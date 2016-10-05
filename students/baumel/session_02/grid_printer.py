@@ -11,4 +11,5 @@ def grid_printer():
     print('|         |         |')
     print('+ - - - - + - - - - +')
 
+
 grid_printer()
