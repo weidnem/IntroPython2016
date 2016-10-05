@@ -49,3 +49,12 @@ def sum_series(n, s1=0, s2=1):
         ser1 = ser2
         ser2 = sern
     return sern
+
+# Check fibonacci function (6th value in fib series is 13)
+assert fibonacci(6) == 13
+# Check lucas function (6th value in luc series is 29)
+assert lucas(6) == 29
+
+# Check sum_series func (6th val in fib series=13, 6th val in luc series=29)
+assert sum_series(6) == 13
+assert sum_series(6, 2, 1) == 29
