@@ -59,7 +59,23 @@ def print_grid2(squares,size):
 def main():
     squares = eval(input("How many squares would you like? "))
     size = eval(input("what size squares would you like? "))
-    print_grid2(squares, size)
+    if squares <= 0 or size <= 0:
+        print("INVALID ENTRY. BOTH VALUES MUST BE GREATER THAN 0!")
+        keepGoing = input("Would you like to try again (y/n)? ")
+        again(keepGoing)
+    else:
+        print_grid2(squares, size)
+        keepGoing = input("Would you like to make another grid (y/n)? ")
+        again(keepGoing)
+
+
+def again(keepGoing):
+    if keepGoing.lower() == 'y':
+        main()
+    elif keepGoing.lower() == 'n':
+        print('Thanks, see ya later')
+    else:
+        again(input("Please enter (y/n)? "))
 
 main()
 
