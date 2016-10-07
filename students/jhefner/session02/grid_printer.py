@@ -5,7 +5,7 @@ grid printer
 def cheat_grid():
     print("+ - - - - + - - - - +\n|         |         |\n|         |         |\n|         |         |\n|         |         |\n+ - - - - + - - - - +\n|         |         |\n|         |         |\n|         |         |\n|         |         |\n+ - - - - + - - - - +")
 
-def slightly_less_of_a_cheat_grid():
+def grid_printer_part1():
     print("+"+" -"*4+" +"+" -"*4+" +")
     print("|"+" "*9+"|"+" "*9+"|")
     print("|"+" "*9+"|"+" "*9+"|")
@@ -18,7 +18,7 @@ def slightly_less_of_a_cheat_grid():
     print("|"+" "*9+"|"+" "*9+"|")
     print("+"+" -"*4+" +"+" -"*4+" +")
 
-def configureable_grid(size):
+def grid_printer_part2(size):
     height_width = size-1
     spaces = (size*2)-1
     print("+"+" -"*height_width+" +"+" -"*height_width+" +")
@@ -30,5 +30,5 @@ def configureable_grid(size):
     print("+"+" -"*height_width+" +"+" -"*height_width+" +")
 
 #cheat_grid()
-#slightly_less_of_a_cheat_grid()
-configureable_grid(10)
+#grid_printer_part1()
+grid_printer_part2(10)
