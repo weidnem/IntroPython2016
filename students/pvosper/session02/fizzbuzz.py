@@ -14,9 +14,11 @@ for i in range(1,101):
     else: print(i)
 
 # ===== The long way round =====
+# fb_list = []
+# 
 # fizz = (3, "Fizz")
 # buzz = (5, "Buzz")
-# fizzbuzz = (fizz[0] * buzz[0], fizz[0] + buzz[0])
+# fizzbuzz = (fizz[0] * buzz[0], fizz[1] + buzz[1])
 # all_izzes = (fizz, buzz, fizzbuzz)
 # limit = 100
 # 
@@ -37,6 +39,8 @@ for i in range(1,101):
 # fizz_buzz()
 
 # ===== This works =====
+# fb_list = []
+# 
 # def do_list(fizz, buzz, limit):
 #     for i in range(0, limit + 1):
 #         fb_list.append(i)
