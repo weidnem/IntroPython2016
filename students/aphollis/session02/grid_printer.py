@@ -8,17 +8,17 @@ SIZE = input("Size: ")
 
 def print_grid(rows, columns, size):
 
-    for n in range(rows):
-        make_row(columns, size)
+    for i in range(rows):
+        h_border(columns, size)
 
-        for n in range(size):
-            for i in range(columns):
+        for i in range(size):
+            for j in range(columns):
                 print("|" + (" " * ((size * 2 ) + 1)), end="")
                 #print the vertical lines and cell spacing
             print("|")
-    make_row(columns, size)
+    h_border(columns, size)
 
-def make_row(columns, size):
+def h_border(columns, size):
     for i in range(columns):
         print('+' + (' -' * size) + ' ', end="")
     print('+')
