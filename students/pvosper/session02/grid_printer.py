@@ -3,6 +3,7 @@
     Ex 3-3 (pg 33)
     Write a function that draws a grid
 '''
+
 # Arguments:
 #   cell: size of each cell
 #   grid: # of cells to print
