@@ -9,27 +9,35 @@
 
 fb_list = []
 
-fizz = (3, "Fizz")
-buzz = (5, "Buzz")
-fizzbuzz = (fizz[0] * buzz[0], fizz[0] + buzz[0])
-all_izzes = (fizz, buzz, fizzbuzz)
-limit = 100
+for i in range(101):
+    if i % 3 == 0 and i % 5 == 0: fb_list.append("fizzbuzz")
+    elif i % 3 == 0: fb_list.append("fizz")
+    elif i % 5 == 0: fb_list.append("buzz")
+    else: fb_list.append(i)
+print(fb_list[1:101])
 
-def do_list():
-    for i in range(0, limit + 1):
-        fb_list.append(i)
-
-def do_fizzbuzz():
-    for i in range(3):
-        for j in range(0, limit + 1, all_izzes[i][0]):
-            fb_list[j] = all_izzes[i][1]
-            
-def fizz_buzz():
-    do_list()
-    do_fizzbuzz()
-    print(fb_list[1:limit + 1])
-
-fizz_buzz()
+# ===== The long way round =====
+# fizz = (3, "Fizz")
+# buzz = (5, "Buzz")
+# fizzbuzz = (fizz[0] * buzz[0], fizz[0] + buzz[0])
+# all_izzes = (fizz, buzz, fizzbuzz)
+# limit = 100
+# 
+# def do_list():
+#     for i in range(0, limit + 1):
+#         fb_list.append(i)
+# 
+# def do_fizzbuzz():
+#     for i in range(3):
+#         for j in range(0, limit + 1, all_izzes[i][0]):
+#             fb_list[j] = all_izzes[i][1]
+#             
+# def fizz_buzz():
+#     do_list()
+#     do_fizzbuzz()
+#     print(fb_list[1:limit + 1])
+# 
+# fizz_buzz()
 
 # ===== This works =====
 # def do_list(fizz, buzz, limit):
