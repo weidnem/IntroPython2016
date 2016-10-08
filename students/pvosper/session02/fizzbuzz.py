@@ -7,14 +7,11 @@
     For numbers which are multiples of both three and five print “FizzBuzz” instead.
 '''
 
-fb_list = []
-
-for i in range(101):
-    if i % 3 == 0 and i % 5 == 0: fb_list.append("fizzbuzz")
-    elif i % 3 == 0: fb_list.append("fizz")
-    elif i % 5 == 0: fb_list.append("buzz")
-    else: fb_list.append(i)
-print(fb_list[1:101])
+for i in range(1,101):
+    if i % 3 == 0 and i % 5 == 0: print("FizzBuzz")
+    elif i % 3 == 0: print("Fizz")
+    elif i % 5 == 0: print("Buzz")
+    else: print(i)
 
 # ===== The long way round =====
 # fizz = (3, "Fizz")
