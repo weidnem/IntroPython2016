@@ -1,5 +1,5 @@
 """Simple text grid drawing script
-10/7/16 edit. Moved input typing to function call and eliminated redundant variables to shorten code and improve readability. 
+10/7/16 edit. Moved input typing to function call and eliminated redundant variables to shorten code and improve readability.
 """
 
 ROWS = input("Rows: ")
@@ -8,26 +8,20 @@ SIZE = input("Size: ")
 
 def print_grid(rows, columns, size):
 
-    corner = "+"
-    h_part = "-"
-    space = " "
-    v_part = "|"
-
-    h_separator = ((space + h_part) * size) + space
-    v_separator = v_part + (space * ((size * 2 ) + 1))
-
     for n in range(rows):
-        for i in range(columns):
-            print(corner + h_separator, end="")
-        print(corner)
+        make_row(columns, size)
 
         for n in range(size):
             for i in range(columns):
-                print(v_separator, end="")
-            print(v_part)
-    for n in range(columns):
-        print(corner + h_separator, end="")
-    print(corner)
+                print("|" + (" " * ((size * 2 ) + 1)), end="")
+                #print the vertical lines and cell spacing
+            print("|")
+    make_row(columns, size)
+
+def make_row(columns, size):
+    for i in range(columns):
+        print('+' + (' -' * size) + ' ', end="")
+    print('+')
 
 print_grid(int(ROWS), int(COLUMNS), int(SIZE))
 
