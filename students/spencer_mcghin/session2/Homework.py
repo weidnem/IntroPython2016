@@ -10,15 +10,37 @@
 
 # Parameters, Unpacking, Variables #
 
+# from sys import argv
+#
+# script, first, second, third , fourth = argv
+#
+# print("The script is called:"), script
+# print("Your first variable is:"), first
+# print("Your second variable is:"), second
+# print("Your third variable is:"), third
+# print("Give me a fourth variable: "), fourth
+
 from sys import argv
 
-script, first, second, third , fourth = argv
+script, user_name = argv
+prompt = '> '
 
-print("The script is called:"), script
-print("Your first variable is:"), first
-print("Your second variable is:"), second
-print("Your third variable is:"), third
-print("Give me a fourth variable: "), fourth
+print("Hi %s, I'm the %s script." % (user_name, script))
+print("I'd like to ask you a few questions.")
+print("Do you like me %s?" % (user_name))
+likes = input(prompt)
+
+print("Where do you live %s?" % (user_name))
+lives = input(prompt)
+
+print("What kind of computer do you have?")
+computer = input(prompt)
+
+print("""
+Alright, so you said %r about liking me.
+You live in %r.  Not sure where that is.
+And you have a %r computer.  Nice.
+""" % (likes, lives, computer))
 
 
 
