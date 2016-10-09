@@ -27,3 +27,24 @@ for i in range(0, 6):
 # now we can print them out too
 for i in elements:
     print ("Element was: %d" % i)
+
+"""
+#1: Completed
+
+#2: Not, it would assign element to be a type 'range'
+
+>>> elements = range(0,6)
+>>> type(elements)
+<class 'range'>
+>>> elements
+range(0, 6)
+
+Correct way:
+>>> elements = list(range(0,6))
+>>> type(elements)
+<class 'list'>
+>>> elements
+[0, 1, 2, 3, 4, 5]
+
+#3: Methods of list: append, extend, insert, remove, pop, clear, index, count, sort, reverse, copy
+"""
