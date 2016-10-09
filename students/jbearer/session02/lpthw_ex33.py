@@ -1,4 +1,4 @@
-def while_func(num):
+def while_func(num, mystep):
     i = 0
     numbers = []
 
@@ -6,7 +6,7 @@ def while_func(num):
         print ("At the top i is %d" % i)
         numbers.append(i)
 
-        i = i + 1
+        i = i + mystep
         print ("Numbers now: ", numbers)
         print ("At the bottom i is %d" % i)
 
@@ -16,4 +16,4 @@ def while_func(num):
     for num in numbers:
         print (num)
 
-while_func(10)
+while_func(10,2)
