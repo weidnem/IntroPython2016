@@ -1,7 +1,9 @@
 """
 Name: Paul Briant
 Date: 10/11/16
+Class: Introduction to Python
 LAB: grid printer
+
 Description:
 This program builds a grid based on specific size parameters.
 """
@@ -16,7 +18,7 @@ def grid_line(char1, char2, char2num, number):
     prints each row of the grid as specified.
     """
     for i in range(number):
-        grid_line(char1, char2, char2num)
+        print_grid(char1, char2, char2num)
 
     return None
 
