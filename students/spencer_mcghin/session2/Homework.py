@@ -1,4 +1,4 @@
-# Raw Input Exercise #
+# Exercise 11 and 12 #
 
 # age = input("How old are you? ")
 #
@@ -8,7 +8,7 @@
 #
 # print('So, you\'re %r old, %r tall and %r heavy.' % (age, height, weight))
 
-# Parameters, Unpacking, Variables #
+# Exercise 13 #
 
 # from sys import argv
 #
@@ -19,6 +19,8 @@
 # print("Your second variable is:"), second
 # print("Your third variable is:"), third
 # print("Give me a fourth variable: "), fourth
+
+# Exercise 14 #
 
 # from sys import argv
 #
@@ -45,30 +47,64 @@
 # And you have a %r computer and live in %r.  Nice.
 # """ % (likes, lives, computer, city))
 
+# Exercise 18 #
+
 # this one is like your scripts with argv
-def print_two(*args):
-    arg1, arg2 = args
-    print("arg1: %r, arg2: %r" % (arg1, arg2))
+# def print_two(*args):
+#     arg1, arg2 = args
+#     print("arg1: %r, arg2: %r" % (arg1, arg2))
+#
+# # ok, that *args is actually pointless, we can just do this
+# def print_two_again(arg1, arg2):
+#     print("arg1: %r, arg2: %r" % (arg1, arg2))
+#
+# # this just takes one argument
+# def print_one(arg1):
+#     print("arg1: %r" % (arg1))
+#
+# # this one takes no arguments
+# def print_none():
+#     print("I got nothin'.")
+#
+#
+# print_two("Zed","Shaw")
+# print_two_again("Zed","Shaw")
+# print_one("First!")
+# print_none()
 
-# ok, that *args is actually pointless, we can just do this
-def print_two_again(arg1, arg2):
-    print("arg1: %r, arg2: %r" % (arg1, arg2))
+# Exercise 19 #
 
-# this just takes one argument
-def print_one(arg1):
-    print("arg1: %r" % (arg1))
+def cheese_and_crackers(cheese_count, boxes_of_crackers):
+    """Prints strings with function inputs"""
+    print("You have %d cheeses!" % (cheese_count))
+    print("You have %d boxes of crackers!" % (boxes_of_crackers))
+    print("Man that's enough for a party!")
+    print("Get a blanket.\n")
 
-# this one takes no arguments
-def print_none():
-    print("I got nothin'.")
+"""Runs function with inputs 20 and 30, respectively"""
+print("We can just give the function numbers directly:")
+(cheese_and_crackers(20, 30))
+
+"""Establishes new function inputs and then runs function below"""
+print("OR, we can use variables from our script:")
+amount_of_cheese = 10
+amount_of_crackers = 50
+
+cheese_and_crackers(amount_of_cheese, amount_of_crackers)
+
+"""Runs function with new inputs that perform arithmetic operations inside input"""
+print("We can even do math inside too:")
+cheese_and_crackers(10 + 20, 5 + 6)
+
+"""Takes previous inputs and adds new values"""
+print("And we can combine the two, variables and math:")
+cheese_and_crackers(amount_of_cheese + 100, amount_of_crackers + 1000)
 
 
-print_two("Zed","Shaw")
-print_two_again("Zed","Shaw")
-print_one("First!")
-print_none()
+def cracker_sandwiches(amount_of_cheese, amount_of_crackers):
+    """Takes crackers and cheese input and calculates the number of cracker sandwiches you can make."""
+    sandwiches = amount_of_crackers / (amount_of_crackers / amount_of_cheese)
+    print("You can even make %s cracker sandwiches." % int((sandwiches)))
 
-
-
-
+cracker_sandwiches(15, 30)
 
