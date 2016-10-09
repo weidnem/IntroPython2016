@@ -74,37 +74,61 @@
 
 # Exercise 19 #
 
-def cheese_and_crackers(cheese_count, boxes_of_crackers):
-    """Prints strings with function inputs"""
-    print("You have %d cheeses!" % (cheese_count))
-    print("You have %d boxes of crackers!" % (boxes_of_crackers))
-    print("Man that's enough for a party!")
-    print("Get a blanket.\n")
+# def cheese_and_crackers(cheese_count, boxes_of_crackers):
+#     """Prints strings with function inputs"""
+#     print("You have %d cheeses!" % (cheese_count))
+#     print("You have %d boxes of crackers!" % (boxes_of_crackers))
+#     print("Man that's enough for a party!")
+#     print("Get a blanket.\n")
+#
+# """Runs function with inputs 20 and 30, respectively"""
+# print("We can just give the function numbers directly:")
+# (cheese_and_crackers(20, 30))
+#
+# """Establishes new function inputs and then runs function below"""
+# print("OR, we can use variables from our script:")
+# amount_of_cheese = 10
+# amount_of_crackers = 50
+#
+# cheese_and_crackers(amount_of_cheese, amount_of_crackers)
+#
+# """Runs function with new inputs that perform arithmetic operations inside input"""
+# print("We can even do math inside too:")
+# cheese_and_crackers(10 + 20, 5 + 6)
+#
+# """Takes previous inputs and adds new values"""
+# print("And we can combine the two, variables and math:")
+# cheese_and_crackers(amount_of_cheese + 100, amount_of_crackers + 1000)
+#
+#
+# def cracker_sandwiches(amount_of_cheese, amount_of_crackers):
+#     """Takes crackers and cheese input and calculates the number of cracker sandwiches you can make."""
+#     sandwiches = amount_of_crackers / (amount_of_crackers / amount_of_cheese)
+#     print("You can even make %s cracker sandwiches." % int((sandwiches)))
+#
+# cracker_sandwiches(15, 30)
 
-"""Runs function with inputs 20 and 30, respectively"""
-print("We can just give the function numbers directly:")
-(cheese_and_crackers(20, 30))
+# Exercise 28 #
 
-"""Establishes new function inputs and then runs function below"""
-print("OR, we can use variables from our script:")
-amount_of_cheese = 10
-amount_of_crackers = 50
+True and True = True
 
-cheese_and_crackers(amount_of_cheese, amount_of_crackers)
+False and True = False
 
-"""Runs function with new inputs that perform arithmetic operations inside input"""
-print("We can even do math inside too:")
-cheese_and_crackers(10 + 20, 5 + 6)
+1 == 1 and 2 == 1 = False
 
-"""Takes previous inputs and adds new values"""
-print("And we can combine the two, variables and math:")
-cheese_and_crackers(amount_of_cheese + 100, amount_of_crackers + 1000)
+"test" == "test" = True
+
+1 == 1 or 2 != 1 = True
+
+True and 1 == 1 = True
+
+False and 0 != 0 = False
+
+True or 1 == 1 = True
+
+not (1 == 1 and 0 != 1) = False
+
+not (10 == 1 or 1000 == 1000) = False
 
 
-def cracker_sandwiches(amount_of_cheese, amount_of_crackers):
-    """Takes crackers and cheese input and calculates the number of cracker sandwiches you can make."""
-    sandwiches = amount_of_crackers / (amount_of_crackers / amount_of_cheese)
-    print("You can even make %s cracker sandwiches." % int((sandwiches)))
-
-cracker_sandwiches(15, 30)
 
