@@ -54,29 +54,31 @@ def main():
 
     """
 
-    print(sum_series(0))
-    print(sum_series(1))
-    print(sum_series(2))
-    print(sum_series(3))
     print(sum_series(0, 2, 1))
     print(sum_series(1, 2, 1))
     print(sum_series(2, 2, 1))
     print(sum_series(3, 2, 1))
     print(sum_series(4, 2, 1))
 
-    # Tests for Fibonacci
+    # Tests for fibonacci
     assert fibonacci(0) == 0
     assert fibonacci(1) == 1
     assert fibonacci(2) == 1
     assert fibonacci(3) == 2
     assert fibonacci(6) == 8
 
-    # Tests for Lucas
+    # Tests for lucas
     assert lucas(0) == 2
     assert lucas(1) == 1
     assert lucas(2) == 3
     assert lucas(3) == 4
     assert lucas(6) == 18
+
+    # Tests for sum_series with default values for first and second
+    assert sum_series(0) == 0
+    assert sum_series(1) == 1
+    assert sum_series(2) == 1
+    assert sum_series(6) == 8
 
 
 
