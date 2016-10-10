@@ -54,12 +54,6 @@ def main():
 
     """
 
-    # print(lucas(0))
-    # print(lucas(1))
-    # print(lucas(2))
-    # print(lucas(3))
-    # print(lucas(4))
-    # print(lucas(10))
     print(sum_series(0))
     print(sum_series(1))
     print(sum_series(2))
@@ -77,7 +71,12 @@ def main():
     assert fibonacci(3) == 2
     assert fibonacci(6) == 8
 
-    
+    # Tests for Lucas
+    assert lucas(0) == 2
+    assert lucas(1) == 1
+    assert lucas(2) == 3
+    assert lucas(3) == 4
+    assert lucas(6) == 18
 
 
 
