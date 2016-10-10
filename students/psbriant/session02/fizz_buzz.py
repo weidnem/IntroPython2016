@@ -19,7 +19,11 @@ for all numbers devisible by both three and five.
 
 def main():
     """
-    
+    Iterates through a range of numbers from 1 to 100 inclusive and prints out
+    each number unless they are devisible by three or five. For multiples of
+    three, the sting 'Fizz' is printed while the string 'Buzz' is printed for
+    multiples of five. For numbers that are divisible by both three and five,
+    the string 'FizzBuzz' is printed.
     """
     for i in range(1, 101):
         if i % 5 == 0 and i % 3 == 0:
