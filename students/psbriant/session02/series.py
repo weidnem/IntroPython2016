@@ -34,6 +34,18 @@ def lucas(n):
     return lucas(n-1) + lucas(n-2)
 
 
+def sum_series(n, first=0, second=1):
+    """
+    Return the nth value in either the Fibonacci series or the Lucas series
+    based on the values of integer arguments first and second.
+    """
+    if n == 0:
+        return first
+    if n == 1:
+        return second
+    return sum_series(n-1) + sum_series(n-2)
+
+
 # ==============================================================================
 
 
