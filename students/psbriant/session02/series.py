@@ -54,12 +54,6 @@ def main():
 
     """
 
-    print(sum_series(0, 2, 1))
-    print(sum_series(1, 2, 1))
-    print(sum_series(2, 2, 1))
-    print(sum_series(3, 2, 1))
-    print(sum_series(4, 2, 1))
-
     # Tests for fibonacci
     assert fibonacci(0) == 0
     assert fibonacci(1) == 1
@@ -80,8 +74,11 @@ def main():
     assert sum_series(2) == 1
     assert sum_series(6) == 8
 
-
-
+    # Tests for sum_series with non default values for first and second
+    assert sum_series(0, 2, 1) == 2
+    assert sum_series(1, 2, 1) == 1
+    assert sum_series(2, 2, 1) == 3
+    assert sum_series(6, 2, 1) == 18
 
 if __name__ == '__main__':
     main()
