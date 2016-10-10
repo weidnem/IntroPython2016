@@ -23,6 +23,16 @@ def fibonacci(n):
     return fibonacci(n-1) + fibonacci(n-2)
 
 
+def lucas(n):
+    """
+    Return the nth value in the Lucas series based on integer argument n.
+    """
+    if n == 0:
+        return 2
+    if n == 1:
+        return 1
+    return lucas(n-1) + lucas(n-2)
+
 
 # ==============================================================================
 
@@ -31,10 +41,17 @@ def main():
     """
 
     """
-    print(fibonacci(3))
-    print(fibonacci(2))
-    print(fibonacci(0))
-    print(fibonacci(7))
+    # print(fibonacci(3))
+    # print(fibonacci(2))
+    # print(fibonacci(0))
+    # print(fibonacci(7))
+    print(lucas(0))
+    print(lucas(1))
+    print(lucas(2))
+    print(lucas(3))
+    print(lucas(4))
+    print(lucas(10))
+
 
 if __name__ == '__main__':
     main()
