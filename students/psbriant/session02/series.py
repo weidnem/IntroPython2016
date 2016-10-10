@@ -53,10 +53,7 @@ def main():
     """
 
     """
-    # print(fibonacci(3))
-    # print(fibonacci(2))
-    # print(fibonacci(0))
-    # print(fibonacci(7))
+
     # print(lucas(0))
     # print(lucas(1))
     # print(lucas(2))
@@ -72,6 +69,17 @@ def main():
     print(sum_series(2, 2, 1))
     print(sum_series(3, 2, 1))
     print(sum_series(4, 2, 1))
+
+    # Tests for Fibonacci
+    assert fibonacci(0) == 0
+    assert fibonacci(1) == 1
+    assert fibonacci(2) == 1
+    assert fibonacci(3) == 2
+    assert fibonacci(6) == 8
+
+    
+
+
 
 
 if __name__ == '__main__':
