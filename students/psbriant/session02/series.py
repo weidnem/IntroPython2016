@@ -43,7 +43,7 @@ def sum_series(n, first=0, second=1):
         return first
     if n == 1:
         return second
-    return sum_series(n-1) + sum_series(n-2)
+    return sum_series(n-1, first, second) + sum_series(n-2, first, second)
 
 
 # ==============================================================================
@@ -57,12 +57,21 @@ def main():
     # print(fibonacci(2))
     # print(fibonacci(0))
     # print(fibonacci(7))
-    print(lucas(0))
-    print(lucas(1))
-    print(lucas(2))
-    print(lucas(3))
-    print(lucas(4))
-    print(lucas(10))
+    # print(lucas(0))
+    # print(lucas(1))
+    # print(lucas(2))
+    # print(lucas(3))
+    # print(lucas(4))
+    # print(lucas(10))
+    print(sum_series(0))
+    print(sum_series(1))
+    print(sum_series(2))
+    print(sum_series(3))
+    print(sum_series(0, 2, 1))
+    print(sum_series(1, 2, 1))
+    print(sum_series(2, 2, 1))
+    print(sum_series(3, 2, 1))
+    print(sum_series(4, 2, 1))
 
 
 if __name__ == '__main__':
