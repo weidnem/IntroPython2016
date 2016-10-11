@@ -1,14 +1,14 @@
-plus = '+'
-minus = '- '
+def print_grid(n):
 
-print plus + ' ' + (minus*4)  + plus + ' ' + (minus*4) + plus
-print ("|         |         |")
-print ("|         |         |")
-print ("|         |         |")
-print ("|         |         |")
-print plus + ' ' + (minus*4)  + plus + ' ' + (minus*4) + plus
-print ("|         |         |")
-print ("|         |         |")
-print ("|         |         |")
-print ("|         |         |")
-print plus + ' ' + (minus*4)  + plus + ' ' + (minus*4) + plus
+    plus = '+'
+    minus = '- '
+    total_minus_spaces = n - 2
+    
+    for i in range(0,n-1):
+        print (plus + ' ' + (minus*size)  + plus + ' ' + (minus*size) + plus)
+        for i in range(0,size):
+            print ("|" + (spaces * ' ') + "|" + (spaces * ' ') + "|" + (spaces * ' '))
+    
+
+
+print_grid(5)
