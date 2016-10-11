@@ -11,22 +11,16 @@ This program builds a grid based on specific size parameters.
 
 # -------------------------------Functions--------------------------------------
 
-def grid_print():
+
+def grid_line():
+    """
+    Print each row of grid.
+    """
     print('+' + (2 * ('-' * 4 + '+')))
     print((('|' + (2 * (' ' * 4 + '|')) + '\n') * 4), end='')
     print('+' + (2 * ('-' * 4 + '+')))
     print((('|' + (2 * (' ' * 4 + '|')) + '\n') * 4), end='')
     print('+' + (2 * ('-' * 4 + '+')))
-
-def grid_line(char1, char2, char2num, number):
-    """
-    This function takes in two single character strings and two integers and
-    prints each row of the grid as specified.
-    """
-    for i in range(number):
-        print_grid(char1, char2, char2num)
-
-    return None
 
 
 def print_grid(char1, char2, char2num):
@@ -35,9 +29,9 @@ def print_grid(char1, char2, char2num):
     prints each row of the grid as specified.
     """
 
-
-
 # ==============================================================================
+
+
 def main():
     """
     Builds a grid based on a specific character and size parameters.
