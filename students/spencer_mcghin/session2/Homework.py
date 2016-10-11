@@ -110,25 +110,51 @@
 
 # Exercise 28 #
 
-True and True = True
+# True and True = True
+#
+# False and True = False
+#
+# 1 == 1 and 2 == 1 = False
+#
+# "test" == "test" = True
+#
+# 1 == 1 or 2 != 1 = True
+#
+# True and 1 == 1 = True
+#
+# False and 0 != 0 = False
+#
+# True or 1 == 1 = True
+#
+# not (1 == 1 and 0 != 1) = False
+#
+# not (10 == 1 or 1000 == 1000) = False
 
-False and True = False
+# Exercise 30 #
 
-1 == 1 and 2 == 1 = False
+people = 30
+cars = 40
+trucks = 15
 
-"test" == "test" = True
+"""Condition to print the statement if the condition is true. If not true, looks to second statement, or to third."""
+if cars > people:
+    print("We should take the cars.")
+elif cars < people:
+    print("We should not take the cars.")
+else:
+    print("We can't decide.")
 
-1 == 1 or 2 != 1 = True
+if trucks > cars:
+    print("That's too many trucks.")
+elif trucks < cars:
+    print("Maybe we could take the trucks.")
+else:
+    print("We still can't decide.")
 
-True and 1 == 1 = True
-
-False and 0 != 0 = False
-
-True or 1 == 1 = True
-
-not (1 == 1 and 0 != 1) = False
-
-not (10 == 1 or 1000 == 1000) = False
+if people > trucks:
+    print("Alright, let's just take the trucks.")
+else:
+    print("Fine, let's stay home then.")
 
 
 
