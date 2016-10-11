@@ -1,4 +1,5 @@
 def fibonacci(n): #function to print out the nth element in the fibonacci series#
+    """Return the nth element in the fibonacci series."""
     lst = []
     lst.insert(0,0)
     lst.insert(1,1)
@@ -10,6 +11,7 @@ def fibonacci(n): #function to print out the nth element in the fibonacci series
 
 
 def lucas(n): #function to print out the nth element in the lucas numbers series#
+    """Return the nth element in the lucas sesies"""
     lst = []
     lst.insert(0,2)
     lst.insert(1,1)
@@ -20,6 +22,7 @@ def lucas(n): #function to print out the nth element in the lucas numbers series
     print ("The nth lucas number is: " + str(lst[n]))
 
 def sum_series(n,first=0,second=1): #generalized function to return the nth in the series that starts with numbers specified in the first and second optional parameters# 
+    """Return the nth element in the series whose first two elements are specified by the optional parameters"""
     lst = []
     lst.insert(0,first)
     lst.insert(1,second)
