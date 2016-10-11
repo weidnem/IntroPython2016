@@ -7,8 +7,6 @@ LAB: grid printer
 Description:
 This program builds a grid based on specific size parameters.
 """
-# -------------------------------Import-----------------------------------------
-
 # -------------------------------Functions--------------------------------------
 
 
@@ -23,11 +21,25 @@ def grid_line():
     print('+' + (2 * ('-' * 4 + '+')))
 
 
-def print_grid(char1, char2, char2num):
+def print_grid(n):
     """
-    This function takes in two single character strings and one integer and
-    prints each row of the grid as specified.
+
     """
+    size = n // 2
+    print('+' + (2 * ('-' * size + '+')))
+    print((('|' + (2 * (' ' * size + '|')) + '\n') * size), end='')
+    print('+' + (2 * ('-' * size + '+')))
+    print((('|' + (2 * (' ' * size + '|')) + '\n') * size), end='')
+    print('+' + (2 * ('-' * size + '+')))
+
+
+def print_grid2(rc, s):
+    """
+
+    """
+    print('+' + (rc * ('-' * s + '+')))
+    print(((('|' + (rc * (' ' * s + '|')) + '\n') * s) +
+          ('+' + (rc * ('-' * s + '+'))) + '\n') * rc, end='')
 
 # ==============================================================================
 
@@ -36,7 +48,12 @@ def main():
     """
     Builds a grid based on a specific character and size parameters.
     """
-    grid_print()
+    # grid_line()
+    # print_grid(15)
+    # print_grid(3)
+    print_grid2(3, 4)
+    print_grid2(5, 3)
+
 
 if __name__ == '__main__':
     main()
