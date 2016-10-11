@@ -23,7 +23,8 @@ def grid_line():
 
 def print_grid(n):
     """
-
+    Print each line of the grid based on the value of integer argument n.
+    Values for n dictate the size of each line.
     """
     size = n // 2
     print('+' + (2 * ('-' * size + '+')))
@@ -35,7 +36,9 @@ def print_grid(n):
 
 def print_grid2(rc, s):
     """
-
+    Print each line of the grid based on the value of integer arguments rc
+    and s. Values for rc dictate the number of rows and colums while values for
+    s dictate the size of each cell.
     """
     print('+' + (rc * ('-' * s + '+')))
     print(((('|' + (rc * (' ' * s + '|')) + '\n') * s) +
