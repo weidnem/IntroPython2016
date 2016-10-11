@@ -11,6 +11,18 @@ This program builds a grid based on specific size parameters.
 
 # -------------------------------Functions--------------------------------------
 
+def grid_print():
+    print('+' + (2 * ('-' * 4 + '+')))
+    print('|' + (2 * (' ' * 4 + '|')))
+    print('|' + (2 * (' ' * 4 + '|')))
+    print('|' + (2 * (' ' * 4 + '|')))
+    print('|' + (2 * (' ' * 4 + '|')))
+    print('+' + (2 * ('-' * 4 + '+')))
+    print('|' + (2 * (' ' * 4 + '|')))
+    print('|' + (2 * (' ' * 4 + '|')))
+    print('|' + (2 * (' ' * 4 + '|')))
+    print('|' + (2 * (' ' * 4 + '|')))
+    print('+' + (2 * ('-' * 4 + '+')))
 
 def grid_line(char1, char2, char2num, number):
     """
@@ -28,10 +40,7 @@ def print_grid(char1, char2, char2num):
     This function takes in two single character strings and one integer and
     prints each row of the grid as specified.
     """
-    print((char1 * 1) + (char2 * char2num) + (char1 * 1) + (char2 * char2num) +
-          (char1 * 1))
 
-    return None
 
 
 # ==============================================================================
@@ -39,12 +48,7 @@ def main():
     """
     Builds a grid based on a specific character and size parameters.
     """
-    print_grid('+', '-', 4)
-    grid_line('|', ' ', 4, 4)
-    print_grid('+', '-', 4)
-    grid_line('|', ' ', 4, 4)
-    print_grid('+', '-', 4)
-
+    grid_print()
 
 if __name__ == '__main__':
     main()
