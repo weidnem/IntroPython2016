@@ -13,15 +13,9 @@ This program builds a grid based on specific size parameters.
 
 def grid_print():
     print('+' + (2 * ('-' * 4 + '+')))
-    print('|' + (2 * (' ' * 4 + '|')))
-    print('|' + (2 * (' ' * 4 + '|')))
-    print('|' + (2 * (' ' * 4 + '|')))
-    print('|' + (2 * (' ' * 4 + '|')))
+    print((('|' + (2 * (' ' * 4 + '|')) + '\n') * 4), end='')
     print('+' + (2 * ('-' * 4 + '+')))
-    print('|' + (2 * (' ' * 4 + '|')))
-    print('|' + (2 * (' ' * 4 + '|')))
-    print('|' + (2 * (' ' * 4 + '|')))
-    print('|' + (2 * (' ' * 4 + '|')))
+    print((('|' + (2 * (' ' * 4 + '|')) + '\n') * 4), end='')
     print('+' + (2 * ('-' * 4 + '+')))
 
 def grid_line(char1, char2, char2num, number):
