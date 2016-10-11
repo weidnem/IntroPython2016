@@ -1,15 +1,26 @@
-"""Fibonacci series exercise"""
+"""Fibonacci series exercises
+    this took forever.
+    i don't understand the purpose of "assert" or it's syntax.
+"""
+
+
 
 def fibonacci(n):
-    fib_list = [0, 1]
-    if len(fib_list) != n:
-        fib_list.append(fib_list[(len(fib_list) - 2)] + fib_list[(len(fib_list) - 1)])
-        fibonacci(n)
-        print(len(fib_list))
-        return len(fib_list)
+    sum_series(n)
 
+def lucas(n):
+    sum_series(n, [2, 1])
+
+def sum_series(n, list=[0, 1]):
+    """add the last two items in a list, and append their sum. repeat until length = n and return the nth item in the series"""
+    next_up = (list[-2]) + (list[-1])
+
+    if len(list) == n:
+        return(list[n-1])
     else:
-        print(fib_list[n])
-        return(fib_list[n])
+        list.append(next_up)
+        sum_series(n, list)
 
-fibonacci(5)
+
+fibonacci(6)
+lucas(6)
