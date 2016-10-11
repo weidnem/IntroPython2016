@@ -5,7 +5,7 @@ Class: Introduction to Python
 LAB: grid printer
 
 Description:
-This program builds a grid based on specific size parameters.
+This program constructs a grid based on specific size parameters.
 """
 # -------------------------------Functions--------------------------------------
 
@@ -49,11 +49,11 @@ def print_grid2(rc, s):
 
 def main():
     """
-    Builds a grid based on a specific character and size parameters.
+    Build a grid based on a specific cell, row and column size parameters.
     """
-    # grid_line()
-    # print_grid(15)
-    # print_grid(3)
+    grid_line()
+    print_grid(15)
+    print_grid(3)
     print_grid2(3, 4)
     print_grid2(5, 3)
 
