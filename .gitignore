@@ -93,3 +93,4 @@ ENV/
 
 # ide stuff
 .idea/*
+.idea
