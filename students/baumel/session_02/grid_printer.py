@@ -29,14 +29,14 @@ def print_grid(n):
     print(top)
 
 #top helper method
-def topMaker(n,squares):
+def topMaker(n, squares):
     apex = "+ "
     lines = "- "
     top = ((apex+lines*n)*squares)+apex
     print(top)
 
 #wall making helper method
-def wallMaker(n,squares):
+def wallMaker(n, squares):
     count = n
     sides = "|"
     wall = sides+"  "*(n)+" "
@@ -46,7 +46,7 @@ def wallMaker(n,squares):
         count -= 1
 
 #main grid making method
-def print_grid2(squares,size):
+def print_grid2(squares, size):
     counter = squares
     #loop to print the boxes
     while counter != 0:
@@ -92,10 +92,3 @@ main()
 
 
 
-
-
-
-
-
-
-    
