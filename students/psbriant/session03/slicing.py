@@ -62,8 +62,5 @@ def main():
     third_is_the_word('mississippi')
 
 
-
-
-
 if __name__ == '__main__':
     main()
