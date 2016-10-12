@@ -1,3 +1,5 @@
+#!/usr/bin/env python
+
 '''
     2nd LAB exercise from 161004
 
