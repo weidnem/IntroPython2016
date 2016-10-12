@@ -8,7 +8,7 @@ Description:
 Answers to exercises from Learn Python the Hard Way.
 """
 # -------------------------------Import-----------------------------------------
-
+from sys import argv
 # -------------------------------Functions--------------------------------------
 
 
@@ -36,6 +36,16 @@ def exercise_12():
 
     print("So, you're %r old, %r tall and %r heavy.") % (age, height, weight)
 
+def exercise_13():
+    """
+
+    """
+    script, first, second, third = argv
+
+    print("The script is called:", script)
+    print("Your first variable is:", first)
+    print("Your second variable is:", second)
+    print("Your third variable is:", third)
 
 # ==============================================================================
 
