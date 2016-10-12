@@ -16,7 +16,7 @@ def first_last(s):
     """
 
     """
-    return s[-1] + s[1:-1] + s[0]
+    return s[-1:] + s[1:-1] + s[:0]
 
 
 def every_other(s):
@@ -30,10 +30,10 @@ def four_removed(s):
     """
 
     """
-    return s[3:-3:2]
+    return s[4:-4:2]
 
 
-def reversed(s):
+def reversed1(s):
     """
 
     """
@@ -45,7 +45,7 @@ def third_is_the_word(s):
 
     """
     t = len(s) // 3
-    return s[t:t * 2] + s[t * 2 :] + s[:t]
+    return s[t:-t] + s[-t:] + s[:t]
 
 
 # ==============================================================================
@@ -55,7 +55,15 @@ def main():
     """
     Hi
     """
+    first_last('mississippi')
     every_other('mississippi')
+    four_removed('mississippi')
+    reversed1('mississippi')
+    third_is_the_word('mississippi')
+
+
+
+
 
 if __name__ == '__main__':
     main()
