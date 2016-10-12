@@ -36,6 +36,7 @@ def exercise_12():
 
     print("So, you're %r old, %r tall and %r heavy.") % (age, height, weight)
 
+
 def exercise_13():
     """
 
