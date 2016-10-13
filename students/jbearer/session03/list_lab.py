@@ -37,5 +37,19 @@ def fruit_tree():
     l.pop(l.index(del_fruit))
     print('Current list:', l)
 
+    print()
+    print('-> List Lab: Section 3 <-')
+    i = 0
+    while i < len(l):
+        answer = input('Do you like %s? ' % l[i].lower())
+        if answer == 'yes':
+            i += 1
+        elif answer == 'no':
+            l.pop(i)
+        else:
+            continue
+    print(l)
+
+
 
 fruit_tree()
