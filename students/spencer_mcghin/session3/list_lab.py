@@ -25,3 +25,15 @@ new_fruits_list = first_fruit + fruits
 print("Your new list of fruits is:")
 for fruit in new_fruits_list:
     print(fruit)
+
+"""Add another fruit to the beginning of the list using the .insert method"""
+second_fruit = input("For the last time, give me a fruit to add to the list > ")
+new_fruits_list.insert(0, second_fruit)
+for fruit in new_fruits_list:
+    print(fruit)
+
+"""Display the fruits that begin with P"""
+print("Check it out everyone, we're going to print all the fruits that begin with P!")
+for fruit in new_fruits_list:
+    if fruit[0] == 'P':
+        print(fruit)
