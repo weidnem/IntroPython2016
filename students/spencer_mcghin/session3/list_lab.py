@@ -8,5 +8,20 @@ for fruit in fruits:
 """Prompt user for another fruit and add to list"""
 new_fruit = input("Please tell me which fruit I should add to the list > ")
 fruits.append(new_fruit)
+print("Your new list of fruits is:")
 for fruit in fruits:
+    print(fruit)
+
+"""Prompt user for a number that corresponds to a fruit and return that number and fruit"""
+new_number = int(input("Please give me a number from 1 to 5 > "))
+while new_number > 5:
+    new_number = int(input("Quit being difficult and give me a number between 1 and 5 > "))
+else:
+    print("Item: " + str(new_number) + " " + "is" + " " + fruits[new_number - 1])
+
+"""Add another fruit to the beginning of the list"""
+first_fruit = [input("Now give me another fruit to add to the beginning of the list > ")]
+new_fruits_list = first_fruit + fruits
+print("Your new list of fruits is:")
+for fruit in new_fruits_list:
     print(fruit)
