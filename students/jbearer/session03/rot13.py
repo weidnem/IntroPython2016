@@ -6,14 +6,20 @@ October 13, 2016
 
 if __name__ == '__main__':
 
-    d_list = {'a':'n','b':'o','c':'p','d':'q','e':'r','f':'s','g':'t',
-    'h':'u','i':'v','j':'w','k':'x','l':'y','m':'z','n':'a','o':'b','p':'c',
-    'q':'d','r':'e','s':'f','t':'g','u':'h','v':'i','w':'j','x':'k','y':'l',
-    'z':'m'}
+    def rot13(myStr):
+        alpha = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+        key =   'nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM'
 
-    print(d_list)
+        decoder = str.maketrans(alpha,key)
+
+        answer = myStr.translate(decoder)
+
+        print(answer)
+
+    theStr = 'Zntargvp sebz bhgfvqr arne pbeare' 
+
+    rot13(theStr)
 
 
 
-    def rot13():
-        print('hi')
+        
