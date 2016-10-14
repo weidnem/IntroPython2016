@@ -51,6 +51,24 @@ def series2(fruit):
     fruit.remove(to_delete)
 
 
+def series3(fruit):
+    """
+
+    """
+    for item in fruit:
+        # Make all items lowercase
+        preference = input("Do you like " + item + "? yes|no")
+        if preference != 'no' and preference != 'yes':
+            while True:
+                preference = input("Please answer with either yes or no")
+                if preference == 'yes' or preference == 'no':
+                    return False
+        if preference == 'no':
+            # remove item from fruit
+            fruit.remove(item)
+    print(fruit)      
+
+
 # ==============================================================================
 
 
