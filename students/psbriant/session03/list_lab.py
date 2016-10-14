@@ -66,7 +66,22 @@ def series3(fruit):
         if preference == 'no':
             # remove item from fruit
             fruit.remove(item)
-    print(fruit)      
+    print(fruit)
+
+
+def series4(fruit):
+    """
+
+    """
+    # Create copy of fruit
+    rev_fruit = fruit[:]
+    # Iterate through copy of fruit and reverse each element
+    for item in rev_fruit:
+        # Reverse each element
+        item[::-1]
+    # Delete last item in original list
+    del fruit[-1]
+    print(fruit, rev_fruit)
 
 
 # ==============================================================================
