@@ -38,12 +38,19 @@ def series1(fruit):
         if item[0] == 'P':
             print(item)
 
-    def series2(fruit):
-    """
 
+def series2(fruit):
+    """
+    Hi
     """
     print(fruit)
-    
+    # Remove last element from list
+    del fruit[-1]
+    print(fruit)
+    to_delete = input("What fruit do you want deleted from this list? ")
+    fruit.remove(to_delete)
+
+
 # ==============================================================================
 
 
