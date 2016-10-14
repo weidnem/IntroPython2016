@@ -6,9 +6,12 @@ fruits = ["Apples", "Pears", "Oranges", "Peaches"]
 for fruit in fruits:
     print(fruit)
 
-"""Prompt user for another fruit and add to list"""
+"""Prompt user for another fruit and add to list and check to see if that fruit is in list already"""
 new_fruit = input("Please enter a new fruit I should add to the list > ")
-fruits.append(new_fruit)
+while new_fruit in fruits:
+    new_fruit = input("Not cool. Enter a fruit that isn't in the list already > ")
+else:
+    fruits.append(new_fruit)
 print("Your new list of fruits is:")
 for fruit in fruits:
     print(fruit)
@@ -20,9 +23,12 @@ while new_number > 5 or new_number <= 0:
 else:
     print("Item " + str(new_number) + " " + "is" + " " + fruits[new_number - 1])
 
-"""Add another fruit to the beginning of the list"""
+"""Add another fruit to the beginning of the list and check to see if it is in the list already"""
 first_fruit = [input("Now give me another fruit to add to the beginning of the list > ")]
-new_fruits_list = first_fruit + fruits
+while first_fruit in fruits:
+    first_fruit = input("Not cool. Enter a a fruit that isn't in the list already > ")
+else:
+    new_fruits_list = first_fruit + fruits
 print("Your new list of fruits is:")
 for fruit in new_fruits_list:
     print(fruit)
