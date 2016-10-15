@@ -37,5 +37,47 @@ def list_donors():
         
 def find_donor(str):
     for entry in donor_list:
-        check = entry[0]
-        print(check.find(str))
+        check = entry[0].lower()
+        if check.find(str.lower()) > -1:
+            return donor_list[donor_list.index(entry)]
+    return
+
+def second_element(list):
+    return list[1]
+
+def report_donors():
+    temp_list = []
+    for i in range(len(donor_list)):
+        entry_donation_total = donor_total(i)
+        temp_list.append([donor_list[i][0], entry_donation_total])
+    temp_list = sorted(temp_list, key=second_element, reverse=True)
+    for donor in temp_list:
+        print(donor[0], "\t$", donor[1]) # $todo: better string formatting
+
+start_message = ('''
+Choose from one of the following actions:
+    m   Mail a Thank You letter to a selected donor
+    r   Report list of all donors, sorted by donation size
+    x   Exit the program
+''')
+
+def mailroom_script():
+
+    while True:
+
+        print(start_message)
+    
+        response = input().strip().lower()
+    
+        if response == "m":
+            print("list")
+        
+        elif response == "r":
+            print("Report of all donors, sorted by donation size:")
+            report_donors()
+
+        elif response == "x":
+            break
+    
+        else:
+            print("try again")
