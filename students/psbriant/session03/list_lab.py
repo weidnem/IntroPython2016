@@ -22,7 +22,6 @@ def series1(fruit):
     # Prompts user for an additional fruit
     new_fruit = input("Please enter another fruit ")
     fruit.append(new_fruit)
-    # Add some cool text formatting
     print(fruit)
     number = int(input("Please enter a number "))
     # Ask about 'one is first basis'.
