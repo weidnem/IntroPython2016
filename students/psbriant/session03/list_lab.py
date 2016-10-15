@@ -2,11 +2,15 @@
 
 """
 Name: Paul Briant
-Date: 10/11/16
+Date: 10/18/16
 Class: Introduction to Python
-LAB: List Lab
+Session: 03
+Assignment List Lab
 
 Description:
+This module contains four unique list manipulation methods. Each method takes
+a list of four fruit and modifys it. The number of elements in each list is
+often increased or decreased based on user input.
 
 """
 # -------------------------------Functions--------------------------------------
