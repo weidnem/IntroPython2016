@@ -55,7 +55,8 @@ def series3(fruit):
 
     """
     for item in fruit:
-        # Make all items lowercase
+        # Make item lowercase
+        item.lower()
         # Asks the user whether they like each fruit
         preference = input("Do you like " + item + "? yes|no")
         # Checks to make sure user entered either 'yes' or 'no'
