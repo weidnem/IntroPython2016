@@ -41,7 +41,9 @@ def series1(fruit):
 
 def series2(fruit):
     """
-    Hi
+    Take in a list of strings and diplays the original list before removing the
+    last element of the list and prompting the user for a specific item to
+    remove from the list.
     """
     print(fruit)
     # Remove last element from list
@@ -98,7 +100,8 @@ def main():
     """
     # Create original list of fruit
     fruit = ["Apples", "Pears", "Oranges", "Peaches"]
-    series1(fruit)
+    # series1(fruit)
+    series2(fruit)
 
 
 if __name__ == '__main__':
