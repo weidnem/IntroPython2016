@@ -29,7 +29,7 @@ def series1(fruit):
     fruit = ["Watermelon"] + fruit
     print(fruit)
     # Inserts new fruit at beginning of list
-    fruit.insert("Pineapple", 0)
+    fruit.insert(0, "Pineapple")
     print(fruit)
     # displays all fruits beginning with the letter 'P'
     for item in fruit:
