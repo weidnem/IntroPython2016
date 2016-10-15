@@ -56,7 +56,7 @@ def series2(fruit):
 
 def series3(fruit):
     """
-    Take in a list of strings iterate through it prompting the user regarding
+    Take in a list of strings and iterate through it prompting the user regarding
     their preference for each fruit. If the user does not like the fruit, it is
     deleted from the list. If the user does not specify their preference,
     they are prompted until they do. A list of remaining fruit is displayed
@@ -81,14 +81,15 @@ def series3(fruit):
 
 def series4(fruit):
     """
-
+    Take in a list of strings and reverse each letter of each item. Display the
+    original list minus the last element and it's copy.
     """
     # Create copy of fruit
     rev_fruit = fruit[:]
-    # Iterate through copy of fruit and reverse each element
-    for item in rev_fruit:
-        # Reverse each element
-        item[::-1]
+    rev_fruit = " ".join(rev_fruit)
+    rev_fruit = rev_fruit[::-1]
+    rev_fruit = rev_fruit.split()
+    rev_fruit.reverse()
     # Delete last item in original list
     del fruit[-1]
     print(fruit, rev_fruit)
@@ -105,7 +106,8 @@ def main():
     fruit = ["Apples", "Pears", "Oranges", "Peaches"]
     # series1(fruit)
     # series2(fruit)
-    series3(fruit)
+    # series3(fruit)
+    series4(fruit)
 
 
 if __name__ == '__main__':
