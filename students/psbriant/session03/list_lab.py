@@ -41,7 +41,7 @@ def series1(fruit):
 
 def series2(fruit):
     """
-    Take in a list of strings and diplays the original list before removing the
+    Take in a list of strings and display the original list before removing the
     last element of the list and prompting the user for a specific item to
     remove from the list.
     """
@@ -56,7 +56,11 @@ def series2(fruit):
 
 def series3(fruit):
     """
-
+    Take in a list of strings iterate through it prompting the user regarding
+    their preference for each fruit. If the user does not like the fruit, it is
+    deleted from the list. If the user does not specify their preference,
+    they are prompted until they do. A list of remaining fruit is displayed
+    after the user has specified their preference for each fruit.
     """
     for item in fruit:
         # Asks the user whether they like each fruit
