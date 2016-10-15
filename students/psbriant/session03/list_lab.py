@@ -108,7 +108,7 @@ def series4(fruit):
 
 def main():
     """
-
+    Calls to each series are made using the fruit list as input.
     """
     # Create original list of fruit
     fruit = ["Apples", "Pears", "Oranges", "Peaches"]
