@@ -24,7 +24,8 @@ def series1(fruit):
     print(fruit)
     number = input("Please enter a number ")
     # Ask about 'one is first basis'.
-    print(number, fruit(number))
+
+    print(number, fruit[number])
     # Adds new fruit to beginning of list using concatenation
     fruit = ["Watermelon"] + fruit
     print(fruit)
