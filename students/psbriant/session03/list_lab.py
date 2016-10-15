@@ -22,9 +22,8 @@ def series1(fruit):
     fruit.append(new_fruit)
     # Add some cool text formatting
     print(fruit)
-    number = input("Please enter a number ")
+    number = int(input("Please enter a number "))
     # Ask about 'one is first basis'.
-
     print(number, fruit[number])
     # Adds new fruit to beginning of list using concatenation
     fruit = ["Watermelon"] + fruit
