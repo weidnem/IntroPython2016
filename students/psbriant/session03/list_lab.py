@@ -61,6 +61,12 @@ def series3(fruit):
     deleted from the list. If the user does not specify their preference,
     they are prompted until they do. A list of remaining fruit is displayed
     after the user has specified their preference for each fruit.
+
+    Questions:
+    Best way to ensure each element is lowercase.
+    How to avoid skipping elements when the element before them is deleted.
+    Best way of ending the while loop.
+    Correctness of using break and when not to use break.
     """
     for item in fruit:
         # Asks the user whether they like each fruit
