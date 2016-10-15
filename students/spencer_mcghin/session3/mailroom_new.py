@@ -38,7 +38,9 @@ def check_donation():
         add_amount()
     else:
 
+
 """Print email to terminal"""
+
 
 def print_email():
         print("Hello %r, Thank you so much for your generous donation to our very charitable organization." '\n'
@@ -48,3 +50,8 @@ def print_email():
               '\n'
               "Spencer McGhin")
 
+
+"""Print donor donation report"""
+
+
+def print_report():
