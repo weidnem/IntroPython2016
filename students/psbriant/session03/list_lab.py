@@ -14,7 +14,9 @@ Description:
 
 def series1(fruit):
     """
-
+    Take in a list of strings and displays the original list before prompting
+    the user to add additonal items to the list. The original list is modified
+    based on user input and insertions to the beginning of the list.
     """
     print(fruit)
     # Prompts user for an additional fruit
