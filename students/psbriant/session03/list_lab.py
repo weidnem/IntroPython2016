@@ -59,16 +59,15 @@ def series3(fruit):
 
     """
     for item in fruit:
-        # Make item lowercase
-        item.lower()
         # Asks the user whether they like each fruit
-        preference = input("Do you like " + item + "? yes|no")
+        preference = input("Do you like " + item.lower() + "? yes|no ")
         # Checks to make sure user entered either 'yes' or 'no'
         if preference != 'no' and preference != 'yes':
             # Repeatedly prompts user to enter 'yes' or 'no' until they do.
             while True:
-                preference = input("Please answer with either yes or no")
+                preference = input("Please answer with either yes or no ")
                 if preference == 'yes' or preference == 'no':
+                    # Ask about using break instead of False
                     return False
         if preference == 'no':
             # remove item from fruit
@@ -101,7 +100,8 @@ def main():
     # Create original list of fruit
     fruit = ["Apples", "Pears", "Oranges", "Peaches"]
     # series1(fruit)
-    series2(fruit)
+    # series2(fruit)
+    series3(fruit)
 
 
 if __name__ == '__main__':
