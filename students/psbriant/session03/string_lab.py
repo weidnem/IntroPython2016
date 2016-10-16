@@ -6,8 +6,7 @@ Session: 03
 Assignment String Lab
 
 Description:
-
-
+This program explores various ways to format strings.
 """
 # -------------------------------Functions--------------------------------------
 
