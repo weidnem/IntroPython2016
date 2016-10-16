@@ -18,8 +18,55 @@ def print_report():
     for i in sort_l:
         print('{:15} {:6} {:6}'.format(i[0],i[1],i[2]))
 
+def proc_donation(d_name):
+    amt = ''
+    while amt == True:
+        try:
+            donation = int(input('Enter donation amount: '))
+        except ValueError:
+            continue
+        else:
+            if d_name in donor_list:
+                donor_list[d_name].append(donation)
+            elif d_name not in donor_list:
+                donor_list[name] = [donation]
+            amt = False
+        return donation
+
+
+
 def send_thanks():
-    print("This will write a thank you note")
+    chk = True
+    amt = True
+    while chk == True:
+        name = input('Enter name or type "list": ')
+        if name == 'list':
+            for d_names in donor_list.keys():
+                print(d_names)
+        # elif name in donor_list or name not in donor_list:
+        #     proc_donation(name)
+        #     chk = False
+        elif name in donor_list:
+            while amt == True:
+                try:
+                    donation = int(input('Enter donation amount: '))
+                except ValueError:
+                    continue
+                else:
+                    donor_list[name].append(donation)
+                    amt = False
+                    chk = False
+        elif name not in donor_list:
+            while amt == True:
+                try:
+                    donation = int(input('Enter donation amount: '))
+                except ValueError:
+                    continue
+                else:
+                    donor_list[name] = [donation]
+                    amt = False
+                    chk = False
+    print('Thank you {} for your donation of ${}.'.format(name,donation))
 
 # here is where triple quoted strings can be helpful
 msg = """
