@@ -8,15 +8,15 @@ donor_list = {'Shrek':[5,10], 'Donkey':[23,101,4], 'Princess Fiona':[7,28],
 'Puss in Boots':[36,12,10], 'Gingerbread Man':[12,34]}
 
 def print_report():
-    print('### Donor Report ###')
-    print('{:16} {:6} {:6}'.format('Name','Total','Donations'))
+    print('{:^33}'.format('### Donor Report ###'))
+    print('{:25} {:10} {:10}'.format('Name','Total','Donations'))
     sort_l = []
     for name, donations in donor_list.items():
         sort_l.append((name, sum(donations), len(donations)))
     
     sort_l = sorted(sort_l, key=lambda donations: donations[1], reverse=True)
     for i in sort_l:
-        print('{:15} {:6} {:6}'.format(i[0],i[1],i[2]))
+        print('{:20} {:10} {:10}'.format(i[0],i[1],i[2]))
 
 def proc_donation(d_name):
     amt = True
@@ -34,12 +34,11 @@ def proc_donation(d_name):
             print('Thank you {} for your donation of ${}!!!'.format(d_name,donation))
             print()
             amt = False
-        return
+    return
 
 
 def send_thanks():
     chk = True
-    # amt = True
     while chk == True:
         name = input('Enter name or type "list": ')
         if name == 'list':
