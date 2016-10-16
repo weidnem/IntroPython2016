@@ -55,3 +55,5 @@ def print_email():
 
 
 def print_report():
+    for donor in donors:
+        sum(donors.values())
