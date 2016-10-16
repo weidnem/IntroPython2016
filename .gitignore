@@ -82,6 +82,9 @@ celerybeat-schedule
 venv/
 ENV/
 
+# ide stuff
+.idea/*
+
 # Spyder project settings
 .spyderproject
 
@@ -90,3 +93,5 @@ ENV/
 
 # ide stuff
 .idea/*
+.idea
+
