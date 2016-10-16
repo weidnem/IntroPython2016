@@ -23,7 +23,7 @@ def str_format1(num_list):
 
 def str_format2(str_tuple):
     """
-
+    Takes a dynamic tuple of ints and outputs them with some added formating.
     """
     t_len = len(str_tuple)
     f_string = '{:d}, ' * t_len
