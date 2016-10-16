@@ -74,6 +74,57 @@ Choose from one of the following actions:
     x   Exit the program
 ''')
 
+def add_donation():
+    target_donor = []
+    print('''
+    First you'll need to select a donor to add a donation to.
+    Enter a full or partial name to search for:
+    ''')
+    response = input().strip().lower()
+    target_donor = find_donor(response)
+    if target_donor != False:
+        print("Add donation to:", target_donor[0])
+        print("Is this correct? (y/n)")
+        correct_response = input().strip().lower()
+        if correct_response == "y":
+            print('''
+            Add a donation for {}
+            Enter the donation amount:
+            '''.format(response))
+            donation = input().strip()
+            if donation.isdigit() == True:
+                index = donor_list.index(target_donor)
+                donor_list[index][1].append(int(donation))
+                return
+            else:
+                print("Sorry, but {} is not a number".format(response))
+                return
+
+def add_donor():
+    print('''
+    Enter the full name as Firstname Lastname
+    Example: Alexander Hamilton
+    ''')
+    response = input().strip()
+    print('''
+    {}
+    Is this correct? y/n
+    '''.format(response))
+    correct_response = input().strip().lower()
+    if correct_response == "y":
+        donor_list.append([response])
+        print('''
+        {} Added
+        Enter the donation amount:
+        '''.format(response))
+        donation = input().strip()
+        if donation.isdigit() == True:
+            donor_list[-1].append([int(donation)])
+            return
+    else:
+        print("Sorry, but {} is not a number".format(response))
+        return
+
 def mail_message(donor_info):
     donations = 0
     for entry in donor_info[1]:
@@ -129,8 +180,16 @@ def main():
         print(start_message)
     
         response = input().strip().lower()
-    
-        if response == "m":
+
+        if response == "a":
+            print("This will allow you to add a new donor with their inital donation")
+            add_donor()
+        
+        elif response == "d":
+            print("This will allow you to enter a new donation for an existing donor")
+            add_donation()
+        
+        elif response == "m":
             print("This will allow you to pick a donor, then send a Thank You message")
             mail_thank_you()
         
