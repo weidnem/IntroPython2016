@@ -1,5 +1,8 @@
 #!/usr/bin/env python3
 
+import numpy
+
+
 """Dictionary of Donors and Amounts Donated"""
 
 donors = {"Nick Padgett": [12312, 34230, 38593],
@@ -51,9 +54,23 @@ def print_email():
               "Spencer McGhin")
 
 
-"""Print donor donation report"""
+"""Print donor donation report functions"""
 
 
 def print_report():
     for donor in donors:
         sum(donors.values())
+
+
+def print_donation_total():
+    for donor, donations in sorted(donors.items()):
+        print(sum(donations))
+
+
+def print_num_donations():
+    for donor, donations in sorted(donors.items()):
+        print(len(donations))
+
+
+def print_avg_donation:
+    print(int(numpy.mean(donations)))
