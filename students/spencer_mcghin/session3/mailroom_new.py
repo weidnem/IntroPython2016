@@ -18,6 +18,8 @@ Functions for program
 
 """
 
+"""Send a thank you functions"""
+
 """Print donor list"""
 
 def print_donor_list():
@@ -58,8 +60,7 @@ def print_email():
 
 
 def print_report():
-    for donor in donors:
-        sum(donors.values())
+
 
 
 def print_donation_total():
@@ -73,4 +74,5 @@ def print_num_donations():
 
 
 def print_avg_donation:
-    print(int(numpy.mean(donations)))
+    for donor, donations in sorted(donors.items()):
+        print(int(numpy.mean(donations)))
