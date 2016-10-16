@@ -14,10 +14,17 @@ Description:
 
 def str_format1(num_list):
     """
-
+    Takes a list of three ints as input pads the first, rounds the second and
+    converts the third to scientific notation.
     """
     print("File {:03d}: \t{:.2f}, {:.0e}".format(num_list[0], num_list[1],
           num_list[2]))
+
+
+def str_format2():
+    """
+
+    """
 
 
 def main():
