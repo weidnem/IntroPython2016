@@ -22,7 +22,7 @@ def str_format1(num_list):
 
 def main():
     """
-
+    Tests each method to verify specified parameters return expected output.
     """
     num_list = [2, 123.4567, 10000]
     str_format1(num_list)
