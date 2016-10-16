@@ -29,11 +29,25 @@ donor_list = [
 
 # ===== Utilities =====
 
-def donor_total(index):
-    donations = 0
+def donor_name_length():
+    length_name = 0
+    for entry in donor_list:
+        if len(entry[0]) > length_name:
+            length_name = len(entry[0])
+    return length_name
+
+def donor_average(index):
+    total_donations = 0
     for entry in donor_list[index][1]:
-        donations += entry
-    return donations
+        total_donations += entry
+        average_donation = total_donations / len(donor_list[index][1])
+    return average_donation
+
+def donor_total(index):
+    total_donations = 0
+    for entry in donor_list[index][1]:
+        total_donations += entry
+    return total_donations
     
 def list_donors():
     for entry in donor_list:
@@ -53,6 +67,8 @@ def second_element(list):
 
 start_message = ('''
 Choose from one of the following actions:
+    a   Add a new donor
+    d   Enter a new donation from an existing donor
     m   Mail a Thank You letter to a selected donor
     r   Report list of all donors, sorted by donation size
     x   Exit the program
@@ -75,6 +91,7 @@ def mail_message(donor_info):
     Carl
     '''
     print(form.format(name=first_name, amount=donations))
+    return
 
 def mail_thank_you():
     target_donor = []
@@ -97,11 +114,13 @@ def mail_thank_you():
     
 def report_donors():
     temp_list = []
+    name_length = donor_name_length()
     for i in range(len(donor_list)):
-        temp_list.append([donor_list[i][0], donor_total(i)])
+        temp_list.append([donor_list[i][0], donor_total(i), donor_average(i)])
     temp_list = sorted(temp_list, key=second_element, reverse=True)
+    print("{}\t{}\t{}".format("Donor Name".ljust(name_length), "Total".rjust(10), "Average".rjust(10)))
     for donor in temp_list:
-        print(donor[0], "\t$", donor[1]) # $todo: better string formatting
+        print("{}\t{:10.2f}\t{:10.2f}".format(donor[0].ljust(name_length), donor[1], donor[2]))
 
 def main():
 
