@@ -36,10 +36,10 @@ def reverse_list(d):
 
 def shell_game(e):
     """not equipped for handling lists not divisible by 3, how?"""
-    thirds = int(len(e)/3)
+    thirds = len(e)//3
     first = e[:thirds]
     middle = e[thirds:thirds*2]
-    last = e[(thirds*2)+1:len(e)]
+    last = e[thirds*2:]
     print(middle + last + first)
 
 
