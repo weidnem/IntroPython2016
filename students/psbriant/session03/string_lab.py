@@ -21,20 +21,27 @@ def str_format1(num_list):
           num_list[2]))
 
 
-def str_format2():
+def str_format2(str_tuple):
     """
 
     """
+    t_len = len(str_tuple)
+    f_string = '{:d}, ' * t_len
+    print("The {:d} numbers are: ".format(t_len) + f_string.format(*str_tuple))
 
 
 def main():
     """
     Tests each method to verify specified parameters return expected output.
     """
-    num_list = [2, 123.4567, 10000]
-    str_format1(num_list)
-    str_format1([10, 1.999, 100])
-    str_format1([100, 0.117, 567])
+    # num_list = [2, 123.4567, 10000]
+    # str_format1(num_list)
+    # str_format1([10, 1.999, 100])
+    # str_format1([100, 0.117, 567])
+    t1 = (1, 2, 3)
+    str_format2(t1)
+    t2 = (1, 2, 3, 4, 5)
+    str_format2(t2)
 
 if __name__ == '__main__':
     main()
