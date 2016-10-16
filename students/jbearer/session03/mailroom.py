@@ -19,7 +19,7 @@ def print_report():
         print('{:15} {:6} {:6}'.format(i[0],i[1],i[2]))
 
 def proc_donation(d_name):
-    amt = ''
+    amt = True
     while amt == True:
         try:
             donation = int(input('Enter donation amount: '))
@@ -29,46 +29,27 @@ def proc_donation(d_name):
             if d_name in donor_list:
                 donor_list[d_name].append(donation)
             elif d_name not in donor_list:
-                donor_list[name] = [donation]
+                donor_list[d_name] = [donation]
+            print()
+            print('Thank you {} for your donation of ${}!!!'.format(d_name,donation))
+            print()
             amt = False
-        return donation
-
+        return
 
 
 def send_thanks():
     chk = True
-    amt = True
+    # amt = True
     while chk == True:
         name = input('Enter name or type "list": ')
         if name == 'list':
             for d_names in donor_list.keys():
                 print(d_names)
-        # elif name in donor_list or name not in donor_list:
-        #     proc_donation(name)
-        #     chk = False
-        elif name in donor_list:
-            while amt == True:
-                try:
-                    donation = int(input('Enter donation amount: '))
-                except ValueError:
-                    continue
-                else:
-                    donor_list[name].append(donation)
-                    amt = False
-                    chk = False
-        elif name not in donor_list:
-            while amt == True:
-                try:
-                    donation = int(input('Enter donation amount: '))
-                except ValueError:
-                    continue
-                else:
-                    donor_list[name] = [donation]
-                    amt = False
-                    chk = False
-    print('Thank you {} for your donation of ${}.'.format(name,donation))
+        elif name in donor_list or name not in donor_list:
+            proc_donation(name)
+            chk = False
 
-# here is where triple quoted strings can be helpful
+
 msg = """
 What would you like to do?
 To send a thank you: type "s"
