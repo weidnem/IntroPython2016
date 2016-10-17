@@ -48,6 +48,15 @@ def send_ty(donors):
     """).format(donors[full_name[0]], donors[full_name[-1]])
 
 
+def add_donor(name, donors, amount):
+    """
+
+    """
+    for item in donors:
+        if name == item[0]:
+            item[1].append(amount)
+    return donors
+
 # ==============================================================================
 
 
@@ -69,10 +78,22 @@ def main():
     To exit: type "x"
     """
 
-    # Provide options and propmt the user for a response.
-    action = input(message)
-
-
+    action = ''
+    # Continue to prompt user until user enters 'x'
+    while True:
+        # Provide options and prompt the user for a response.
+        print(message)
+        # Remove any additional white space.
+        action = input('==> ').strip()
+        # Determine action to take.
+        if action == 's':
+            send_ty(donors)
+        elif action == 'p':
+            print_report(donors)
+        elif action == 'x':
+            break
+        else:
+            print('please type "s", "p", or "x"')
 
 
 if __name__ == '__main__':
