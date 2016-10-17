@@ -21,7 +21,22 @@ Choose an option:==>
 """
 
 def sendThankyou():
-    pass
+    nameprompt = "Please Enter a Donor Name"
+    response = input(nameprompt).strip
+    if response == 'list':
+        listDonors()
+    else:
+        if response not in donors.keys():
+            donors[response] = '{1: 0}'
+        else:
+            try:
+            newdonation = int(input("Enter Donation Amount"))
+            except ValueError:
+                print("Please enter an integer")
+                continue
+            donors[response].update({'latest':newdonation})
+            print("Dear %s: Thanks for the money bro") % (response)
+
 
 def createReport():
     pass
