@@ -62,17 +62,23 @@ def print_email():
 def print_report():
 
 
+# Print total donor donations #
 
 def print_donation_total():
     for donor, donations in sorted(donors.items()):
-        print(sum(donations))
+        print([sum(donations)])
 
+# Print total number of donations #
 
 def print_num_donations():
     for donor, donations in sorted(donors.items()):
-        print(len(donations))
+        print([len(donations)])
 
+# Print average donation #
 
-def print_avg_donation:
+def print_avg_donation():
     for donor, donations in sorted(donors.items()):
-        print(int(numpy.mean(donations)))
+        print([int(numpy.mean(donations))])
+
+
+# Output info for tabulate format #
