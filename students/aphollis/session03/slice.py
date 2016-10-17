@@ -42,10 +42,6 @@ def shell_game(e):
     last = e[thirds*2:]
     print(middle + last + first)
 
-
-
-
-
 start_end_reverse([1,3,4,5,6,7,8,8,9,9])
 rem_every_other([1,3,4,5,6,7,8,8,9,9])
 rem_stuff([1,3,4,5,6,7,8,8,9,9])
