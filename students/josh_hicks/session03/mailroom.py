@@ -36,6 +36,7 @@ def do_thankyou():
                 break
             except Exception as e:
                 print("Invalid input")
+        add_donation(donor_name, donation_amount)
 
 
 def show_donorlist():
@@ -44,6 +45,17 @@ def show_donorlist():
         joined_contributions = ','.join(map(str, contributions))
         print("{0}: {1}".format(donor, joined_contributions))
     print()
+
+
+def add_donation(donor, amount):
+    try:
+        contribution_list = donor_list[donor]
+        contribution_list.append(amount)
+        print("Donation recorded successfully!")
+        print("{0}: {1}".format(donor, ','.join(map(str, contribution_list))))
+        print()
+    except Exception as e:
+        print("Donor not found")
 
 
 if __name__ == '__main__':
