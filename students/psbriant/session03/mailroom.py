@@ -37,25 +37,26 @@ def send_ty(donors):
     # Verify amount is a number
     if not amount.isnumeric():
         amount = input("How much would you like to donate? ")
+    d_index = add_donor(full_name, donors)
     # Append to donor in donors
-    donors[full_name].append(amount)
+    donors[d_index][1].append(amount)
     # Display thank you
     print("""
     Dear {},
-    Thank you for your generous donation of ${d:}!
+    Thank you for your generous donation of ${}!
     Your contribution to this organization will greatly
     impact our efforts to complete our mission.
-    """).format(donors[full_name[0]], donors[full_name[-1]])
+    """.format(donors[d_index][0], donors[d_index][1][-1]))
 
 
-def add_donor(name, donors, amount):
+def add_donor(name, donors):
     """
 
     """
     for item in donors:
-        if name == item[0]:
-            item[1].append(amount)
-    return donors
+        if name in item:
+            d_index = item.index(name)
+    return d_index
 
 # ==============================================================================
 
