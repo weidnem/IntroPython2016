@@ -18,4 +18,5 @@ def rot13(s):
 
 
 if __name__ == '__main__':
-    assert rot13("Zntargvp sebz bhgfvqr arne pbeare") == "Magnetic from outside near corner"
+    assert rot13("Zntargvp sebz bhgfvqr arne pbeare") == "Magnetic from outside\
+                                                         near corner"
