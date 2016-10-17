@@ -12,10 +12,14 @@ donors = {
             'Maples':[1.50, 225]
          }
 
+donations = {}
+for k, v in donors.items():
+    donations[k] = sum(v)
+
 def print_report():
     print("This will print a report")
-    for i in donors.values():
-        print(sum(i))
+    for i in donations:
+        print(i, donations[i])
 
 
 def send_thanks():
