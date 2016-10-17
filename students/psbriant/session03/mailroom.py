@@ -17,6 +17,24 @@ def print_report(donors):
     """
 
     """
+    #iterate through donors
+    for item in donors:
+        # Name, total donated, number of donations and average donation amount.
+        print(item[0], item[1])
+
+
+def sum_d(donors):
+    """
+
+    """
+    total_list = []
+    d_total = 0
+    for item in donors:
+        for d in item[1]:
+            d_total += d
+        total_list.append(d_total)
+    return total_list
+
 
 
 
