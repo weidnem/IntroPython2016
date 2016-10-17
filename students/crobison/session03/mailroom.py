@@ -4,13 +4,23 @@
 
 #!/usr/bin/env python
 
+donors = {
+            'Smith':[100, 125, 100],
+            'Galloway':[50],
+            'Williams':[22, 43, 40, 3.25],
+            'Cruz':[101],
+            'Maples':[1.50, 225]
+         }
 
 def print_report():
     print("This will print a report")
+    for i in donors.values():
+        print(sum(i))
 
 
 def send_thanks():
     print("This will write a thank you note")
+
 
 # here is where triple quoted strings can be helpful
 msg = """
