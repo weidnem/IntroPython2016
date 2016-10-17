@@ -48,6 +48,75 @@ for i in fruits:
     if i[0] == 'P':
         print(i)
 
+# Display the list.
+print("Here's the current list of fruits: ")
+for i in fruits:
+    print(i)
+
+# Remove the last fruit from the list.
+print("Now, we'll remove the last item. ")
+last_item = len(fruits)-1
+del fruits[last_item]
+
+# Display the list.
+print("Here's the updated list of fruits: ")
+for i in fruits:
+    print(i)
+
+# Ask the user for a fruit to delete and find it and delete it.
+response = input("Which item would you like removed? ")
+fruits.remove(response)
+print("Done - here's the current list: ")
+for i in fruits:
+    print(i)
+
+# Ask the user for input displaying a line like “Do you like apples?”
+# for each fruit in the list (making the fruit all lowercase).
+# For each “no”, delete that fruit from the list.
+# For any answer that is not “yes” or “no”, prompt the user to answer with one of those two values (a while loop is good here):
+# Display the list.
+
+list_count = 0
+while list_count < len(fruits):
+    response = input("Do you like " + fruits[list_count] + "? y/n:")
+    if response == 'n':
+        del fruits[list_count]
+        #list_count += 1
+    elif response == 'y':
+        list_count += 1
+    else:
+        print("Please answer only 'y' or 'n'")
+
+print("Okay then, here are the fruits you do like: ")
+for i in fruits:
+    print(i)
+
+# Make a copy of the list and reverse the letters in each fruit in the copy.
+print("Here's the currently list backward: ")
+back_fruit = fruits
+for i in back_fruit:
+    print(i[::-1])
+
+# Delete the last item of the original list.
+# Display the original list and the copy.
+print("Deleting last item of original list: ")
+del fruits[-1]
+print("Here's the updated original list: ")
+for i in fruits:
+    print(i)
+
+print("And here's the copy: ")
+for i in back_fruit:
+    print(i)
+
+
+
+
+
+
+
+
+
 
 
 
