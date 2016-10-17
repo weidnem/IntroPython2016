@@ -20,23 +20,23 @@ Functions for program
 
 """Send a thank you functions"""
 
-"""Print donor list"""
+# Print donor list #
 
 def print_donor_list():
     for donor, donation in donors.items():
         print(donor)
 
-"""Add donor name to list"""
+# Add donor name to list #
 
 def add_donor():
     donors.update(# need donor name variable here #)
 
-"""Add donation amount to new donor"""
+# Add donation amount to new donor #
 
 def add_amount():
     donors.update({# add_donor variable : amount_input variable #})
 
-"""Vefify donation amount is an integer"""
+# Verify donation amount is an integer #
 
 def check_donation():
     while isinstance( # input #, int):
@@ -44,7 +44,7 @@ def check_donation():
     else:
 
 
-"""Print email to terminal"""
+# Print email to terminal #
 
 
 def print_email():
