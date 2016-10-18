@@ -15,13 +15,6 @@ donors = {"Nick Padgett": [12312, 34230, 38593],
 
 """ Input variables """
 
-# Input for thank you, add user, or report #
-
-user_input = input("Hey there! Please select one of the following options or type 'list' to see the current donor list '\n'"
-                   "1.) Send A Thank You Letter '\n'"
-                   "2.) Generate a Donor Report '\n"
-                   "> ")
-
 # Input for donation amount #
 
 donation_amount = input("Please enter a donation amount '\n'"
@@ -33,6 +26,22 @@ donation_amount = input("Please enter a donation amount '\n'"
 Functions for program
 
 """
+
+"""Main menu prompt"""
+
+def main():
+    menu = {}
+    menu['1']="Generate a Thank You Letter"
+    menu['2']="Generate a Donor Report"
+    menu['3']="List Current Donors"
+    print("At any time, type 'Exit' in order to exit the program, or 'Menu' to go back to the main menu.")
+    while True:
+        options=sorted(menu.keys())
+        for entry in options:
+            print(entry, menu[entry])
+
+
+
 
 """Send a thank you functions"""
 
@@ -50,7 +59,7 @@ def add_donor():
 # Add donation amount to new donor #
 
 def add_amount():
-    donors.update({user_input : donation_amount})
+    donors.update({# Variable : donation_amount})
 
 # Verify donation amount is an integer #
 
@@ -58,7 +67,7 @@ def check_donation():
     while isinstance(donation_amount, int):
         add_amount()
     else:
-
+        main()
 
 # Print email to terminal #
 
@@ -72,8 +81,13 @@ def print_email():
               "Spencer McGhin")
 
 
-"""Print donor donation report functions"""
+"""
 
+Print donor donation report functions
+
+"""
+
+# Print lists containing output of functions below #
 
 def print_report():
 # todo - print output of functions below as list for each donor
