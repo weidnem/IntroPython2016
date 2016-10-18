@@ -98,3 +98,6 @@ def print_avg_donation():
 
 
 # Output info for tabulate format #
+
+
+if __name__ == '__main__':
