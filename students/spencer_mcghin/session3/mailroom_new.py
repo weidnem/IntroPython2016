@@ -90,7 +90,7 @@ Print donor donation report functions
 # Print lists containing output of functions below #
 
 def print_report():
-# todo - print output of functions below as list for each donor
+# todo - print output of functions below as list for each donor using tabulate
 
 # Print total donor donations #
 
@@ -112,7 +112,7 @@ def print_avg_donation():
 
 
 # Output info for tabulate format #
-# todo - take output of print_report() for each user and generate table
+# todo - generate list of lists containing output from each function for each donor
 
 if __name__ == '__main__':
 # todo - write program!
