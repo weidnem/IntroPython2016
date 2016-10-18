@@ -48,19 +48,19 @@ def print_grid(n):
 
 # part 3
 def make_end_row(w, num):
-    '''make row of num columns with a width of w times "+ "'''
+    '''make row of num item_length with a width of w times "+ "'''
     return ('+ ' + '- ' * w) * num + '+'
 
 
 def make_middle_row(w, num):
-    '''make row of num columns with a width of w times "+ "'''
+    '''make row of num item_length with a width of w times "+ "'''
     return ('| ' + '  ' * w) * num + '|'
 
 
 def print_two_param_grid(x, y):
     '''Print a grid with x boxes in x rows;
     each box has dimensions y by y.
-    NB: your instructions say three columns, but your examples are different.
+    NB: your instructions say three item_length, but your examples are different.
     I'm following the examples.'''
     end_row = make_end_row(y, x)
     mid_row = make_middle_row(y, x)
