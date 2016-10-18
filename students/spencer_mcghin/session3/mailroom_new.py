@@ -76,7 +76,7 @@ def print_email():
 
 
 def print_report():
-
+# todo - print output of functions below as list for each donor
 
 # Print total donor donations #
 
@@ -98,6 +98,7 @@ def print_avg_donation():
 
 
 # Output info for tabulate format #
-
+# todo - take output of print_report() for each user and generate table
 
 if __name__ == '__main__':
+# todo - write program!
