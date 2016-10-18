@@ -19,7 +19,7 @@ donors = {"Nick Padgett": [12312, 34230, 38593],
 
 donation_amount = input("Please enter a donation amount '\n'"
                         "> ")
-
+donor_name = input()
 
 """
 
@@ -54,7 +54,7 @@ def print_donor_list():
 # Add donor name to list #
 
 def add_donor():
-    donors.update(user_input)
+    donors.update()
 
 # Add donation amount to new donor #
 
