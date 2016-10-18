@@ -9,21 +9,34 @@ ASK_NAME = "Please enter your full name"
 ASK_DONATION = "Please enter donation amount"
 
 # declare email to be sent
-EMAIL = "Thank you {:s} for your donation of amount: {:d}$"
+EMAIL = "{:25s}   {:11.2f}   {:9d}   {:12.2f}"
 
+# Sorry I copied your print_report method!
 def print_report():
     # iterate over the donor list
+    reportRows = []
     for donor,amt in donorList.items():
-        REPORT = "Donor {:s} - Contribution Amount: "
-        REPORT.format(donor)
-        amtList = donorList[donor]
-        # sorts in reverse order - latest contribution will be first
-        sortedList = amtList [::-1]
-        for sortedAmt in sortedList:
-            amtPrint = str(sortedAmt)
-            amtPrint =+ amtPrint
-            # pass
-        print(REPORT,amtPrint)
+        totalAmt = sum(amt)
+        numAmt = len(amt)
+        avgAmt = totalAmt / numAmt
+        reportRows.append((donor, totalAmt, numAmt, avgAmt))
+
+    #print the donors
+    print("-" * 66)
+    for row in reportRows:
+        print(EMAIL.format(*row))
+
+
+        # REPORT = "Donor {:s} - Contribution Amount: "
+        # REPORT.format(donor)
+        # amtList = donorList[donor]
+        # # sorts in reverse order - latest contribution will be first
+        # sortedList = amtList [::-1]
+        # for sortedAmt in sortedList:
+        #     amtPrint = str(sortedAmt)
+        #     amtPrint =+ amtPrint
+        #     # pass
+        # print(REPORT,amtPrint)
 
 
 
