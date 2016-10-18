@@ -45,17 +45,17 @@ def print_donor_list():
 # Add donor name to list #
 
 def add_donor():
-    donors.update(# need donor name variable here #)
+    donors.update(user_input)
 
 # Add donation amount to new donor #
 
 def add_amount():
-    donors.update({# add_donor variable : amount_input variable #})
+    donors.update({user_input : donation_amount})
 
 # Verify donation amount is an integer #
 
 def check_donation():
-    while isinstance( # input #, int):
+    while isinstance(donation_amount, int):
         add_amount()
     else:
 
