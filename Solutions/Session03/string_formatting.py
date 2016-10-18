@@ -11,12 +11,12 @@ This version using the format() method
 # Write a format string that will take:
 #        ( 2, 123.4567, 10000)
 #        and produce:
-#        'file_002 :   123.46, 1e+04'
+#        'file_002 :   123.46, 1.00e+04'
 #####
 
-print("file_{:03d} : {:10.2f}, {:.3g}".format(2, 123.4567, 10000))
+print("file_{:03d} : {:10.2f}, {:.2g}".format(2, 123.4567, 10000))
 
-# could use '{:.3e}' for the last one, too -- I like '%g' --
+# could use '{:.2e}' for the last one, too -- I like '%g' --
 #         it does significant figures...
 
 #######################
@@ -25,6 +25,7 @@ print("file_{:03d} : {:10.2f}, {:.3g}".format(2, 123.4567, 10000))
 
 # solution 1
 # the goal was to demonstrate dynamic building of format strings:
+
 
 def formatter(t):
     fstring = "the {:d} numbers are: ".format(len(t))
