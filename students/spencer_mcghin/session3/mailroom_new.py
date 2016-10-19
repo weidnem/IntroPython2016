@@ -31,9 +31,9 @@ Functions for program
 
 def main():
     menu = {}
-    menu['1']="Generate a Thank You Letter"
-    menu['2']="Generate a Donor Report"
-    menu['3']="List Current Donors"
+    menu['1.)']="Generate a Thank You Letter"
+    menu['2.)']="Generate a Donor Report"
+    menu['3.)']="List Current Donors"
     print("At any time, type 'Exit' in order to exit the program, or 'Menu' to go back to the main menu.")
     while True:
         options=sorted(menu.keys())
