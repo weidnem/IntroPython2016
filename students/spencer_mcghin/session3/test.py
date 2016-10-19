@@ -18,7 +18,7 @@ def print_donor_list():
 # Print total donor donations #
 
 def print_donation_total():
-    totals_results=[]
+    totals_results = []
     for donor, donations in sorted(donors.items()):
         totals_results.append((sum(donations)))
     print(totals_results)
@@ -27,7 +27,7 @@ def print_donation_total():
 # Print total number of donations #
 
 def print_num_donations():
-    num_results=[]
+    num_results = []
     for donor, donations in sorted(donors.items()):
         num_results.append(len(donations))
     print(num_results)
@@ -36,7 +36,7 @@ def print_num_donations():
 # Print average donation #
 
 def print_avg_donation():
-    avg_results=[]
+    avg_results = []
     for donor, donations in sorted(donors.items()):
         avg_results.append(int(numpy.mean(donations)))
     print(avg_results)
