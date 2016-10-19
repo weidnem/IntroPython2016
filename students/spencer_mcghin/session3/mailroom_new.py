@@ -48,7 +48,7 @@ def main():
 # Print donor list #
 
 def print_donor_list():
-    for donor, donation in donors.items():
+    for donor, donation in sorted(donors.items()):
         print(donor)
 
 # Add donor name to list #
@@ -95,20 +95,23 @@ def print_report():
 # Print total donor donations #
 
 def print_donation_total():
+    totals_results = []
     for donor, donations in sorted(donors.items()):
-        print(sum(donations))
+        totals_results.append((sum(donations)))
 
 # Print total number of donations #
 
 def print_num_donations():
+    num_results = []
     for donor, donations in sorted(donors.items()):
-        print(len(donations))
+        num_results.append(len(donations))
 
 # Print average donation #
 
 def print_avg_donation():
+    avg_results = []
     for donor, donations in sorted(donors.items()):
-        print(int(numpy.mean(donations)))
+        avg_results.append(int(numpy.mean(donations)))
 
 
 # Output info for tabulate format #
