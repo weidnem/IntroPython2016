@@ -21,7 +21,6 @@ def print_report(donors):
     """
     # list of the sum of total contributions by each donor
     total_list = sorted(sum_d(donors))
-    print(total_list)
     # iterate through donors
     for i in range(len(total_list)):
         # Name, total donated, number of donations and average donation amount.
@@ -31,7 +30,8 @@ def print_report(donors):
 
 def sum_d(donors):
     """
-
+    Takes in a multi dimensional list of donors and contributions and returns
+    a list containing total amount donated, donor name and number of donations.
     """
     total_list = []
 
@@ -45,7 +45,9 @@ def sum_d(donors):
 
 def send_ty(donors):
     """
-    This function
+    This function takes in a multi dimensional list of donors and
+    contributions, prompts for specific donor information and composes a thank
+    you letter for the specified donor.
     """
     full_name = input("Please enter your full name: ")
     if full_name == 'list':
@@ -74,7 +76,9 @@ def send_ty(donors):
 
 def add_donor(name, donors):
     """
-
+    This function takes in the full name of each donor and a multi dimensional
+    list of donors and contributions and returns the index of the name in the
+    donors list.
     """
     for item in donors:
         if name in item:
@@ -86,7 +90,9 @@ def add_donor(name, donors):
 
 def main():
     """
-
+    Displays the main interactive interface of this program. The interface
+    provides the user with options to send a thank you letter, print a report
+    and exit the interface.
     """
     donors = [['Bill Gates', [1000000, 2500000, 1800000]],
               ['Sheryl Sandberg', [200000, 100000, 130000]],
