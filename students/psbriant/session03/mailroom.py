@@ -8,22 +8,25 @@ Session: 03
 Assignment: Mailroom
 
 Description:
-
+This program creates donor statistics reports or sends thank you letters based
+on user specification.
 """
 # -------------------------------Functions--------------------------------------
 
 
 def print_report(donors):
     """
-
+    Takes in the donors list and prints a report of donors ordered least to
+    greatest in terms of historic contributions.
     """
-    #list of the sum of total contributions by each donor
-    total_list = sum_d(donors)
+    # list of the sum of total contributions by each donor
+    total_list = sorted(sum_d(donors))
+    print(total_list)
     # iterate through donors
-    for item in donors:
+    for i in range(len(total_list)):
         # Name, total donated, number of donations and average donation amount.
-        print(item[0], total_list[item[0]], len(item[1]),
-              total_list[item[0]] / len(item[1]))
+        print(total_list[i][1], total_list[i][0], total_list[i][2],
+              total_list[i][0] / total_list[i][2])
 
 
 def sum_d(donors):
@@ -31,19 +34,18 @@ def sum_d(donors):
 
     """
     total_list = []
-    d_total = 0
+
     for item in donors:
+        d_total = 0
         for d in item[1]:
             d_total += d
-        total_list.append(d_total)
+        total_list.append([d_total, item[0], len(item[1])])
     return total_list
-
-
 
 
 def send_ty(donors):
     """
-
+    This function
     """
     full_name = input("Please enter your full name: ")
     if full_name == 'list':
