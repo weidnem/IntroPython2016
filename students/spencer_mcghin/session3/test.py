@@ -9,31 +9,43 @@ donors = {"Nick Padgett": [12312, 34230, 38593],
           "Andy Rocha": [20968, 2091, 8934],
           "Beth DeSousa": [29092, 5906, 8734]}
 
+# Print donor list #
+
+def print_donor_list():
+    for donor, donation in sorted(donors.items()):
+        print(donor)
 
 # Print total donor donations #
 
 def print_donation_total():
+    totals_results=[]
     for donor, donations in sorted(donors.items()):
-        print(sum(donations))
+        totals_results.append((sum(donations)))
+    print(totals_results)
 
 
 # Print total number of donations #
 
 def print_num_donations():
+    num_results=[]
     for donor, donations in sorted(donors.items()):
-        print(len(donations))
+        num_results.append(len(donations))
+    print(num_results)
 
 
 # Print average donation #
 
 def print_avg_donation():
+    avg_results=[]
     for donor, donations in sorted(donors.items()):
-        print(int(numpy.mean(donations)))
+        avg_results.append(int(numpy.mean(donations)))
+    print(avg_results)
 
 
-def test():
-    for donor in donors:
-        print([print_donation_total(), print_num_donations(), print_avg_donation()])
+print_donor_list()
 
+print_donation_total()
 
+print_num_donations()
 
+print_avg_donation()
