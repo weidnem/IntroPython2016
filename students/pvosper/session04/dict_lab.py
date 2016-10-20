@@ -97,25 +97,3 @@ if __name__ == '__main__':
     
     print('\nand if s4 is a subset of s2 (True).')
     print(s4.issubset(s2))
-    
-
-    
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
