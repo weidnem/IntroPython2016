@@ -26,6 +26,28 @@ def part1(dict1):
     print("cake" in dict1)
     print("Mango" in dict1.values())
 
+
+def part2(dict1):
+    """
+
+    """
+
+
+def part3():
+    """
+
+    """
+    # Ints divisible by 2
+    s2 = set([2, 4, 6, 8, 10, 12, 14, 16, 18, 20])
+    # Ints divisible by 3
+    s3 = set([3, 6, 9, 12, 15, 18])
+    # Ints divisible by 4
+    s4 = set([4, 8, 12, 16, 20])
+    print(s2, s3, s4)
+    print(s3.issubset(s2))
+    print(s4.issubset(s2))
+
+
 # ==============================================================================
 
 
@@ -33,8 +55,9 @@ def main():
     """
 
     """
-    dict1 = {"name": "Chris", "city": "Seattle", "cake": "Chocolate"}
-    part1(dict1)
+    # dict1 = {"name": "Chris", "city": "Seattle", "cake": "Chocolate"}
+    # part1(dict1)
+    part3()
 
 
 if __name__ == '__main__':
