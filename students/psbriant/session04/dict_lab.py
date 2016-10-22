@@ -7,7 +7,8 @@ Session04
 LAB: Dictionaries
 
 Description:
-
+This lab explores various ways of utilizng dictionaries, sets and their
+associated methods.
 """
 # -------------------------------Import-----------------------------------------
 
@@ -16,7 +17,8 @@ Description:
 
 def part1(dict1):
     """
-
+    Explores adding, deleting, displaying and verifying values and keys in
+    dictionaries.
     """
     print(dict1)
     del dict1["cake"]
@@ -36,7 +38,7 @@ def part2(dict1):
 
 def part3():
     """
-
+    Creates three sets, displays them and determines which are subsets.
     """
     # Ints divisible by 2
     s2 = set([2, 4, 6, 8, 10, 12, 14, 16, 18, 20])
@@ -51,7 +53,8 @@ def part3():
 
 def part4():
     """
-
+    Creates a set and frozenset and displays the intersection and union of
+    both.
     """
     python_set = set(['P', 'y', 't', 'h', 'o', 'n'])
     python_set.add('i')
@@ -64,7 +67,7 @@ def part4():
 
 def main():
     """
-
+    Tests output.
     """
     # dict1 = {"name": "Chris", "city": "Seattle", "cake": "Chocolate"}
     # part1(dict1)
