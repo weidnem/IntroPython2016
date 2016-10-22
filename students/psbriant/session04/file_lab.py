@@ -24,6 +24,13 @@ def print_path():
     for f in pth.iterdir():
         print(f.absolute())
 
+
+def copy_file(file_name):
+    """
+    Takes in a file and copies it from the source to a destination.
+    """
+
+
 # ==============================================================================
 
 
