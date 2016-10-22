@@ -55,6 +55,24 @@ def read_file(file_name):
     return lines
 
 
+def list_languages(file_name):
+    """
+
+    """
+    lines = read_file(file_name)
+    languages = []
+    for line in lines:
+        strs = line.split(':')[1]
+        lang = strs.split(',')
+        for item in lang:
+            item.strip()
+            if item not in languages:
+                languages.append(item)
+    return languages
+
+
+
+
 # ==============================================================================
 
 
