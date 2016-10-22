@@ -23,21 +23,10 @@ file_new.close()
 
 # advanced: make it work for any size file: i.e. don’t read
 # the entire contents of the file into memory at once.
-file = open('file_lab01.txt', 'r')
-file_new = open('file_lab02.txt', 'w')
-file_text = file.readline()
-for line in file_text:
-    file_new.write(line)
-    line = file.readline()
-file.close()
-file_new.close()
+with open('file_lab01.txt','r') as r, open('file_lab02.txt', 'w') as w:
+    for line in r:
+        w.write(line)
+r.close()
+w.close()
 
-# not working correctl, second try:
-print('second try:')
 
-file_new = open('file_labe02.txt', 'w')
-with open('file_lab01.txt', 'r') as f:
-    for line in f:
-        file_text = f.readline()
-        file_new.write(line)
-file_new.close()
