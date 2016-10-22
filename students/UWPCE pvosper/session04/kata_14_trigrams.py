@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
 
+'''
+Generate text based on trigrams within a source file.
+'''
+
 import random
 
 # text_string = '''
@@ -9,10 +13,12 @@ import random
 # of individual words that can follow each two word sequence in the document. 
 # '''
 
+# Read in file
 temp_file = open('sherlock_partial.txt')
 text_string = temp_file.read()
 temp_file.close()
 
+# Create list
 text_list = text_string.split()
 
 # Strip punctuation ,. (but not apostrophe '?)
@@ -33,9 +39,29 @@ for i in range(len(text_list)-2):
     val = [text_list[i+2]]
     trigrams.setdefault(key, []).append(val)
 
-# seed = random.randint(0, len(trigrams))
-# print(trigrams[seed])
-print(random.choice(list(trigrams.keys())))
+def pick_value(val_list):
+    # random includes upper range value
+    return val_list[random.randint(0, len(val_list) - 1)]
 
 if __name__ == '__main__':
-    print('\n=== MAIN ===')
+    print('\n=== MAIN ===\n')
+
+seed = random.choice(list(trigrams.keys()))
+print("seed = ", seed)
+print("trigrams[seed] = ", trigrams[seed])
+
+print("next word: ", pick_value(trigrams[seed])[0])
+
+s = seed + " " + pick_value(trigrams[seed])[0]
+
+print(s)
+
+sl = s.split()
+
+print(sl)
+
+next_seed = sl[-2] + " " + sl[-1]
+
+print(next_seed)
+
+print(trigrams[next_seed])
