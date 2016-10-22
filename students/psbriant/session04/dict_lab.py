@@ -55,7 +55,8 @@ def part4():
     """
     python_set = set(['P', 'y', 't', 'h', 'o', 'n'])
     python_set.add('i')
-    print(python_set)
+    fs = frozenset(['m', 'a', 'r', 'a', 't', 'h', 'o', 'n'])
+    print(python_set.union(fs), python_set.intersection(fs))
 
 
 # ==============================================================================
