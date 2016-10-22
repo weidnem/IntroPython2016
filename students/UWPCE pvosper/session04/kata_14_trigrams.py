@@ -18,19 +18,34 @@ sentance_list = []
 
 # Read in file
 temp_file = open('sherlock_partial.txt')
-text_string = temp_file.read()
+text_string = temp_file.read().replace('\n', ' ')
 temp_file.close()
+
+# This is crude
+text_string = text_string.lower()
+text_string = text_string.replace('"', '')
+text_string = text_string.replace(',', '')
+text_string = text_string.replace('.', '')
+text_string = text_string.replace('?', '')
+text_string = text_string.replace('-', '')
+text_string = text_string.replace(':', '')
+text_string = text_string.replace(';', '')
+text_string = text_string.replace("'", '')
+text_string = text_string.replace('  ', ' ')
+text_string = text_string.replace(' i ', ' I ')
+text_string = text_string.replace(' holmes ', ' Holmes ')
 
 # Create list
 text_list = text_string.split()
 
 # Strip punctuation ,. (but not apostrophe '?)
-for i, entry in enumerate(text_list):
-    temp_string = ''
-    for char in entry:
-        if char.isalpha():
-            temp_string = temp_string + char.lower()
-    text_list[i] = temp_string
+# . , " ? <double space>
+# for i, entry in enumerate(text_list):
+#     temp_string = ''
+#     for char in entry:
+#         if char.isalpha():
+#             temp_string = temp_string + char.lower()
+#     text_list[i] = temp_string
 
 # In trigrams dictionary, each value is a list of lists
 trigrams = {}
@@ -50,20 +65,20 @@ def make_sentance():
     sentance = ""
     seed = random.choice(list(trigrams.keys()))
     sentance_list = seed.split()
-    for i in range(50):
-#     while trigrams[seed]:        
+    for i in range(random.randint(8, 72)):
         seed = sentance_list[-2] + " " + sentance_list[-1]
         sentance_list.append(pick_value(trigrams[seed])[0])
     for word in sentance_list:
         sentance = sentance + " " + word
-    print("sentance: ", sentance)
+    sentance = sentance[1].upper() + sentance[2:] + '.'
+    print(sentance)
     return sentance
 
 if __name__ == '__main__':
     print('\n=== MAIN ===\n')
     
     make_sentance()
-    print(sentance)
 
 # While true until lookup failer; then end sentence and start another
 # Create list of capitalized works - from capitals mid-sentence
+# I
