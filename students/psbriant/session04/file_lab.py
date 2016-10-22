@@ -57,7 +57,9 @@ def read_file(file_name):
 
 def list_languages(file_name):
     """
-
+    Questions:
+    What is the best way to get the path of desired file?
+    Should we use a dictionary for the advanced segment?
     """
     lines = read_file(file_name)
     languages = []
@@ -69,8 +71,6 @@ def list_languages(file_name):
             if item not in languages:
                 languages.append(item)
     return languages
-
-
 
 
 # ==============================================================================
