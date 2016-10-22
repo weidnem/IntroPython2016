@@ -49,6 +49,15 @@ def part3():
     print(s4.issubset(s2))
 
 
+def part4():
+    """
+
+    """
+    python_set = set(['P', 'y', 't', 'h', 'o', 'n'])
+    python_set.add('i')
+    print(python_set)
+
+
 # ==============================================================================
 
 
@@ -58,7 +67,8 @@ def main():
     """
     # dict1 = {"name": "Chris", "city": "Seattle", "cake": "Chocolate"}
     # part1(dict1)
-    part3()
+    # part3()
+    part4()
 
 
 if __name__ == '__main__':
