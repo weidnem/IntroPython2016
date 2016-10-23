@@ -66,8 +66,11 @@ def list_languages():
     lines = r_file('../../../Examples/Session01/students.txt')
     languages = []
     for line in lines:
-        strs = line.split(':')[1]
-        lang = strs.split(',')
+        strs = line.split(':')
+        # print(strs)
+        print(strs[1])
+        lang_str = strs.pop(1)
+        lang = lang_str.split(',')
         for item in lang:
             item.strip()
             if item not in languages:
