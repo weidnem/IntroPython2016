@@ -32,20 +32,22 @@ def part1(dict1):
 
 def part2(dict1):
     """
-
+    Takes in a dictionary and returns the count of the letter 't' in each
+    value.
     """
+    # Creat a new dictionary with identical values to dict1
     new_dict = dict1
 
     # Iterate through keys
     for key in dict1:
         count = 0
         # Iterate through values
-        for char in dict.value():
+        for char in dict1[key]:
             if char == 't':
-                count += 0
+                count += 1
         # Add count to each key
         new_dict[key] = count
-    print(new_dict)
+    return new_dict
 
 
 def part3():
@@ -81,10 +83,11 @@ def main():
     """
     Tests output.
     """
-    # dict1 = {"name": "Chris", "city": "Seattle", "cake": "Chocolate"}
+    dict1 = {"name": "Chris", "city": "Seattle", "cake": "Chocolate"}
     # part1(dict1)
+    print(part2(dict1))
     # part3()
-    part4()
+    # part4()
 
 
 if __name__ == '__main__':
