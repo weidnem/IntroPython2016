@@ -29,18 +29,16 @@ def print_path():
         print(f.absolute())
 
 
-def copy_file(file_name):
+def copy_file(input_file, output_file):
     """
     Takes in a file and copies it from the source to a destination.
 
     Questions:
     Correct method of specifying directory?
-    Intended way of copying file?
     """
-    lines = read_file(file_name)
-    outfile = open(file_name, 'wb')
-    for line in lines:
-        outfile.write(line)
+    lines = read_file(input_file)
+    with open(output_file, 'wb') as outfile:
+        outfile.write(lines)
     outfile.close()
 
 
@@ -49,8 +47,8 @@ def read_file(file_name):
     Takes in a file as the only argument, reads it and returns each line as a
     list of strings.
     """
-    f = open(file_name, 'rb')
-    lines = f.readlines()
+    with open(file_name, 'rb') as f:
+        lines = f.read()
     f.close()
     return lines
 
