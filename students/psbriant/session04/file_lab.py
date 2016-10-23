@@ -32,9 +32,6 @@ def print_path():
 def copy_file(input_file, output_file):
     """
     Takes in a file and copies it from the source to a destination.
-
-    Questions:
-    Correct method of specifying directory?
     """
     lines = read_file(input_file)
     with open(output_file, 'wb') as outfile:
@@ -53,13 +50,20 @@ def read_file(file_name):
     return lines
 
 
-def list_languages(file_name):
+def r_file(file_name):
+    with open(file_name, 'r') as f:
+        lines = f.readlines()
+    f.close()
+    return lines
+
+
+def list_languages():
     """
     Questions:
     What is the best way to get the path of desired file?
     Should we use a dictionary for the advanced segment?
     """
-    lines = read_file(file_name)
+    lines = r_file('../../../Examples/Session01/students.txt')
     languages = []
     for line in lines:
         strs = line.split(':')[1]
@@ -80,6 +84,8 @@ def main():
     """
     # print_path()
     # copy_file()
+    list_languages()
+
 
 if __name__ == '__main__':
     main()
