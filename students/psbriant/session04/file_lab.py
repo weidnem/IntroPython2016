@@ -69,11 +69,21 @@ def list_languages():
         if ':' in line:
             strs = line.split(':')
             # print(strs)
-            print(strs[1])
+            # print(strs[1])
             lang_str = strs.pop(1)
             lang = lang_str.split(',')
             for item in lang:
-                item.strip()
+                item = item.strip('\n')
+                item = item.strip()
+                # Checks for lowercase sql and corrects the string
+                if item == 'sql':
+                    item = 'SQL'
+                # Checks for misspelled python and corrects the string
+                if item == 'pyton':
+                    item = 'python'
+                # Checks for misspelled html and corrects the string
+                if item == 'htl':
+                    item = 'html'
                 if item not in languages:
                     languages.append(item)
     return languages
@@ -88,7 +98,7 @@ def main():
     """
     # print_path()
     # copy_file()
-    list_languages()
+    print(list_languages())
 
 
 if __name__ == '__main__':
