@@ -15,7 +15,7 @@ langs = set()
 with open(pathname+filename, 'r') as f:
     for line in f:
         if len(line[line.find(":"):].split(',')) > 0:
-            items = (line[line.find(":")+2:line.find("\n")].split(','))
+            items = line[line.find(":")+2:line.find("\n")].split(',')
             for lang in items:
                 langs.add(lang.strip())
 #        print(langs)
