@@ -51,6 +51,9 @@ def read_file(file_name):
 
 
 def r_file(file_name):
+    """
+
+    """
     with open(file_name, 'r') as f:
         lines = f.readlines()
     f.close()
@@ -68,12 +71,9 @@ def list_languages():
     for line in lines:
         if ':' in line:
             strs = line.split(':')
-            # print(strs)
-            # print(strs[1])
             lang_str = strs.pop(1)
             lang = lang_str.split(',')
             for item in lang:
-                item = item.strip('\n')
                 item = item.strip()
                 # Checks for lowercase sql and corrects the string
                 if item == 'sql':
