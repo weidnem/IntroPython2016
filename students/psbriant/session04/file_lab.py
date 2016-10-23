@@ -7,10 +7,6 @@ LAB: File Lab
 
 Description:
 This program explores handling files and parsing simple text.
-
-Questions:
-When should we use 'with' and why?
-To what degree should we handle exceptions?
 """
 # -------------------------------Import-----------------------------------------
 import pathlib
@@ -52,7 +48,8 @@ def read_file(file_name):
 
 def r_file(file_name):
     """
-
+    Take in a file read it and return a list of stings where each string is a
+    line from the file.
     """
     with open(file_name, 'r') as f:
         lines = f.readlines()
@@ -62,9 +59,8 @@ def r_file(file_name):
 
 def list_languages():
     """
-    Questions:
-    What is the best way to get the path of desired file?
-    Should we use a dictionary for the advanced segment?
+    Iterate through a line of file lines, parse out programming languages and
+    and return a list of all programming languages present in the file.
     """
     lines = r_file('../../../Examples/Session01/students.txt')
     languages = []
