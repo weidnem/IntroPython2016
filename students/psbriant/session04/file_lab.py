@@ -48,7 +48,7 @@ def read_file(file_name):
 
 def r_file(file_name):
     """
-    Take in a file read it and return a list of stings where each string is a
+    Take in a non binary file, read it and return a list of stings where each string is a
     line from the file.
     """
     with open(file_name, 'r') as f:
