@@ -34,6 +34,18 @@ def part2(dict1):
     """
 
     """
+    new_dict = dict1
+
+    # Iterate through keys
+    for key in dict1:
+        count = 0
+        # Iterate through values
+        for char in dict.value():
+            if char == 't':
+                count += 0
+        # Add count to each key
+        new_dict[key] = count
+    print(new_dict)
 
 
 def part3():
