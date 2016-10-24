@@ -46,16 +46,16 @@ def listDonors():
     for i in donors.keys():
         print(i)
 
-if __name__ == "main":
+if __name__ == "__main__":
     while True:
         response = input(prompt).strip
         if response not in ['r', 'x', 's']:
-            print "Please enter a valid selection"
+            print("Please enter a valid selection")
             continue
         if response == 'r':
             createReport()
         elif response == 's':
             sendThankyou()
-        elif response == 'x':
+        elif response == 'q':
             break
         else: print("Please enter your selection")
