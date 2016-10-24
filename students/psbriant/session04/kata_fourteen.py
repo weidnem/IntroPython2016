@@ -12,6 +12,17 @@ Description:
 
 # -------------------------------Functions--------------------------------------
 # Read file
+
+
+def read_file(file_name):
+    """
+    Take in a file and return it as a string.
+    """
+    with open(file_name) as f:
+        strings = f.read()
+    return strings
+
+
 # Iterate through strings in file and place first three in a set.
 # Use the first two as a key in a dictionary and the third as the value.
 # Update the set so that it moves through the file one word at a time.
