@@ -40,7 +40,20 @@ def sendThankyou():
 
 
 def createReport():
-    pass
+
+    #make a list from my dictionary
+    mylist = []
+
+    #get values of list items in dict, add to list
+    for k in donors.keys():
+        for v in donors[k]:
+            mylist.append(v)
+
+    total_donations = sum()
+    number_donations = len()
+    average = total_donations / number_donations
+    report.append(donor, total_donations, number_donations, average)
+
 
 def listDonors():
     for i in donors.keys():
