@@ -36,7 +36,7 @@ def sendThankyou():
                 pass
             donors[response].append(newdonation)
 
-    print("Dear %s: Thanks for the money bro") % (response)
+    print("Dear {}: Thanks for the money bro").format(response)
 
 
 def createReport():
