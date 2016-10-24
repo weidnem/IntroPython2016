@@ -29,4 +29,19 @@ with open('file_lab01.txt','r') as r, open('file_lab02.txt', 'w') as w:
 r.close()
 w.close()
 
+# You will find the list I generated in the first class of all
+# the students in the class, and what programming languages they
+# have used in the past.
 
+# Write a little script that reads that file, and generates a list
+# of all the languages that have been used.
+languages = []
+with open('students.txt', 'r') as infile:
+    for line in infile:
+        if not ':' in line:
+            continue
+        for student, language in line.split(':'):
+            languages.append(language)
+print(languages)
+# Getting value error:
+# ValueError: too many values to unpack (expected 2)
