@@ -18,12 +18,11 @@ prompt = """
 To send a thank you note: enter "s"\n
 To print a report: enter "r"\n
 To quit: "q"\n
-Choose an option:==>
-"""
+Choose an option:==>"""
 
 def sendThankyou():
-    nameprompt = "Please Enter a Donor Name"
-    response = input(nameprompt).strip
+    nameprompt = "Please Enter a Donor Name (Enter 'list' for donors): "
+    response = input(nameprompt)
     if response == 'list':
         listDonors()
     else:
@@ -31,12 +30,13 @@ def sendThankyou():
             donors[response] = []
         else:
             try:
-                newdonation = int(input("Enter Donation Amount"))
+                newdonation = int(input("Enter Donation Amount: "))
             except ValueError:
                 print("Please enter an integer")
                 pass
-        donors[response].append(newdonation)
-        print("Dear %s: Thanks for the money bro") % (response)
+            donors[response].append(newdonation)
+
+    print("Dear %s: Thanks for the money bro") % (response)
 
 
 def createReport():
@@ -48,11 +48,11 @@ def listDonors():
 
 if __name__ == "__main__":
     while True:
-        response = input(prompt).strip
+        response = input(prompt)
         if response not in ['r', 'x', 's']:
             print("Please enter a valid selection")
             continue
-        if response == 'r':
+        elif response == 'r':
             createReport()
         elif response == 's':
             sendThankyou()
