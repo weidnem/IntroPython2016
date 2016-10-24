@@ -34,6 +34,10 @@ display the union and intersection of the two sets.
 
 d = {'name' : 'Chris', 'city' : 'Seattle', 'cake' : 'chocolate'}
 
+# CHB: you can use the build in .count() method of sequences (including strings)
+
+# str.count('s')
+
 def count_s(str):
     tally = 0  
     for char in str:
