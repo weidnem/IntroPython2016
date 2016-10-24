@@ -1,16 +1,17 @@
-"""
+#!/usr/bin/python3
+
+'''
 This script should be executable. The script should accomplish the following goals:
 
 It should have a data structure that holds a list of your donors and a history of the amounts they have donated. This structure should be populated at first with at least five donors, with between 1 and 3 donations each
-The script should prompt the user (you) to choose from a menu of 2 actions: ‘Send a Thank You’ or ‘Create a Report’.
-"""
-
+The script should prompt the user (you) to choose from a menu of 2 actions: 'Send a Thank You' or 'Create a Report'.
+'''
 
 #donors and their donation amounts
 donors = {
-"reginald": {1: 500, 2: 350, 3: 666},
-"sassafrass": {1: 99},
-"diggles": {1: 444, 2: 555}
+"reginald": [500, 350, 666],
+"sassafrass": [99],
+"diggles": [444, 555]
 }
 
 prompt = """
@@ -27,15 +28,15 @@ def sendThankyou():
         listDonors()
     else:
         if response not in donors.keys():
-            donors[response] = '{1: 0}'
+            donors[response] = []
         else:
             try:
-            newdonation = int(input("Enter Donation Amount"))
+                newdonation = int(input("Enter Donation Amount"))
             except ValueError:
                 print("Please enter an integer")
-                continue
-            donors[response].update({'latest':newdonation})
-            print("Dear %s: Thanks for the money bro") % (response)
+                pass
+        donors[response].append(newdonation)
+        print("Dear %s: Thanks for the money bro") % (response)
 
 
 def createReport():
@@ -43,17 +44,18 @@ def createReport():
 
 def listDonors():
     for i in donors.keys():
-    print(i)
-
-
+        print(i)
 
 if __name__ == "main":
-    while true:
+    while True:
         response = input(prompt).strip
+        if response not in ['r', 'x', 's']:
+            print "Please enter a valid selection"
+            continue
         if response == 'r':
             createReport()
         elif response == 's':
             sendThankyou()
-        elif response = 'x':
+        elif response == 'x':
             break
-        else: print(Please enter your selection)
+        else: print("Please enter your selection")
