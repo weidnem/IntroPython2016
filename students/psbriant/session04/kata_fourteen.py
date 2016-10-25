@@ -9,7 +9,7 @@ Description:
 
 """
 # -------------------------------Import-----------------------------------------
-
+import random
 # -------------------------------Functions--------------------------------------
 
 
@@ -22,14 +22,21 @@ def read_file(file_name):
     return string
 
 
-def dict_gen(string):
+def gen_list(string):
     """
     Take in a large string of all the words in the file. Split that string
-    into a list of strings. Iterate through list of strings and concatenate
+    into a list of strings.
+    """
+    str_list = string.split()
+    return str_list
+
+
+def dict_gen(str_list):
+    """
+    Take in a list of strings. Iterate through list of strings and concatenate
     focus item and item directely following it to create a dictionary key.
     Assign the next string as the value. Return dictionary.
     """
-    str_list = string.split()
     tri_dict = {}
 
     for i in range(len(str_list)):
@@ -48,14 +55,17 @@ def dict_gen(string):
     return tri_dict
 
 
-def key_lookup():
+def key_lookup(str_list):
     """
     Once entire file has been iterated through:
     Choose random word pair as the start and use these to look up the next
     word.
     """
-
-    # rand_item = random.choice(items)
+    rand_item = random.choice(str_list)
+    item2_index = rand_item.index(str_list)
+    item2 = str_list[item2_index]
+    start_key = rand_item + ' ' + item2
+    return start_key
 
 
 # Write to file.
@@ -70,7 +80,8 @@ def main():
     Tests output.
     """
     string = read_file('tri_test.txt')
-    print(dict_gen(string))
+    str_list = gen_list(string)
+    print(dict_gen(str_list))
 
 if __name__ == '__main__':
     main()
