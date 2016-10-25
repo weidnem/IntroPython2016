@@ -22,9 +22,12 @@ def read_file(file_name):
     return string
 
 
-def set_generator(string):
+def dict_gen(string):
     """
-    Iterate through strings in file and place first three in a set.
+    Take in a large string of all the words in the file. Split that string
+    into a list of strings. Iterate through list of strings and concatenate
+    focus item and item directely following it to create a dictionary key.
+    Assign the next string as the value. Return dictionary.
     """
     str_list = string.split()
     tri_dict = {}
@@ -32,14 +35,17 @@ def set_generator(string):
     for i in range(len(str_list)):
         # Use the first two strings as a key in tri_dict.
         tri_key = str_list[i] + ' ' + str_list[i + 1]
-        # Use the third string as the value tri_dict.
-        tri_dict[tri_key] = str_list[i + 2]
+        # Check if key exists
+        if tri_key not in tri_dict.keys():
+            # Use the third string as the value tri_dict.
+            tri_dict[tri_key] = [str_list[i + 2]]
+        else:
+            # If key already exists, add new values.
+            tri_dict[tri_key].append(str_list[i + 2])
 
     return tri_dict
 
 
-# Update the set so that it moves through the file one word at a time.
-# If key already exists, add new values.
 # Once entire file has been iterated through:
 # Choose random word pair as the start and use these to look up the next word.
 # Write to file.
