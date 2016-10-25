@@ -75,6 +75,25 @@ def main_menu_selection(message):
     action = input('==> ').strip()
     return action
 
+
+def create_letter(donor):
+    """
+    Take in donor information and return a thank you letter to specific donor.
+    To Do:
+    Ensure donor key value pair works as intended.
+    """
+    # Display thank you
+    return '''
+          Dear {},
+          Thank you for your generous donation of ${}!
+          Your contribution to this organization will greatly
+          impact our efforts to complete our mission.
+
+          Sincerely,
+          -The Team
+          '''.format(donors[d_index][0], donors[d_index][1][-1]))
+
+
 def send_ty(donor_dict):
     """
     This function takes in a multi dimensional list of donors and
@@ -96,13 +115,7 @@ def send_ty(donor_dict):
     d_index = add_donor(full_name, donors)
     # Append to donor in donors
     donors[d_index][1].append(amount)
-    # Display thank you
-    print("""
-    Dear {},
-    Thank you for your generous donation of ${}!
-    Your contribution to this organization will greatly
-    impact our efforts to complete our mission.
-    """.format(donors[d_index][0], donors[d_index][1][-1]))
+    print(create_letter(donor))
 
 
 def add_donor(name, donors):
