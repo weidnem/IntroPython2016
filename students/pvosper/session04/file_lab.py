@@ -3,13 +3,24 @@
 '''
 File Lab Excercises.
 
-
 '''
 
-# student_text = open('../IntroPython2016/Examples/Session01/students.txt')
-students_file = open('../IntroPython2016/Examples/Session01/students.txt')
+# temp_file = open('../../../Examples/Session01/students.txt')
+# text_string = temp_file.read()
+# temp_file.close()
+
+
 d = {}
-s = students_file.readline()
-print(s)
-students_string = students_file.read()#. replace('\n', ' ')
-students_file.close()
+
+for line in open('../../../Examples/Session01/students.txt'):
+    s = []
+    s = line.split(':')
+    if len(s) == 2:
+        d[s[0]] = s[1]
+    else:
+        d[s[0]] = '<n/a>'
+
+if __name__ == '__main__':
+    print('\n=== MAIN ===\n')
+
+    print(d)
