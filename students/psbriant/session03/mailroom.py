@@ -45,7 +45,7 @@ def sum_d(donors):
 
 def print_donor(donor_dict):
     """
-
+    Take in the dictionary of donors and displays each donor name.
     """
     for key in donor_dict:
         print(donor_dict[key])
@@ -53,7 +53,11 @@ def print_donor(donor_dict):
 
 def find_donor(full_name, donor_dict):
     """
+    Take in the name of the donor and the donor dictionary. Iterate through the
+    compliation of donors and return donor information.
 
+    To Do:
+    Ensure 'donor' returns all donor related information.
     """
     for donor in donor_dict:
         if full_name.strip().lower() == donor.lower():
@@ -62,7 +66,8 @@ def find_donor(full_name, donor_dict):
 
 def main_menu_selection(message):
     """
-
+    Take in donor option message, prompts user for a response and return
+    their response.
     """
     # Provide options and prompt the user for a response.
     print(message)
