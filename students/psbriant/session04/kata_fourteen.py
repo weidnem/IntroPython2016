@@ -59,7 +59,8 @@ def main():
     """
     Tests output.
     """
-
+    string = read_file('sherlock_small.txt')
+    print(dict_gen(string))
 
 if __name__ == '__main__':
     main()
