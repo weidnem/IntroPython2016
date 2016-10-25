@@ -68,8 +68,36 @@ def key_lookup(str_list):
     return start_key
 
 
+def build_trigram(str_key, tri_dict):
+    """
+    Create a list of strings to write to a new file.
+    Use random key as the first string and append it to the list.
+    Use it to lookup the next string.
+    Split the first string and use the second and third strings to look up the
+    next string.
+    If a key has multiple values, choose a random value.
+    """
+    # Strings to write to file
+    out_list = []
+    # Current key
+    key_phrase = str_key
+
+    while True:
+        if key_phrase not in tri_dict:
+            break
+        # Add element to out list
+        out_list.append(str_key)
+        # Get the next string
+        next_str = tri_dict[key_phrase]
+        # Add to list
+        out_list.append(next_str)
+        # Assign new strings to key phrase
+        key_phrase = key_phrase.split
+        key_phrase = key_phrase[1] + ' ' + next_str
+    return out_list
+
+
 # Write to file.
-# Use second and third words to look up the next word.
 #
 
 # ==============================================================================
