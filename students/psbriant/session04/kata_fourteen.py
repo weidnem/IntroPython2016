@@ -48,8 +48,16 @@ def dict_gen(string):
     return tri_dict
 
 
-# Once entire file has been iterated through:
-# Choose random word pair as the start and use these to look up the next word.
+def key_lookup():
+    """
+    Once entire file has been iterated through:
+    Choose random word pair as the start and use these to look up the next
+    word.
+    """
+
+    # rand_item = random.choice(items)
+
+
 # Write to file.
 # Use second and third words to look up the next word.
 #
@@ -61,7 +69,7 @@ def main():
     """
     Tests output.
     """
-    string = read_file('sherlock_small.txt')
+    string = read_file('tri_test.txt')
     print(dict_gen(string))
 
 if __name__ == '__main__':
