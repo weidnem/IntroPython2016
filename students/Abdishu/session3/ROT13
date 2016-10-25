@@ -14,16 +14,22 @@ lower =  list(string.ascii_lowercase)
 upper = list(string.ascii_uppercase)
 
 def ascii_test():
-    seq = list(input("Please enter any sequence to test for upper, lower, space or other characters"))
+    seq = list(input("Please enter any sequence to test for upper, lower, space or other characters:  "))
     for i in seq:
         if i  in string.ascii_lowercase:
-            
-            print("it is a lower case letter:- ", lower[lower.index(i) + 13])
+            if (lower.index(i) +13) > len(lower):
+                print(lower[lower.index(i) +13 - (len(lower))])
+            else:
+                print(lower[lower.index(i) +13] )
         elif i in string.ascii_uppercase:
-            print("It is an upper case letter:- ",upper[upper.index(i) + 13])
+            if (upper.index(i) +13) > len(upper): 
+                print(upper[upper.index(i) +13 - (len(upper))])
+            else:
+                print(upper[upper.index(i) +13] )
         else:
             print('This is not an ascii ', i)
-    print("You have entered: ", seq)            
+    print("You have entered: ", seq)
+          
 
 ascii_test()
 
