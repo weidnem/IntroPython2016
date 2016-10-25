@@ -27,20 +27,17 @@ def set_generator(string):
     Iterate through strings in file and place first three in a set.
     """
     str_list = string.split()
-    # Initialized set with first three words of file.
-    trigrams = set([str_list[0], str_list[1], str_list[2]])
     tri_dict = {}
 
-    del str_list[0]
-    del str_list[1]
-    del str_list[2]
+    for i in range(len(str_list)):
+        # Use the first two strings as a key in tri_dict.
+        tri_key = str_list[i] + ' ' + str_list[i + 1]
+        # Use the third string as the value tri_dict.
+        tri_dict[tri_key] = str_list[i + 2]
 
-    for item in str_list:
-        # trigrams = set([item, ])
+    return tri_dict
 
 
-
-# Use the first two as a key in a dictionary and the third as the value.
 # Update the set so that it moves through the file one word at a time.
 # If key already exists, add new values.
 # Once entire file has been iterated through:
