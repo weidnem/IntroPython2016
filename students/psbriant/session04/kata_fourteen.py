@@ -33,15 +33,17 @@ def dict_gen(string):
     tri_dict = {}
 
     for i in range(len(str_list)):
-        # Use the first two strings as a key in tri_dict.
-        tri_key = str_list[i] + ' ' + str_list[i + 1]
-        # Check if key exists
-        if tri_key not in tri_dict.keys():
-            # Use the third string as the value tri_dict.
-            tri_dict[tri_key] = [str_list[i + 2]]
-        else:
-            # If key already exists, add new values.
-            tri_dict[tri_key].append(str_list[i + 2])
+        # Ensures list index is in range
+        if (i + 2) < len(str_list):
+            # Use the first two strings as a key in tri_dict.
+            tri_key = str_list[i] + ' ' + str_list[i + 1]
+            # Check if key exists
+            if tri_key not in tri_dict.keys():
+                # Use the third string as the value tri_dict.
+                tri_dict[tri_key] = [str_list[i + 2]]
+            else:
+                # If key already exists, add new values.
+                tri_dict[tri_key].append(str_list[i + 2])
 
     return tri_dict
 
