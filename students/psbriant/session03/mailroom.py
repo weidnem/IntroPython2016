@@ -43,7 +43,34 @@ def sum_d(donors):
     return total_list
 
 
-def send_ty(donors):
+def print_donor(donor_dict):
+    """
+
+    """
+    for key in donor_dict:
+        print(donor_dict[key])
+
+
+def find_donor(full_name, donor_dict):
+    """
+
+    """
+    for donor in donor_dict:
+        if full_name.strip().lower() == donor.lower():
+            return donor
+
+
+def main_menu_selection(message):
+    """
+
+    """
+    # Provide options and prompt the user for a response.
+    print(message)
+    # Remove any additional white space.
+    action = input('==> ').strip()
+    return action
+
+def send_ty(donor_dict):
     """
     This function takes in a multi dimensional list of donors and
     contributions, prompts for specific donor information and composes a thank
@@ -51,8 +78,7 @@ def send_ty(donors):
     """
     full_name = input("Please enter your full name: ")
     if full_name == 'list':
-        for item in donors:
-            print(item[0])
+        print_donor(donor_dict)
         full_name = input("Please enter your full name: ")
     if full_name not in donors:
         # Add new donor name to donors
@@ -100,6 +126,12 @@ def main():
               ['Satya Nadella', [140000, 111000]],
               ['Susan Wojcicki', [100000, 109000]]]
 
+    donor_dict = {'Bill Gates': [1000000, 2500000, 1800000], 'Sheryl Sandberg':
+                  [200000, 100000, 130000], 'Larry Page': [150000, 110000,
+                  170000], 'Satya Nadella': [140000, 111000], 'Susan Wojcicki':
+                  [100000, 109000]
+                  }
+
     message = """
     Please select from the following options:
 
@@ -111,10 +143,7 @@ def main():
     action = ''
     # Continue to prompt user until user enters 'x'
     while True:
-        # Provide options and prompt the user for a response.
-        print(message)
-        # Remove any additional white space.
-        action = input('==> ').strip()
+        action = main_menu_selection(message)
         # Determine action to take.
         if action == 's':
             send_ty(donors)
