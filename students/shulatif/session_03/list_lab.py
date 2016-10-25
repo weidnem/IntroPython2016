@@ -19,13 +19,10 @@ fruits.append(input('What fruit would you like to add?: '))
 print(fruits)
 
 # Index the list with enumeration but labeling the number starting with 1. Then print the fruit selected from this index.
-# NEED TO FIX
 for fruit in enumerate(fruits, 1):
     print(fruit)
 pick = int(input('Pick a number: ')) - 1
 print(fruits[pick])
-
-
 
 
 # Add a fruit to the end of list by using +
@@ -63,15 +60,17 @@ print(fruits)
 # Ask user if they like a fruit. If they don't remove it. If they do, continue. But if they don't answer no or yes,
 # re-prompt and ask for only yes or no answers. Maybe I should have done it all in a while loop but the instructions
 # sounded like it was supposed to be just the last part.
+# NEED TO FIX
 for fruit in fruits:
     del_fruit = input('Do you like {}? '.format(fruit.lower()))
-    if del_fruit.lower() == 'no':
+    if del_fruit.lower() != 'yes' or 'no':
+        del_fruit = input('Do you like {}? Answer only yes or no '.format(fruit.lower()))
+    elif del_fruit.lower() == 'no':
         fruits.remove(fruit)
     elif del_fruit.lower() == 'yes':
         pass
-    else:
-        while del_fruit.lower() != 'yes' or 'no':
-            del_fruit = input('Do you like {}? Answer only yes or no '.format(fruit.lower()))
+
+
 print(fruits)
 
 # Part 4
