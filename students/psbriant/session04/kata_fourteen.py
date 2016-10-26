@@ -6,7 +6,7 @@ Session04
 Assignment: Kata Fourteen
 
 Description:
-
+Read a file and build a trigram based off of the text in file.
 """
 # -------------------------------Import-----------------------------------------
 import random
@@ -86,7 +86,6 @@ def build_trigram(str_key, tri_dict):
             break
         # Add element to out list
         out_list = out_list.append(key_phrase)
-        print(out_list)
         # Get the next string
         next_str = tri_dict[key_phrase]
         if len(next_str) > 1:
@@ -101,22 +100,29 @@ def build_trigram(str_key, tri_dict):
     return out_list
 
 
-# Write to file.
-#
+def write_file(trigram):
+    """
+    Take in a list of strings representing the trigram. Join list into one
+    string and write to a new file.
+    """
+    text = " ".join(trigram)
+    with open('new_trigram.txt', 'w') as outfile:
+        outfile.write(text)
+    outfile.close()
 
 # ==============================================================================
 
 
 def main():
     """
-    Tests output.
+    Calls methods and builds a trigram based on an input file.
     """
     string = read_file('tri_test.txt')
     str_list = gen_list(string)
     tri_dict = dict_gen(str_list)
     str_key = key_lookup(str_list)
     trigram = build_trigram(str_key, tri_dict)
-    print(trigram)
+    write_file(trigram)
 
 
 if __name__ == '__main__':
