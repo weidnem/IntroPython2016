@@ -86,11 +86,15 @@ def build_trigram(str_key, tri_dict):
         if key_phrase not in tri_dict:
             break
         # Add element to out list
-        out_list.append(str_key)
+        out_list.append(key_phrase)
         # Get the next string
         next_str = tri_dict[key_phrase]
-        # Add to list
-        out_list.append(next_str)
+        if len(next_str) > 1:
+            # Add random element to list
+            out_list.append(random.choice(next_str))
+        else:
+            # Add to list
+            out_list.append(next_str)
         # Assign new strings to key phrase
         key_phrase = key_phrase.split
         key_phrase = key_phrase[1] + ' ' + next_str
@@ -109,7 +113,10 @@ def main():
     """
     string = read_file('tri_test.txt')
     str_list = gen_list(string)
-    print(dict_gen(str_list))
+    tri_dict = dict_gen(str_list)
+    str_key = key_lookup(str_list)
+    print(trigram = build_trigram(str_key, tri_dict))
+
 
 if __name__ == '__main__':
     main()
