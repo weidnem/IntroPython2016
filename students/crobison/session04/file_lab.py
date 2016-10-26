@@ -36,7 +36,7 @@ w.close()
 # Write a little script that reads that file, and generates a list
 # of all the languages that have been used.
 languages = []
-with open('students.txt', 'r') as infile:
+with open('students_test.txt', 'r') as infile:
     for line in infile:
         if not ':' in line:
             continue
