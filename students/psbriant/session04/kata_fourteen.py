@@ -51,7 +51,6 @@ def dict_gen(str_list):
             else:
                 # If key already exists, add new values.
                 tri_dict[tri_key].append(str_list[i + 2])
-
     return tri_dict
 
 
@@ -62,7 +61,7 @@ def key_lookup(str_list):
     word.
     """
     rand_item = random.choice(str_list)
-    item2_index = rand_item.index(str_list)
+    item2_index = str_list.index(rand_item) + 1
     item2 = str_list[item2_index]
     start_key = rand_item + ' ' + item2
     return start_key
@@ -86,15 +85,16 @@ def build_trigram(str_key, tri_dict):
         if key_phrase not in tri_dict:
             break
         # Add element to out list
-        out_list.append(key_phrase)
+        out_list = out_list.append(key_phrase)
+        print(out_list)
         # Get the next string
         next_str = tri_dict[key_phrase]
         if len(next_str) > 1:
             # Add random element to list
-            out_list.append(random.choice(next_str))
+            out_list = out_list.append(random.choice(next_str))
         else:
             # Add to list
-            out_list.append(next_str)
+            out_list = out_list.append(next_str)
         # Assign new strings to key phrase
         key_phrase = key_phrase.split
         key_phrase = key_phrase[1] + ' ' + next_str
@@ -115,7 +115,8 @@ def main():
     str_list = gen_list(string)
     tri_dict = dict_gen(str_list)
     str_key = key_lookup(str_list)
-    print(trigram = build_trigram(str_key, tri_dict))
+    trigram = build_trigram(str_key, tri_dict)
+    print(trigram)
 
 
 if __name__ == '__main__':
