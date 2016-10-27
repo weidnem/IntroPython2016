@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
 
-# === File Lab Exercises =====
+# === File Lab Exercises ===
 
-# === Paths and File Processing =====
+# === Paths and File Processing ===
 
 '''
-write a program which prints the full path to all files in the current 
+Write a program which prints the full path to all files in the current 
 directory, one per line
-write a program which copies a file from a source, to a destination (without 
-using shutil, or the OS copy command)
 '''
 
 import os
@@ -20,12 +18,49 @@ directory_list = os.listdir()
 for entry in directory_list:
     print("\t", entry)
 
-# ====
+'''
+Write a program which copies a file from a source, to a destination (without 
+using shutil, or the OS copy command)
+'''
 
-f = open('temp_file.txt', 'w')
+# === CHB Example:
+
+# with open(the_filename, 'w') as outfile:
+#     outfile.write(something)
+#     do_some_more...
+# # now done with out file -- it will be closed, regardless of errors, etc.
+# do_other_stuff
+
+# Function to create 80 character line of gibberish
+def line_of_gibberish():
+    import random
+    line = ""
+    for i in range(80):
+        line = line + chr(random.randint(41,79)) #$Todo: hex
+    line = line + "\n"
+    return line
+
+# Create file to use as source
+file_object = open('source_file.txt', 'w')
 for i in range(100):
-    f.write('All work and no play makes Jack a dull boy\n')
-f.close()
+    file_object.write(line_of_gibberish())
+file_object.close()
+
+# Copy source to target line by line
+target_file_object = open('target_file.txt','w')
+source_file_object = open('source_file.txt','r')
+while True:
+    line = source_file_object.readline()
+    if not line:
+        break
+    else:
+        target_file_object.write(line)
+target_file_object.close()
+source_file_object.close()
+
+
+# with open(temp_file.txt, 'rb') as infile, open(dest, 'wb') as outfile:
+#     outfile.write(infile.read())
 
 
 
