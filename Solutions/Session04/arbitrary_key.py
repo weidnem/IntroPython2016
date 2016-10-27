@@ -16,16 +16,16 @@ the same if you want the whole item.
 import random
 
 # make a tiny little dict to test with:
-d = {'that': 2, 'this': 3, 'the other': 56}
+tiny = {'that': 2, 'this': 3, 'the other': 56}
 
 # One simple solution is to take advantage of popitem() and then put it back:
-item = d.popitem()
+item = tiny.popitem()
 print("An arbitrary key")
 print(item[0])
 # put it back:
-d.update((item,))
+tiny.update((item,))
 # it's still the same
-print(d)
+print(tiny)
 
 # but this is pretty ugly:
 #  - we only want a key but we got the entire item, so we need to pull the key out of that
@@ -35,23 +35,23 @@ print(d)
 
 # solution we used in class:
 print("An arbitrary key")
-print(list(d.keys())[0])
+print(list(tiny.keys())[0])
 
 # This works fine -- the list of the keys is in arbitrary order, so
 # grabbing the first one gets you an arbitrary key
 #
 # This also has the advantage that you could easily adapt it to give you a ransom key instead:
 print("a random key")
-print(random.choice(list(d.keys())))
+print(random.choice(list(tiny.keys())))
 
 # However -- the downside of this is that you are making an entire list of all the keys,
 # just to toss it away afterward. Computers are fast and have lots of memory, so probably
 # not a big deal, but it is good to think it terms of efficient algorithms, if they don't
 # complicate your code. This is why dict.keys() does not return a list (in py3):
-print("type of keys():", type(d.keys()))
+print("type of keys():", type(tiny.keys()))
 
 # the dict_Keys type is an "iterable" -- something you can iterate through with a for loop:
-for key in d.keys():
+for key in tiny.keys():
     print(key)
 
 # The dict_keys object "gives" the for loop each key, one at a time, without ever making
@@ -60,7 +60,7 @@ for key in d.keys():
 # So we could take advantage of this to get an arbitrary key without making an entire list
 # first:
 
-for key in d.keys():
+for key in tiny.keys():
     print("An arbitrary key")
     print(key)
     break
@@ -77,14 +77,14 @@ for key in d.keys():
 # the first item:
 
 print("An arbitrary key")
-print(next(iter(d.keys())))
+print(next(iter(tiny.keys())))
 
 # Wait! what is that `iter()` call? the `iter()` function takes a "iterable" and returns and
 # "iterator" from it.  An "iterable" is something you can iterate over -- an "iterator" is the
 # actual object that saves state and returns the actual items.
 # You can't call next() on an iterable:
 
-next(d.keys())
+next(tiny.keys())
 
 # you get a type error:
 # TypeError: 'dict_keys' object is not an iterator
@@ -105,13 +105,13 @@ next(d.keys())
 
 # I think that:
 #
-#  next(iter(d.keys()))
+#  next(iter(tiny.keys()))
 #
 #  is probably the most "pythonic" way to do it -- compact and efficient
 #  However, it does require fairly advanced understanding of iterables and iterators.
 #  So:
 #
-#  list(d.keys())[0]
+#  list(tiny.keys())[0]
 #
 #  is a fine option. And leaves the door open for using random.choice, too.
 
