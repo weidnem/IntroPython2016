@@ -83,7 +83,7 @@ def dict_comp():
     for i in range(16):
         print(hex(i))
 
-    num_hex_list = [{myNum, myHex} for myNum in range(16) for myHex in hex(myNum)]
+    num_hex_list = [(myNum, myHex) for myNum in range(16) for myHex in hex(myNum)]
     print(num_hex_list)
 
 dict_comp()
