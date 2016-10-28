@@ -13,17 +13,14 @@ directory, one per line
 
 # === Paths and File Processing =====
 
-'''
 write a program which prints the full path to all files in the current 
 directory, one per line
 write a program which copies a file from a source, to a destination (without 
 using shutil, or the OS copy command)
->>>>>>> 7e545de2923a78205120dc3a65e3b467ec1b8445
 '''
 
 import os
 
-<<<<<<< HEAD
 # print full path to current directory
 print(os.getcwd(), ":")
 
@@ -83,15 +80,12 @@ f = open('temp_file.txt', 'w')
 for i in range(100):
     f.write('All work and no play makes Jack a dull boy\n')
 f.close()
->>>>>>> 7e545de2923a78205120dc3a65e3b467ec1b8445
-
 
 
 # temp_file = open('../../../Examples/Session01/students.txt')
 # text_string = temp_file.read()
 # temp_file.close()
 
-<<<<<<< HEAD
 # Create a dictionary from students.txt file
 # key = name, value = languages
 students_dictionary = {}
@@ -134,7 +128,6 @@ for line in open('../../../Examples/Session01/students.txt'):
         d[s[0]] = s[1].replace('\n', ' ')
     else:
         d[s[0]] = '<n/a>'
->>>>>>> 7e545de2923a78205120dc3a65e3b467ec1b8445
 
 # for entry in d:
 #     print(entry)
