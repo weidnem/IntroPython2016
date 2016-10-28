@@ -11,10 +11,13 @@ directory, one per line
 
 import os
 
+# print full path to current directory
 print(os.getcwd(), ":")
 
+# create list of all files in current directory
 directory_list = os.listdir()
 
+# print each entry on it's own line
 for entry in directory_list:
     print("\t", entry)
 
@@ -22,14 +25,6 @@ for entry in directory_list:
 Write a program which copies a file from a source, to a destination (without 
 using shutil, or the OS copy command)
 '''
-
-# === CHB Example:
-
-# with open(the_filename, 'w') as outfile:
-#     outfile.write(something)
-#     do_some_more...
-# # now done with out file -- it will be closed, regardless of errors, etc.
-# do_other_stuff
 
 # Function to create 80 character line of gibberish
 def line_of_gibberish():
@@ -68,15 +63,38 @@ source_file_object.close()
 # text_string = temp_file.read()
 # temp_file.close()
 
-d = {}
+# Create a dictionary from students.txt file
+# key = name, value = languages
+students_dictionary = {}
 
 for line in open('../../../Examples/Session01/students.txt'):
-    s = []
-    s = line.split(':')
-    if len(s) == 2:
-        d[s[0]] = s[1].replace('\n', ' ')
+    student_info = []
+    student_info = line.split(':')
+    if len(student_info) == 2:
+        students_dictionary[student_info[0]] = student_info[1].replace('\n', ' ')
     else:
-        d[s[0]] = '<n/a>'
+        students_dictionary[student_info[0]] = '<n/a>'
+
+# Create a dictionary of languages
+# key = language, value = count
+# $todo value = list of students who know that language
+# BUG: Header "Students Languages"
+language_dictionary = {}
+language_list = students_dictionary.values()
+# print(language_list)
+for entry in language_list:
+    entry = entry.lower().replace(',', '').replace('pyton', 'python')
+    entry_list = entry.split()
+#     print(type(entry_list), entry_list)
+    for language in entry_list:
+#         print(language)
+        if language in language_dictionary:
+            language_dictionary[language] = language_dictionary[language] + 1
+        else:
+            language_dictionary[language] = 1
+
+for languages in language_dictionary:             
+    print(languages, language_dictionary[languages])
 
 # for entry in d:
 #     print(entry)
