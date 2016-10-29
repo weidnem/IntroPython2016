@@ -1,35 +1,27 @@
 #!/usr/bin/env python3
 
-<<<<<<< HEAD
-# === File Lab Exercises ===
-
-# === Paths and File Processing ===
+# === File Lab =====
 
 '''
-Write a program which prints the full path to all files in the current 
-directory, one per line
-=======
-# === File Lab Exercises =====
-
-# === Paths and File Processing =====
-
 write a program which prints the full path to all files in the current 
 directory, one per line
-write a program which copies a file from a source, to a destination (without 
-using shutil, or the OS copy command)
 '''
 
 import os
 
-# print full path to current directory
-print(os.getcwd(), ":")
+print('\nFull path to current directory:')
+print(os.getcwd())
 
 # create list of all files in current directory
 directory_list = os.listdir()
 
-# print each entry on it's own line
+print('\nFiles in current directory:')
 for entry in directory_list:
     print("\t", entry)
+
+print('\n'*2)
+print('-'*80)
+print('\n'*2)
 
 '''
 Write a program which copies a file from a source, to a destination (without 
@@ -63,28 +55,12 @@ while True:
 target_file_object.close()
 source_file_object.close()
 
+'''
+Write a little script that reads that file (students.txt), and generates a
+list of all the languages that have been used.
 
-# with open(temp_file.txt, 'rb') as infile, open(dest, 'wb') as outfile:
-#     outfile.write(infile.read())
-=======
-print(os.getcwd(), ":")
-
-directory_list = os.listdir()
-
-for entry in directory_list:
-    print("\t", entry)
-
-# ====
-
-f = open('temp_file.txt', 'w')
-for i in range(100):
-    f.write('All work and no play makes Jack a dull boy\n')
-f.close()
-
-
-# temp_file = open('../../../Examples/Session01/students.txt')
-# text_string = temp_file.read()
-# temp_file.close()
+Extra credit: keep track of how many students specified each language.
+'''
 
 # Create a dictionary from students.txt file
 # key = name, value = languages
@@ -98,48 +74,84 @@ for line in open('../../../Examples/Session01/students.txt'):
     else:
         students_dictionary[student_info[0]] = '<n/a>'
 
+# Get rid of 'name: languages' header line
+students_dictionary.pop('name')
+
 # Create a dictionary of languages
 # key = language, value = count
 # $todo value = list of students who know that language
-# BUG: Header "Students Languages"
 language_dictionary = {}
 language_list = students_dictionary.values()
-# print(language_list)
 for entry in language_list:
-    entry = entry.lower().replace(',', '').replace('pyton', 'python')
+    entry = entry.lower().replace(',', '').replace('pyton', 'python').replace('macscript', 'maxscript')
     entry_list = entry.split()
-#     print(type(entry_list), entry_list)
     for language in entry_list:
-#         print(language)
         if language in language_dictionary:
             language_dictionary[language] = language_dictionary[language] + 1
         else:
             language_dictionary[language] = 1
 
+# Print Languages & number of users            
 for languages in language_dictionary:             
-    print(languages, language_dictionary[languages])
-=======
-d = {}
-
-for line in open('../../../Examples/Session01/students.txt'):
-    s = []
-    s = line.split(':')
-    if len(s) == 2:
-        d[s[0]] = s[1].replace('\n', ' ')
-    else:
-        d[s[0]] = '<n/a>'
-
-# for entry in d:
-#     print(entry)
-
-# .strip().lower()
-
-# f = open('myfile','w')
-# f.write('hi there\n') # python will convert \n to os.linesep
-# f.close() # you can omit in most cases as the destructor will call it
+    print("{}\t{:10.0f}".format(languages.ljust(12), language_dictionary[languages]))
 
 if __name__ == '__main__':
     print('\n=== MAIN ===\n')
+    
+'''
+=== SAMPLE ===
 
-#     print(d)
-#     print(d.values())
+In [20]: run file_lab.py
+
+Full path to current directory:
+/Users/paulvosper/UWPCE_IntroPython2016/IntroPython2016/students/pvosper/session04
+
+Files in current directory:
+	 .DS_Store
+	 dict_lab.py
+	 file_lab.py
+	 kata_14_trigrams.py
+	 lorem_ipsum_generator.py
+	 myfile
+	 sherlock.txt
+	 sherlock_partial.txt
+	 source_file.txt
+	 target_file.txt
+	 temp_file.txt
+
+
+
+--------------------------------------------------------------------------------
+
+
+
+swift       	         1
+asp         	         1
+r           	         4
+bash        	         6
+cobol       	         1
+ruby        	         2
+sas         	         1
+python      	        19
+perl        	         3
+c           	         2
+maxscript   	         1
+german      	         1
+qbasic      	         1
+actionscript	         1
+php         	         4
+xml         	         1
+basic       	         2
+sql         	        12
+htl         	         1
+html        	         7
+javascript  	         1
+c#          	         2
+c++         	         5
+scala       	         1
+java        	         3
+shell       	         2
+
+=== MAIN ===
+
+'''
