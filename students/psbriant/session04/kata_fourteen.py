@@ -81,22 +81,24 @@ def build_trigram(str_key, tri_dict):
     # Current key
     key_phrase = str_key
 
+    # import pdb; pdb.set_trace()
     while True:
+
         if key_phrase not in tri_dict:
             break
         # Add element to out list
-        out_list = out_list.append(key_phrase)
+        out_list.append(key_phrase)
         # Get the next string
         next_str = tri_dict[key_phrase]
         if len(next_str) > 1:
             # Add random element to list
-            out_list = out_list.append(random.choice(next_str))
+            out_list.append(random.choice(next_str))
         else:
             # Add to list
-            out_list = out_list.append(next_str)
+            out_list.extend(next_str)
         # Assign new strings to key phrase
-        key_phrase = key_phrase.split
-        key_phrase = key_phrase[1] + ' ' + next_str
+        key_phrase = key_phrase.split()
+        key_phrase = key_phrase[1] + ' ' + out_list[-1]
     return out_list
 
 
