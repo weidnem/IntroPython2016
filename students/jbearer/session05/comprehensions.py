@@ -80,10 +80,26 @@ def dict_comp():
     # print(dict_answer)
 
     #2.
-    for i in range(16):
-        print(hex(i))
+    num_list = [myNum for myNum in range(16)]
+    hex_list = [hex(myHex) for myHex in range(16)]
+    num_hex_list = list(zip(num_list, hex_list)) 
+    # print(num_hex_list)
 
-    num_hex_list = [(myNum, myHex) for myNum in range(16) for myHex in hex(myNum)]
-    print(num_hex_list)
+    #3.
+    new_dict = {myInt: myHex for (myInt, myHex) in num_hex_list}
+    # print(new_dict)
+
+    #4.
+    dict_new = {}
+    for k, v in food_prefs.items():
+        for i in len(v):
+            if v[i] == 'a':
+                counter += 1
+            dict_new[k] = counter
+    print(dict_new)
+
+    # dict_food_a = {theKey: theValue for (theKey, theValue) in food_prefs if food_prefs.items() == 'a'}
+    # print(dict_food_a)
+
 
 dict_comp()
