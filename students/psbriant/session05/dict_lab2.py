@@ -75,6 +75,10 @@ def part4():
     print(python_set.union(fs), python_set.intersection(fs))
 
 
+def display_dict(info_dict):
+    print("{name} is from {city}, and he likes {cake} cake, {fruit} fruit, {salad} salad, and {pasta} pasta")
+
+
 # ==============================================================================
 
 
@@ -82,9 +86,10 @@ def main():
     """
     Tests output.
     """
-    dict1 = {"name": "Chris", "city": "Seattle", "cake": "Chocolate"}
-    # part1(dict1)
-    print(part2(dict1))
+    info_dict = {"name": "Chris", "city": "Seattle", "cake": "Chocolate",
+                 "fruit": "mango", "salad": "greek", "pasta": "lasagna"}
+    # part1(info_dict)
+    print(part2(info_dict))
     # part3()
     # part4()
 
