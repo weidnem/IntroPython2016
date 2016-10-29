@@ -80,14 +80,14 @@ def build_trigram(str_key, tri_dict):
     out_list = []
     # Current key
     key_phrase = str_key
+    # Add element to out list
+    out_list.append(key_phrase)
 
-    import pdb; pdb.set_trace()
+    # import pdb; pdb.set_trace()
     while True:
 
         if key_phrase not in tri_dict:
             break
-        # Add element to out list
-        out_list.append(key_phrase)
         # Get the next string
         next_str = tri_dict[key_phrase]
         if len(next_str) > 1:
