@@ -76,7 +76,10 @@ def part4():
 
 
 def display_dict(info_dict):
-    print("{name} is from {city}, and he likes {cake} cake, {fruit} fruit, {salad} salad, and {pasta} pasta")
+    """
+
+    """
+    print("{name} is from {city}, and he likes {cake} cake, {fruit} fruit, {salad} salad, and {pasta} pasta").format(info_dict[name], info_dict[city], info_dict[cake], info_dict[fruit], info_dict[])
 
 
 # ==============================================================================
@@ -89,9 +92,10 @@ def main():
     info_dict = {"name": "Chris", "city": "Seattle", "cake": "Chocolate",
                  "fruit": "mango", "salad": "greek", "pasta": "lasagna"}
     # part1(info_dict)
-    print(part2(info_dict))
+    # print(part2(info_dict))
     # part3()
     # part4()
+    display_dict(info_dict)
 
 
 if __name__ == '__main__':
