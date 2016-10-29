@@ -92,7 +92,8 @@ def dict_comp():
     #4.
     dict_new = {}
     for k, v in food_prefs.items():
-        for i in len(v):
+        counter = 0
+        for i in range(len(v)):
             if v[i] == 'a':
                 counter += 1
             dict_new[k] = counter
