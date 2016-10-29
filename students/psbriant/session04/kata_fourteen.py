@@ -81,7 +81,7 @@ def build_trigram(str_key, tri_dict):
     # Current key
     key_phrase = str_key
 
-    # import pdb; pdb.set_trace()
+    import pdb; pdb.set_trace()
     while True:
 
         if key_phrase not in tri_dict:
@@ -107,8 +107,17 @@ def write_file(trigram):
     Take in a list of strings representing the trigram. Join list into one
     string and write to a new file.
     """
-    text = " ".join(trigram)
+    # text = " ".join(trigram)
+    lines = []
     with open('new_trigram.txt', 'w') as outfile:
+        for string in trigram:
+            if len(lines) > 8:
+                text = " ".join(lines) + '\n'
+                outfile.write(text)
+                lines = []
+            else:
+                lines.append(string)
+        text = " ".join(lines) + '\n'
         outfile.write(text)
     outfile.close()
 
@@ -119,7 +128,7 @@ def main():
     """
     Calls methods and builds a trigram based on an input file.
     """
-    string = read_file('tri_test.txt')
+    string = read_file('sherlock_small.txt')
     str_list = gen_list(string)
     tri_dict = dict_gen(str_list)
     str_key = key_lookup(str_list)
