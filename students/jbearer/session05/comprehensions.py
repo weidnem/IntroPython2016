@@ -82,7 +82,9 @@ def dict_comp():
     #2.
     num_list = [myNum for myNum in range(16)]
     hex_list = [hex(myHex) for myHex in range(16)]
-    num_hex_list = list(zip(num_list, hex_list)) 
+    num_hex_list = list(zip(num_list, hex_list))
+    num_hex_list2 = [(myNum, hex(myHex)) for (myNum, myHex) in range(16)]
+    print(num_hex_list2)
     # print(num_hex_list)
 
     #3.
@@ -90,17 +92,26 @@ def dict_comp():
     # print(new_dict)
 
     #4.
-    dict_new = {}
-    for k, v in food_prefs.items():
-        counter = 0
-        for i in range(len(v)):
-            if v[i] == 'a':
-                counter += 1
-            dict_new[k] = counter
-    print(dict_new)
-
-    # dict_food_a = {theKey: theValue for (theKey, theValue) in food_prefs if food_prefs.items() == 'a'}
+    dict_food_a = {k: v.count('a') for (k, v) in food_prefs.items()}
     # print(dict_food_a)
 
+    #5a.
+    s2 = {div_2 for div_2 in range(21) if div_2 % 2 == 0}
+    s3 = {div_3 for div_3 in range(21) if div_3 % 3 == 0}
+    s4 = {div_4 for div_4 in range(21) if div_4 % 4 == 0}
+    # print(s2)
+    # print(s3)
+    # print(s4)
+
+    #5.b.a
+    s5 = s2.union(s3, s4)
+    # print(s5)
+    
+    #5.b.b
+    # Not sure what it means to 'build the set up'.
+
+    #5.b.c (incomplete)
+    s6 = {div_num for div_num in range(21) if div_num % 2 == 0 or div_num % 3 == 0 or div_num % 4 == 0}
+    print(s6)
 
 dict_comp()
