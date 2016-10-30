@@ -77,7 +77,8 @@ def part4():
 
 def display_dict(info_dict):
     """
-
+    Takes in the info_dict and displays it using string formatting and an
+    advanced function call.
     """
     print("{name} is from {city}, and he likes {cake} cake, {fruit}"
           " fruit, {salad} salad, and {pasta} pasta".format(**info_dict))
@@ -85,7 +86,8 @@ def display_dict(info_dict):
 
 def hex_gen():
     """
-
+    Generates and displays two dictionaries, one using a list comprehension
+    and the other using a dict comprehension.
     """
     hex_list = [hex(x) for x in range(16)]
     new_dict = dict(zip(range(16), hex_list))
