@@ -96,11 +96,23 @@ def hex_gen():
     print(hex_dict)
 
 
-def a_counter(info_dict):
-    """
+# def a_counter(info_dict):
+    # """
 
+    # """
+    # new_dict = {key: value for (key, value) in info_dict
+    # value += 1 for x in value if x == 'a'}
+
+
+def set_gen():
     """
-    new_dict = {key: value for (key, value) in info_dict value += 1 for x in value if x == 'a'}
+    Create three sets based on the divisors of 2, 3 and 4. Display each set.
+    """
+    s2 = {x for x in range(21) if x % 2 == 0}
+    s3 = {x for x in range(21) if x % 3 == 0}
+    s4 = {x for x in range(21) if x % 4 == 0}
+    print(s2, s3, s4)
+
 
 
 # ==============================================================================
@@ -117,7 +129,8 @@ def main():
     # part3()
     # part4()
     # display_dict(info_dict)
-    hex_gen()
+    # hex_gen()
+    set_gen()
 
 
 if __name__ == '__main__':
