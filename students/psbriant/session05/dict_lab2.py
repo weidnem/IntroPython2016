@@ -96,6 +96,13 @@ def hex_gen():
     print(hex_dict)
 
 
+def a_counter(info_dict):
+    """
+
+    """
+    new_dict = {key: value for (key, value) in info_dict value += 1 for x in value if x == 'a'}
+
+
 # ==============================================================================
 
 
