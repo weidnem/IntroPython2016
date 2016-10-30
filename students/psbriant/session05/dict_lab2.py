@@ -83,6 +83,17 @@ def display_dict(info_dict):
           " fruit, {salad} salad, and {pasta} pasta".format(**info_dict))
 
 
+def hex_gen():
+    """
+
+    """
+    hex_list = [hex(x) for x in range(16)]
+    new_dict = dict(zip(range(16), hex_list))
+    hex_dict = {x: hex(x) for x in range(16)}
+    print(new_dict)
+    print(hex_dict)
+
+
 # ==============================================================================
 
 
@@ -96,7 +107,8 @@ def main():
     # print(part2(info_dict))
     # part3()
     # part4()
-    display_dict(info_dict)
+    # display_dict(info_dict)
+    hex_gen()
 
 
 if __name__ == '__main__':
