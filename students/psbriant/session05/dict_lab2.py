@@ -114,6 +114,16 @@ def set_gen():
     print(s2, s3, s4)
 
 
+def generalized_set_gen(divisors):
+    """
+
+    """
+    set_list = []
+    for divisor in divisors:
+        comp = [x for x in range(21) if x % divisor == 0]
+        set_list.append(comp)
+    return set_list
+
 
 # ==============================================================================
 
@@ -122,15 +132,17 @@ def main():
     """
     Tests output.
     """
-    info_dict = {"name": "Chris", "city": "Seattle", "cake": "Chocolate",
-                 "fruit": "mango", "salad": "greek", "pasta": "lasagna"}
+    # info_dict = {"name": "Chris", "city": "Seattle", "cake": "Chocolate",
+    # "fruit": "mango", "salad": "greek", "pasta": "lasagna"}
+    divisors = [2, 3, 4, 5, 8]
     # part1(info_dict)
     # print(part2(info_dict))
     # part3()
     # part4()
     # display_dict(info_dict)
     # hex_gen()
-    set_gen()
+    # set_gen()
+    print(generalized_set_gen(divisors))
 
 
 if __name__ == '__main__':
