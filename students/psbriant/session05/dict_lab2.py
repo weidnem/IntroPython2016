@@ -79,7 +79,8 @@ def display_dict(info_dict):
     """
 
     """
-    print("{name} is from {city}, and he likes {cake} cake, {fruit} fruit, {salad} salad, and {pasta} pasta").format(info_dict[name], info_dict[city], info_dict[cake], info_dict[fruit], info_dict[])
+    print("{name} is from {city}, and he likes {cake} cake, {fruit}"
+          "fruit, {salad} salad, and {pasta} pasta").format(**info_dict)
 
 
 # ==============================================================================
