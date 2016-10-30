@@ -80,7 +80,7 @@ def display_dict(info_dict):
 
     """
     print("{name} is from {city}, and he likes {cake} cake, {fruit}"
-          "fruit, {salad} salad, and {pasta} pasta").format(**info_dict)
+          " fruit, {salad} salad, and {pasta} pasta".format(**info_dict))
 
 
 # ==============================================================================
