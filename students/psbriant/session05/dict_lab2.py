@@ -116,7 +116,7 @@ def set_gen():
 
 def generalized_set_gen(divisors):
     """
-
+    Take in a list of integers and return a list of integer sets.
     """
     set_list = []
     for divisor in divisors:
