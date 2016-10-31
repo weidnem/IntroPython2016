@@ -125,6 +125,13 @@ def generalized_set_gen(divisors):
     return set_list
 
 
+def generalized_set_gen2(divisors):
+    """
+    Take in a list of integers and return a list of integer sets.
+    """
+    return [x for d in divisors for x in range(21) if x % d == 0]
+
+
 # ==============================================================================
 
 
@@ -142,7 +149,8 @@ def main():
     # display_dict(info_dict)
     # hex_gen()
     # set_gen()
-    print(generalized_set_gen(divisors))
+    # print(generalized_set_gen(divisors))
+    print(generalized_set_gen2(divisors))
 
 
 if __name__ == '__main__':
