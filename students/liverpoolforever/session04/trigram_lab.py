@@ -57,6 +57,7 @@ def create_trigram():
 def create_text():
 	#  Ask for first 2 words from the user to start
 	response = safe_input()
+	# Print the first word from the input
 	print(response.split()[0],end = ' ')
 	while True: 
 		if response in trigram_dict.keys():
