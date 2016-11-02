@@ -96,12 +96,12 @@ def hex_gen():
     print(hex_dict)
 
 
-# def a_counter(info_dict):
-    # """
-    # Question: Having trouble adding a count as the value for each key
-    # """
-    # new_dict = {key: value for (key, value) in info_dict
-    # value += 1 for x in value if x == 'a'}
+def a_counter(info_dict):
+    """
+    Question: Having trouble adding a count as the value for each key
+    """
+    new_dict = {key: value.count('a') for (key, value) in info_dict.items()}
+    print(new_dict)
 
 
 def set_gen():
@@ -141,18 +141,24 @@ def main():
     """
     Tests output.
     """
-    # info_dict = {"name": "Chris", "city": "Seattle", "cake": "Chocolate",
-    # "fruit": "mango", "salad": "greek", "pasta": "lasagna"}
+    info_dict = {"name": "Chris",
+                 "city": "Seattle",
+                 "cake": "Chocolate",
+                 "fruit": "mango",
+                 "salad": "greek",
+                 "pasta": "lasagna"}
     divisors = [2, 3, 4, 5, 8]
     # part1(info_dict)
     # print(part2(info_dict))
     # part3()
     # part4()
     # display_dict(info_dict)
+    a_counter(info_dict)
     # hex_gen()
     # set_gen()
     # print(generalized_set_gen(divisors))
-    print(generalized_set_gen2(divisors))
+    # print(generalized_set_gen2(divisors))
+
 
 
 if __name__ == '__main__':
