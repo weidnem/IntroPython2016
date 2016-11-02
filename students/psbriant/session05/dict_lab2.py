@@ -98,7 +98,8 @@ def hex_gen():
 
 def a_counter(info_dict):
     """
-    Question: Having trouble adding a count as the value for each key
+    Take in a dictionary and display a new dict with values representing the
+    number of 'a's in the input dictionary's values.
     """
     new_dict = {key: value.count('a') for (key, value) in info_dict.items()}
     print(new_dict)
@@ -158,7 +159,6 @@ def main():
     # set_gen()
     # print(generalized_set_gen(divisors))
     # print(generalized_set_gen2(divisors))
-
 
 
 if __name__ == '__main__':
