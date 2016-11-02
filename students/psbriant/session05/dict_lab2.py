@@ -98,7 +98,7 @@ def hex_gen():
 
 # def a_counter(info_dict):
     # """
-
+    # Question: Having trouble adding a count as the value for each key
     # """
     # new_dict = {key: value for (key, value) in info_dict
     # value += 1 for x in value if x == 'a'}
@@ -128,6 +128,8 @@ def generalized_set_gen(divisors):
 def generalized_set_gen2(divisors):
     """
     Take in a list of integers and return a list of integer sets.
+    Question: Output is correct but in a single list. How would I seperate the
+    output into multiple lists?
     """
     return [x for d in divisors for x in range(21) if x % d == 0]
 
