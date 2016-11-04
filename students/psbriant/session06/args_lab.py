@@ -6,8 +6,7 @@ Session05
 LAB: Dictionaries
 
 Description:
-This module takes the dictionary lab from Session04 and incorporates
-comprehensions.
+
 """
 
 # -------------------------------Functions--------------------------------------
@@ -19,7 +18,7 @@ def print_colors(fore_color='Blue', back_color='Green', link_color='White',
     Take in strings representing the color of the foreground, background, links
     and visited links of a website and display the them.
     """
-    
+
 
 # ==============================================================================
 
