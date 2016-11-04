@@ -10,7 +10,7 @@ Description:
 """
 
 # -------------------------------Imports----------------------------------------
-from pprint import pprint
+
 
 # -------------------------------Functions--------------------------------------
 
@@ -21,7 +21,7 @@ def print_colors(fore_color='Blue', back_color='Green', link_color='White',
     Take in strings representing the color of the foreground, background, links
     and visited links of a website and display the them.
     """
-    pprint(fore_color, back_color, link_color, visited_color)
+    print(fore_color, back_color, link_color, visited_color)
 
 # ==============================================================================
 
