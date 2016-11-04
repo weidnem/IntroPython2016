@@ -26,7 +26,7 @@ def print_colors(fore_color='Blue', back_color='Green', link_color='White',
     print("Foreground: {} Background: {} Links: {} Visited links: "
           "{}".format(fore_color, back_color, link_color, visited_color))
     print("Foreground: {} Background: {} Links: {} Visited links: "
-          "{}".format(fore_color, back_color, link_color, visited_color))        
+          "{}".format(fore_color, back_color, link_color, visited_color))
 
 # ==============================================================================
 
