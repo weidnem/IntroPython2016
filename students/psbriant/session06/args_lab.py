@@ -12,6 +12,15 @@ comprehensions.
 
 # -------------------------------Functions--------------------------------------
 
+
+def print_colors(fore_color='Blue', back_color='Green', link_color='White',
+                 visited_color='Yellow'):
+    """
+    Take in strings representing the color of the foreground, background, links
+    and visited links of a website and display the them.
+    """
+    
+
 # ==============================================================================
 
 
