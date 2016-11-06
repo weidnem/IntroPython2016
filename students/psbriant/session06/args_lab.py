@@ -21,8 +21,10 @@ def print_colors(fore_color='Blue', back_color='Green', link_color='White',
     Take in strings representing the color of the foreground, background, links
     and visited links of a website and display the them.
     """
-    print("Foreground: {} Background: {} Links: {} Visited links: "
-          "{}".format(fore_color, back_color, link_color, visited_color))
+    print("Foreground: {fore_color} Background: {back_color} Links:"
+          " {link_color} Visited links: {visited_color}"
+          "".format(fore_color=fore_color, back_color=back_color,
+                    link_color=link_color, visited_color=visited_color))
 
 
 def print_colors2(**kwargs):
@@ -55,9 +57,18 @@ def main():
     print_colors()
     print_colors('Purple')
     print_colors(back_color='Black', visited_color='Pink')
-    print_colors2(fore_color='Blue', back_color='Green', link_color='White',
-                  visited_color='Yellow')
-    print_colors3('Black', 'Pink', 'Blue', 'Yellow')
+    args1 = ('Blue', 'Red', 'Teal')
+    args2 = ('Pink', 'Orange', 'Teal', 'Gold')
+    dict1 = {'fore_color': 'Black',
+             'back_color': 'Green',
+             'link_color': 'Red',
+             'visited_color': 'Yellow'}
+    print_colors(*args1)
+    print_colors(*args2)
+    print_colors(**dict1)
+    # print_colors2(fore_color='Blue', back_color='Green', link_color='White',
+    # visited_color='Yellow')
+    # print_colors3('Black', 'Pink', 'Blue', 'Yellow')
 
 
 if __name__ == '__main__':
