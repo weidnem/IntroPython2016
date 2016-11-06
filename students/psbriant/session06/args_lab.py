@@ -35,6 +35,16 @@ def print_colors2(**kwargs):
           " links: {visited_color}".format(**kwargs))
 
 
+def print_colors3(*args):
+    """
+    Take in strings representing the color of the foreground, background, links
+    and visited links of a website and display the them.
+    """
+    print("Foreground: {} Background: {}"
+          " Links: {} Visited"
+          " links: {}".format(*args))
+
+
 # ==============================================================================
 
 
@@ -45,9 +55,10 @@ def main():
     print_colors()
     print_colors('Purple')
     print_colors(back_color='Black', visited_color='Pink')
-
     print_colors2(fore_color='Blue', back_color='Green', link_color='White',
                   visited_color='Yellow')
+    print_colors3('Black', 'Pink', 'Blue', 'Yellow')
+
 
 if __name__ == '__main__':
     main()
