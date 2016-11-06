@@ -31,8 +31,8 @@ def print_colors2(**kwargs):
     and visited links of a website and display the them.
     """
     print("Foreground: {fore_color} Background: {back_color}"
-          "Links: {link_color} Visited"
-          "links: {visited_color}".format(**kwargs))
+          " Links: {link_color} Visited"
+          " links: {visited_color}".format(**kwargs))
 
 
 # ==============================================================================
