@@ -3,10 +3,11 @@ Name: Paul Briant
 Date: 11/15/16
 Class: Introduction to Python
 Session05
-LAB: Dictionaries
+LAB: Args
 
 Description:
-
+This Lab explores the various ways to call function arguments including passing
+tuples and dictionaries and unpacking them using args and kwargs.
 """
 
 # -------------------------------Imports----------------------------------------
@@ -52,7 +53,7 @@ def print_colors3(*args):
 
 def main():
     """
-    Tests output.
+    Calls functions and produces output.
     """
     print_colors()
     print_colors('Purple')
