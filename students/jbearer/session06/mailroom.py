@@ -7,13 +7,19 @@ November 2, 2016
 donor_list = {'Shrek':[5,10], 'Donkey':[23,101,4], 'Princess Fiona':[7,28],
 'Puss in Boots':[36,12,10], 'Gingerbread Man':[12,34]}
 
-def print_report():
+sort_list = []
+
+def print_report(sort_list):
     print('{:^33}'.format('### Donor Report ###'))
     print('{:25} {:10} {:10}'.format('Name','Total','Donations'))
-    
-    sort_l = [(name, sum(donations), len(donations)) for (name, donations) in donor_list.items()]
-    sort_l = sorted(sort_l, key=lambda donations: donations[1], reverse=True)
-    sort_l = [print('{:20} {:10} {:10}'.format(i[0],i[1],i[2])) for i in sort_l]
+    [print('{:20} {:10} {:10}'.format(i[0],i[1],i[2])) for i in sort_list]
+
+def sort_donors(): 
+    global sort_list
+    sort_list = [(name, sum(donations), len(donations)) for (name, donations) in donor_list.items()]
+    sort_list = sorted(sort_list, key=lambda donations: donations[1], reverse=True)
+    # return sort_list
+    # sort_list = [print('{:20} {:10} {:10}'.format(i[0],i[1],i[2])) for i in sort_l]
     
 def get_donation(d_name):
     amt = True
@@ -25,13 +31,13 @@ def get_donation(d_name):
         else:
             amt = False
             proc_donation(d_name, donation)
+            print_donation(d_name, donation)
 
 def proc_donation(d_name, donation):
     if d_name in donor_list:
         donor_list[d_name].append(donation)
     elif d_name not in donor_list:
         donor_list[d_name] = [donation]
-    print_donation(d_name, donation)
 
 def print_donation(d_name, donation):
     print()
@@ -62,7 +68,8 @@ def main():
         try:
             response = input("==> ").strip()
             if response == 'p':
-                print_report()
+                sort_donors()
+                print_report(sort_list)
             elif response == 's':
                 send_thanks()
             elif response == 'x':
