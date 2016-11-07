@@ -18,8 +18,6 @@ def sort_donors():
     global sort_list
     sort_list = [(name, sum(donations), len(donations)) for (name, donations) in donor_list.items()]
     sort_list = sorted(sort_list, key=lambda donations: donations[1], reverse=True)
-    # return sort_list
-    # sort_list = [print('{:20} {:10} {:10}'.format(i[0],i[1],i[2])) for i in sort_l]
     
 def get_donation(d_name):
     amt = True
