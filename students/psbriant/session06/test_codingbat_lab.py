@@ -67,7 +67,7 @@ def test_90_false():
 # Tests for big_diff
 
 def test_10_3_5_6_diff8():
-    assert big_diff([10, 3, 5, 6]) == 8
+    assert big_diff([10, 3, 5, 6]) == 7
 
 
 def test_7_2_10_9_diff8():
