@@ -76,7 +76,7 @@ def main_menu_selection(message):
     return action
 
 
-def create_letter(donor):
+def create_letter(full_name, amount):
     """
     Take in donor information and return a thank you letter to specific donor.
     To Do:
@@ -91,7 +91,7 @@ def create_letter(donor):
 
           Sincerely,
           -The Team
-          '''.format(donors[d_index][0], donors[d_index][1][-1]))
+          '''.format(full_name, amount)
 
 
 def send_ty(donor_dict):
@@ -104,18 +104,18 @@ def send_ty(donor_dict):
     if full_name == 'list':
         print_donor(donor_dict)
         full_name = input("Please enter your full name: ")
-    if full_name not in donors:
+    if full_name not in donor_dict:
         # Add new donor name to donors
-        donors.append([full_name, []])
+        donor_dict[full_name] = []
     # Prompt for a donation amount
     amount = input("How much would you like to donate? ")
     # Verify amount is a number
     if not amount.isnumeric():
         amount = input("How much would you like to donate? ")
-    d_index = add_donor(full_name, donors)
+    #  d_index = add_donor(full_name, donor_dict)
     # Append to donor in donors
-    donors[d_index][1].append(amount)
-    print(create_letter(donor))
+    donor_dict[full_name].append(amount)
+    print(create_letter(full_name, amount))
 
 
 def add_donor(name, donors):
@@ -164,9 +164,9 @@ def main():
         action = main_menu_selection(message)
         # Determine action to take.
         if action == 's':
-            send_ty(donors)
+            send_ty(donor_dict)
         elif action == 'p':
-            print_report(donors)
+            print_report(donor_dict)
         elif action == 'x':
             break
         else:
