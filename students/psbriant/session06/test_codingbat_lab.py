@@ -66,6 +66,52 @@ def test_90_false():
 
 # Tests for sum_67
 
+def test_10_3_5_6_diff8():
+    pass
+
+
+def test_7_2_10_9_diff8():
+    pass
+
+
+def test_2_10_7_2_diff8():
+    pass
+
+
+def test_2_10_diff8():
+    pass
+
+
+def test_10_2_diff8():
+    pass
+
+
+def test_10_0_diff10():
+    pass
+
+
+def test_2_3_diff1():
+    pass
+
+
+def test_2_2_diff0():
+    pass
+
+
+def test_2_diff0():
+    pass
+
+
+def test_5_1_6_1_9_9_diff8():
+    pass
+
+
+def test_7_6_8_5_diff3():
+    pass
+
+
+def test_7_7_6_8_5_5_6_diff3():
+    pass
 
 
 # ==============================================================================
