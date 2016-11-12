@@ -14,6 +14,12 @@ on user specification.
 # -------------------------------Functions--------------------------------------
 
 
+def sort_key(item):
+    """
+    Takes in a list of ints and outputs the int at index one.
+    """
+    return item[1]
+
 def print_report(donor_dict):
     """
     Takes in the donors list and prints a report of donors ordered least to
@@ -25,7 +31,7 @@ def print_report(donor_dict):
     for i in range(len(total_list)):
         # Name, total donated, number of donations and average donation amount.
         print(total_list[i][1], total_list[i][0], total_list[i][2],
-              total_list[i][0] / total_list[i][2])
+              round(total_list[i][0] / total_list[i][2], 2))
 
 
 def sum_d(donor_dict):
