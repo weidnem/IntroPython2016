@@ -20,7 +20,7 @@ def caught_speeding(speed, is_birthday):
     """
 
 
-def sum67(nums):
+def big_diff(nums):
     """
 
     """
