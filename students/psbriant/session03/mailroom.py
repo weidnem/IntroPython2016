@@ -14,13 +14,13 @@ on user specification.
 # -------------------------------Functions--------------------------------------
 
 
-def print_report(donors):
+def print_report(donor_dict):
     """
     Takes in the donors list and prints a report of donors ordered least to
     greatest in terms of historic contributions.
     """
     # list of the sum of total contributions by each donor
-    total_list = sorted(sum_d(donors))
+    total_list = sorted(sum_d(donor_dict))
     # iterate through donors
     for i in range(len(total_list)):
         # Name, total donated, number of donations and average donation amount.
@@ -28,18 +28,18 @@ def print_report(donors):
               total_list[i][0] / total_list[i][2])
 
 
-def sum_d(donors):
+def sum_d(donor_dict):
     """
     Takes in a multi dimensional list of donors and contributions and returns
     a list containing total amount donated, donor name and number of donations.
     """
     total_list = []
 
-    for item in donors:
+    for key in donor_dict:
         d_total = 0
-        for d in item[1]:
+        for d in donor_dict[key]:
             d_total += d
-        total_list.append([d_total, item[0], len(item[1])])
+        total_list.append([d_total, key, len(donor_dict[key])])
     return total_list
 
 
