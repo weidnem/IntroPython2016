@@ -17,7 +17,7 @@ from codingbat_lab import caught_speeding, sum67
 
 # Tests for caught_speeding
 
-    
+
 
 # Tests for sum_67
 
