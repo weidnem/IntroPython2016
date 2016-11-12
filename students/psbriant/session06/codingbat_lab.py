@@ -38,6 +38,11 @@ def big_diff(nums):
     """
 
     """
+    count = len(nums)
+    max_num, min_num = nums[0], nums[0]
+    for i in range(1, count):
+        max_num, min_num = max(max_num, nums[i]), min(min_num, nums[i])
+    return max_num - min_num
 
 # ==============================================================================
 
