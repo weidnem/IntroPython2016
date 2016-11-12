@@ -64,54 +64,54 @@ def test_90_false():
     assert caught_speeding(90, False) == 2
 
 
-# Tests for sum_67
+# Tests for big_diff
 
 def test_10_3_5_6_diff8():
-    pass
+    assert big_diff([10, 3, 5, 6]) == 8
 
 
 def test_7_2_10_9_diff8():
-    pass
+    assert big_diff([7, 2, 10, 9]) == 8
 
 
 def test_2_10_7_2_diff8():
-    pass
+    assert big_diff([2, 10, 7, 2]) == 8
 
 
 def test_2_10_diff8():
-    pass
+    assert big_diff([2, 10]) == 8
 
 
 def test_10_2_diff8():
-    pass
+    assert big_diff([10, 2]) == 8
 
 
 def test_10_0_diff10():
-    pass
+    assert big_diff([10, 0]) == 10
 
 
 def test_2_3_diff1():
-    pass
+    assert big_diff([2, 3]) == 1
 
 
 def test_2_2_diff0():
-    pass
+    assert big_diff([2, 2]) == 0
 
 
 def test_2_diff0():
-    pass
+    assert big_diff([2]) == 0
 
 
 def test_5_1_6_1_9_9_diff8():
-    pass
+    assert big_diff([5, 1, 6, 1, 9, 9]) == 8
 
 
 def test_7_6_8_5_diff3():
-    pass
+    assert big_diff([7, 6, 8, 5]) == 3
 
 
 def test_7_7_6_8_5_5_6_diff3():
-    pass
+    assert big_diff([7, 7, 6, 8, 5, 5, 6]) == 3
 
 
 # ==============================================================================
