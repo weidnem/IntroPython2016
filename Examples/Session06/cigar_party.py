@@ -8,5 +8,13 @@ is no upper bound on the number of cigars.
 Return True if the party with the given values is successful,
 or False otherwise.
 """
+<<<<<<< HEAD
 def cigar_party(cigars, weekend):
     return cigars >= 40 and (cigars <= 60 or weekend)
+=======
+
+
+def cigar_party(num, weekend):
+    return num >= 40  and (num <= 60 or weekend)
+
+>>>>>>> 82918d5472627037e6cfaa6846d007c78ac8ef6c
