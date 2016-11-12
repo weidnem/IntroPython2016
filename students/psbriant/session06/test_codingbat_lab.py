@@ -17,51 +17,51 @@ from codingbat_lab import caught_speeding, big_diff
 
 # Tests for caught_speeding
 def test_60_false():
-    pass
+    assert caught_speeding(60, False) == 0
 
 
 def test_65_false():
-    pass
+    assert caught_speeding(65, False) == 1
 
 
 def test_65_true():
-    pass
+    assert caught_speeding(65, True) == 0
 
 
 def test_80_false():
-    pass
+    assert caught_speeding(80, False) == 1
 
 
 def test_85_false():
-    pass
+    assert caught_speeding(85, False) == 2
 
 
 def test_85_true():
-    pass
+    assert caught_speeding(85, True) == 1
 
 
 def test_70_false():
-    pass
+    assert caught_speeding(70, False) == 1
 
 
 def test_75_false():
-    pass
+    assert caught_speeding(75, False) == 1
 
 
 def test_75_true():
-    pass
+    assert caught_speeding(75, True) == 1
 
 
 def test_40_false():
-    pass
+    assert caught_speeding(40, False) == 0
 
 
 def test_40_true():
-    pass
+    assert caught_speeding(40, True) == 0
 
 
 def test_90_false():
-    pass
+    assert caught_speeding(90, False) == 2
 
 
 # Tests for sum_67
