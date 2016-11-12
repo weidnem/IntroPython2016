@@ -10,7 +10,7 @@ Description:
 """
 
 # -------------------------------Imports----------------------------------------
-from codingbat_lab import caught_speeding, sum67
+from codingbat_lab import caught_speeding, big_diff
 
 # -------------------------------Functions--------------------------------------
 
