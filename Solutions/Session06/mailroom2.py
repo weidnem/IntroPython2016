@@ -3,7 +3,7 @@
 mailroom assignment
 
 This version uses a dict for the main db, and exception handling to
-check input
+check input, and has been factored to be amenable to testing.
 """
 
 import sys
