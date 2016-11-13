@@ -1,68 +1,77 @@
 #!/usr/bin/env python3
 
-print("You've Got Mail!")
+print("You've Got Mail 2!")
 # Note: https://mkaz.tech/python-string-format.html
 
 # ===== Initial data set =====
 
-donor_list = [
-    ["Domingo Nair", [75, 50, 25]],
-    ["Cruz Woodman", [100]],
-    ["Quinn Halvorsen", [125, 500, 50]],
-    ["Carlota Lamkin", [50, 200]],
-    ["Angelyn Meekins", [500, 50]],
-    ["Maryland Cassel", [100, 50, 60]],
-    ["Muoi Macken", [125]],
-    ["Robby Remus", [25, 50, 75]],
-    ["Arlette Vanderveer", [125, 50]],
-    ["Reed Brantley", [125, 50, 200]],
-    ["Lenard Hardegree", [100]],
-    ["Lashunda Mckeithan", [125, 50]],
-    ["Eveline Paquette", [100, 250]],
-    ["Shawana Cano", [125, 50, 250]],
-    ["Phylicia Sansbury", [25, 100]],
-    ["Ricarda Wykoff", [100, 50, 200]],
-    ["Lue Mollett", [125, 50, 250]],
-    ["Janean Hetzler", [125, 50]],
-    ["Garth Figura", [125]],
-    ["Kurt Cowherd", [100, 50, 25]]
-    ]
+# Dictionary of donors, with list of donations as values
+donor_list = {
+    "Domingo Nair" : [75, 50, 25],
+    "Cruz Woodman" : [100],
+    "Quinn Halvorsen" : [125, 500, 50],
+    "Carlota Lamkin" : [50, 200],
+    "Angelyn Meekins" : [500, 50],
+    "Maryland Cassel" : [100, 50, 60],
+    "Muoi Macken" : [125],
+    "Robby Remus" : [25, 50, 75],
+    "Arlette Vanderveer" : [125, 50],
+    "Reed Brantley" : [125, 50, 200],
+    "Lenard Hardegree" : [100],
+    "Lashunda Mckeithan" : [125, 50],
+    "Eveline Paquette" : [100, 250],
+    "Shawana Cano" : [125, 50, 250],
+    "Phylicia Sansbury" : [25, 100],
+    "Ricarda Wykoff" : [100, 50, 200],
+    "Lue Mollett" : [125, 50, 250],
+    "Janean Hetzler" : [125, 50],
+    "Garth Figura" : [125],
+    "Kurt Cowherd" : [100, 50, 25]
+    }
 
 # ===== Utilities =====
+# $todo Is it worth separating all of these out into their own functions?
+#   Many are short enough to include in-line
+#   Many are less necessary after refactoring
 
-def donor_name_length():
-    length_name = 0
-    for entry in donor_list:
-        if len(entry[0]) > length_name:
-            length_name = len(entry[0])
-    return length_name
+# Return length of longest name for print formatting
+# donor_name_length(donor_list.keys())
+def donor_name_length(name_list):
+    return max(len(name) for name in name_list)
 
-def donor_average(index):
-    total_donations = 0
-    for entry in donor_list[index][1]:
-        total_donations += entry
-        average_donation = total_donations / len(donor_list[index][1])
-    return average_donation
+# Return average donation from list
+# donor_average(donor_list[key])
+def donor_average(donation_list):
+    return sum(donation_list) / len(donation_list)
 
-def donor_total(index):
-    total_donations = 0
-    for entry in donor_list[index][1]:
-        total_donations += entry
-    return total_donations
-    
-def list_donors():
-    for entry in donor_list:
-        print(donor_list[entry][0])
-        
-def find_donor(str):
-    for entry in donor_list:
-        check = entry[0].lower()
-        if check.find(str.lower()) > -1:
-            return donor_list[donor_list.index(entry)]
-    return False
+# Return total of donations from list
+# donor_total(donor_list[key])
+def donor_total(donation_list):
+    return sum(donation_list)
 
-def second_element(list):
-    return list[1]
+# Return simple list of donor names
+# print(list_donors(donor_list))
+# instead, use: print(donor_list.keys())
+# def list_donors():
+#     return donor_list.keys()
+
+# Return the full name of a donor from list given a partial string    
+# find_donor(donor_list.keys())
+def find_donor(string, name_list):
+    for entry in name_list:
+        # 'find' returns integer index, but not True/False
+        if entry.lower().find(string.lower()) > -1:
+            return entry
+    return None
+
+# def second_element(list):
+#     return list[1]
+# CHB: no point to this -- at least not with this name.
+#   IF it were something like:
+#       def donations(donor_record):
+#       return donor_record[1]
+#   that would let you change the structure of the donor data, and keep the changes isolated.
+
 
 # ===== Main Elements =====
 
@@ -81,6 +90,7 @@ def add_donation():
     First you'll need to select a donor to add a donation to.
     Enter a full or partial name to search for:
     ''')
+    # CHB: ahh -- that's what the string.find() was for! nice!
     response = input().strip().lower()
     target_donor = find_donor(response)
     if target_donor != False:
@@ -144,6 +154,8 @@ def mail_message(donor_info):
     '''
     print(form.format(name=first_name, amount=donations))
     return
+    # CHB: nice use of format!
+    # and yes, I'd probably just return it -- then print it where it's called.
 
 def mail_thank_you():
     target_donor = []
@@ -208,3 +220,4 @@ def main():
   
 if __name__ == "__main__":
     main()
+    # CHB: nice job!
