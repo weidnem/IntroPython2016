@@ -15,7 +15,7 @@ return a string -- that way I could test that the returned string was correct.
 
 import pytest  # used for testing exceptions
 
-from kwargs_lab import colors
+from kwargs_lab import colors, call_colors
 
 
 # Calling "colors" in various ways.
@@ -149,3 +149,114 @@ def test_call_everything():
     assert 'link: orange' in result
     # you can force a test failure if you want to see the output
     # assert False
+
+# ###########################
+# now lets try calling call_colors in all the above ways, and see if we get what we expect.
+#
+# Note that these tests are realy testing the Python machinery
+#  -- which you don't need to do! Python is already well tested.
+#
+# But writing theese tests tests your undestanding of how things work
+#    if a test fails, it's because you ( I ;- ) didn't understand the
+#    calling convertions.
+# ############################
+
+
+def test_call_all_positional():
+    args, kwargs = call_colors('red', 'blue', 'yellow', 'chartreuse')
+
+    # no kwrags, they should all be in the args tuple:
+    assert not kwargs  # kwargs is empty
+    assert args == ('red', 'blue', 'yellow', 'chartreuse')
+
+
+def test_call_one_keyword():
+    args, kwargs = call_colors(link_color='purple')
+
+    assert not args  # args should be an empty tuple
+    assert kwargs['link_color'] == 'purple'
+    assert len(kwargs) == 1  # only one entry in the kwargs dict
+
+
+def test_call_pos_and_keyword():
+    args, kwargs = call_colors('yellow', 'gray', link_color='purple')
+
+    assert args == ('yellow', 'gray')
+    assert kwargs == {'link_color': 'purple'}
+
+
+def test_call_duplicate():
+    """
+    This was an error above -- but is not here -- no keyword arguments
+    to duplicate!
+    """
+
+    args, kwargs = call_colors('yellow', fore_color='purple')
+
+    assert args == ('yellow',)
+    assert kwargs == {'fore_color': 'purple'}
+
+
+def test_call_call_tuple():
+    t = ('red', 'blue', 'yellow', 'chartreuse')
+    args, kwargs = call_colors(*t)
+
+    # This is straighforward -- the args tuple should be the one passed in!
+    assert args == t
+
+    # But it is NOT the SAME tuple!
+    assert args is not t
+    # and an empty kwargs dict
+    assert kwargs == {}  # multiple ways to test for an empty dict.
+
+
+def test_call_call_dict():
+    d = {'fore_color': 'red',
+         'visited_color': 'cyan',
+         'link_color': 'green',
+         'back_color': 'blue',
+         }
+    args, kwargs = call_colors(**d)
+
+    # also easy -- should be the dict passed in
+    assert kwargs == d
+    assert args == tuple()
+
+
+def test_call_call_tuple_dict():
+    t = ('red', 'blue')
+
+    d = {'visited_color': 'cyan',
+         'link_color': 'green',
+         }
+    args, kwargs = call_colors(*t, **d)
+
+    # this should be just what's passed in.
+    assert args == t
+    assert kwargs == d
+
+
+def test_call_call_everything():
+    """
+    this one uses:
+      - a positional argument
+      - *tuple
+      - a keyword argument
+      - **dict
+    """
+    t = ('red',)  # note the extra comma to amke it a tuple!
+
+    d = {'visited_color': 'cyan'}
+
+    args, kwargs = call_colors('blue', *t, link_color='orange', **d)
+
+    # This one is more interesting:
+    assert args == ('blue',) + t
+    assert args == ('blue', 'red')  # a different way to spell the same thing
+
+    assert kwargs == {'visited_color': 'cyan', 'link_color': 'orange'}
+    # or:
+    d['link_color'] = 'orange'
+    assert kwargs == d
+
+
