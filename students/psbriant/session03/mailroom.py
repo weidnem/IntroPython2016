@@ -18,7 +18,7 @@ def sort_key(item):
     """
     Takes in a list of ints and outputs the int at index one.
     """
-    return item[1]
+    return item[0][0]
 
 def print_report(donor_dict):
     """
@@ -26,7 +26,13 @@ def print_report(donor_dict):
     greatest in terms of historic contributions.
     """
     # list of the sum of total contributions by each donor
-    total_list = sorted(sum_d(donor_dict))
+    total_list = sum_d(donor_dict)
+    print(total_list)
+    # Derive numbers to sort by.
+    sort_by = sort_key(total_list)
+    print(sort_by)
+    # Sort list by highest sum of total donations
+    total_list.sort(key=sort_by, reverse=True)
     # iterate through donors
     for i in range(len(total_list)):
         # Name, total donated, number of donations and average donation amount.
