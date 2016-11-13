@@ -5,10 +5,19 @@ args-kwargs lab:
 
 Experimenting with various ways to call and define functions
 
-The colors function defined below is called in various ways by the test module:
+The functions defined below is called in various ways by the test module:
 
 test_kwargs_lab.py
 
+colors() is a function with a bunch of keyword arguments
+  the test code calls it in various ways and confirms the results are as expected.
+
+call_colors() is a functiont hat takes totaly generic arguments
+  the tet code calls it in various ways so you can confirm that it works as expected.
+
+colors_manual() takes generic arguments, but processes it as if it had keyworkd parameters.
+  - you'd never write code like this, but it shows what's going on under the hood.
+  - the test code confirms it works the same way.
 
 """
 
@@ -68,6 +77,9 @@ def call_colors(*args, **kwargs):
 def colors_manual(*args, **kwargs):
     """
     This example to show you how much work you need to do to do this by hand!
+
+    This passes all the same tests as the colors function above:
+      with a LOT more code!
     """
     # putting this in a tuple, as order is important
     #  could also use an ordereddict
@@ -76,8 +88,12 @@ def colors_manual(*args, **kwargs):
                                   ('link_color', 'green'),
                                   ('visited_color', 'cyan'),
                                   ))
-    all_args = {}
+    for key in kwargs:
+        if key not in default_colors:
+            msg = "colors_manual() got an unexpected keyword argument: {}".format(key)
+            raise TypeError
 
+    all_args = {}
     # unpack the args tuple:
     for i, key in enumerate(default_colors.keys()):
         try:

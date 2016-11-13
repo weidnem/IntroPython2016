@@ -150,6 +150,13 @@ def test_call_everything():
     # you can force a test failure if you want to see the output
     # assert False
 
+
+def test_call_undefined_kwarg():
+    # should get an error passing in non-existand keyword
+    with pytest.raises(TypeError):
+        result = colors(weird_color='grey')
+
+
 # ###########################
 # now lets try calling call_colors in all the above ways, and see if we get what we expect.
 #
@@ -397,3 +404,9 @@ def test_manual_call_everything():
     assert 'link: orange' in result
     # you can force a test failure if you want to see the output
     # assert False
+
+
+def test_manual_call_undefined_kwarg():
+    # should get an error passing in non-existand keyword
+    with pytest.raises(TypeError):
+        result = colors_manual(weird_color='grey')
