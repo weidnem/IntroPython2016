@@ -120,6 +120,16 @@ def create_letter(full_name, amount):
           '''.format(full_name, amount)
 
 
+def list_donors(donor_dict):
+    """
+    Take in the dictionary of donors and outputs each donor in a string.
+    """
+    donors_list = ['Donors:']
+    for donor in donor_dict:
+        donors_list.append(donor)
+    return '\n'.join(donors_list)
+
+
 def send_ty(donor_dict):
     """
     This function takes in a multi dimensional list of donors and
@@ -128,7 +138,7 @@ def send_ty(donor_dict):
     """
     full_name = input("Please enter your full name: ")
     if full_name == 'list':
-        print_donor(donor_dict)
+        print(list_donors(donor_dict))
         full_name = input("Please enter your full name: ")
     if full_name not in donor_dict:
         # Add new donor name to donors
