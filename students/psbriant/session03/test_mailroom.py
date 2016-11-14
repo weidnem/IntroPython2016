@@ -33,6 +33,15 @@ def test_find_donor():
     assert mailroom.find_donor("satYa nADella ", mailroom.donor_dict)
 
 
+def test_not_donor():
+    """
+    Tests a non-existent donor.
+    """
+    donor_db = mailroom.donor_dict
+    donor = mailroom.find_donor("Saya Nadella", donor_db)
+    assert donor is None
+
+
 # ==============================================================================
 def main():
     """
