@@ -35,11 +35,24 @@ def test_find_donor():
 
 def test_not_donor():
     """
-    Tests a non-existent donor.
+    Test a non-existent donor.
     """
     donor_db = mailroom.donor_dict
     donor = mailroom.find_donor("Saya Nadella", donor_db)
     assert donor is None
+
+
+def test_create_letter():
+    """
+    Test output of letter to ensure donor name and donation are present with
+    correct formatting.
+    """
+    name = "Paul Briant"
+    amount = 200.00
+    letter = mailroom.create_letter(name, amount)
+    assert letter.startswith("Dear Paul Briant,\n")
+    assert letter.endswith("-The Team\n")
+    assert "donation of $200.00!\n" in letter
 
 
 # ==============================================================================
