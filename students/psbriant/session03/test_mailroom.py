@@ -14,6 +14,18 @@ import mailroom
 
 # -------------------------------Functions--------------------------------------
 
+
+def test_list_donors():
+    """
+    Verifies content of the list_donors output.
+    """
+    listing = mailroom.list_donors
+    assert listing.startswith('Donors:\n')
+    assert "Sheryl Sandberg" in listing
+    assert "Satya Nadella" in listing
+    assert len(listing.split('\n')) == 5
+
+
 # ==============================================================================
 def main():
 
