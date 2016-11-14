@@ -27,12 +27,10 @@ def print_report(donor_dict):
     """
     # list of the sum of total contributions by each donor
     total_list = sum_d(donor_dict)
-    print(total_list)
     # Derive numbers to sort by.
-    sort_by = sort_key(total_list)
-    print(sort_by)
+    # sort_by = sort_key(total_list)
     # Sort list by highest sum of total donations
-    total_list.sort(key=sort_by, reverse=True)
+    # sorted(total_list, key=sort_by, reverse=True)
     # iterate through donors
     for i in range(len(total_list)):
         # Name, total donated, number of donations and average donation amount.
