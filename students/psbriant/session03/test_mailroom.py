@@ -47,6 +47,7 @@ def test_create_letter():
     Test output of letter to ensure donor name and donation are present with
     correct formatting.
     """
+    # Create test donor and donation amount
     name = "Paul Briant"
     amount = 200.00
     letter = mailroom.create_letter(name, amount)
