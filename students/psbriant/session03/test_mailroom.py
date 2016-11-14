@@ -26,9 +26,18 @@ def test_list_donors():
     assert len(listing.split('\n')) == 5
 
 
+def test_find_donor():
+    """
+    Checks to see if a donor exists but with varied whitespace and cases.
+    """
+    assert mailroom.find_donor("satYa nADella ", mailroom.donor_dict)
+
+
 # ==============================================================================
 def main():
+    """
 
+    """
 
 
 if __name__ == '__main__':
