@@ -148,11 +148,6 @@ def main():
     provides the user with options to send a thank you letter, print a report
     and exit the interface.
     """
-    donors = [['Bill Gates', [1000000, 2500000, 1800000]],
-              ['Sheryl Sandberg', [200000, 100000, 130000]],
-              ['Larry Page', [150000, 110000, 170000]],
-              ['Satya Nadella', [140000, 111000]],
-              ['Susan Wojcicki', [100000, 109000]]]
 
     donor_dict = {'Bill Gates': [1000000, 2500000, 1800000], 'Sheryl Sandberg':
                   [200000, 100000, 130000], 'Larry Page': [150000, 110000,
