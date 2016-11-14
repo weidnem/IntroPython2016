@@ -14,11 +14,27 @@ on user specification.
 # -------------------------------Functions--------------------------------------
 
 
+donor_dict = {'Bill Gates': [1000000, 2500000, 1800000], 'Sheryl Sandberg':
+              [200000, 100000, 130000], 'Larry Page': [150000, 110000,
+              170000], 'Satya Nadella': [140000, 111000], 'Susan Wojcicki':
+              [100000, 109000]
+              }
+
+message = """
+Please select from the following options:
+
+To send a thank you: type "s"
+To print a report: type "p"
+To exit: type "x"
+"""
+
+
 def sort_key(item):
     """
     Takes in a list of ints and outputs the int at index one.
     """
     return item[0][0]
+
 
 def print_report(donor_dict):
     """
@@ -147,20 +163,6 @@ def main():
     Displays the main interactive interface of this program. The interface
     provides the user with options to send a thank you letter, print a report
     and exit the interface.
-    """
-
-    donor_dict = {'Bill Gates': [1000000, 2500000, 1800000], 'Sheryl Sandberg':
-                  [200000, 100000, 130000], 'Larry Page': [150000, 110000,
-                  170000], 'Satya Nadella': [140000, 111000], 'Susan Wojcicki':
-                  [100000, 109000]
-                  }
-
-    message = """
-    Please select from the following options:
-
-    To send a thank you: type "s"
-    To print a report: type "p"
-    To exit: type "x"
     """
 
     action = ''
