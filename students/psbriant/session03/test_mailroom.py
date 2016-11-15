@@ -56,6 +56,14 @@ def test_create_letter():
     assert "donation of $200.00!\n" in letter
 
 
+def test_print_report():
+    """
+    Test to ensure report is generated.
+    """
+    report = mailroom.print_report
+    print(report)
+
+
 # ==============================================================================
 def main():
     """
