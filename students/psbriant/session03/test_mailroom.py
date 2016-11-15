@@ -47,6 +47,9 @@ def test_create_letter():
     """
     Test output of letter to ensure donor name and donation are present with
     correct formatting.
+
+    Question:
+    Need to fix assert error when verifying start of letter.
     """
     # Create test donor and donation amount
     name = "Paul Briant"
