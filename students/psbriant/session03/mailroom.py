@@ -105,8 +105,6 @@ def main_menu_selection(message):
 def create_letter(full_name, amount):
     """
     Take in donor information and return a thank you letter to specific donor.
-    To Do:
-    Ensure donor key value pair works as intended.
     """
     # Display thank you
     return '''
