@@ -19,11 +19,12 @@ def test_list_donors():
     """
     Verifies content of the list_donors output.
     """
-    listing = mailroom.list_donors
+    donor_db = mailroom.donor_dict
+    listing = mailroom.list_donors(donor_db)
     assert listing.startswith('Donors:\n')
     assert "Sheryl Sandberg" in listing
     assert "Satya Nadella" in listing
-    assert len(listing.split('\n')) == 5
+    assert len(listing.split('\n')) == 6
 
 
 def test_find_donor():
