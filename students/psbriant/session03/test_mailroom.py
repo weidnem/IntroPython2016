@@ -72,14 +72,3 @@ def test_sum_d():
     donor_db = mailroom.donor_dict
     stats = mailroom.sum_d(donor_db)
     print(stats)
-
-
-# ==============================================================================
-def main():
-    """
-
-    """
-
-
-if __name__ == '__main__':
-    main()
