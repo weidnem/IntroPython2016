@@ -60,8 +60,18 @@ def test_print_report():
     """
     Test to ensure report is generated.
     """
-    report = mailroom.print_report
+    donor_db = mailroom.donor_dict
+    report = mailroom.print_report(donor_db)
     print(report)
+
+
+def test_sum_d():
+    """
+    Test to ensure donor statistics are generated.
+    """
+    donor_db = mailroom.donor_dict
+    stats = mailroom.sum_d(donor_db)
+    print(stats)
 
 
 # ==============================================================================
