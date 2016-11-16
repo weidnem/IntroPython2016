@@ -41,11 +41,3 @@ def test_monkey_true_false():
     assert monkey_trouble(True, False) is False
 
 # more!
-def test_monkey_false_false():
-    assert monkey_trouble(False, False)
-
-def test_monkey_true_false():
-    assert monkey_trouble(True, False) is False
-
-def test_monkey_false_true():
-    assert monkey_trouble(False, True) is False
