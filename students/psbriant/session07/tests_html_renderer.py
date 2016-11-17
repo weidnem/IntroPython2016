@@ -10,6 +10,6 @@ Tests for HTML Renderer
 """
 
 # -------------------------------Imports----------------------------------------
-import html_renderer.py
+import html_renderer
 
 # -------------------------------Functions--------------------------------------
