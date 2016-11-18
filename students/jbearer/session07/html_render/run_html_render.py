@@ -55,13 +55,17 @@ page = hr.Html()
 
 body = hr.Body()
 
-body.append(hr.P("Here is a paragraph of text -- there could be more of them, but this is enough  to show that we can do some text"))
+body.append("body stuff")
+page.append(body)
+render_page(page, 'testfile.html')
+
+# body.append(hr.P("Here is a paragraph of text -- there could be more of them, but this is enough  to show that we can do some text"))
 
 # body.append(hr.P("And here is another piece of text -- you should be able to add any number"))
 
-page.append(body)
+# page.append(body)
 
-render_page(page, "test_html_output2.html")
+# render_page(page, "test_html_output2.html")
 
 # # Step 3
 # ##########
