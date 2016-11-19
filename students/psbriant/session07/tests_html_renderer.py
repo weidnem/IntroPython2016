@@ -10,7 +10,7 @@ Tests for HTML Renderer
 """
 
 # -------------------------------Imports----------------------------------------
-import html_renderer
+from html_renderer import Element
 import io
 
 # -------------------------------Functions--------------------------------------
@@ -20,7 +20,7 @@ def test_content():
     """
     Checks whether content is a str.
     """
-    e = html_renderer.Element
+    e = Element()
     assert type(e.self.content) is str
 
 
