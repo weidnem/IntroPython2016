@@ -25,10 +25,11 @@ class Element:
         if content:
             self.content.append(content)
 
-    def append(content):
+    def append(self, content):
         """
 
         """
+        self.content.append(content)
 
     def render(self, file_out):
         """
