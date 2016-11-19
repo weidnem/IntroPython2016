@@ -12,13 +12,17 @@ Description:
 
 
 # -------------------------------Classes--------------------------------------
-class Element(content=None):
-    def __init__(self, tag, indent):
+class Element:
+
+    tag = 'html'
+
+    def __init__(self, content=None):
         """
         Initializes class attributes tag and spaces.
         """
-        self.tag = tag
-        self.spaces = indent
+        self.content = []
+        if content:
+            self.content.append(content)
 
     def append(content):
         """
