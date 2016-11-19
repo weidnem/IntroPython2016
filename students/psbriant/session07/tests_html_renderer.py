@@ -31,8 +31,12 @@ def test_append():
 
 def test_render():
     """
-
+    Tests whether render successfully writes content to file by creating
+    instance of element, adding content to it using the append function and
+    calling the render funtion on it.
     """
+    # Creates in memory version of content to write to file
     output = io.StringIO()
     e = html_renderer.Element("Hello World!")
+    e.append("Wazzup World!")
     e.render(output)
