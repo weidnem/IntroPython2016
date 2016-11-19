@@ -40,7 +40,7 @@ def test_render():
     e = Element("this is some text")
     e.append("and this is some more text")
 
-    e.render(outfile)
+    e.render(outfile, "")
 
     outfile.seek(0)
     file_contents = outfile.read()

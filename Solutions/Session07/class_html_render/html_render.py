@@ -10,7 +10,7 @@ class Element:
     def append(self, content):
         self.content.append(content)
 
-    def render(self, out_file):
+    def render(self, out_file, ind=""):
         out_file.write("<html>\n")
         for stuff in self.content:
             out_file.write(stuff+"\n")
