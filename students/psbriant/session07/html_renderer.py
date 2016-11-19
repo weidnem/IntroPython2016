@@ -25,12 +25,14 @@ class Element(content=None):
 
         """
 
-    def render(file_out, ind=""):
+    def render(self, file_out):
         """
 
         """
-
-
+        file_out.write("<{}>\n".format(self.tag))
+        for stuff in self.content:
+            file_out.write(stuff+"\n")
+        file_out.write("</{}>\n".format(self.tag))
 
 
 # ==============================================================================
