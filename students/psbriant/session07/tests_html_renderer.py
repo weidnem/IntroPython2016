@@ -13,3 +13,23 @@ Tests for HTML Renderer
 import html_renderer
 
 # -------------------------------Functions--------------------------------------
+
+
+def test_content():
+    """
+    Checks whether content is a str.
+    """
+    assert type() is str
+
+
+def test_append():
+    """
+    Verifies additional content is successfully added to rest of content
+    """
+
+
+def test_render():
+    """
+
+    """
+    print(html_renderer.Element.render())
