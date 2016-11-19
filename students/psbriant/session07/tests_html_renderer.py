@@ -38,6 +38,6 @@ def test_render():
     """
     # Creates in memory version of content to write to file
     output = io.StringIO()
-    e = html_renderer.Element("Hello World!")
+    e = Element("Hello World!")
     e.append("Wazzup World!")
     e.render(output)
