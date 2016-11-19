@@ -26,6 +26,7 @@ def test_append():
 
     assert "some more text" in e.content
 
+
 def test_two_instances():
     e = Element("this is some text")
     e2 = Element("this is some text")
@@ -33,6 +34,7 @@ def test_two_instances():
     e.append("some more text")
 
     assert "some more text" not in e2.content
+
 
 def test_render():
     outfile = io.StringIO()
@@ -42,14 +44,11 @@ def test_render():
 
     e.render(outfile, "")
 
-    outfile.seek(0)
-    file_contents = outfile.read()
+    # outfile.seek(0)
+    file_contents = outfile.getvalue()
 
     assert("this is some text") in file_contents
     assert("and this is some more text") in file_contents
 
     assert file_contents.startswith("<html>")
     assert file_contents.strip().endswith("</html>")
-
-
-
