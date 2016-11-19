@@ -27,13 +27,16 @@ class Element:
 
     def append(self, content):
         """
-
+        Takes in new content in the form of a string and adds it to list of
+        existing content.
         """
         self.content.append(content)
 
     def render(self, file_out):
         """
-
+        Takes in the output file, generates opening and closing tags and
+        inserts each individual line of content in between it. All tags and
+        content are written to output file.
         """
         file_out.write("<{}>\n".format(self.tag))
         for stuff in self.content:
