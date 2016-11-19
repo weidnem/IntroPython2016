@@ -18,7 +18,8 @@ class Element:
 
     def __init__(self, content=None):
         """
-        Initializes class attributes tag and spaces.
+        Initializes class attribute content and appends any value not equal to
+        none into and empty list.
         """
         self.content = []
         if content:
