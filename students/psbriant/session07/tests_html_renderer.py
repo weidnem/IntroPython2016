@@ -20,7 +20,8 @@ def test_content():
     """
     Checks whether content is a str.
     """
-    assert type(self.content) is str
+    e = html_renderer.Element
+    assert type(e.self.content) is str
 
 
 def test_append():
