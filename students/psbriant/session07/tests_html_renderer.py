@@ -20,7 +20,7 @@ def test_content():
     """
     Checks whether content is a str.
     """
-    assert type() is str
+    assert type(self.content) is str
 
 
 def test_append():
