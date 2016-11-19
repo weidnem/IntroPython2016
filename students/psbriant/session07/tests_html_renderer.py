@@ -11,6 +11,7 @@ Tests for HTML Renderer
 
 # -------------------------------Imports----------------------------------------
 import html_renderer
+import io
 
 # -------------------------------Functions--------------------------------------
 
@@ -32,4 +33,6 @@ def test_render():
     """
 
     """
-    print(html_renderer.Element.render())
+    output = io.StringIO()
+    e = html_renderer.Element("Hello World!")
+    e.render(output)
