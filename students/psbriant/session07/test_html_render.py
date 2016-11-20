@@ -10,7 +10,7 @@ Tests for HTML Renderer
 """
 
 # -------------------------------Imports----------------------------------------
-from html_renderer import Element, Html, Body, P
+from html_render import Element, Html, Body, P
 import io
 
 # -------------------------------Functions--------------------------------------
