@@ -11,9 +11,23 @@ Running tests using ipython:
     Creates -> test_html_output<step #>.html
 '''
 
+# Chris' method:
+class TextWrapper:
+    """
+    A simple wrapper that creates a class with a render method
+    for simple text
+    """
+    def __init__(self, text):
+        self.text = text
+
+    def render(self, file_out, current_ind=""):
+        file_out.write(current_ind + self.text)
+
 class Element:
+    # Class names should normally use the CapWords convention
     # Class attributes are shared by all instances
-    tag = 'html'
+    tag = 'element'    # Element doesn't really have a tag
+    ind = ''
 
     # The __init__ method gets called when memory for the object is allocated
     
@@ -22,16 +36,37 @@ class Element:
         self.content = []
         if content:
             self.content.append(content)
-
+                    
     # Other Methods
    
     def append(self, content):
-        self.content.append(content)
+        if hasattr(content, 'render'):
+            self.content.append(content)
+        else:
+            self.content.append(TextWrapper(str(content)))
         
     def render(self, out_file, ind = ''):
-        # out_file.write('<html>\n')
-        out_file.write("<{}>\n".format(self.tag))
-        for entry in self.content:
-            out_file.write(entry + " ")
-        # out_file.write('\n</html>')
-        out_file.write("</{}>\n".format(self.tag))
+        # self = <html> object (assume 1)
+        out_file.write(ind + '<{}>\n'.format(self.tag))
+        for body in self.content:
+            # body = <body> object (assume 1)
+            out_file.write(ind + '<{}>\n'.format(body.tag))
+            for p in body.content:
+                # p = <p> objects (assume multiple)
+                out_file.write(ind + '<{}>\n'.format(p.tag))
+                out_file.write(ind + p.content[0] + '\n')
+                out_file.write(ind + '</{}>\n'.format(p.tag))
+            out_file.write(ind + '</{}>\n'.format(body.tag))
+        out_file.write(ind + '</{}>\n'.format(self.tag))
+        
+class Html(Element):
+    tag = 'html'
+    ind = ''
+
+class Body(Element):
+    tag = 'body'
+    ind = '    '
+
+class P(Element):
+    tag = 'p'
+    ind = '        '
