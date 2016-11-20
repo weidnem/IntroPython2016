@@ -16,6 +16,11 @@ import io
 # -------------------------------Functions--------------------------------------
 
 
+def test_init():
+    e = Element()
+    e = Element("Please remain calm, this is a test.")
+
+
 def test_content():
     """
     Checks whether content is a str.
