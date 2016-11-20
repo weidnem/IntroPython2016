@@ -30,35 +30,44 @@ class Element:
     ind = ''
 
     # The __init__ method gets called when memory for the object is allocated
-    
+
     def __init__(self, content=None):
         # Instance attributes unique to each instance
         self.content = []
         if content:
             self.content.append(content)
-                    
+                
     # Other Methods
-   
+
     def append(self, content):
         if hasattr(content, 'render'):
             self.content.append(content)
         else:
             self.content.append(TextWrapper(str(content)))
-        
+    
     def render(self, out_file, ind = ''):
         # self = <html> object (assume 1)
-        out_file.write(ind + '<{}>\n'.format(self.tag))
+        out_file.write(self.ind + '<{}>\n'.format(self.tag))
         for body in self.content:
             # body = <body> object (assume 1)
-            out_file.write(ind + '<{}>\n'.format(body.tag))
+            out_file.write(body.ind + '<{}>\n'.format(body.tag))
             for p in body.content:
                 # p = <p> objects (assume multiple)
-                out_file.write(ind + '<{}>\n'.format(p.tag))
-                out_file.write(ind + p.content[0] + '\n')
-                out_file.write(ind + '</{}>\n'.format(p.tag))
-            out_file.write(ind + '</{}>\n'.format(body.tag))
-        out_file.write(ind + '</{}>\n'.format(self.tag))
-        
+                out_file.write(p.ind + '<{}>\n'.format(p.tag))
+                out_file.write(p.ind + "    " + p.content[0] + '\n')
+                out_file.write(p.ind + '</{}>\n'.format(p.tag))
+            out_file.write(body.ind + '</{}>\n'.format(body.tag))
+        out_file.write(self.ind + '</{}>\n'.format(self.tag))
+
+    # Chris' recursive version:
+#     def render(self, out_file, ind=""):
+#         out_file.write("<{}>\n".format(self.tag))
+#         for stuff in self.content:
+#             stuff.render(out_file)
+#             out_file.write("\n")
+#         out_file.write("</{}>".format(self.tag))
+    # AttributeError: 'str' object has no attribute 'render'
+
 class Html(Element):
     tag = 'html'
     ind = ''
