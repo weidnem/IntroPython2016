@@ -68,7 +68,9 @@ def test_render():
 
 def test_html_render():
     """
-
+    Tests whether render successfully writes content to file for the html tag
+    by creating instance of element, adding content to it using the append
+    function and calling the render funtion on it.
     """
     # Creates in memory version of content to write to file
     output = io.StringIO()
@@ -82,7 +84,9 @@ def test_html_render():
 
 def test_body_render():
     """
-
+    Tests whether render successfully writes content to file for the body tag
+    by creating instance of element, adding content to it using the append
+    function and calling the render funtion on it.
     """
     # Creates in memory version of content to write to file
     output = io.StringIO()
@@ -96,7 +100,9 @@ def test_body_render():
 
 def test_p_render():
     """
-
+    Tests whether render successfully writes content to file for the p tag
+    by creating instance of element, adding content to it using the append
+    function and calling the render funtion on it.
     """
     # Creates in memory version of content to write to file
     output = io.StringIO()
