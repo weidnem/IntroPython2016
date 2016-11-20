@@ -120,6 +120,20 @@ def test_text_wrapper():
     assert file_contents == "A basic piece of text"
 
 
+def test_non_str():
+    """ you should be able to pass anything in, and it will get
+    "stringified"
+    """
+    e = P(34)  # a number
+    e.append((3, 4, 5))  # even a tuple
+
+    file_contents = render_result(e)
+
+    print(file_contents)
+    assert("34") in file_contents
+    assert("(3, 4, 5)") in file_contents
+
+
 def test_sub_element():
     """
     tests that you can add another element and still render properly
