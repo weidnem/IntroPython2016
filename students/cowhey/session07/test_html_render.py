@@ -2,7 +2,7 @@
 test code for html_render.py
 """
 
-from html_render import Body, Element, Head, Html, P, OneLineTag, Title, Hr, Br, Img, A
+from html_render import Body, Element, Head, Html, P, OneLineTag, Title, Hr, Br, Img, A, H, Meta
 import io
 
 
@@ -32,6 +32,14 @@ def test_append():
     e = Element("some text")
     e.append("some more text")
     assert e.content[-1] == "some more text"
+
+
+def test_header():
+    attr = {"class": "tiny-header"}
+    h = H(4, "a header", **attr)
+    output = get_output(h)
+    print(output)
+    assert output == "<h4 class=\"tiny-header\">a header</h4>"
 
 
 def test_element_with_attributes():
@@ -87,6 +95,19 @@ def test_two_instances():
     assert "more text" not in e2.content
 
 
+def test_doctype_and_meta():
+    h = Html()
+    b = Body()
+    p = P("a paragraph")
+    b.append(p)
+    h.append(b)
+    output = get_output(h)
+    output_lines = get_output_lines(h)
+    print(output)
+    assert output_lines[0] == "<!DOCTYPE html>"
+    assert output_lines[1] == "<meta charset=\"UTF-8\" />"
+
+
 def test_indentation_render():
     e = P("some text")
     output = get_output(e, ind="    ")
@@ -98,10 +119,10 @@ def test_html_indentation():
     e = Html("a test")
     output = get_output(e)
     print(output)
-    assert output.startswith("<html>")
+    assert "<html>\n" in output
     assert output.endswith("\n</html>")
     output_lines = output.split("\n")
-    assert output_lines[1] == "    a test"
+    assert "    a test" in output_lines
 
 
 def test_multiple_element_indentation():
@@ -112,8 +133,8 @@ def test_multiple_element_indentation():
     e1.append(e2)
     output = get_output(e1)
     output_lines = output.split("\n")
-    assert output_lines[2] == "        <p>"
-    assert output_lines[3] == "            some random text"
+    assert "        <p>" in output_lines
+    assert "            some random text" in output_lines
     print(output)
 
 
@@ -125,9 +146,8 @@ def test_one_line_tag():
     e1.append(e2)
     output = get_output(e1)
     print(output)
-    output = get_output(e1)
-    output_lines = output.split("\n")
-    assert output_lines[2] == "        <title>Hark! A Title!</title>"
+    output_lines = get_output_lines(e1)
+    assert "        <title>Hark! A Title!</title>" in output_lines
 
 
 def test_render():
