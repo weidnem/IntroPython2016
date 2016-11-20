@@ -40,7 +40,10 @@ class Element:
         """
         file_out.write("<{}>\n".format(self.tag))
         for stuff in self.content:
-            file_out.write(stuff+"\n")
+            try:
+                stuff.render(file_out, ind)
+            except AttributeError:
+                file_out.write(stuff+"\n")
         file_out.write("</{}>\n".format(self.tag))
 
 
