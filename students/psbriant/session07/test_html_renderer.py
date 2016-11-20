@@ -64,3 +64,21 @@ def test_render():
     assert("DON'T PANIC") in file_cont
     assert file_cont.startswith("<html>")
     assert file_cont.strip().endswith("</html>")
+
+
+def test_html_render():
+    """
+
+    """
+
+
+def test_body_render():
+    """
+
+    """
+
+
+def test_p_render():
+    """
+
+    """
