@@ -10,7 +10,7 @@ Tests for HTML Renderer
 """
 
 # -------------------------------Imports----------------------------------------
-from html_renderer import Element
+from html_renderer import Element, Html, Body, P
 import io
 
 # -------------------------------Functions--------------------------------------
@@ -74,7 +74,7 @@ def test_html_render():
     """
     # Creates in memory version of content to write to file
     output = io.StringIO()
-    e = Element("Testing, 1 2 3..")
+    e = Html("Testing, 1 2 3..")
     e.append("DON'T PANIC")
     e.render(output, "")
     file_cont = output.getvalue()
@@ -90,7 +90,7 @@ def test_body_render():
     """
     # Creates in memory version of content to write to file
     output = io.StringIO()
-    e = Element("Testing, 1 2 3..")
+    e = Body("Testing, 1 2 3..")
     e.append("DON'T PANIC")
     e.render(output, "")
     file_cont = output.getvalue()
@@ -106,7 +106,7 @@ def test_p_render():
     """
     # Creates in memory version of content to write to file
     output = io.StringIO()
-    e = Element("Testing, 1 2 3..")
+    e = P("Testing, 1 2 3..")
     e.append("DON'T PANIC")
     e.render(output, "")
     file_cont = output.getvalue()
