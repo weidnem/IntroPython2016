@@ -29,7 +29,6 @@ def test_content():
     Ask about why type based testcase fails.
     """
     e = Element("Testing, 1 2 3..")
-    assert e.content is str
     assert "Testing, 1 2 3.." in e.content
 
 
