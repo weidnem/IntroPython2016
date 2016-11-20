@@ -44,6 +44,18 @@ class Element:
         file_out.write("</{}>\n".format(self.tag))
 
 
+class Html(Element):
+        tag = 'html'
+
+
+class Body(Element):
+        tag = 'body'
+
+
+class P(Element):
+        tag = 'p'
+
+
 # ==============================================================================
 
 
