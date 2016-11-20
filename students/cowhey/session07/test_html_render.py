@@ -2,7 +2,7 @@
 test code for html_render.py
 """
 
-from html_render import Body, Element, Head, Html, P, OneLineTag, Title
+from html_render import Body, Element, Head, Html, P, OneLineTag, Title, Hr, Br, Img, A
 import io
 
 
@@ -37,20 +37,47 @@ def test_append():
 def test_element_with_attributes():
     p = P("a paragraph", id="TheList", style="line-height:200%")
     outfile_lines = get_output_lines(p)
-    assert outfile_lines[0] == "<p id=\"TheList\" style=\"line-height:200%\">"
+    assert "id=\"TheList\"" in outfile_lines[0]
+    assert "style=\"line-height:200%\"" in outfile_lines[0]
 
 
 def test_single_line_element_with_attributes():
-    # can't use this because class is a keyword...
-    # e = Title("a title", id="myTitle", class="red")
-    e = Title("a title", id="myTitle", style="line-height:200%")
+    attr = {"id": "myTitle", "class": "red"}
+    e = Title("a title", **attr)
     outfile_lines = get_output_lines(e)
     print(outfile_lines[0])
     assert "<title " in outfile_lines[0]
     assert "id=\"myTitle\"" in outfile_lines[0]
-    assert "style=\"line-height:200%\"" in outfile_lines[0]
-    # assert "class=\"red\"" in outfile_lines[0]
+    assert "class=\"red\"" in outfile_lines[0]
 
+
+def test_self_closing_tag():
+    e = Hr()
+    output = get_output(e)
+    print(output)
+    assert output == "<hr />"
+
+
+def test_img_tag():
+    img = Img(src="/assets/an_image.jpg")
+    output = get_output(img)
+    print(output)
+    assert "src=\"/assets/an_image.jpg\"" in output
+
+
+def test_link():
+    a = A("http://google.com", "link to google")
+    output = get_output(a)
+    print(output)
+    assert output == "<a href=\"http://google.com\">link to google</a>"
+
+def test_link_with_attributes():
+    attr = {"class": "external-link", "target": "_blank"}
+    a = A("http://google.com", "link to google", **attr)
+    output = get_output(a)
+    print(output)
+    assert "class=\"external-link\"" in output
+    assert "target=\"_blank\"" in output
 
 
 def test_two_instances():

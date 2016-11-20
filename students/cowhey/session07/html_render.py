@@ -7,8 +7,8 @@ class Element:
         self.attributes = []
         if content:
             self.content.append(content)
-        k_list = sorted(kwargs.keys())
-        for k in k_list:
+        for k in kwargs:
+            # think about using ordered dict
             self.attributes.append((k, kwargs[k]))
 
 
@@ -61,6 +61,13 @@ class Title(OneLineTag):
     tag = "title"
 
 
+class A(OneLineTag):
+    tag = "a"
+    def __init__(self, link, content, **kwargs):
+        kwargs["href"] = link
+        super().__init__(content, **kwargs)
+
+
 class SelfClosingTag(Element):
     def render(self, out_file, ind=""):
         out_file.write("{}<{}{} />".format(ind, self.tag, self.render_opening_tag()))
@@ -72,3 +79,7 @@ class Br(SelfClosingTag):
 
 class Hr(SelfClosingTag):
     tag = "hr"
+
+
+class Img(SelfClosingTag):
+    tag = "img"
