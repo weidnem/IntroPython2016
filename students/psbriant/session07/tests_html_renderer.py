@@ -25,9 +25,9 @@ def test_content():
     """
     Checks whether content is a str.
     """
-    e = Element("Testing 1 2 3..")
+    e = Element("Testing, 1 2 3..")
     assert type(e.content) is str
-    assert "Testing 1 2 3.." in e.content
+    assert "Testing, 1 2 3.." in e.content
 
 
 def test_append():
@@ -37,6 +37,14 @@ def test_append():
     e = Element("Please remain calm, this is a test.")
     e.append("DON'T PANIC!")
     assert "DON'T PANIC!" in e.content
+
+
+def test_two_instances():
+    e = Element("Testing, 1 2 3..")
+    e2 = Element("Testing, 1 2 3..")
+    e.append("More tests! We need more tests!")
+    assert "More tests! We need more tests!" not in e2.content
+
 
 def test_render():
     """
