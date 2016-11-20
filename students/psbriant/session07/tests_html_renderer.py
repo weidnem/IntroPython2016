@@ -20,8 +20,9 @@ def test_content():
     """
     Checks whether content is a str.
     """
-    e = Element()
-    assert type(e.self.content) is str
+    e = Element("Testing 1 2 3..")
+    assert type(e.content) is str
+    assert "Testing 1 2 3.." in e.content
 
 
 def test_append():
