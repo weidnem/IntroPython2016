@@ -61,7 +61,7 @@ def test_render():
     e.append("DON'T PANIC")
     e.render(output, "")
     file_cont = output.getvalue()
-    assert("Testing 1 2 3..") in file_cont
+    assert("Testing, 1 2 3..") in file_cont
     assert("DON'T PANIC") in file_cont
     assert file_cont.startswith("<html>")
     assert file_cont.strip().endswith("</html>")
