@@ -57,6 +57,11 @@ def test_render():
     """
     # Creates in memory version of content to write to file
     output = io.StringIO()
-    e = Element("Hello World!")
-    e.append("Wazzup World!")
-    e.render(output)
+    e = Element("Testing, 1 2 3..")
+    e.append("DON'T PANIC")
+    e.render(output, "")
+    file_cont = output.getvalue()
+    assert("Testing 1 2 3..") in file_cont
+    assert("DON'T PANIC") in file_cont
+    assert file_cont.startswith("<html>")
+    assert file_cont.strip().endswith("</html>")
