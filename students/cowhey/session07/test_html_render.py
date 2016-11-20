@@ -11,6 +11,10 @@ def get_output(element, ind=""):
     element.render(outfile, ind)
     return outfile.getvalue()
 
+def get_output_lines(element, ind=""):
+    outfile = get_output(element, ind)
+    return outfile.split("\n")
+
 
 def test_init():
     e = Element("some string")
@@ -28,6 +32,25 @@ def test_append():
     e = Element("some text")
     e.append("some more text")
     assert e.content[-1] == "some more text"
+
+
+def test_element_with_attributes():
+    p = P("a paragraph", id="TheList", style="line-height:200%")
+    outfile_lines = get_output_lines(p)
+    assert outfile_lines[0] == "<p id=\"TheList\" style=\"line-height:200%\">"
+
+
+def test_single_line_element_with_attributes():
+    # can't use this because class is a keyword...
+    # e = Title("a title", id="myTitle", class="red")
+    e = Title("a title", id="myTitle", style="line-height:200%")
+    outfile_lines = get_output_lines(e)
+    print(outfile_lines[0])
+    assert "<title " in outfile_lines[0]
+    assert "id=\"myTitle\"" in outfile_lines[0]
+    assert "style=\"line-height:200%\"" in outfile_lines[0]
+    # assert "class=\"red\"" in outfile_lines[0]
+
 
 
 def test_two_instances():
