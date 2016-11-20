@@ -70,15 +70,39 @@ def test_html_render():
     """
 
     """
+    # Creates in memory version of content to write to file
+    output = io.StringIO()
+    e = Element("Testing, 1 2 3..")
+    e.append("DON'T PANIC")
+    e.render(output, "")
+    file_cont = output.getvalue()
+    assert file_cont.startswith("<html>")
+    assert file_cont.strip().endswith("</html>")
 
 
 def test_body_render():
     """
 
     """
+    # Creates in memory version of content to write to file
+    output = io.StringIO()
+    e = Element("Testing, 1 2 3..")
+    e.append("DON'T PANIC")
+    e.render(output, "")
+    file_cont = output.getvalue()
+    assert file_cont.startswith("<body>")
+    assert file_cont.strip().endswith("</body>")
 
 
 def test_p_render():
     """
 
     """
+    # Creates in memory version of content to write to file
+    output = io.StringIO()
+    e = Element("Testing, 1 2 3..")
+    e.append("DON'T PANIC")
+    e.render(output, "")
+    file_cont = output.getvalue()
+    assert file_cont.startswith("<p>")
+    assert file_cont.strip().endswith("</p>")
