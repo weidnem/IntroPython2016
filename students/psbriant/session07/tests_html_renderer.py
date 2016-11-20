@@ -34,7 +34,9 @@ def test_append():
     """
     Verifies additional content is successfully added to rest of content
     """
-
+    e = Element("Please remain calm, this is a test.")
+    e.append("DON'T PANIC!")
+    assert "DON'T PANIC!" in e.content
 
 def test_render():
     """
