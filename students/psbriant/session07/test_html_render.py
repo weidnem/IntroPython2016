@@ -109,3 +109,20 @@ def test_p_render():
     file_cont = output.getvalue()
     assert file_cont.startswith("<p>")
     assert file_cont.strip().endswith("</p>")
+
+
+def test_append_instances():
+    """
+    Test to verify an instance of an html element can be appended into another.
+    """
+    output = io.StringIO()
+    e_body = Body()
+    e_p = P("Testing, 1 2 3..")
+    e_body.append(e_p)
+    e_body.render(output, "")
+    # Check startswith
+    # Check endswith
+    # print
+    # check content
+    # check p tag is in body
+    # additional tests
