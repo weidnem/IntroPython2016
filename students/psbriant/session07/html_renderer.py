@@ -32,7 +32,7 @@ class Element:
         """
         self.content.append(content)
 
-    def render(self, file_out):
+    def render(self, file_out, ind=""):
         """
         Takes in the output file, generates opening and closing tags and
         inserts each individual line of content in between it. All tags and
