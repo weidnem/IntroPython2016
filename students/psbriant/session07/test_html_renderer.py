@@ -24,9 +24,12 @@ def test_init():
 def test_content():
     """
     Checks whether content is a str.
+
+    Question:
+    Ask about why type based testcase fails.
     """
     e = Element("Testing, 1 2 3..")
-    assert type(e.content) is str
+    assert e.content is str
     assert "Testing, 1 2 3.." in e.content
 
 
