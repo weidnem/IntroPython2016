@@ -66,7 +66,7 @@ def test_render():
 def test_html_render():
     """
     Tests whether render successfully writes content to file for the html tag
-    by creating instance of element, adding content to it using the append
+    by creating instance of HTML, adding content to it using the append
     function and calling the render funtion on it.
     """
     # Creates in memory version of content to write to file
@@ -82,7 +82,7 @@ def test_html_render():
 def test_body_render():
     """
     Tests whether render successfully writes content to file for the body tag
-    by creating instance of element, adding content to it using the append
+    by creating instance of Body, adding content to it using the append
     function and calling the render funtion on it.
     """
     # Creates in memory version of content to write to file
@@ -98,7 +98,7 @@ def test_body_render():
 def test_p_render():
     """
     Tests whether render successfully writes content to file for the p tag
-    by creating instance of element, adding content to it using the append
+    by creating instance of P, adding content to it using the append
     function and calling the render funtion on it.
     """
     # Creates in memory version of content to write to file
@@ -133,7 +133,7 @@ def test_append_instances():
 def test_head_render():
     """
     Tests whether render successfully writes content to file for the head tag
-    by creating instance of element, adding content to it using the append
+    by creating instance of Head, adding content to it using the append
     function and calling the render funtion on it.
     """
     output = io.StringIO()
@@ -149,7 +149,7 @@ def test_onelinetag_title():
     """
     Tests whether the element subclass of onelinetag successfully writes all
     content on the same line to  a file for the inline tag 'title'. This is
-    tested by creating an instance of title, adding content to it using the
+    tested by creating an instance of Title, adding content to it using the
     append function and calling the render funtion on it.
     """
     output = io.StringIO()
