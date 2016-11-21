@@ -120,10 +120,11 @@ def test_append_instances():
     e_p = P("Testing, 1 2 3..")
     e_body.append(e_p)
     e_body.render(output, "")
-    # Check startswith
-
-    # Check endswith
-    # print
-    # check content
+    file_cont = output.getvalue()
+    assert file_cont.startswith("<body>")
+    assert file_cont.endswith("</body>")
+    print(file_cont)
+    assert "Testing, 1 2 3.." in file_cont
     # check p tag is in body
-    # additional tests
+    assert "<p>" in file_cont and "</p>" in file_cont
+    # additional tests?
