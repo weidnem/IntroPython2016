@@ -11,18 +11,6 @@ Running tests using ipython:
     Creates -> test_html_output<step #>.html
 '''
 
-# Chris' method:
-class TextWrapper:
-    """
-    A simple wrapper that creates a class with a render method
-    for simple text
-    """
-    def __init__(self, text):
-        self.text = text
-
-    def render(self, file_out, current_ind=""):
-        file_out.write(current_ind + self.text)
-
 class Element:
     # Class names should normally use the CapWords convention
     # Class attributes are shared by all instances
@@ -49,10 +37,25 @@ class Element:
         out_file.write(self.ind + '<{}>\n'.format(self.tag))
         for content in self.content:
             if hasattr(content, 'render'):
+                content.render(out_file, '')
+            else:
+                out_file.write(self.ind + '    ' + content + '\n')
+        out_file.write(self.ind + '</{}>\n'.format(self.tag))
+
+class OneLineTag(Element):
+
+    def render(self, out_file, ind = ''):
+        out_file.write(self.ind + '<{}>'.format(self.tag))
+        for content in self.content:
+            if hasattr(content, 'render'):
                 content.render(out_file, "")
             else:
-                out_file.write(self.ind + content + '\n')
+                out_file.write(self.ind + '   ' + content)
         out_file.write(self.ind + '</{}>\n'.format(self.tag))
+
+class Head(Element):
+    tag = 'head'
+    ind = ''
 
 class Html(Element):
     tag = 'html'
@@ -65,3 +68,7 @@ class Body(Element):
 class P(Element):
     tag = 'p'
     ind = '        '
+
+class Title(OneLineTag):
+    tag = 'title'
+    ind = '    '
