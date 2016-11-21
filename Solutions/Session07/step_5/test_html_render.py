@@ -12,6 +12,8 @@ from html_render import (Element,
                          TextWrapper,
                          Head,
                          Title,
+                         Hr,
+                         Br
                          )
 
 # utility function for testing render methods
@@ -302,3 +304,15 @@ def test_attributes_one_line_tag():
     assert 'color="red"' in file_contents
 
 
+def test_br():
+    br = Br("")
+    file_contents = render_result(br)
+    print(file_contents)
+    assert file_contents == "<br />"
+
+
+def test_hr():
+    hr = Hr(width=400)
+    file_contents = render_result(hr)
+    print(file_contents)
+    assert file_contents == '<hr width="400" />'
