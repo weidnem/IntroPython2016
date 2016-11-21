@@ -128,3 +128,16 @@ def test_append_instances():
     # check p tag is in body
     assert "<p>" in file_cont and "</p>" in file_cont
     # additional tests?
+
+
+def test_head_render():
+    """
+
+    """
+    output = io.StringIO()
+    e = Head("Testing, 1 2 3..")
+    e.append("DON'T PANIC")
+    e.render(output, "")
+    file_cont = output.getvalue()
+    assert file_cont.startswith("<head>")
+    assert file_cont.strip().endswith("</head>")
