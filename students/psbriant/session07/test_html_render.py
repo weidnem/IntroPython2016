@@ -121,6 +121,7 @@ def test_append_instances():
     e_body.append(e_p)
     e_body.render(output, "")
     # Check startswith
+
     # Check endswith
     # print
     # check content
