@@ -34,8 +34,8 @@ def test_append():
     Verifies additional content is successfully added to rest of content
     """
     e = hr.Element("Please remain calm, this is a test.")
-    e.append("DON'T PANIC!")
-    assert "DON'T PANIC!" in e.content
+    e.append("Testing, 1 2 3..")
+    assert "Testing, 1 2 3.." in e.content
 
 
 def test_two_instances():
@@ -54,11 +54,11 @@ def test_render():
     # Creates in memory version of content to write to file
     output = io.StringIO()
     e = hr.Element("Testing, 1 2 3..")
-    e.append("DON'T PANIC")
+    e.append("More tests! We need more tests!")
     e.render(output, "")
     file_cont = output.getvalue()
     assert("Testing, 1 2 3..") in file_cont
-    assert("DON'T PANIC") in file_cont
+    assert("More tests! We need more tests!") in file_cont
     assert file_cont.startswith("<html>")
     assert file_cont.strip().endswith("</html>")
 
@@ -72,7 +72,7 @@ def test_html_render():
     # Creates in memory version of content to write to file
     output = io.StringIO()
     e = hr.Html("Testing, 1 2 3..")
-    e.append("DON'T PANIC")
+    e.append("More tests! We need more tests!")
     e.render(output, "")
     file_cont = output.getvalue()
     assert file_cont.startswith("<html>")
@@ -88,7 +88,7 @@ def test_body_render():
     # Creates in memory version of content to write to file
     output = io.StringIO()
     e = hr.Body("Testing, 1 2 3..")
-    e.append("DON'T PANIC")
+    e.append("More tests! We need more tests!")
     e.render(output, "")
     file_cont = output.getvalue()
     assert file_cont.startswith("<body>")
@@ -104,7 +104,7 @@ def test_p_render():
     # Creates in memory version of content to write to file
     output = io.StringIO()
     e = hr.P("Testing, 1 2 3..")
-    e.append("DON'T PANIC")
+    e.append("More tests! We need more tests!")
     e.render(output, "")
     file_cont = output.getvalue()
     assert file_cont.startswith("<p>")
@@ -138,7 +138,7 @@ def test_head_render():
     """
     output = io.StringIO()
     e = hr.Head("Testing, 1 2 3..")
-    e.append("DON'T PANIC")
+    e.append("More tests! We need more tests!")
     e.render(output, "")
     file_cont = output.getvalue()
     assert file_cont.startswith("<head>")
@@ -154,7 +154,7 @@ def test_onelinetag_title():
     """
     output = io.StringIO()
     e = hr.Title("Testing, 1 2 3..")
-    e.append("DON'T PANIC")
+    e.append("More tests! We need more tests!")
     e.render(output, "")
     file_cont = output.getvalue()
     assert "\n" not in file_cont
