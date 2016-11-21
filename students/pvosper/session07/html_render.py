@@ -26,7 +26,7 @@ class TextWrapper:
 class Element:
     # Class names should normally use the CapWords convention
     # Class attributes are shared by all instances
-    tag = 'element'    # Element doesn't really have a tag
+    tag = 'html'    # Element doesn't really have a tag
     ind = ''
 
     # The __init__ method gets called when memory for the object is allocated
@@ -43,7 +43,7 @@ class Element:
         if hasattr(content, 'render'):
             self.content.append(content)
         else:
-            self.content.append(TextWrapper(str(content)))
+            self.content.append(str(content))
 
     def render(self, out_file, ind = ''):
         out_file.write(self.ind + '<{}>\n'.format(self.tag))
