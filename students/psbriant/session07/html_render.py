@@ -15,6 +15,7 @@ Description:
 class Element:
 
     tag = 'html'
+    num_ind = 0
 
     def __init__(self, content=None):
         """
@@ -38,25 +39,28 @@ class Element:
         inserts each individual line of content in between it. All tags and
         content are written to output file.
         """
-        file_out.write("{}<{}>\n".format(ind, self.tag))
+        file_out.write("{}<{}>\n".format((ind * self.num_ind), self.tag))
         for stuff in self.content:
             try:
                 stuff.render(file_out, ind)
             except AttributeError:
-                file_out.write(ind+stuff+"\n")
-        file_out.write("{}</{}>\n".format(ind, self.tag))
+                file_out.write((3*ind)+stuff+"\n")
+        file_out.write("{}</{}>\n".format(ind * self.num_ind, self.tag))
 
 
 class Html(Element):
         tag = 'html'
+        num_ind = 0
 
 
 class Body(Element):
         tag = 'body'
+        num_ind = 1
 
 
 class P(Element):
         tag = 'p'
+        num_ind = 2
 
 
 # ==============================================================================
