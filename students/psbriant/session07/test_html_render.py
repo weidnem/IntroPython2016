@@ -143,3 +143,20 @@ def test_head_render():
     file_cont = output.getvalue()
     assert file_cont.startswith("<head>")
     assert file_cont.strip().endswith("</head>")
+
+
+def test_onelinetag_title():
+    """
+    Tests whether the element subclass of onelinetag successfully writes all
+    content on the same line to  a file for the inline tag 'title'. This is
+    tested by creating an instance of title, adding content to it using the
+    append function and calling the render funtion on it.
+    """
+    output = io.StringIO()
+    e = hr.Title("Testing, 1 2 3..")
+    e.append("DON'T PANIC")
+    e.render(output, "")
+    file_cont = output.getvalue()
+    assert "\n" not in file_cont
+    assert file_cont.startswith("<title>")
+    assert file_cont.strip().endswith("</title>")
