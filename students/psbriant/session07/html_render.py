@@ -38,13 +38,13 @@ class Element:
         inserts each individual line of content in between it. All tags and
         content are written to output file.
         """
-        file_out.write("<{}>\n".format(self.tag))
+        file_out.write("{}<{}>\n".format(ind, self.tag))
         for stuff in self.content:
             try:
                 stuff.render(file_out, ind)
             except AttributeError:
                 file_out.write(stuff+"\n")
-        file_out.write("</{}>\n".format(self.tag))
+        file_out.write("{}</{}>\n".format(ind, self.tag))
 
 
 class Html(Element):
