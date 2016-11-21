@@ -122,7 +122,7 @@ def test_append_instances():
     e_body.render(output, "")
     file_cont = output.getvalue()
     assert file_cont.startswith("<body>")
-    assert file_cont.endswith("</body>")
+    assert file_cont.strip().endswith("</body>")
     print(file_cont)
     assert "Testing, 1 2 3.." in file_cont
     # check p tag is in body
