@@ -43,7 +43,7 @@ class Element:
             try:
                 stuff.render(file_out, ind)
             except AttributeError:
-                file_out.write(stuff+"\n")
+                file_out.write(ind+stuff+"\n")
         file_out.write("{}</{}>\n".format(ind, self.tag))
 
 
