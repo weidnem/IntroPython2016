@@ -7,7 +7,7 @@ Test code for html_render.py
 
 import io
 
-from html_render import Element
+from html_render import Element, Html, Body, P
 
 def test_init():
     e = Element()
@@ -24,7 +24,7 @@ def test_append():
     e = Element('this is some text')
     
     e.append('some more text')
-    
+
     assert 'some more text' in e.content
     
 def test_two_instances():
@@ -48,4 +48,6 @@ def test_render():
     assert('some more text') in file_contents
     
     assert file_contents.startswith('<html>')
-    assert file_contents.strip().endswith('<\html>')
+    assert file_contents.strip().endswith('</html>')
+
+# test Html, Body, P
