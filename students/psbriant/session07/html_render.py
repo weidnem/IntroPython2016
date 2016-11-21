@@ -49,18 +49,18 @@ class Element:
 
 
 class Html(Element):
-        tag = 'html'
-        num_ind = 0
+    tag = 'html'
+    num_ind = 0
 
 
 class Body(Element):
-        tag = 'body'
-        num_ind = 1
+    tag = 'body'
+    num_ind = 1
 
 
 class P(Element):
-        tag = 'p'
-        num_ind = 2
+    tag = 'p'
+    num_ind = 2
 
 
 class Head(Element):
