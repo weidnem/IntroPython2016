@@ -311,6 +311,16 @@ def test_br():
     assert file_contents == "<br />"
 
 
+def test_br_in_p():
+    p = P("here is a small paragraph of text")
+    p.append(Br())
+    p.append("And here is some more text after a line break")
+
+    file_contents = render_result(p).split('\n')
+    print(file_contents)
+    assert file_contents[2].strip() == "<br />"
+
+
 def test_hr():
     hr = Hr(width=400)
     file_contents = render_result(hr)
