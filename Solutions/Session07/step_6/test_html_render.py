@@ -13,7 +13,8 @@ from html_render import (Element,
                          Head,
                          Title,
                          Hr,
-                         Br
+                         Br,
+                         A,
                          )
 
 # utility function for testing render methods
@@ -311,17 +312,18 @@ def test_br():
     assert file_contents == "<br />"
 
 
-def test_br_in_p():
-    p = P("here is a small paragraph of text")
-    p.append(Br())
-    p.append("And here is some more text after a line break")
-
-    file_contents = render_result(p).split('\n')
-    print(file_contents)
-    assert file_contents[2].strip() == "<br />"
-
 def test_hr():
     hr = Hr(width=400)
     file_contents = render_result(hr)
     print(file_contents)
     assert file_contents == '<hr width="400" />'
+
+
+def test_anchor():
+    a = A("http://google.com", "link to google")
+    file_contents = render_result(a)
+    print(file_contents)
+    assert file_contents.startswith('<a ')
+    assert file_contents.endswith('</a>')
+    assert 'href="http://google.com"' in file_contents
+    assert 'link to google' in file_contents
