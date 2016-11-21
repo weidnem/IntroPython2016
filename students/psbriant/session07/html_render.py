@@ -68,6 +68,22 @@ class Head(Element):
     num_ind = 1
 
 
+class OneLineTag(Element):
+    def render(self, file_out, ind=""):
+        """
+        Takes in the output file, generates opening and closing tags and
+        inserts each individual line of content in between it. All tags and
+        content are written to output file.
+        """
+        file_out.write("{}<{}>\n".format((ind * self.num_ind), self.tag))
+        for stuff in self.content:
+            try:
+                stuff.render(file_out, ind)
+            except AttributeError:
+                file_out.write((3*ind)+stuff+"\n")
+        file_out.write("{}</{}>\n".format(ind * self.num_ind, self.tag))
+
+
 # ==============================================================================
 
 
