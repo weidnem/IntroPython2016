@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Chris's solution through step 7
+Chris's solution through step 8
 """
 
 

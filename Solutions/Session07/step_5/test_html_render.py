@@ -1,8 +1,9 @@
 """
 test code for html_render.py
 
-includes step 4
+includes up to step 5
 """
+
 import io
 
 from html_render import (Element,

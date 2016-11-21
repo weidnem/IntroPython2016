@@ -1,7 +1,7 @@
 """
 test code for html_render.py
 
-includes step 7
+Includes step 8
 """
 import io
 
