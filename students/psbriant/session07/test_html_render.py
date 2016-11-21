@@ -132,7 +132,9 @@ def test_append_instances():
 
 def test_head_render():
     """
-
+    Tests whether render successfully writes content to file for the head tag
+    by creating instance of element, adding content to it using the append
+    function and calling the render funtion on it.
     """
     output = io.StringIO()
     e = hr.Head("Testing, 1 2 3..")
