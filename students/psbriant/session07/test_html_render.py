@@ -10,22 +10,22 @@ Tests for HTML Renderer
 """
 
 # -------------------------------Imports----------------------------------------
-from html_render import Element, Html, Body, P
+import html_render as hr
 import io
 
 # -------------------------------Functions--------------------------------------
 
 
 def test_init():
-    e = Element()
-    e = Element("Please remain calm, this is a test.")
+    e = hr.Element()
+    e = hr.Element("Please remain calm, this is a test.")
 
 
 def test_content():
     """
     Checks whether content is a str.
     """
-    e = Element("Testing, 1 2 3..")
+    e = hr.Element("Testing, 1 2 3..")
     assert "Testing, 1 2 3.." in e.content
 
 
@@ -33,14 +33,14 @@ def test_append():
     """
     Verifies additional content is successfully added to rest of content
     """
-    e = Element("Please remain calm, this is a test.")
+    e = hr.Element("Please remain calm, this is a test.")
     e.append("DON'T PANIC!")
     assert "DON'T PANIC!" in e.content
 
 
 def test_two_instances():
-    e = Element("Testing, 1 2 3..")
-    e2 = Element("Testing, 1 2 3..")
+    e = hr.Element("Testing, 1 2 3..")
+    e2 = hr.Element("Testing, 1 2 3..")
     e.append("More tests! We need more tests!")
     assert "More tests! We need more tests!" not in e2.content
 
@@ -53,7 +53,7 @@ def test_render():
     """
     # Creates in memory version of content to write to file
     output = io.StringIO()
-    e = Element("Testing, 1 2 3..")
+    e = hr.Element("Testing, 1 2 3..")
     e.append("DON'T PANIC")
     e.render(output, "")
     file_cont = output.getvalue()
@@ -71,7 +71,7 @@ def test_html_render():
     """
     # Creates in memory version of content to write to file
     output = io.StringIO()
-    e = Html("Testing, 1 2 3..")
+    e = hr.Html("Testing, 1 2 3..")
     e.append("DON'T PANIC")
     e.render(output, "")
     file_cont = output.getvalue()
@@ -87,7 +87,7 @@ def test_body_render():
     """
     # Creates in memory version of content to write to file
     output = io.StringIO()
-    e = Body("Testing, 1 2 3..")
+    e = hr.Body("Testing, 1 2 3..")
     e.append("DON'T PANIC")
     e.render(output, "")
     file_cont = output.getvalue()
@@ -103,7 +103,7 @@ def test_p_render():
     """
     # Creates in memory version of content to write to file
     output = io.StringIO()
-    e = P("Testing, 1 2 3..")
+    e = hr.P("Testing, 1 2 3..")
     e.append("DON'T PANIC")
     e.render(output, "")
     file_cont = output.getvalue()
@@ -116,8 +116,8 @@ def test_append_instances():
     Test to verify an instance of an html element can be appended into another.
     """
     output = io.StringIO()
-    e_body = Body()
-    e_p = P("Testing, 1 2 3..")
+    e_body = hr.Body()
+    e_p = hr.P("Testing, 1 2 3..")
     e_body.append(e_p)
     e_body.render(output, "")
     file_cont = output.getvalue()
@@ -135,7 +135,7 @@ def test_head_render():
 
     """
     output = io.StringIO()
-    e = Head("Testing, 1 2 3..")
+    e = hr.Head("Testing, 1 2 3..")
     e.append("DON'T PANIC")
     e.render(output, "")
     file_cont = output.getvalue()
