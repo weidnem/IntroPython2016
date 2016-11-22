@@ -160,3 +160,14 @@ def test_onelinetag_title():
     assert "\n" not in file_cont[:-2]
     assert file_cont.startswith("<title>")
     assert file_cont.strip().endswith("</title>")
+
+
+def test_element_attributes():
+    """
+    Verifies that attributes have been correctly implemented in output file.
+    """
+    output = io.StringIO()
+    e = hr.P("Testing, 1 2 3..", id="test", style="line-height:200%")
+    e.render(output, "")
+    file_cont = output.getvalue()
+    assert file_cont.startswith("<p id=\"test\" style=\"line-height:200%\"")
