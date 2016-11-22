@@ -79,6 +79,11 @@ class OneLineTag(Element):
                        " ".join(self.content), self.tag))
 
 
+class Title(OneLineTag):
+    tag = 'title'
+    num_ind = 2
+
+
 # ==============================================================================
 
 
