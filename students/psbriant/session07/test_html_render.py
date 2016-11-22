@@ -157,6 +157,6 @@ def test_onelinetag_title():
     e.append("More tests! We need more tests!")
     e.render(output, "")
     file_cont = output.getvalue()
-    assert "\n" not in file_cont
+    assert "\n" not in file_cont[:-2]
     assert file_cont.startswith("<title>")
     assert file_cont.strip().endswith("</title>")
