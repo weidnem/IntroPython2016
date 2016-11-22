@@ -11,6 +11,12 @@ Running tests using ipython:
     Creates -> test_html_output<step #>.html
 '''
 
+# def practice(**kwargs):
+#     for entry in kwargs.keys():
+#         print(entry, '=', kwargs[entry])
+# 
+# practice(id="TheList", style="line-height:200%")
+
 class Element:
     # Class names should normally use the CapWords convention
     # Class attributes are shared by all instances
@@ -19,11 +25,14 @@ class Element:
 
     # The __init__ method gets called when memory for the object is allocated
 
-    def __init__(self, content=None):
-        # Instance attributes unique to each instance
+    def __init__(self, content=None, **kwargs):
+        # Instance attributes are unique to each instance
         self.content = []
         if content:
             self.content.append(content)
+        # for entry in kwargs.keys():
+#             attr = (entry, '=', kwargs[entry]).replace(' ', '')
+#         tag = tag + 
                 
     # Other Methods
 
@@ -50,12 +59,12 @@ class OneLineTag(Element):
             if hasattr(content, 'render'):
                 content.render(out_file, "")
             else:
-                out_file.write(self.ind + '   ' + content)
-        out_file.write(self.ind + '</{}>\n'.format(self.tag))
+                out_file.write(content)
+        out_file.write('</{}>\n'.format(self.tag))
 
 class Head(Element):
     tag = 'head'
-    ind = ''
+    ind = '    '
 
 class Html(Element):
     tag = 'html'
@@ -65,7 +74,7 @@ class Body(Element):
     tag = 'body'
     ind = '    '
 
-class P(Element):
+class P(OneLineTag):
     tag = 'p'
     ind = '        '
 
