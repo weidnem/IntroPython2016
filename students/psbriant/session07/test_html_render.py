@@ -59,7 +59,7 @@ def test_render():
     file_cont = output.getvalue()
     assert("Testing, 1 2 3..") in file_cont
     assert("More tests! We need more tests!") in file_cont
-    assert file_cont.startswith("<html>")
+    assert file_cont.strip().startswith("<html>")
     assert file_cont.strip().endswith("</html>")
 
 
@@ -75,7 +75,7 @@ def test_html_render():
     e.append("More tests! We need more tests!")
     e.render(output, "")
     file_cont = output.getvalue()
-    assert file_cont.startswith("<html>")
+    assert file_cont.strip().startswith("<html>")
     assert file_cont.strip().endswith("</html>")
 
 
@@ -91,7 +91,7 @@ def test_body_render():
     e.append("More tests! We need more tests!")
     e.render(output, "")
     file_cont = output.getvalue()
-    assert file_cont.startswith("<body>")
+    assert file_cont.strip().startswith("<body>")
     assert file_cont.strip().endswith("</body>")
 
 
@@ -107,7 +107,7 @@ def test_p_render():
     e.append("More tests! We need more tests!")
     e.render(output, "")
     file_cont = output.getvalue()
-    assert file_cont.startswith("<p>")
+    assert file_cont.strip().startswith("<p>")
     assert file_cont.strip().endswith("</p>")
 
 
@@ -141,7 +141,7 @@ def test_head_render():
     e.append("More tests! We need more tests!")
     e.render(output, "")
     file_cont = output.getvalue()
-    assert file_cont.startswith("<head>")
+    assert file_cont.strip().startswith("<head>")
     assert file_cont.strip().endswith("</head>")
 
 
@@ -158,7 +158,7 @@ def test_onelinetag_title():
     e.render(output, "")
     file_cont = output.getvalue()
     assert "\n" not in file_cont[:-2]
-    assert file_cont.startswith("<title>")
+    assert file_cont.strip().startswith("<title>")
     assert file_cont.strip().endswith("</title>")
 
 
