@@ -10,14 +10,29 @@ class Element:
     def append(self, content):
         self.content.append(content)
 
+    # def render(self, out_file, indent=""):
+    #     out_file.write("<{}>\n".format(self.tag))
+    #     for stuff in self.content:
+    #         try:
+    #             new_ind = indent + "    "
+    #             stuff.render(out_file, indent=new_ind)
+    #             out_file.write("\n")
+    #         except AttributeError:
+    #             out_file.write(new_ind + str(stuff) + "\n")
+    #     out_file.write("</{}>\n".format(self.tag))
+
     def render(self, out_file, indent=""):
         out_file.write("<{}>\n".format(self.tag))
         for stuff in self.content:
-            try:
+            new_ind = indent + "    "
+            if self.tag == "p":
+                stuff.render(out_file, indent=new_ind)
+                out_file.write("\n")
+            if self.tag == "body":
                 new_ind = indent + "    "
                 stuff.render(out_file, indent=new_ind)
                 out_file.write("\n")
-            except AttributeError:
+            if self.tag == "html":
                 out_file.write(new_ind + str(stuff) + "\n")
         out_file.write("</{}>\n".format(self.tag))
 
