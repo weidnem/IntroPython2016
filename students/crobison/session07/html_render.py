@@ -5,7 +5,7 @@ class Element:
     def __init__(self, content=None):
         self.content = []
         if content is not None:
-            self.content.append(content)
+            self.append(content)
 
     def append(self, content):
         self.content.append(content)
