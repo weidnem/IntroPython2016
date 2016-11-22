@@ -21,9 +21,11 @@ class Html(Element):
 
 class Body(Element):
     tag = "body"
+    indent = "    "
 
 class P(Element):
     tag = "p"
+    indent = "        "
 
 
 
