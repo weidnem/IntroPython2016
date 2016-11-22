@@ -14,7 +14,10 @@ class Element:
     def render(self, out_file, ind=''):
         out_file.write("<{}>\n".format(self.tag))
         for stuff in self.content:
-            out_file.write(stuff+"\n")
+            try:
+                stuff.render(out_file)
+            except AttributeError:
+                out_file.write(str(stuff) + '\n')
         out_file.write("</{}>\n".format(self.tag))
 
 
@@ -27,7 +30,20 @@ class Body(Element):
 class P(Element):
     tag = 'p'
 
+    def __init__(self, style=None):
+        print('style:', style)
+        self.style = []
+        if style:
+            self.style.append(style)
 
+
+class Head(Element):
+    tag = 'head'
+
+class Title(Element):
+    tag = 'title'
+
+# print(help(Body))
 
 
 
