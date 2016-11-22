@@ -55,12 +55,14 @@ def test_render():
     output = io.StringIO()
     e = hr.Element("Testing, 1 2 3..")
     e.append("More tests! We need more tests!")
-    e.render(output, "")
+    e.render(output, "    ")
     file_cont = output.getvalue()
     assert("Testing, 1 2 3..") in file_cont
     assert("More tests! We need more tests!") in file_cont
     assert file_cont.strip().startswith("<html>")
     assert file_cont.strip().endswith("</html>")
+    # Verify there is no indentation
+    assert file_cont.startswith("<html>")
 
 
 def test_html_render():
@@ -73,10 +75,12 @@ def test_html_render():
     output = io.StringIO()
     e = hr.Html("Testing, 1 2 3..")
     e.append("More tests! We need more tests!")
-    e.render(output, "")
+    e.render(output, "    ")
     file_cont = output.getvalue()
     assert file_cont.strip().startswith("<html>")
     assert file_cont.strip().endswith("</html>")
+    # Verify amount of indentation
+    assert file_cont.startswith("<html>")
 
 
 def test_body_render():
@@ -89,10 +93,12 @@ def test_body_render():
     output = io.StringIO()
     e = hr.Body("Testing, 1 2 3..")
     e.append("More tests! We need more tests!")
-    e.render(output, "")
+    e.render(output, "    ")
     file_cont = output.getvalue()
     assert file_cont.strip().startswith("<body>")
     assert file_cont.strip().endswith("</body>")
+    # Verify amount of indentation
+    assert file_cont.startswith("    ")
 
 
 def test_p_render():
@@ -105,10 +111,12 @@ def test_p_render():
     output = io.StringIO()
     e = hr.P("Testing, 1 2 3..")
     e.append("More tests! We need more tests!")
-    e.render(output, "")
+    e.render(output, "    ")
     file_cont = output.getvalue()
     assert file_cont.strip().startswith("<p>")
     assert file_cont.strip().endswith("</p>")
+    # Verify amount of indentation
+    assert file_cont.startswith("    " * 2)
 
 
 def test_append_instances():
@@ -139,10 +147,13 @@ def test_head_render():
     output = io.StringIO()
     e = hr.Head("Testing, 1 2 3..")
     e.append("More tests! We need more tests!")
-    e.render(output, "")
+    e.render(output, "    ")
     file_cont = output.getvalue()
     assert file_cont.strip().startswith("<head>")
     assert file_cont.strip().endswith("</head>")
+    # Verify amount of indentation
+    assert file_cont.startswith("    ")
+
 
 
 def test_onelinetag_title():
@@ -155,11 +166,13 @@ def test_onelinetag_title():
     output = io.StringIO()
     e = hr.Title("Testing, 1 2 3..")
     e.append("More tests! We need more tests!")
-    e.render(output, "")
+    e.render(output, "    ")
     file_cont = output.getvalue()
     assert "\n" not in file_cont[:-2]
     assert file_cont.strip().startswith("<title>")
     assert file_cont.strip().endswith("</title>")
+    # Verify amount of indentation
+    assert file_cont.startswith("    " * 2)
 
 
 def test_element_attributes():
