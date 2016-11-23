@@ -4,3 +4,6 @@ class Circle:
 
         """
         self.radius = radius
+
+        self.diameter = radius * 2
+    
