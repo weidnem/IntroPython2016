@@ -3,7 +3,7 @@ tests for circle class
 """
 
 import math
-
+import pytest
 from circle import Circle
 
 def test_radius():
@@ -29,4 +29,8 @@ def test_change_diameter():
 def test_area():
     c = Circle(4)
     assert c.area == math.pi * 4**2
+
+    with pytest.raises(AttributeError):
+        c.area = 45
+
 
