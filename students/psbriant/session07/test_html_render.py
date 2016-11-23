@@ -188,7 +188,7 @@ def test_element_attributes():
 
 def test_selfclosingtag_hr():
     """
-
+    Verifies that the self closing tag hr is one line and outputed correctly.
     """
     output = io.StringIO()
     e = hr.Hr()
@@ -200,7 +200,7 @@ def test_selfclosingtag_hr():
 
 def test_selfclosingtag_br():
     """
-
+    Verifies that the self closing tag br is one line and outputed correctly.
     """
     output = io.StringIO()
     e = hr.Br()
