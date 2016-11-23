@@ -84,6 +84,13 @@ class Title(OneLineTag):
     num_ind = 2
 
 
+class SelfClosingTag(Element):
+    def render(self, file_out, ind=""):
+        """
+        Take in an output file and generate a self closing tag.
+        """
+        file_out.write("{}<{} />\n".format((ind * self.num_ind), self.tag))
+
 # ==============================================================================
 
 
