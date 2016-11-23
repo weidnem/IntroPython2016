@@ -194,6 +194,7 @@ def test_selfclosingtag_hr():
     e = hr.Hr()
     e.render(output, "")
     file_cont = output.getvalue()
+    assert "\n" not in file_cont[:-2]
     assert file_cont == "<hr />"
 
 
@@ -205,4 +206,5 @@ def test_selfclosingtag_br():
     e = hr.Br()
     e.render(output, "")
     file_cont = output.getvalue()
+    assert "\n" not in file_cont[:-2]
     assert file_cont == "<br />"
