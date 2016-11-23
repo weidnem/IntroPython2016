@@ -184,3 +184,25 @@ def test_element_attributes():
     e.render(output, "")
     file_cont = output.getvalue()
     assert file_cont.startswith("<p id=\"test\" style=\"line-height:200%\"")
+
+
+def test_selfclosingtag_hr():
+    """
+
+    """
+    output = io.StringIO()
+    e = hr.Hr()
+    e.render(output, "")
+    file_cont = output.getvalue()
+    assert file_cont == "<hr />"
+
+
+def test_selfclosingtag_br():
+    """
+
+    """
+    output = io.StringIO()
+    e = hr.Br()
+    e.render(output, "")
+    file_cont = output.getvalue()
+    assert file_cont == "<br />"
