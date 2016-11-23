@@ -10,7 +10,7 @@ Tests for Circle lab
 """
 
 # -------------------------------Imports----------------------------------------
-
+import math
 from circle import Circle
 # -------------------------------Functions--------------------------------------
 
@@ -36,3 +36,9 @@ def test_change_diameter():
     c.diameter = 12
     assert c.diameter == 12
     assert c.radius == 6
+
+
+def test_area():
+    """
+
+    """
