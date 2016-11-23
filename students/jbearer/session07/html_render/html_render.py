@@ -2,7 +2,10 @@
 
 
 class Element:
+    
     tag = 'html'
+    indent = "    "
+
     def __init__(self, content=None):
         self.content = []
         if content:
@@ -30,13 +33,6 @@ class Body(Element):
 class P(Element):
     tag = 'p'
 
-    def __init__(self, style=None):
-        print('style:', style)
-        self.style = []
-        if style:
-            self.style.append(style)
-
-
 class Head(Element):
     tag = 'head'
 
@@ -48,31 +44,3 @@ class Title(Element):
 
 
 
-
-# class Element:
-    
-#     tag = 'aaa'
-
-#     def __init__(self, content=None):
-#         self.content = []
-#         if content:
-#             self.content.append(content)
-
-#     def append(self, content):
-#         self.content.append(content)
-
-#     def render(self, out_file, ind=''):
-#         if self.tag == 'html':
-#             out_file.write('<html>\n')
-#         for stuff in self.content:
-#             out_file.write(stuff + '\n')
-        
-#         # if self.tag == 'body':
-#         #     out_file.write('<body>\n')
-#         # for stuff in self.content:
-#         #     out_file.write(stuff + '\n')
-#         # if self.tag == 'body':
-#         #     out_file.write('</body>\n')
-
-#         if self.tag == 'html':
-#             out_file.write('</html>\n')
