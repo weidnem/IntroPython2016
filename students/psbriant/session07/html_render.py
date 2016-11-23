@@ -91,6 +91,16 @@ class SelfClosingTag(Element):
         """
         file_out.write("{}<{} />\n".format((ind * self.num_ind), self.tag))
 
+
+class Hr(SelfClosingTag):
+    tag = 'hr'
+    num_ind = 2
+
+
+class Br(SelfClosingTag):
+    tag = 'br'
+    num_ind = 3
+
 # ==============================================================================
 
 
