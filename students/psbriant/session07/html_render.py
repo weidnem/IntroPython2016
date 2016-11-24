@@ -34,6 +34,20 @@ class Element:
         """
         self.content.append(content)
 
+    def make_tags(self):
+        """
+        Generalizes the creation of tags and allows for tags to be created with
+        or without attributes.
+        """
+        attrs = " ".join(['{}="{}"'.format(key, val) for key, val in self.attributes.items()])
+        if attrs.strip():
+            open_tag = "<{} {}>".format(self.tag, attrs.strip())
+        else:
+            open_tag = "<{}>".format(self.tag)
+        close_tag = "</{}>".format(self.tag)
+
+        return open_tag, close_tag
+
     def render(self, file_out, ind=""):
         """
         Takes in the output file, generates opening and closing tags and
