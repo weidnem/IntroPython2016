@@ -17,11 +17,12 @@ class Element:
     tag = 'html'
     num_ind = 0
 
-    def __init__(self, content=None):
+    def __init__(self, content=None, **kwargs):
         """
         Initializes class attribute content and appends any value not equal to
         none into and empty list.
         """
+        self.attributes = kwargs
         self.content = []
         if content:
             self.content.append(content)
