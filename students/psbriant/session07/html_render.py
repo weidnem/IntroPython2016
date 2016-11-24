@@ -57,7 +57,7 @@ class Element:
         open_tag, close_tag = self.make_tags()
         file_out.write((ind * self.num_ind) + open_tag + "\n")
         for stuff in self.content:
-            stuff.render(file_out, (ind * self.num_ind) + self.indent)
+            stuff.render(file_out, (ind * self.num_ind))
             file_out.write("\n")
         file_out.write(ind + close_tag)
 
