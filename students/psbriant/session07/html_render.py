@@ -120,6 +120,7 @@ class SelfClosingTag(Element):
 
 class Hr(SelfClosingTag):
     tag = 'hr'
+    indent = ""
 
 
 class Br(SelfClosingTag):
