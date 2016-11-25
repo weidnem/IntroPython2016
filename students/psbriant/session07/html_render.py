@@ -125,6 +125,7 @@ class Hr(SelfClosingTag):
 
 class Br(SelfClosingTag):
     tag = 'br'
+    indent = ''
 
 # ==============================================================================
 
