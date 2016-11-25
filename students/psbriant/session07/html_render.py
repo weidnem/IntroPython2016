@@ -26,7 +26,7 @@ class TextWrapper:
 class Element:
 
     tag = 'html'
-    num_ind = 0
+    num_ind = "    "
 
     def __init__(self, content=None, **kwargs):
         """
@@ -43,7 +43,10 @@ class Element:
         Takes in new content in the form of a string and adds it to list of
         existing content.
         """
-        self.content.append(content)
+        if hasattr(content, 'render'):
+            self.content.append(content)
+        else:
+            self.content.append(TextWrapper(str(content)))
 
     def make_tags(self):
         """
