@@ -99,8 +99,11 @@ class OneLineTag(Element):
         inserts each individual line of content in between it. All tags and
         content are written to output file.
         """
-        file_out.write("{}<{}>{}</{}>\n".format((ind + self.indent), self.tag,
-                       " ".join(self.content), self.tag))
+        open_tag, close_tag = self.make_tags()
+        file_out.write(ind + open_tag)
+        for stuff in self.content:
+            stuff.render(file_out)
+        file_out.write(close_tag)
 
 
 class Title(OneLineTag):
