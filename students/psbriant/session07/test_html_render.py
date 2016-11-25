@@ -21,23 +21,6 @@ def test_init():
     e = hr.Element("Please remain calm, this is a test.")
 
 
-def test_content():
-    """
-    Checks whether content is a str.
-    """
-    e = hr.Element("Testing, 1 2 3..")
-    assert "Testing, 1 2 3.." in e.content
-
-
-def test_append():
-    """
-    Verifies additional content is successfully added to rest of content
-    """
-    e = hr.Element("Please remain calm, this is a test.")
-    e.append("Testing, 1 2 3..")
-    assert "Testing, 1 2 3.." in e.content
-
-
 def test_two_instances():
     e = hr.Element("Testing, 1 2 3..")
     e2 = hr.Element("Testing, 1 2 3..")
