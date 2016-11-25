@@ -44,8 +44,8 @@ def test_render():
     assert("More tests! We need more tests!") in file_cont
     assert file_cont.strip().startswith("<html>")
     assert file_cont.strip().endswith("</html>")
-    # Verify there is no indentation
-    assert file_cont.startswith("<html>")
+    # Verify there is indentation
+    assert file_cont.startswith("    ")
 
 
 def test_html_render():
@@ -63,7 +63,7 @@ def test_html_render():
     assert file_cont.strip().startswith("<html>")
     assert file_cont.strip().endswith("</html>")
     # Verify amount of indentation
-    assert file_cont.startswith("<html>")
+    assert file_cont.startswith("    ")
 
 
 def test_body_render():
@@ -99,7 +99,7 @@ def test_p_render():
     assert file_cont.strip().startswith("<p>")
     assert file_cont.strip().endswith("</p>")
     # Verify amount of indentation
-    assert file_cont.startswith("    " * 2)
+    assert file_cont.startswith("    ")
 
 
 def test_append_instances():
@@ -138,7 +138,6 @@ def test_head_render():
     assert file_cont.startswith("    ")
 
 
-
 def test_onelinetag_title():
     """
     Tests whether the element subclass of onelinetag successfully writes all
@@ -155,7 +154,7 @@ def test_onelinetag_title():
     assert file_cont.strip().startswith("<title>")
     assert file_cont.strip().endswith("</title>")
     # Verify amount of indentation
-    assert file_cont.startswith("    " * 2)
+    assert file_cont.startswith("    ")
 
 
 def test_element_attributes():
@@ -166,8 +165,9 @@ def test_element_attributes():
     e = hr.P("Testing, 1 2 3..", id="test", style="line-height:200%")
     e.render(output, "")
     file_cont = output.getvalue()
-    assert file_cont.startswith("<p id=\"test\" style=\"line-height:200%\"")
-
+    print(file_cont)
+    assert 'id="test"' in file_cont
+    assert 'style="line-height:200%"' in file_cont
 
 def test_selfclosingtag_hr():
     """
