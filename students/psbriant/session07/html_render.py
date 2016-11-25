@@ -26,7 +26,7 @@ class TextWrapper:
 class Element:
 
     tag = 'html'
-    num_ind = "    "
+    indent = "    "
 
     def __init__(self, content=None, **kwargs):
         """
@@ -69,31 +69,27 @@ class Element:
         content are written to output file.
         """
         open_tag, close_tag = self.make_tags()
-        file_out.write((ind * self.num_ind) + open_tag + "\n")
+        file_out.write(ind + open_tag + "\n")
         for stuff in self.content:
-            stuff.render(file_out, (ind * self.num_ind))
+            stuff.render(file_out, (ind + self.indent))
             file_out.write("\n")
         file_out.write(ind + close_tag)
 
 
 class Html(Element):
     tag = 'html'
-    num_ind = 0
 
 
 class Body(Element):
     tag = 'body'
-    num_ind = 1
 
 
 class P(Element):
     tag = 'p'
-    num_ind = 2
 
 
 class Head(Element):
     tag = 'head'
-    num_ind = 1
 
 
 class OneLineTag(Element):
@@ -109,7 +105,6 @@ class OneLineTag(Element):
 
 class Title(OneLineTag):
     tag = 'title'
-    num_ind = 2
 
 
 class SelfClosingTag(Element):
@@ -122,12 +117,10 @@ class SelfClosingTag(Element):
 
 class Hr(SelfClosingTag):
     tag = 'hr'
-    num_ind = 2
 
 
 class Br(SelfClosingTag):
     tag = 'br'
-    num_ind = 3
 
 # ==============================================================================
 
