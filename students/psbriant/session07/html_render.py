@@ -12,6 +12,17 @@ Description:
 
 
 # -------------------------------Classes--------------------------------------
+class TextWrapper:
+    """
+    Render either Element objects or plain text
+    """
+    def __init__(self, text):
+        self.text = text
+
+    def render(self, file_out, current_ind=""):
+        file_out.write(current_ind + self.text)
+
+
 class Element:
 
     tag = 'html'
@@ -25,7 +36,7 @@ class Element:
         self.attributes = kwargs
         self.content = []
         if content:
-            self.content.append(content)
+            self.append(content)
 
     def append(self, content):
         """
