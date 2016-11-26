@@ -144,7 +144,7 @@ class Li(Element):
     tag = 'li'
 
 
-class Header(OneLineTag):
+class H(OneLineTag):
     tag = "H"
 
     def __init__(self, size, content=None, **kwargs):
