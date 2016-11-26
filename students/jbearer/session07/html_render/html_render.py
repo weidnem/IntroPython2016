@@ -78,8 +78,25 @@ class P(Element):
 class Head(Element):
     tag = 'head'
 
-class Title(Element):
+class Title(OneLineTag):
     tag = 'title'
+
+class SelfClosingTag(Element):
+    """
+    base class for tags that have no content
+    """
+    def render(self, out_file, ind=""):
+        # there is some repition here -- maybe factor that out?
+        open_tag, _ = self.make_tags()
+        # make it a self cloding tag by adding the /
+        out_file.write(ind + open_tag.replace(">", " />"))
+
+class Hr(SelfClosingTag):
+    tag = 'hr'
+
+class Br(SelfClosingTag):
+    tag = 'br'
+
 
 # print(help(Body))
 
