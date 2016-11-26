@@ -11,6 +11,8 @@ Running tests using ipython:
     Creates -> test_html_output<step #>.html
 '''
 
+# AFAICT this does NOT include code review
+
 class Element:
     # Class names should normally use the CapWords convention
     # Class attributes are shared by all instances
