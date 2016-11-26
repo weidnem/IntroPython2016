@@ -231,3 +231,15 @@ def test_a():
     assert "link to google" in file_cont
     assert file_cont.strip().startswith('<a href="http://google.com">')
     assert file_cont.strip().endswith('</a>')
+
+
+def test_ul():
+    """
+    Verify ul tag is displayed correctly.
+    """
+    output = io.StringIO()
+    ul = hr.Ul("Testing, 1 2 3..", id="TheList", style="line-height:200%")
+    ul.render(output, "")
+    file_cont = output.getvalue()
+    assert file_cont.strip().startswith('<ul style="line-height:200%" id="TheList">')
+    assert file_cont.strip().endswith('</ul>')
