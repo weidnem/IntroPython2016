@@ -273,3 +273,16 @@ def test_list():
     assert '<li style="color: blue">' in file_cont
     assert "More tests! We need more tests!" in file_cont
     assert file_cont.strip().endswith('</ul>')
+
+
+def test_header():
+    """
+    Verify header tag was created correctly
+    """
+    output = io.StringIO()
+    h1 = hr.Header(1,"More tests! We need more tests!")
+    h1.render(output, "")
+    file_cont = output.getvalue()
+    assert file_cont.strip().startswith("<h1>")
+    assert file_cont.strip().endswith("</h1>")
+    assert "More tests! We need more tests!" in file_cont
