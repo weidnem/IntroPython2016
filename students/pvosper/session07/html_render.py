@@ -99,3 +99,13 @@ class Hr(SelfClosingTag):
 
 class Br(SelfClosingTag):
     tag = 'br'
+
+class A(Element):
+    # A("http://google.com", "link")
+    # <a href="http://google.com">link</a>
+
+    def __init__(self, link, link_text):
+        self.content = '<a href="{}">{}</a>'.format(link, link_text)
+        
+    def render(self, out_file, current_indent = ''):
+        out_file.write(current_indent + self.content + '\n')
