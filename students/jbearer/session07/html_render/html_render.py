@@ -15,13 +15,13 @@ class Element:
         self.content.append(content)
 
     def render(self, out_file, ind=''):
-        out_file.write("<{}>\n".format(self.tag))
+        out_file.write(ind + "<{}>\n".format(self.tag))
         for stuff in self.content:
             try:
-                stuff.render(out_file)
+                stuff.render(out_file, ind + self.indent)
             except AttributeError:
-                out_file.write(str(stuff) + '\n')
-        out_file.write("</{}>\n".format(self.tag))
+                out_file.write(ind + str(stuff) + '\n')
+        out_file.write(ind + "</{}>\n".format(self.tag))
 
 
 class Html(Element):
