@@ -84,6 +84,17 @@ def test_body_render():
     assert file_cont.startswith("    ")
 
 
+def test_text_wrapper():
+    """
+
+    """
+    output = io.StringIO()
+    tw = hr.TextWrapper("More tests! We need more tests!")
+    tw.render(output, "")
+    file_cont = output.getvalue()
+    assert file_cont == "More tests! We need more tests!"
+
+
 def test_p_render():
     """
     Tests whether render successfully writes content to file for the p tag
