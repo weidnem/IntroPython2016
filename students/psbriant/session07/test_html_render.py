@@ -243,3 +243,15 @@ def test_ul():
     file_cont = output.getvalue()
     assert file_cont.strip().startswith('<ul style="line-height:200%" id="TheList">')
     assert file_cont.strip().endswith('</ul>')
+
+
+def test_li():
+    """
+    Verify li tag is displayed correctly.
+    """
+    output = io.StringIO()
+    ul = hr.Li("Testing, 1 2 3..", style="color: green")
+    ul.render(output, "")
+    file_cont = output.getvalue()
+    assert file_cont.strip().startswith('<li style="line-height:200%">')
+    assert file_cont.strip().endswith('</li>')
