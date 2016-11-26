@@ -253,5 +253,23 @@ def test_li():
     ul = hr.Li("Testing, 1 2 3..", style="color: green")
     ul.render(output, "")
     file_cont = output.getvalue()
-    assert file_cont.strip().startswith('<li style="line-height:200%">')
+    assert file_cont.strip().startswith('<li style="color: green">')
     assert file_cont.strip().endswith('</li>')
+
+
+def test_list():
+    """
+    Verify li tags are correctly appended into ul tags.
+    """
+    output = io.StringIO()
+    ul = hr.Ul()
+    li1 = hr.Li("Testing, 1 2 3..", style="color: blue")
+    li2 = hr.Li("More tests! We need more tests!")
+    ul.append(li1)
+    ul.append(li2)
+    ul.render(output, "")
+    file_cont = output.getvalue()
+    print(file_cont)
+    assert '<li style="color: blue">' in file_cont
+    assert "More tests! We need more tests!" in file_cont
+    assert file_cont.strip().endswith('</ul>')
