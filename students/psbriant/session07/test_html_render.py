@@ -282,7 +282,7 @@ def test_header():
     Verify header tag was created correctly
     """
     output = io.StringIO()
-    h1 = hr.Header(1, "More tests! We need more tests!")
+    h1 = hr.H(1, "More tests! We need more tests!")
     h1.render(output, "")
     file_cont = output.getvalue()
     assert file_cont.strip().startswith("<h1>")
