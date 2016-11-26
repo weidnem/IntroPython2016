@@ -142,3 +142,11 @@ class Ul(Element):
 
 class Li(Element):
     tag = 'li'
+
+
+class Header(OneLineTag):
+    tag = "H"
+
+    def __init__(self, size, content=None, **kwargs):
+        self.tag = "h" + str(int(size))
+        super().__init__(content, **kwargs)
