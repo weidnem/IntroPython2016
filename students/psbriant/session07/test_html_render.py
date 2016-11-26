@@ -180,6 +180,7 @@ def test_element_attributes():
     assert 'id="test"' in file_cont
     assert 'style="line-height:200%"' in file_cont
 
+
 def test_selfclosingtag_hr():
     """
     Verifies that the self closing tag hr is one line and outputed correctly.
@@ -190,6 +191,21 @@ def test_selfclosingtag_hr():
     file_cont = output.getvalue()
     assert "\n" not in file_cont[:-2]
     assert file_cont == "<hr />"
+
+
+def test_br_in_p():
+    """
+
+    """
+    output = io.StringIO()
+    p = hr.P("Testing, 1 2 3..")
+    p.append(hr.Br())
+    p.append("More tests! We need more tests!")
+    p.render(output, "")
+
+    file_cont = output.getvalue().split('\n')
+    print(file_cont)
+    assert file_cont[2].strip() == "<br />"
 
 
 def test_selfclosingtag_br():
