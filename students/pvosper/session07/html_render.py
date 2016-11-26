@@ -14,8 +14,10 @@ Running tests using ipython:
 class Element:
     # Class names should normally use the CapWords convention
     # Class attributes are shared by all instances
+    # These don't need to get overwritten!
+    # subclass indent * parent class indent 
     tag = 'html'    # Element doesn't really have a tag
-    ind = ''
+    ind = ''    # change to # of indentations
 
     # The __init__ method gets called when memory for the object is allocated
 
@@ -25,10 +27,16 @@ class Element:
         if content:
             self.content.append(content)
         # build single string for html attributes
-        self.l = []
-        for entry in kwargs.keys():
-            self.l.append(' ' + entry + '="' + kwargs[entry] + '"')
-        self.html_attr = ' '.join(self.l)
+        # move to render method?
+        # semi-colons between
+        for entry, val in kwargs.items():
+            l = []  # Keep as local function
+            
+
+#         self.l = []
+#         for entry in kwargs.keys():
+#             self.l.append(' ' + entry + '="' + kwargs[entry] + '"')
+#         self.html_attr = ' '.join(self.l)
                 
     # Other Methods
 
@@ -36,12 +44,15 @@ class Element:
         if hasattr(content, 'render'):
             self.content.append(content)
         else:
-            self.content.append(str(content))
+            self.content.append(str(content)) # Textwrapper, for render method
 
+    # pass through current level of indentation
     def render(self, out_file, ind = ''):
         out_file.write(self.ind + '<{}{}>\n'.format(self.tag, self.html_attr))
         for content in self.content:
             if hasattr(content, 'render'):
+                # include current indentation
+                # content.render(out_file, current_ind + self.indent)
                 content.render(out_file, '')
             else:
                 out_file.write(self.ind + '    ' + content + '\n')
