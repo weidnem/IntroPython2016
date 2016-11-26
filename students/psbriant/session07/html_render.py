@@ -126,3 +126,12 @@ class Hr(SelfClosingTag):
 class Br(SelfClosingTag):
     tag = 'br'
     indent = ''
+
+
+class A(OneLineTag):
+    tag = "a"
+
+    def __init__(self, link, content, **kwargs):
+        kwargs['href'] = link
+        self.link = link
+        Element.__init__(self, content, **kwargs)
