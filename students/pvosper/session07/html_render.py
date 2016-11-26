@@ -16,10 +16,9 @@ Running tests using ipython:
 class Element:
     # Class names should normally use the CapWords convention
     # Class attributes are shared by all instances
-    # These don't need to get overwritten!
-    # subclass indent * parent class indent 
-    tag = 'html'    # Element doesn't really have a tag
-    ind = ''    # change to # of indentations
+    tag = 'html'            # Element doesn't really have a tag
+    indent_amount = '    '  # Indent increment
+    current_indent = ''     # Indent accumulates as passed through
 
     # The __init__ method gets called when memory for the object is allocated
 
@@ -28,18 +27,18 @@ class Element:
         self.content = []
         if content:
             self.content.append(content)
-        # build single string for html attributes
-        # move to render method?
-        # semi-colons between
+        # Build single string for html attributes
+        # To me, this seem logical to keep in the __init__
+        #   What's the advantage to move this to render method?
+        #   Just customization per class?
+        l = []  # Local, won't exist outside this method
         for entry, val in kwargs.items():
-            l = []  # Keep as local function
-            
-
-#         self.l = []
-#         for entry in kwargs.keys():
-#             self.l.append(' ' + entry + '="' + kwargs[entry] + '"')
-#         self.html_attr = ' '.join(self.l)
-                
+            l.append(' ' + entry + '="' + val + '"')
+        self.html_attr = ' '.join(l)
+        self.tag_open = '<{}{}>\n'.format(self.tag, self.html_attr)
+        self.tag_open_single_line = '<{}{}>'.format(self.tag, self.html_attr)
+        self.tag_close = '</{}>\n'.format(self.tag)
+                        
     # Other Methods
 
     def append(self, content):
@@ -47,34 +46,32 @@ class Element:
             self.content.append(content)
         else:
             self.content.append(str(content)) # Textwrapper, for render method
-
+  
     # pass through current level of indentation
-    def render(self, out_file, ind = ''):
-        out_file.write(self.ind + '<{}{}>\n'.format(self.tag, self.html_attr))
+    def render(self, out_file, current_indent = ''):
+        out_file.write(current_indent + self.tag_open)
         for content in self.content:
             if hasattr(content, 'render'):
-                # include current indentation
-                # content.render(out_file, current_ind + self.indent)
-                content.render(out_file, '')
+                content.render(out_file, current_indent + self.indent_amount)
             else:
-                out_file.write(self.ind + '    ' + content + '\n')
-        out_file.write(self.ind + '</{}>\n'.format(self.tag))
+                out_file.write(current_indent + '    ' + content + '\n')
+        out_file.write(current_indent + self.tag_close)
 
 class OneLineTag(Element):
 
-    def render(self, out_file, ind = ''):
-        out_file.write(self.ind + '<{}{}>'.format(self.tag, self.html_attr))
+    def render(self, out_file, current_indent = ''):
+        out_file.write(current_indent + self.tag_open_single_line)
         for content in self.content:
             if hasattr(content, 'render'):
                 content.render(out_file, '')
             else:
                 out_file.write(' ' + content + ' ')
-        out_file.write('</{}>\n'.format(self.tag))
+        out_file.write(self.tag_close)
         
 class SelfClosingTag(Element):
 
-    def render(self, out_file, ind = ''):
-        out_file.write(self.ind + '<{}{}>'.format(self.tag, self.html_attr))
+    def render(self, out_file, current_indent = ''):
+        out_file.write(current_indent + self.tag_open)
         for content in self.content:
             if hasattr(content, 'render'):
                 content.render(out_file, '')
@@ -84,28 +81,21 @@ class SelfClosingTag(Element):
 
 class Head(Element):
     tag = 'head'
-    ind = '    '
 
 class Html(Element):
     tag = 'html'
-    ind = ''
 
 class Body(Element):
     tag = 'body'
-    ind = '    '
 
 class P(Element):
     tag = 'p'
-    ind = '        '
 
 class Title(OneLineTag):
     tag = 'title'
-    ind = '        '
 
 class Hr(SelfClosingTag):
     tag = 'hr'
-    ind = '        '
 
 class Br(SelfClosingTag):
     tag = 'br'
-    ind = '        '
