@@ -218,3 +218,16 @@ def test_selfclosingtag_br():
     file_cont = output.getvalue()
     assert "\n" not in file_cont[:-2]
     assert file_cont == "<br />"
+
+
+def test_a():
+    """
+    Verify the link tag displays the link and content accordingly.
+    """
+    output = io.StringIO()
+    a = hr.A("http://google.com", "link to google")
+    a.render(output, "")
+    file_cont = output.getvalue()
+    assert "link to google" in file_cont
+    assert file_cont.strip().startswith('<a href="http://google.com">')
+    assert file_cont.strip().endswith('</a>')
