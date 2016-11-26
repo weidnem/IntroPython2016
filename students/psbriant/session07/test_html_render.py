@@ -238,10 +238,12 @@ def test_ul():
     Verify ul tag is displayed correctly.
     """
     output = io.StringIO()
-    ul = hr.Ul("Testing, 1 2 3..", id="TheList", style="line-height:200%")
+    ul = hr.Ul("Testing, 1 2 3..", style="line-height:200%", id="TheList")
     ul.render(output, "")
     file_cont = output.getvalue()
-    assert file_cont.strip().startswith('<ul style="line-height:200%" id="TheList">')
+    assert file_cont.strip().startswith('<ul')
+    assert 'style="line-height:200%"' in file_cont
+    assert 'id="TheList"' in file_cont
     assert file_cont.strip().endswith('</ul>')
 
 
