@@ -86,7 +86,7 @@ def test_body_render():
 
 def test_text_wrapper():
     """
-
+    Verify that text based content is produced.
     """
     output = io.StringIO()
     tw = hr.TextWrapper("More tests! We need more tests!")
