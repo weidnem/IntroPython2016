@@ -195,7 +195,7 @@ def test_selfclosingtag_hr():
 
 def test_br_in_p():
     """
-
+    Test the creation f the br tag within the p tag.
     """
     output = io.StringIO()
     p = hr.P("Testing, 1 2 3..")
