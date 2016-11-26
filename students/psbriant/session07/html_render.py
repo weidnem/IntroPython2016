@@ -126,15 +126,3 @@ class Hr(SelfClosingTag):
 class Br(SelfClosingTag):
     tag = 'br'
     indent = ''
-
-# ==============================================================================
-
-
-def main():
-    """
-    Calls functions and produces output.
-    """
-
-
-if __name__ == '__main__':
-    main()
