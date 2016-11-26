@@ -133,5 +133,4 @@ class A(OneLineTag):
 
     def __init__(self, link, content, **kwargs):
         kwargs['href'] = link
-        self.link = link
         Element.__init__(self, content, **kwargs)
