@@ -59,6 +59,7 @@ class Element:
 
 class OneLineTag(Element):
 
+    # This renders tags as '<tag>', not '<tag />'
     def render(self, out_file, current_indent = ''):
         out_file.write(current_indent + self.tag_open_single_line)
         for content in self.content:
@@ -81,9 +82,18 @@ class SelfClosingTag(Element):
 
 class Head(Element):
     tag = 'head'
+    
+#     def render(self, out_file, current_indent = ''):
+#         out_file.write('<meta charset="UTF-8" />\n')
+#         super(Head, self).render(out_file, current_indent = '')
 
 class Html(Element):
     tag = 'html'
+    
+    def render(self, out_file, current_indent = ''):
+        out_file.write('<!DOCTYPE html>\n')
+        # LOL - using 'copy, paste & cross fingers':
+        super(Html, self).render(out_file, current_indent = '    ')
 
 class Body(Element):
     tag = 'body'
