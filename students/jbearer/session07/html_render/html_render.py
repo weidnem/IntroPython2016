@@ -109,6 +109,30 @@ class A(OneLineTag):
         # this could also be direct:
         # Element.__init__(self, content, **kwargs)
 
+class Ul(Element):
+    """
+    unordered list
+    """
+    tag = "ul"
+
+
+class Li(Element):
+    """
+    list element
+    """
+    tag = "li"
+
+
+class H(OneLineTag):
+    """
+    section head
+    """
+    tag = "H"
+
+    def __init__(self, level, content=None, **kwargs):
+        self.tag = "h" + str(int(level))
+        super().__init__(content, **kwargs)
+
 
 # print(help(Body))
 
