@@ -87,7 +87,7 @@ class Meta(SelfClosingTag):
     
     def render(self, out_file, current_indent = ''):
         content = ' charset="UTF-8'
-        super(Meta, self).render(out_file, current_indent = '')
+        super(Meta, self).render(out_file, current_indent)
 
 class Head(Element):
     tag = 'head'
@@ -98,7 +98,7 @@ class Html(Element):
     def render(self, out_file, current_indent = ''):
         out_file.write('<!DOCTYPE html>\n')
         # LOL - using 'copy, paste & cross fingers':
-        super(Html, self).render(out_file, current_indent = '    ')
+        super(Html, self).render(out_file, current_indent)
 
 class Body(Element):
     tag = 'body'
