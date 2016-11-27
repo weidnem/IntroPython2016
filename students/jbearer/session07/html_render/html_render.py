@@ -97,6 +97,18 @@ class Hr(SelfClosingTag):
 class Br(SelfClosingTag):
     tag = 'br'
 
+class A(OneLineTag):
+    """
+    anchor element
+    """
+    tag = "a"
+
+    def __init__(self, link, content, **kwargs):
+        kwargs['href'] = link
+        super().__init__(content, **kwargs)
+        # this could also be direct:
+        # Element.__init__(self, content, **kwargs)
+
 
 # print(help(Body))
 
