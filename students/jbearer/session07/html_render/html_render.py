@@ -133,6 +133,12 @@ class H(OneLineTag):
         self.tag = "h" + str(int(level))
         super().__init__(content, **kwargs)
 
+class Meta(SelfClosingTag):
+    """
+    metadata tag
+    """
+    tag = "meta"
+
 
 # print(help(Body))
 
