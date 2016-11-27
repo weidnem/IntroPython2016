@@ -60,7 +60,7 @@ def test_html_render():
     e.append("More tests! We need more tests!")
     e.render(output, "    ")
     file_cont = output.getvalue()
-    assert file_cont.strip().startswith("<html>")
+    assert file_cont.strip().startswith("<!DOCTYPE html>")
     assert file_cont.strip().endswith("</html>")
     # Verify amount of indentation
     assert file_cont.startswith("    ")
@@ -288,17 +288,6 @@ def test_header():
     assert file_cont.strip().startswith("<h1>")
     assert file_cont.strip().endswith("</h1>")
     assert "More tests! We need more tests!" in file_cont
-
-
-def test_doctype():
-    """
-    Test the html subclass to ensure the Doctype is above the opening html tag.
-    """
-    output = io.StringIO()
-    html = hr.Html()
-    html.render(output, "")
-    file_cont = output.getvalue()
-    assert file_cont.strip().startswith("<!DOCTYPE html>")
 
 
 def test_meta():
