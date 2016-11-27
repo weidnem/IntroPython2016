@@ -119,7 +119,8 @@ class SelfClosingTag(Element):
         """
         Take in an output file and generate a self closing tag.
         """
-        file_out.write("{}<{} />".format((ind + self.indent), self.tag))
+        open_tag, _ = self.make_tags()
+        file_out.write(ind + open_tag.replace(">", " />"))
 
 
 class Hr(SelfClosingTag):
