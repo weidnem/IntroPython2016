@@ -78,7 +78,7 @@ class SelfClosingTag(Element):
                 content.render(out_file, '')
             else:
                 out_file.write(' ' + content + ' ')
-        out_file.write('\n')
+        # out_file.write('\n')
 
 class Meta(SelfClosingTag):
     # Meta(charset="UTF-8")
