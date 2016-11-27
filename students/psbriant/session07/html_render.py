@@ -80,7 +80,7 @@ class Html(Element):
     tag = 'html'
 
     def render(self, file_out, ind=""):
-        file_out.write(ind + "<!DOCTYPE html>")
+        file_out.write(ind + "<!DOCTYPE html>" + "\n")
         super().render(file_out, ind=ind)
 
 
