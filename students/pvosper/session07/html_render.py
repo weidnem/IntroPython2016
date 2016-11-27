@@ -28,13 +28,11 @@ class Element:
         if content:
             self.content.append(content)
         # Build single string for html attributes
-        # To me, this seem logical to keep in the __init__
-        #   What's the advantage to move this to render method?
-        #   Just customization per class?
         l = []  # Local, won't exist outside this method
         for entry, val in kwargs.items():
             l.append(' ' + entry + '="' + val + '"')
         self.html_attr = ' '.join(l)
+        # build tags
         self.tag_open = '<{}{}>\n'.format(self.tag, self.html_attr)
         self.tag_open_single_line = '<{}{}>'.format(self.tag, self.html_attr)
         self.tag_close = '</{}>\n'.format(self.tag)
@@ -56,6 +54,8 @@ class Element:
             else:
                 out_file.write(current_indent + '    ' + content + '\n')
         out_file.write(current_indent + self.tag_close)
+
+# === Sub Classess ===
 
 class OneLineTag(Element):
 
@@ -106,7 +106,6 @@ class A(OneLineTag):
     tag = 'a'
     
     def __init__(self, html_attr, content):
-        # Instance attributes are unique to each instance
         self.content = []
         if content:
             self.content.append(content)
@@ -114,9 +113,23 @@ class A(OneLineTag):
         self.tag_open_single_line = '<{}{}>'.format(self.tag, self.html_attr)
         self.tag_close = '</{}>\n'.format(self.tag)
 
-    # This is cheating, a bit - to include the tag in content
-#     def __init__(self, link, link_text):
-#         self.content = '<a href="{}">{}</a>'.format(link, link_text)
-#     
-#     def render(self, out_file, current_indent = ''):
-#         out_file.write(current_indent + self.content + '\n')
+class Ul(Element):
+    # Ul(id="TheList", style="line-height:200%")
+    # <ul style="line-height:200%" id="TheList">   
+    tag = 'ul'
+
+class Li(Element):
+    tag = 'li'
+
+class H(OneLineTag):
+    # H(2, "PythonClass - Class 6 example")
+    # <h2> PythonClass - Class 6 example </h2>
+
+    def __init__(self, level, content):
+        self.content = []
+        if content:
+            self.content.append(content)
+        self.tag = 'h' + str(level)
+        self.tag_open_single_line = '<{}>'.format(self.tag)
+        # self.tag_open_single_line = '<{}{}>'.format(self.tag, self.html_attr)
+        self.tag_close = '</{}>\n'.format(self.tag)
