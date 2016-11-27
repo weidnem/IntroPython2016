@@ -7,7 +7,7 @@ Test code for html_render.py
 
 import io
 
-from html_render import Element, Html, Body, P, A
+from html_render import Element, Html, Body, P, A, Ul
 
 def test_init():
     e = Element()
@@ -53,7 +53,6 @@ def test_render():
 def test_link():
     outfile = io.StringIO()
     a = A("http://google.com", "link")
-    # assert '<a href="http://google.com">link</a>' == a.content
 
     a.render(outfile)
     
@@ -64,6 +63,20 @@ def test_link():
 
     assert file_contents.startswith('<a href="')
     assert file_contents.strip().endswith('</a>')
+
+class test_Ul():
+    # Ul(id="TheList", style="line-height:200%")
+    # <ul style="line-height:200%" id="TheList">   
+    outfile = io.StringIO()
+    u = Ul(id="TheList", style="line-height:200%")
+
+    u.render(outfile)
+    
+    outfile.seek(0)
+    file_contents = outfile.read()
+
+    assert file_contents.startswith('<ul style="line-height:200%"')
+    assert file_contents.strip().endswith('id="TheList">')
     
 
 # test Html, Body, P
