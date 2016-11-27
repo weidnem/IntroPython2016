@@ -288,3 +288,15 @@ def test_header():
     assert file_cont.strip().startswith("<h1>")
     assert file_cont.strip().endswith("</h1>")
     assert "More tests! We need more tests!" in file_cont
+
+
+def test_meta():
+    """
+    Verify meta tag was created correctly
+    """
+    output = io.StringIO()
+    meta = hr.Meta(charset="UTF-8")
+    meta.render(output, "")
+    file_cont = output.getvalue()
+    assert "\n" not in file_cont[:-2]
+    assert '<meta charset="UTF-8" />' == file_cont
