@@ -36,6 +36,7 @@ class Element:
         self.tag_open = '<{}{}>\n'.format(self.tag, self.html_attr)
         self.tag_open_single_line = '<{}{}>'.format(self.tag, self.html_attr)
         self.tag_close = '</{}>\n'.format(self.tag)
+        self.tag_self_close = '<{}{} />\n'.format(self.tag, self.html_attr)
                         
     # Other Methods
 
@@ -59,7 +60,6 @@ class Element:
 
 class OneLineTag(Element):
 
-    # This renders tags as '<tag>', not '<tag />'
     def render(self, out_file, current_indent = ''):
         out_file.write(current_indent + self.tag_open_single_line)
         for content in self.content:
@@ -72,7 +72,7 @@ class OneLineTag(Element):
 class SelfClosingTag(Element):
 
     def render(self, out_file, current_indent = ''):
-        out_file.write(current_indent + self.tag_open)
+        out_file.write(current_indent + self.tag_self_close)
         for content in self.content:
             if hasattr(content, 'render'):
                 content.render(out_file, '')
@@ -80,12 +80,17 @@ class SelfClosingTag(Element):
                 out_file.write(' ' + content + ' ')
         out_file.write('\n')
 
+class Meta(SelfClosingTag):
+    # Meta(charset="UTF-8")
+    # <meta charset="UTF-8" />
+    tag = 'meta'
+    
+    def render(self, out_file, current_indent = ''):
+        content = ' charset="UTF-8'
+        super(Meta, self).render(out_file, current_indent = '')
+
 class Head(Element):
     tag = 'head'
-    
-#     def render(self, out_file, current_indent = ''):
-#         out_file.write('<meta charset="UTF-8" />\n')
-#         super(Head, self).render(out_file, current_indent = '')
 
 class Html(Element):
     tag = 'html'
