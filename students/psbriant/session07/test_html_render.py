@@ -310,4 +310,4 @@ def test_meta():
     meta.render(output, "")
     file_cont = output.getvalue()
     assert "\n" not in file_cont[:-2]
-    assert '<meta charset="UTF-8" />' == file_cont
+    assert '<meta charset="UTF-8" />' == file_cont.strip()
