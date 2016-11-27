@@ -290,6 +290,17 @@ def test_header():
     assert "More tests! We need more tests!" in file_cont
 
 
+def test_doctype():
+    """
+    Test the html subclass to ensure the Doctype is above the opening html tag.
+    """
+    output = io.StringIO()
+    html = hr.Html()
+    html.render(output, "")
+    file_cont = output.getvalue()
+    assert file_cont.strip().startswith("<!DOCTYPE html>")
+
+
 def test_meta():
     """
     Verify meta tag was created correctly
