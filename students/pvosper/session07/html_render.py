@@ -100,14 +100,23 @@ class Hr(SelfClosingTag):
 class Br(SelfClosingTag):
     tag = 'br'
 
-class A(Element):
+class A(OneLineTag):
     # A("http://google.com", "link")
     # <a href="http://google.com">link</a>
+    tag = 'a'
+    
+    def __init__(self, html_attr, content):
+        # Instance attributes are unique to each instance
+        self.content = []
+        if content:
+            self.content.append(content)
+        self.html_attr = ' href="' + html_attr + '"'
+        self.tag_open_single_line = '<{}{}>'.format(self.tag, self.html_attr)
+        self.tag_close = '</{}>\n'.format(self.tag)
 
     # This is cheating, a bit - to include the tag in content
-    # I could subclass it from OneLineTag
-    def __init__(self, link, link_text):
-        self.content = '<a href="{}">{}</a>'.format(link, link_text)
-    
-    def render(self, out_file, current_indent = ''):
-        out_file.write(current_indent + self.content + '\n')
+#     def __init__(self, link, link_text):
+#         self.content = '<a href="{}">{}</a>'.format(link, link_text)
+#     
+#     def render(self, out_file, current_indent = ''):
+#         out_file.write(current_indent + self.content + '\n')
