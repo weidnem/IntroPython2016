@@ -79,6 +79,10 @@ class Element:
 class Html(Element):
     tag = 'html'
 
+    def render(self, file_out, ind=""):
+        file_out.write(ind + "<!DOCTYPE html>")
+        super().render(file_out, ind=ind)
+
 
 class Body(Element):
     tag = 'body'
