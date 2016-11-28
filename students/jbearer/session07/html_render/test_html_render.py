@@ -67,12 +67,9 @@ def test_Html():
     assert('This is some text') in file_contents
     assert('This is some more text') in file_contents
 
-<<<<<<< HEAD
     assert file_contents.startswith("<html>")
     assert file_contents.strip().endswith("</html>")
 
-=======
->>>>>>> 3ceb3ebffee331395c4eae6eb83b0081465145c4
 def test_Body():
     outfile = io.StringIO()
 
