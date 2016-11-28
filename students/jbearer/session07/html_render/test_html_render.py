@@ -4,12 +4,7 @@ test code for html_render.py
 """
 import io
 
-<<<<<<< HEAD
 from html_render import Element, Html, Body, P, Head, Title
-=======
-from html_render import Element, Html, Body, P
->>>>>>> 3ceb3ebffee331395c4eae6eb83b0081465145c4
-
 
 def test_init():
     e = Element()
@@ -94,12 +89,9 @@ def test_Body():
     assert('This is some text') in file_contents
     assert('This is some more text') in file_contents
 
-<<<<<<< HEAD
     assert file_contents.startswith("<body>")
     assert file_contents.strip().endswith("</body>")
 
-=======
->>>>>>> 3ceb3ebffee331395c4eae6eb83b0081465145c4
 def test_P():
     outfile = io.StringIO()
 
@@ -116,7 +108,6 @@ def test_P():
     assert('This is some text') in file_contents
     assert('This is some more text') in file_contents
 
-<<<<<<< HEAD
     assert file_contents.startswith("<p>")
     assert file_contents.strip().endswith("</p>")
 
@@ -203,7 +194,3 @@ def test_step3():
     assert file_contents.startswith("<html>")
     assert file_contents.strip().endswith("</html>")
 
-
-=======
-    # something == False
->>>>>>> 3ceb3ebffee331395c4eae6eb83b0081465145c4
