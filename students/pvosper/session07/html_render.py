@@ -56,7 +56,7 @@ class Element:
                 out_file.write(current_indent + '    ' + content + '\n')
         out_file.write(current_indent + self.tag_close)
 
-# === Sub Classess ===
+# === Sub Classes ===
 
 class OneLineTag(Element):
 
@@ -130,7 +130,7 @@ class A(OneLineTag):
 
 class Ul(Element):
     # Ul(id="TheList", style="line-height:200%")
-    # <ul style="line-height:200%" id="TheList">   
+    # <ul style="line-height:200%" id="TheList">
     tag = 'ul'
 
 class Li(Element):
