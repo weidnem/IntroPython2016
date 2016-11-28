@@ -42,10 +42,20 @@ class Element:
         #       it no longer holds strings -- so a test will fail
         #       but that test was testing internal API --
         #       it's probably better remove it
+<<<<<<< HEAD
         if hasattr(content, 'render'):
             self.content.append(content)
         else:
             self.content.append(TextWrapper(str(content)))
+=======
+        # if isinstance(content, Element):
+        if hasattr(content, 'render'):
+           self.content.append(content)
+        else:
+           self.content.append(TextWrapper(str(content)))
+        # self.content.append(content)
+
+>>>>>>> 3ceb3ebffee331395c4eae6eb83b0081465145c4
 
     def make_tags(self):
         """
@@ -61,6 +71,7 @@ class Element:
 
         return open_tag, close_tag
 
+<<<<<<< HEAD
     def render(self, out_file, ind=""):
         open_tag, close_tag = self.make_tags()
         out_file.write(ind + open_tag + "\n")
@@ -77,15 +88,43 @@ class OneLineTag(Element):
         out_file.write(ind + open_tag)
         for stuff in self.content:
             stuff.render(out_file)
+=======
+    def render(self, out_file, cur_ind=""):
+        print("in render, type of self", type(self))
+        open_tag, close_tag = self.make_tags()
+        out_file.write(cur_ind + open_tag + "\n")
+        for stuff in self.content:
+            stuff.render(out_file, cur_ind + self.indent)
+            out_file.write("\n")
+        out_file.write(cur_ind + close_tag)
+
+
+class OneLineTag(Element):
+    def render(self, out_file, cur_ind=""):
+        # there is some repition here -- maybe factor that out?
+        open_tag, close_tag = self.make_tags()
+        out_file.write(cur_ind + open_tag)
+        for stuff in self.content:
+            try:
+                stuff.render(out_file)
+            except AttributeError:
+                out_file.write(stuff)
+>>>>>>> 3ceb3ebffee331395c4eae6eb83b0081465145c4
         out_file.write(close_tag)
 
 
 class Html(Element):
     tag = 'html'
 
+<<<<<<< HEAD
     def render(self, file_out, ind=""):
         file_out.write(ind + "<!DOCTYPE html>\n")
         super().render(file_out, ind=ind)
+=======
+    def render(self, file_out, cur_ind=""):
+        file_out.write(cur_ind + "<!DOCTYPE html>\n")
+        super().render(file_out, cur_ind=cur_ind)
+>>>>>>> 3ceb3ebffee331395c4eae6eb83b0081465145c4
 
 
 class Body(Element):
@@ -95,7 +134,10 @@ class Body(Element):
 class P(Element):
     tag = "p"
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 3ceb3ebffee331395c4eae6eb83b0081465145c4
 class Head(Element):
     tag = "head"
 

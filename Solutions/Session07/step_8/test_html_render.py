@@ -430,6 +430,15 @@ def test_whole_thing():
 
     page.append(body)
 
+<<<<<<< HEAD
     # now render it:
     with open("sample_output.html", 'w') as f:
         page.render(f)
+=======
+    # Element.indent = "        "
+    # now render it:
+    with open("sample_output.html", 'w') as f:
+        page.render(f)
+
+    # assert False
+>>>>>>> 3ceb3ebffee331395c4eae6eb83b0081465145c4

@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 
+<<<<<<< HEAD
 
 class TextWrapper:
     """
@@ -65,6 +66,24 @@ class OneLineTag(Element):
         for stuff in self.content:
             stuff.render(out_file)
         out_file.write(close_tag)
+=======
+class Element:
+    tag = 'html'
+    def __init__(self, content=None):
+        self.content = []
+        if content:
+            self.content.append(content)
+
+    def append(self, content):
+        self.content.append(content)
+
+    def render(self, out_file, ind=''):
+        out_file.write("<{}>\n".format(self.tag))
+        for stuff in self.content:
+            out_file.write(stuff+"\n")
+        out_file.write("</{}>\n".format(self.tag))
+
+>>>>>>> 3ceb3ebffee331395c4eae6eb83b0081465145c4
 
 class Html(Element):
     tag = 'html'
@@ -75,6 +94,7 @@ class Body(Element):
 class P(Element):
     tag = 'p'
 
+<<<<<<< HEAD
 class Head(Element):
     tag = 'head'
 
@@ -141,7 +161,41 @@ class Meta(SelfClosingTag):
 
 
 # print(help(Body))
+=======
+
+
+>>>>>>> 3ceb3ebffee331395c4eae6eb83b0081465145c4
 
 
 
 
+<<<<<<< HEAD
+=======
+# class Element:
+    
+#     tag = 'aaa'
+
+#     def __init__(self, content=None):
+#         self.content = []
+#         if content:
+#             self.content.append(content)
+
+#     def append(self, content):
+#         self.content.append(content)
+
+#     def render(self, out_file, ind=''):
+#         if self.tag == 'html':
+#             out_file.write('<html>\n')
+#         for stuff in self.content:
+#             out_file.write(stuff + '\n')
+        
+#         # if self.tag == 'body':
+#         #     out_file.write('<body>\n')
+#         # for stuff in self.content:
+#         #     out_file.write(stuff + '\n')
+#         # if self.tag == 'body':
+#         #     out_file.write('</body>\n')
+
+#         if self.tag == 'html':
+#             out_file.write('</html>\n')
+>>>>>>> 3ceb3ebffee331395c4eae6eb83b0081465145c4
