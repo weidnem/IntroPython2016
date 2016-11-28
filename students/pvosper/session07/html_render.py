@@ -11,7 +11,6 @@ Running tests using ipython:
     Creates -> test_html_output<step #>.html
 '''
 
-<<<<<<< HEAD
 # AFAICT this does NOT include code review
 
 class Element:
@@ -20,13 +19,6 @@ class Element:
     tag = 'html'            # Element doesn't really have a tag
     indent_amount = '    '  # Indent increment
     current_indent = ''     # Indent accumulates as passed through
-=======
-class Element:
-    # Class names should normally use the CapWords convention
-    # Class attributes are shared by all instances
-    tag = 'html'    # Element doesn't really have a tag
-    ind = ''
->>>>>>> a2b4ce5b145766aed9c92bf5a41f5a12abd6380f
 
     # The __init__ method gets called when memory for the object is allocated
 
@@ -35,7 +27,6 @@ class Element:
         self.content = []
         if content:
             self.content.append(content)
-<<<<<<< HEAD
         # Build single string for html attributes
         l = []  # Local, won't exist outside this method
         for entry, val in kwargs.items():
@@ -47,21 +38,12 @@ class Element:
         self.tag_close = '</{}>\n'.format(self.tag)
         self.tag_self_close = '<{}{} />\n'.format(self.tag, self.html_attr)
                         
-=======
-        # build single string for html attributes
-        l = []
-        for entry, val in kwargs.items():
-            l.append(' ' + entry + '="' + val + '"')
-        self.html_attr = ' '.join(l)
-
->>>>>>> a2b4ce5b145766aed9c92bf5a41f5a12abd6380f
     # Other Methods
 
     def append(self, content):
         if hasattr(content, 'render'):
             self.content.append(content)
         else:
-<<<<<<< HEAD
             self.content.append(str(content)) # Textwrapper, for render method
   
     # pass through current level of indentation
@@ -80,49 +62,22 @@ class OneLineTag(Element):
 
     def render(self, out_file, current_indent = ''):
         out_file.write(current_indent + self.tag_open_single_line)
-=======
-            self.content.append(str(content))
-
-    def render(self, out_file, ind = ''):
-        out_file.write(self.ind + '<{}{}>\n'.format(self.tag, self.html_attr))
-        for content in self.content:
-            if hasattr(content, 'render'):
-                content.render(out_file, '')
-            else:
-                out_file.write(self.ind + '    ' + content + '\n')
-        out_file.write(self.ind + '</{}>\n'.format(self.tag))
-
-class OneLineTag(Element):
-
-    def render(self, out_file, ind = ''):
-        out_file.write(self.ind + '<{}{}>'.format(self.tag, self.html_attr))
->>>>>>> a2b4ce5b145766aed9c92bf5a41f5a12abd6380f
         for content in self.content:
             if hasattr(content, 'render'):
                 content.render(out_file, '')
             else:
                 out_file.write(' ' + content + ' ')
-<<<<<<< HEAD
         out_file.write(self.tag_close)
         
 class SelfClosingTag(Element):
 
     def render(self, out_file, current_indent = ''):
         out_file.write(current_indent + self.tag_self_close)
-=======
-        out_file.write('</{}>\n'.format(self.tag))
-
-class SelfClosingTag(Element):
-
-    def render(self, out_file, ind = ''):
-        out_file.write(self.ind + '<{}{}>'.format(self.tag, self.html_attr))
->>>>>>> a2b4ce5b145766aed9c92bf5a41f5a12abd6380f
         for content in self.content:
             if hasattr(content, 'render'):
                 content.render(out_file, '')
             else:
                 out_file.write(' ' + content + ' ')
-<<<<<<< HEAD
         # out_file.write('\n')
 
 class Meta(SelfClosingTag):
@@ -193,34 +148,3 @@ class H(OneLineTag):
         self.tag_open_single_line = '<{}>'.format(self.tag)
         # self.tag_open_single_line = '<{}{}>'.format(self.tag, self.html_attr)
         self.tag_close = '</{}>\n'.format(self.tag)
-=======
-        out_file.write('\n')
-
-class Head(Element):
-    tag = 'head'
-    ind = '    '
-
-class Html(Element):
-    tag = 'html'
-    ind = ''
-
-class Body(Element):
-    tag = 'body'
-    ind = '    '
-
-class P(Element):
-    tag = 'p'
-    ind = '        '
-
-class Title(OneLineTag):
-    tag = 'title'
-    ind = '        '
-
-class Hr(SelfClosingTag):
-    tag = 'hr'
-    ind = '        '
-
-class Br(SelfClosingTag):
-    tag = 'br'
-    ind = '        '
->>>>>>> a2b4ce5b145766aed9c92bf5a41f5a12abd6380f
