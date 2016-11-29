@@ -6,7 +6,7 @@ tests for circle_class_ex
 
 import math
 
-from circle_class_ex import Circle, Circle_d
+from circle_class_ex import Circle
 
 # 1: create class called Circle
 def test_radius():
@@ -37,7 +37,7 @@ def test_area():
 
 # 5: Add an “alternate constructor” that lets the user create a Circle directly with the diameter
 def test_create_by_diameter():
-    c = Circle_d(14)
+    c = Circle.circle_d(14)
     assert c.diameter == 14
     assert c.radius == 7
     assert c.area == math.pi * 7**2

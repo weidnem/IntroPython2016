@@ -17,10 +17,12 @@ circle lab
 import math
 
 class Circle:
+    '''Creates circle object given a radius'''
     def __init__(self, radius):
         self.radius = radius
 
     # Get the diameter of the circle
+    # @property is a decorator
     @property
     def diameter(self):
         return self.radius * 2
@@ -34,8 +36,9 @@ class Circle:
     @property
     def area(self):
         return self.radius**2 * math.pi
-    
-# Create a Circle directly with the diameter
-class Circle_d(Circle):
-    def __init__(self, diameter):
-        self.diameter = diameter
+
+    # Create a Circle directly with the diameter
+    @classmethod
+    def circle_d(cls, diameter):
+        circle_obj = cls(diameter / 2)
+        return circle_obj
