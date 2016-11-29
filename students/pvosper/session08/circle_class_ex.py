@@ -42,3 +42,14 @@ class Circle:
     def circle_d(cls, diameter):
         circle_obj = cls(diameter / 2)
         return circle_obj
+        
+    # __str__ and __repr__ methods to your Circle class (printing)
+    # Ex: print(c): 'Circle with radius: 4.000000'
+    def __str__(self):
+        return 'Circle with radius: {:.6f}'.format(self.radius)
+        
+    # Ex: repr(c): 'Circle(4)'
+    def __repr__(self):
+        return 'Circle({})'.format(self.radius)
+        
+        

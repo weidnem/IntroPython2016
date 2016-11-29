@@ -43,6 +43,14 @@ def test_create_by_diameter():
     assert c.area == math.pi * 7**2
 
 # 6: Add __str__ and __repr__ methods to your Circle class (printing)
+def test_str():
+    c = Circle(4)
+    assert str(c) == 'Circle with radius: 4.000000'
+
+def test_repr():
+    c = Circle(4)
+    repr(c) == 'Circle(4)'
+
 # 7: Add some of the numeric protocol to your Circle (add & multiply)
 # 8: add the ability to compare two circles (<, >, &etc)
 # 8: Optional Features
