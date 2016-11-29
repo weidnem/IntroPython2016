@@ -52,5 +52,16 @@ def test_repr():
     repr(c) == 'Circle(4)'
 
 # 7: Add some of the numeric protocol to your Circle (add & multiply)
+def test_add():
+    c1 = Circle(2)
+    c2 = Circle(4)
+    c3 = c1 + c2
+    assert c3.radius == 6
+
+def test_multiply():
+    c2 = Circle(4)
+    c3 = c2 * 3
+    assert c3.radius == 12
+
 # 8: add the ability to compare two circles (<, >, &etc)
 # 8: Optional Features
