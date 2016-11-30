@@ -55,5 +55,32 @@ class Circle:
     def __add__(self, other):
         return Circle(self.radius + other.radius)
 
-    def __mul__(self, other):
-        return Circle(self.radius * other)
+    # Works (c * 3), but not for reflection (3 * c)
+    # First arg always self?
+    def __mul__(*args): #self, other):
+        # return Circle(self.radius * other)
+        product = 1
+        for entry in args:
+            if hasattr(entry, 'radius'):
+                print('entry.radius = ', entry.radius)
+                product *= entry.radius
+            else:
+                print('entry = ', entry)
+                product *= entry
+        return Circle(product)
+    
+    def __gt__(self, other):
+        a = self.radius
+        b = other.radius
+        return a > b
+
+# All tests pass without this - why?        
+#     def __lt__(self, other):
+#         a = self.radius
+#         b = other.radius
+#         return a < b
+    
+    def __eq__(self, other):
+        a = self.radius
+        b = other.radius
+        return a == b

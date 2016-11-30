@@ -63,5 +63,25 @@ def test_multiply():
     c3 = c2 * 3
     assert c3.radius == 12
 
+# TypeError: unsupported operand type(s) for *: 'int' and 'Circle'
+# ? Would need to change __mul__ for int as well?
+# def test_multiply_reflection():
+#     c2 = Circle(4)
+#     c3 = 3 * c2
+#     assert c3.radius == 12
+
 # 8: add the ability to compare two circles (<, >, &etc)
+def test_compare():
+    c1 = Circle(2)
+    c2 = Circle(4)
+    assert (c1 > c2) == False
+
+    assert (c1 < c2) == True
+
+    assert (c1 == c2) == False
+
+    c3 = Circle(4)
+
+    assert (c2 == c3) == True
+
 # 8: Optional Features
