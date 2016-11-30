@@ -40,8 +40,8 @@ class Circle:
     # Create a Circle directly with the diameter
     @classmethod
     def circle_d(cls, diameter):
-        circle_obj = cls(diameter / 2)
-        return circle_obj
+        self = cls(diameter / 2)    # By convention use 'self'
+        return self
         
     # __str__ and __repr__ methods to your Circle class (printing)
     # Ex: print(c): 'Circle with radius: 4.000000'
@@ -49,32 +49,40 @@ class Circle:
         return 'Circle with radius: {:.6f}'.format(self.radius)
         
     # Ex: repr(c): 'Circle(4)'
+    # eval( repr(something) ) == something
     def __repr__(self):
         return 'Circle({})'.format(self.radius)
     
     def __add__(self, other):
         return Circle(self.radius + other.radius)
 
+    def __mul__(self, other):
+        return Circle(self.radius * other)
+
+    def __rmul__(self, other):
+        return Circle(self.radius * other)
+
     # Works (c * 3), but not for reflection (3 * c)
-    # First arg always self?
-    def __mul__(*args): #self, other):
-        # return Circle(self.radius * other)
-        product = 1
-        for entry in args:
-            if hasattr(entry, 'radius'):
-                print('entry.radius = ', entry.radius)
-                product *= entry.radius
-            else:
-                print('entry = ', entry)
-                product *= entry
-        return Circle(product)
+    # First arg always self!
+#     def __mul__(*args): #self, other):
+#         # return Circle(self.radius * other)
+#         product = 1
+#         for entry in args:
+#             if hasattr(entry, 'radius'):
+#                 print('entry.radius = ', entry.radius)
+#                 product *= entry.radius
+#             else:
+#                 print('entry = ', entry)
+#                 product *= entry
+#         return Circle(product)
     
     def __gt__(self, other):
         a = self.radius
         b = other.radius
         return a > b
 
-# All tests pass without this - why?        
+# All tests pass *without* this - why?
+# ! lt assumed to be opposite of gt    
 #     def __lt__(self, other):
 #         a = self.radius
 #         b = other.radius
