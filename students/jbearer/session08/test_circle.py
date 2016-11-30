@@ -2,7 +2,7 @@
 Test for circle class
 """
 import math
-from circle import Circle
+from circle import Circle, Sphere
 
 def test_radius():
     c = Circle(4)
@@ -26,3 +26,23 @@ def test_change_diameter():
 def test_area():
     c = Circle(4)
     assert c.area == math.pi * 4 ** 2
+
+def test_from_diameter():
+    c = Circle.from_diameter(8)
+
+    assert c.diameter == 8
+    assert c.radius == 4
+
+def test_sphere():
+    s = Sphere(4)
+
+    print(s.volume())
+
+    assert s.volume() == 268.0825731006329
+
+def test_sphere_diameter():
+    s = Sphere.from_diameter(8)
+
+    print(s.volume())
+
+    assert False
