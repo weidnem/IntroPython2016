@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+<<<<<<< HEAD
 """
 tests for circle_class_ex
 """
@@ -88,3 +89,5 @@ def test_sorting():
     assert circles == [Circle(0), Circle(1), Circle(2), Circle(3), Circle(4), Circle(5), Circle(6), Circle(7), Circle(8), Circle(9)]
 
 # 8: Optional Features
+=======
+>>>>>>> 50ca119d0ccfd834b34c85a3fc0801c8604b12ed
