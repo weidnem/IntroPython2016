@@ -1,3 +1,15 @@
+"""
+Name: Paul Briant
+Date: 11/29/16
+Class: Introduction to Python
+Session: 08
+Assignment: Circle Lab
+
+Description:
+Classes for Circle Lab
+"""
+
+
 class Circle:
     def __init__(self, radius):
         """
