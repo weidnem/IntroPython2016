@@ -9,6 +9,7 @@ Description:
 Classes for Circle Lab
 """
 
+import math
 
 class Circle:
     def __init__(self, radius):
@@ -37,3 +38,7 @@ class Circle:
         @diameter.setter
         def diameter(self, value):
             self.radius = value / 2
+
+        @property
+        def area(self):
+            return (self.radius ** 2) * math.pi
