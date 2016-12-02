@@ -40,5 +40,7 @@ def test_change_diameter():
 
 def test_area():
     """
-
+    Verify area of circle
     """
+    c = Circle(5)
+    assert c.area == 25
