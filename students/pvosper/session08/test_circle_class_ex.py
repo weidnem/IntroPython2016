@@ -88,3 +88,34 @@ def test_sorting():
     assert circles == [Circle(0), Circle(1), Circle(2), Circle(3), Circle(4), Circle(5), Circle(6), Circle(7), Circle(8), Circle(9)]
 
 # 8: Optional Features
+
+    # a_circle * 3 == 3 * a_circle
+def test_reflected():
+    a_circle = Circle(3)
+    assert a_circle * 3 == 3 * a_circle
+
+def test_divide():
+    c2 = Circle(6)
+    c3 = c2 / 3
+    assert c3.radius == 2
+
+def test_divide_reflection():
+    c2 = Circle(4)
+    c3 = 12 / c2
+    assert c3.radius == 3
+
+# These 'just work' without the need to include defs for iadd and imul
+def test_augmented_assignment_add():
+    c1 = Circle(2)
+    c2 = Circle(4)
+    c1 += c2
+    
+    assert c1.radius == 6
+
+def test_augmented_assignment_mul():
+    c1 = Circle(2)
+    c1 *= 2
+    
+    assert c1.radius == 4
+
+
