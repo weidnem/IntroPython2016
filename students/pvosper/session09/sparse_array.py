@@ -28,6 +28,8 @@ class SparseArray:
     def __getitem__(self, i):
         if i in self.sparse_dict.keys():
             return self.sparse_dict[i]
+        elif i > self.length:
+            raise IndexError('list index out of range')
         else:
             return 0
 

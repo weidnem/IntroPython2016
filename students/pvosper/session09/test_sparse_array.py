@@ -16,6 +16,10 @@ def test_index():
     assert sa[2] == 0
     assert sa[9] == 72
 
+# This works (I think) but I can't figure out how to test it
+# def test_IndexError():
+#     sa = SparseArray([7,29,0,0,0,0,13,0,0,72])
+#     assert sa[21] != raises(IndexError)
 
 '''
 sa[5] = 12
