@@ -7,8 +7,15 @@ Simple testst for SparseArray
 from sparse_array import SparseArray
 
 def test_len():
-    sa = SparseArray([1,2,0,0,0,0,3,0,0,4])
+    sa = SparseArray([7,29,0,0,0,0,13,0,0,72])
     assert len(sa) == 10
+    
+def test_index():
+    sa = SparseArray([7,29,0,0,0,0,13,0,0,72])
+    assert sa[1] == 29
+    assert sa[2] == 0
+    assert sa[9] == 72
+
 
 '''
 sa[5] = 12
@@ -22,4 +29,51 @@ IndexError: list index out of range
 it should have an append() method
 Can you make it support slicing?
 How else can you make it like a list?
+
+['__add__',
+ '__class__',
+ '__contains__',
+ '__delattr__',
+ '__delitem__',
+ '__dir__',
+ '__doc__',
+ '__eq__',
+ '__format__',
+ '__ge__',
+ '__getattribute__',
+ '__getitem__',
+ '__gt__',
+ '__hash__',
+ '__iadd__',
+ '__imul__',
+ '__init__',
+ '__iter__',
+ '__le__',
+ '__len__',
+ '__lt__',
+ '__mul__',
+ '__ne__',
+ '__new__',
+ '__reduce__',
+ '__reduce_ex__',
+ '__repr__',
+ '__reversed__',
+ '__rmul__',
+ '__setattr__',
+ '__setitem__',
+ '__sizeof__',
+ '__str__',
+ '__subclasshook__',
+ 'append',
+ 'clear',
+ 'copy',
+ 'count',
+ 'extend',
+ 'index',
+ 'insert',
+ 'pop',
+ 'remove',
+ 'reverse',
+ 'sort']
+ 
 '''

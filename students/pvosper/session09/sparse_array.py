@@ -24,6 +24,12 @@ class SparseArray:
 
     def __len__(self):
         return self.length
+        
+    def __getitem__(self, i):
+        if i in self.sparse_dict.keys():
+            return self.sparse_dict[i]
+        else:
+            return 0
 
 
 # sa = SparseArray([7,29,0,0,0,0,13,0,0,72])
