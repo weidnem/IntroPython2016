@@ -21,6 +21,23 @@ def test_index():
 #     sa = SparseArray([7,29,0,0,0,0,13,0,0,72])
 #     assert sa[21] != raises(IndexError)
 
+def test_getvalue():
+    sa = SparseArray([7,29,0,0,0,0,13,0,0,72])
+    test_a = sa[6]
+    test_b = sa[1]
+    test_c = sa[5]
+    assert test_a == 13
+    assert test_b == 29
+    assert test_c == 0
+    
+def test_del():
+    sa = SparseArray([7,29,0,0,0,0,13,0,0,72])
+    del sa[4]
+    assert sa[1] == 29
+    assert sa[2] == 0
+    assert sa[8] == 72
+
+
 '''
 sa[5] = 12
 sa[3] = 0 # the zero won't get stored!
