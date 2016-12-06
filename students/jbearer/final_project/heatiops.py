@@ -38,7 +38,7 @@ def proc_file():
                     proc_lines(heat_line, parse_file)
         write_db_file(clusterName, parse_file)
         parkPath = parse_file.replace('queued', 'parked')
-        # os.rename(parse_file, parkPath)
+        os.rename(parse_file, parkPath)
         dict_path_iops.clear()
         dict_node_iops.clear()
         dict_total_iops.clear()
