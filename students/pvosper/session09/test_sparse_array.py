@@ -31,6 +31,13 @@ with pytest.raises(IndexError):
 that will pass if an indexError is raised -- fail if not.
 '''
 
+import pytest
+
+def test_IndexError():
+    sa = SparseArray([7,29,0,0,0,0,13,0,0,72])
+    with pytest.raises(IndexError):
+        val = sa[21]
+
 def test_getvalue():
     sa = SparseArray([7,29,0,0,0,0,13,0,0,72])
     test_a = sa[6]
@@ -47,6 +54,12 @@ def test_del():
     assert sa[2] == 0
     assert sa[8] == 72
 
+def test_append():
+    sa = SparseArray([7,29,0,0,0,0,13,0,0,72])
+    old_length = sa.length
+    sa.append(4)
+    assert sa[10] == 4
+    assert sa.length == old_length + 1
 
 '''
 sa[5] = 12
