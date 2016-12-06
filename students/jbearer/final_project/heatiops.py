@@ -113,7 +113,7 @@ def write_db_file(clusterName, parse_file):
 
         for myPath, values in dict_path_iops.items():
             for myEvent, myEventOps in values.items():
-                out.write('heatiops,clustername={},path={},event={}, ops={} {}\n'.format(clusterName,
+                out.write('heatiops,clustername={},path={},event={} ops={} {}\n'.format(clusterName,
                 myPath, myEvent, myEventOps, epochDate))
 
         for myNode, myEventOps in dict_node_iops.items():
