@@ -21,6 +21,16 @@ def test_index():
 #     sa = SparseArray([7,29,0,0,0,0,13,0,0,72])
 #     assert sa[21] != raises(IndexError)
 
+''' @CHB:
+you need a utiltiy from pytest (or from another test runner):
+
+import pytest
+
+with pytest.raises(IndexError):
+    val = sa[21]
+that will pass if an indexError is raised -- fail if not.
+'''
+
 def test_getvalue():
     sa = SparseArray([7,29,0,0,0,0,13,0,0,72])
     test_a = sa[6]

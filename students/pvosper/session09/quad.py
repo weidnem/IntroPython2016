@@ -26,6 +26,29 @@ conjugates.
 
 quadratic coefficient, the linear coefficient and the constant or free term.
 
+@ CHB:
+
+you got fancier than I expected!
+
+by evaluate, i meant:
+
+y = ax**2 + bx + c
+
+then it would return y for whichever x was passed in.
+
+but you got the OO part here.
+
+the next step is to define a call method, so you can do:
+
+q = Quadratic(3,4,5)
+
+y = q(4)
+y2 = q(5.1)
+
+etc...
+
+i.e. the instance acts like a function.
+
 '''
 
 import math
