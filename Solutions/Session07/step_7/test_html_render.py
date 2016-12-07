@@ -364,4 +364,3 @@ def test_header():
     assert "A nice header line" in file_contents
     assert ' align="center"' in file_contents
 
-
