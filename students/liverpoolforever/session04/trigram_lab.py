@@ -16,7 +16,6 @@ def safe_input():
 		response = input("==> ").rstrip()
 		return response
 	except (EOFError,KeyboardInterrupt) as e:
-		
 		print("Input interrupted by user or end of line reached")
 		return None
 
