@@ -7,11 +7,7 @@ Test code for html_render.py
 
 import io
 
-<<<<<<< HEAD
-from html_render import Element, Html, Body, P
-=======
 from html_render import Element, Html, Body, P, A, Ul
->>>>>>> 3ceb3ebffee331395c4eae6eb83b0081465145c4
 
 def test_init():
     e = Element()
@@ -31,8 +27,6 @@ def test_append():
 
     assert 'some more text' in e.content
     
-<<<<<<< HEAD
-=======
 from html_render import Element, Html, Body, P
 
 def test_init():
@@ -53,17 +47,12 @@ def test_append():
 
     assert 'some more text' in e.content
 
->>>>>>> 3ceb3ebffee331395c4eae6eb83b0081465145c4
 def test_two_instances():
     e = Element('this is some text')
     e2 = Element('this is some other text')
 
     e.append('some more text')
-<<<<<<< HEAD
-    
-=======
 
->>>>>>> 3ceb3ebffee331395c4eae6eb83b0081465145c4
     assert 'some more text' not in e2.content
 
 def test_render():
@@ -81,8 +70,6 @@ def test_render():
     assert file_contents.startswith('<html>')
     assert file_contents.strip().endswith('</html>')
 
-<<<<<<< HEAD
-=======
 def test_link():
     outfile = io.StringIO()
     a = A("http://google.com", "link")
@@ -142,5 +129,4 @@ def test_attributes():
     assert line1.startswith("<")
     assert line1.endswith(">")
 
->>>>>>> 3ceb3ebffee331395c4eae6eb83b0081465145c4
 # test Html, Body, P
