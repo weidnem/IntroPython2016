@@ -121,7 +121,7 @@ def write_db_file(clusterName, parse_file):
                 myNode, myEventOps, epochDate))
 
         for total_iops, totalOps in dict_total_iops.items():
-            out.write('heatiops,clustername={} ops={} {}\n'.format(clusterName, 
+            out.write('totaliops,clustername={} ops={} {}\n'.format(clusterName, 
                 round(totalOps, 2), epochDate))
 
     url = 'http://localhost:8086/write?db=heatiops'
