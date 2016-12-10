@@ -1,0 +1,1293 @@
+VERSION 8
+FILE_TYPE TXT
+NAME s_budget_set
+CHECKSUM 0x45faa75a
+VERSION 8
+SCHEMATA
+< 
+                RECORD_DECL 0    "s_schema_persistent_schema_handle_container#0" // s_schema_persistent_schema_handle_container
+                RECORD_DECL 1    "s_schema_persistent_schema_handle_array#0" 20 // s_schema_persistent_schema_handle_array
+                RECORD_DECL 2    "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 3    "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 4    "s_well_known_schema_persistent_handle#0" // s_well_known_schema_persistent_handle
+                RECORD_DECL 5    "s_conjured_template_schema_persistent_handle#0" 1 // s_conjured_template_schema_persistent_handle
+                RECORD_DECL 6    "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 7    "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 8    "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 9    "s_well_known_schema_persistent_handle#0" // s_well_known_schema_persistent_handle
+                RECORD_DECL 10   "s_conjured_template_schema_persistent_handle#0" 1 // s_conjured_template_schema_persistent_handle
+                RECORD_DECL 11   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 12   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 13   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 14   "s_conjured_template_schema_persistent_handle#0" 1 // s_conjured_template_schema_persistent_handle
+                RECORD_DECL 15   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 16   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 17   "s_conjured_template_schema_persistent_handle#0" 1 // s_conjured_template_schema_persistent_handle
+                RECORD_DECL 18   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 19   "s_well_known_schema_persistent_handle#0" // s_well_known_schema_persistent_handle
+                RECORD_DECL 20   "s_conjured_template_schema_persistent_handle#0" 1 // s_conjured_template_schema_persistent_handle
+                RECORD_DECL 21   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 22   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 23   "s_well_known_schema_persistent_handle#0" // s_well_known_schema_persistent_handle
+                RECORD_DECL 24   "s_conjured_template_schema_persistent_handle#0" 1 // s_conjured_template_schema_persistent_handle
+                RECORD_DECL 25   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 26   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 27   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 28   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 29   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 30   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 31   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 32   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 33   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DEF 0  
+                <
+                                FIELD handles                                                    ^RECORD[1]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[2]
+                                                                FIELD checksum                                                                0xA69EB5E1
+                                                >
+                                                FIELD [1]                                                                              // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[3]
+                                                                FIELD checksum                                                                0x06257D73
+                                                >
+                                                FIELD [2]                                                                              // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[5]
+                                                                FIELD checksum                                                                0x159B6A19
+                                                >
+                                                FIELD [3]                                                                              // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[7]
+                                                                FIELD checksum                                                                0xF24260D1
+                                                >
+                                                FIELD [4]                                                                              // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[8]
+                                                                FIELD checksum                                                                0x033B5B74
+                                                >
+                                                FIELD [5]                                                                              // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[10]
+                                                                FIELD checksum                                                                0x8DE2DFAC
+                                                >
+                                                FIELD [6]                                                                              // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[12]
+                                                                FIELD checksum                                                                0xCBF324AF
+                                                >
+                                                FIELD [7]                                                                              // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[14]
+                                                                FIELD checksum                                                                0xD682C118
+                                                >
+                                                FIELD [8]                                                                              // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[17]
+                                                                FIELD checksum                                                                0xF46DBC24
+                                                >
+                                                FIELD [9]                                                                              // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[20]
+                                                                FIELD checksum                                                                0x8FD375D7
+                                                >
+                                                FIELD [10]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[22]
+                                                                FIELD checksum                                                                0x5B4AE144
+                                                >
+                                                FIELD [11]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[24]
+                                                                FIELD checksum                                                                0xF4D83818
+                                                >
+                                                FIELD [12]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[26]
+                                                                FIELD checksum                                                                0x74D30F67
+                                                >
+                                                FIELD [13]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[27]
+                                                                FIELD checksum                                                                0xDE095377
+                                                >
+                                                FIELD [14]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[28]
+                                                                FIELD checksum                                                                0x6FA177D0
+                                                >
+                                                FIELD [15]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[29]
+                                                                FIELD checksum                                                                0xA13ADC93
+                                                >
+                                                FIELD [16]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[30]
+                                                                FIELD checksum                                                                0x949D5007
+                                                >
+                                                FIELD [17]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[31]
+                                                                FIELD checksum                                                                0x769CA121
+                                                >
+                                                FIELD [18]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[32]
+                                                                FIELD checksum                                                                0xFC0D18B2
+                                                >
+                                                FIELD [19]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[33]
+                                                >
+                                >
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD schema_name                                      "s_csharp_wrapper_generate"
+                >
+                RECORD_DEF 3  
+                <
+                                FIELD schema_name                                      "e_package_budget_id"
+                >
+                RECORD_DEF 4  
+                <
+                                FIELD well_known_schema_name "st_enum_storage"
+                >
+                RECORD_DEF 5  
+                <
+                                FIELD template_definition           ^RECORD[4]
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_conjured_template_schema_persistent_handle_entry
+                                                <
+                                                                FIELD type_argument                                    ^RECORD[6]
+                                                >
+                                >
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD schema_name                                      "e_package_budget_id"
+                >
+                RECORD_DEF 7  
+                <
+                                FIELD schema_name                                      "s_network_no_rsat_metadata"
+                >
+                RECORD_DEF 8  
+                <
+                                FIELD schema_name                                      "c_fake_tag_reference"
+                >
+                RECORD_DEF 9  
+                <
+                                FIELD well_known_schema_name "c_schema_owner_pointer"
+                >
+                RECORD_DEF 10 
+                <
+                                FIELD template_definition           ^RECORD[9]
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_conjured_template_schema_persistent_handle_entry
+                                                <
+                                                                FIELD type_argument                                    ^RECORD[11]
+                                                >
+                                >
+                >
+                RECORD_DEF 11 
+                <
+                                FIELD schema_name                                      "s_dynamic_array_dynamic_element_container"
+                >
+                RECORD_DEF 12 
+                <
+                                FIELD schema_name                                      "st_dynamic_array"
+                >
+                RECORD_DEF 13 
+                <
+                                FIELD schema_name                                      "st_dynamic_array"
+                >
+                RECORD_DEF 14 
+                <
+                                FIELD template_definition           ^RECORD[13]
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_conjured_template_schema_persistent_handle_entry
+                                                <
+                                                                FIELD type_argument                                    ^RECORD[15]
+                                                >
+                                >
+                >
+                RECORD_DEF 15 
+                <
+                                FIELD schema_name                                      "s_budget_set_asset"
+                >
+                RECORD_DEF 16 
+                <
+                                FIELD schema_name                                      "st_dynamic_array"
+                >
+                RECORD_DEF 17 
+                <
+                                FIELD template_definition           ^RECORD[16]
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_conjured_template_schema_persistent_handle_entry
+                                                <
+                                                                FIELD type_argument                                    ^RECORD[18]
+                                                >
+                                >
+                >
+                RECORD_DEF 18 
+                <
+                                FIELD schema_name                                      "s_asset_with_variant"
+                >
+                RECORD_DEF 19 
+                <
+                                FIELD well_known_schema_name "st_flags_storage"
+                >
+                RECORD_DEF 20 
+                <
+                                FIELD template_definition           ^RECORD[19]
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_conjured_template_schema_persistent_handle_entry
+                                                <
+                                                                FIELD type_argument                                    ^RECORD[21]
+                                                >
+                                >
+                >
+                RECORD_DEF 21 
+                <
+                                FIELD schema_name                                      "e_package_budget_id"
+                >
+                RECORD_DEF 22 
+                <
+                                FIELD schema_name                                      "e_source_file_visibility_enum"
+                >
+                RECORD_DEF 23 
+                <
+                                FIELD well_known_schema_name "st_enum_storage"
+                >
+                RECORD_DEF 24 
+                <
+                                FIELD template_definition           ^RECORD[23]
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_conjured_template_schema_persistent_handle_entry
+                                                <
+                                                                FIELD type_argument                                    ^RECORD[25]
+                                                >
+                                >
+                >
+                RECORD_DEF 25 
+                <
+                                FIELD schema_name                                      "e_source_file_visibility_enum"
+                >
+                RECORD_DEF 26 
+                <
+                                FIELD schema_name                                      "s_source_file_info"
+                >
+                RECORD_DEF 27 
+                <
+                                FIELD schema_name                                      "s_fake_tag_reference_file_filters"
+                >
+                RECORD_DEF 28 
+                <
+                                FIELD schema_name                                      "s_tagview_desc"
+                >
+                RECORD_DEF 29 
+                <
+                                FIELD schema_name                                      "s_budget_set"
+                                FIELD major_version_number   0x01
+                >
+                RECORD_DEF 30 
+                <
+                                FIELD schema_name                                      "s_dynamic_array_dynamic_element_container"
+                >
+                RECORD_DEF 31 
+                <
+                                FIELD schema_name                                      "s_fake_tag_is_blob_reference"
+                >
+                RECORD_DEF 32 
+                <
+                                FIELD schema_name                                      "s_budget_set_asset"
+                >
+                RECORD_DEF 33 
+                <
+                                FIELD schema_name                                      "s_asset_with_variant"
+                >
+> 
+ 
+HANDLES
+< 
+                RECORD_DECL 0    "s_schema_persistent_handle_container#0" // s_schema_persistent_handle_container
+                RECORD_DEF 0  
+                <
+                >
+> 
+ 
+SCHEMA "s_csharp_wrapper_generate" 0 // SCHEMA[0]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 4    "s_schema_checksum_ignore#0" // s_schema_checksum_ignore
+                RECORD_DECL 5    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 6    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[6]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/interfaces/csharp_metadata.h"
+                                FIELD line_number                                          22
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                RECORD_DEF 5  
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "s_csharp_wrapper_generate"
+                >
+> 
+ 
+SCHEMA "e_package_budget_id" 0 // SCHEMA[1]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 4    "s_schema_enum_members_incremental#0" 63 // s_schema_enum_members_incremental
+                RECORD_DECL 5    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 6    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD reflection_enabled_parallel_data ^RECORD[6]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/systems/resourcerer/interfaces/resourcerer_budget_ids.h"
+                                FIELD line_number                                          22
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              "_package_budget_id_undefined"
+                                                FIELD [1]                                                                              "_package_budget_id_runtime_generated"
+                                                FIELD [2]                                                                              "_package_budget_id_plates"
+                                                FIELD [3]                                                                              "_package_budget_id_imposters"
+                                                FIELD [4]                                                                              "_package_budget_id_objects"
+                                                FIELD [5]                                                                              "_package_budget_id_bitmaps"
+                                                FIELD [6]                                                                              "_package_budget_id_globals"
+                                                FIELD [7]                                                                              "_package_budget_id_system"
+                                                FIELD [8]                                                                              "_package_budget_id_inspection"
+                                                FIELD [9]                                                                              "_package_budget_id_design"
+                                                FIELD [10]                                                                            "_package_budget_id_activity"
+                                                FIELD [11]                                                                            "_package_budget_id_investment"
+                                                FIELD [12]                                                                            "_package_budget_id_env"
+                                                FIELD [13]                                                                            "_package_budget_id_env_terrain"
+                                                FIELD [14]                                                                            "_package_budget_id_env_bitmaps"
+                                                FIELD [15]                                                                            "_package_budget_id_env_instances"
+                                                FIELD [16]                                                                            "_package_budget_id_env_physics"
+                                                FIELD [17]                                                                            "_package_budget_id_env_pathfinding"
+                                                FIELD [18]                                                                            "_package_budget_id_env_visibility"
+                                                FIELD [19]                                                                            "_package_budget_id_env_speedtree"
+                                                FIELD [20]                                                                            "_package_budget_id_obj_sandbox"
+                                                FIELD [21]                                                                            "_package_budget_id_env_objects"
+                                                FIELD [22]                                                                            "_package_budget_id_obj_imposters"
+                                                FIELD [23]                                                                            "_package_budget_id_env_imposters"
+                                                FIELD [24]                                                                            "_package_budget_id_animation"
+                                                FIELD [25]                                                                            "_package_budget_id_ui_and_hud"
+                                                FIELD [26]                                                                            "_package_budget_id_effects"
+                                                FIELD [27]                                                                            "_package_budget_id_ao_tags"
+                                                FIELD [28]                                                                            "_package_budget_id_audio"
+                                                FIELD [29]                                                                            "_package_budget_id_globals_shared"
+                                                FIELD [30]                                                                            "_package_budget_id_two_pass_start"
+                                                FIELD [31]                                                                            "_package_budget_id_gear_dyes"
+                                                FIELD [32]                                                                            "_package_budget_id_player_head"
+                                                FIELD [33]                                                                            "_package_budget_id_player_head_social"
+                                                FIELD [34]                                                                            "_package_budget_id_player_hair"
+                                                FIELD [35]                                                                            "_package_budget_id_player_hair_social"
+                                                FIELD [36]                                                                            "_package_budget_id_player_facial_decal"
+                                                FIELD [37]                                                                            "_package_budget_id_player_facial_decal_social"
+                                                FIELD [38]                                                                            "_package_budget_id_player_facial_hair"
+                                                FIELD [39]                                                                            "_package_budget_id_player_facial_hair_social"
+                                                FIELD [40]                                                                            "_package_budget_id_player_chest"
+                                                FIELD [41]                                                                            "_package_budget_id_player_arms"
+                                                FIELD [42]                                                                            "_package_budget_id_player_legs"
+                                                FIELD [43]                                                                            "_package_budget_id_player_class"
+                                                FIELD [44]                                                                            "_package_budget_id_weapon_frame"
+                                                FIELD [45]                                                                            "_package_budget_id_weapon_barrel"
+                                                FIELD [46]                                                                            "_package_budget_id_weapon_magazine"
+                                                FIELD [47]                                                                            "_package_budget_id_weapon_scope"
+                                                FIELD [48]                                                                            "_package_budget_id_weapon_stock"
+                                                FIELD [49]                                                                            "_package_budget_id_weapon_hud"
+                                                FIELD [50]                                                                            "_package_budget_id_weapon_reticle"
+                                                FIELD [51]                                                                            "_package_budget_id_ship_frame"
+                                                FIELD [52]                                                                            "_package_budget_id_ship_cockpit"
+                                                FIELD [53]                                                                            "_package_budget_id_ship_wings"
+                                                FIELD [54]                                                                            "_package_budget_id_ship_jet"
+                                                FIELD [55]                                                                            "_package_budget_id_ship_engine"
+                                                FIELD [56]                                                                            "_package_budget_id_ship_pod"
+                                                FIELD [57]                                                                            "_package_budget_id_sparrow_gear"
+                                                FIELD [58]                                                                            "_package_budget_id_ghost_gear"
+                                                FIELD [59]                                                                            "_package_budget_id_video"
+                                                FIELD [60]                                                                            "_package_budget_id_lens_flare"
+                                                FIELD [61]                                                                            "_package_budget_id_lens_flare_environment"
+                                                FIELD [62]                                                                            "_package_budget_id_lens_flare_sandbox"
+                                >
+                >
+                RECORD_DEF 5  
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "e_package_budget_id"
+                >
+> 
+ 
+SCHEMA "st_enum_storage<e_package_budget_id>" 0 // SCHEMA[2]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_template_definition#0" // s_template_definition
+                RECORD_DECL 2    "s_template_parameters_t#0" // s_template_parameters_t
+                RECORD_DECL 3    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 4    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_template_instance
+                                FIELD reflection_enabled_parallel_data ^RECORD[4]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD template_definition           "st_enum_storage#0" // st_enum_storage
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD t0                                                                                SCHEMA[1] // e_package_budget_id
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "st_enum_storage<e_package_budget_id>"
+                >
+> 
+ 
+SCHEMA "s_network_no_rsat_metadata" 0 // SCHEMA[3]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 4    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 5    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[5]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/networking/interfaces/networking_metadata_definitions.h"
+                                FIELD line_number                                          24
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                RECORD_DEF 5  
+                <
+                                FIELD name                                                                        "s_network_no_rsat_metadata"
+                >
+> 
+ 
+SCHEMA "c_fake_tag_reference" 0 // SCHEMA[4]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 4    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 5    SCHEMA[3] // s_network_no_rsat_metadata
+                RECORD_DECL 6    "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 7    "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 8    "s_schema_data_is_generated#0" // s_schema_data_is_generated
+                RECORD_DECL 9    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 10   "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[10]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/systems/schema/helpers/interfaces/fake_tag_loader.h"
+                                FIELD line_number                                          68
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "m_referenced_tag_name"
+                >
+                RECORD_DEF 7  
+                <
+                                FIELD name                                                                        "m_referenced_tag_handle"
+                                FIELD type                                                                           "c_common_handle#0" // c_common_handle
+                >
+                RECORD_DEF 8  
+                RECORD_DEF 9  
+                RECORD_DEF 10 
+                <
+                                FIELD name                                                                        "c_fake_tag_reference"
+                >
+> 
+ 
+SCHEMA "c_schema_owner_pointer<s_dynamic_array_dynamic_element_container>" 0 // SCHEMA[5]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_template_definition#0" // s_template_definition
+                RECORD_DECL 2    "s_template_parameters_w#0" // s_template_parameters_w
+                RECORD_DECL 3    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 4    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD root_type                                                               "c_schema_offset_pointer#0" // c_schema_offset_pointer
+                                FIELD schema_flags                                        _schema_flags_inherits
+                                FIELD schema_type                                        _schema_type_template_instance
+                                FIELD reflection_enabled_parallel_data ^RECORD[4]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD template_definition           "c_schema_owner_pointer#0" // c_schema_owner_pointer
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD w0                                                                              SCHEMA[16] // s_dynamic_array_dynamic_element_container
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "c_schema_owner_pointer<s_dynamic_array_dynamic_element_container>"
+                >
+> 
+ 
+SCHEMA "st_dynamic_array" 0 // SCHEMA[6]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_template_definition_parameters#0" // s_template_definition_parameters
+                RECORD_DECL 2    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 3    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 4    "s_schema_release_reflection_owner_pointer_wrapper#0" // s_schema_release_reflection_owner_pointer_wrapper
+                RECORD_DECL 5    "s_schema_trim_process#0" // s_schema_trim_process
+                RECORD_DECL 6    "s_schema_release_required_recursive#0" // s_schema_release_required_recursive
+                RECORD_DECL 7    "s_schema_release_dependency#0" // s_schema_release_dependency
+                RECORD_DECL 8    "s_schema_release_required#0" // s_schema_release_required
+                RECORD_DECL 9    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 10   "s_schema_embedded_integer_intrinsic<intsize>#0" // s_schema_embedded_integer_intrinsic<intsize>
+                RECORD_DECL 11   "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 12   "s_schema_version_snap_owner_pointer_to_record#0" // s_schema_version_snap_owner_pointer_to_record
+                RECORD_DECL 13   "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 14   "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_template_definition
+                                FIELD reflection_enabled_parallel_data ^RECORD[14]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD parameters                                            "s_template_parameters_w#0" // s_template_parameters_w
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/interfaces/dynamic_array.h"
+                                FIELD line_number                                          215
+                >
+                RECORD_DEF 3  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                >
+                RECORD_DEF 6  
+                <
+                >
+                RECORD_DEF 7  
+                <
+                >
+                RECORD_DEF 8  
+                <
+                >
+                RECORD_DEF 9  
+                <
+                >
+                RECORD_DEF 10 
+                <
+                                FIELD name                                                                        "m_element_count"
+                >
+                RECORD_DEF 11 
+                <
+                                FIELD name                                                                        "m_elements"
+                                FIELD type                                                                           SCHEMA[5] // c_schema_owner_pointer<s_dynamic_array_dynamic_element_container>
+                >
+                RECORD_DEF 12 
+                RECORD_DEF 13 
+                RECORD_DEF 14 
+                <
+                                FIELD name                                                                        "st_dynamic_array"
+                >
+> 
+ 
+SCHEMA "st_dynamic_array<s_budget_set_asset>" 0 // SCHEMA[7]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_template_definition#0" // s_template_definition
+                RECORD_DECL 2    "s_template_parameters_w#0" // s_template_parameters_w
+                RECORD_DECL 3    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 4    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_template_instance
+                                FIELD reflection_enabled_parallel_data ^RECORD[4]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD template_definition           SCHEMA[6] // st_dynamic_array
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD w0                                                                              SCHEMA[18] // s_budget_set_asset
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "st_dynamic_array<s_budget_set_asset>"
+                >
+> 
+ 
+SCHEMA "st_dynamic_array<s_asset_with_variant>" 0 // SCHEMA[8]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_template_definition#0" // s_template_definition
+                RECORD_DECL 2    "s_template_parameters_w#0" // s_template_parameters_w
+                RECORD_DECL 3    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 4    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_template_instance
+                                FIELD reflection_enabled_parallel_data ^RECORD[4]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD template_definition           SCHEMA[6] // st_dynamic_array
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD w0                                                                              SCHEMA[19] // s_asset_with_variant
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "st_dynamic_array<s_asset_with_variant>"
+                >
+> 
+ 
+SCHEMA "st_flags_storage<e_package_budget_id>" 0 // SCHEMA[9]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_template_definition#0" // s_template_definition
+                RECORD_DECL 2    "s_template_parameters_t#0" // s_template_parameters_t
+                RECORD_DECL 3    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 4    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_template_instance
+                                FIELD reflection_enabled_parallel_data ^RECORD[4]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD template_definition           "st_flags_storage#0" // st_flags_storage
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD t0                                                                                SCHEMA[1] // e_package_budget_id
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "st_flags_storage<e_package_budget_id>"
+                >
+> 
+ 
+SCHEMA "e_source_file_visibility_enum" 0 // SCHEMA[10]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_checksum_ignore#0" // s_schema_checksum_ignore
+                RECORD_DECL 4    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 5    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 6    "s_schema_enum_members_incremental#0" 2 // s_schema_enum_members_incremental
+                RECORD_DECL 7    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 8    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD reflection_enabled_parallel_data ^RECORD[8]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/private/bonobo_metadata_definitions.h"
+                                FIELD line_number                                          379
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              "_source_file_visibility_hidden"
+                                                FIELD [1]                                                                              "_source_file_visibility_visible"
+                                >
+                >
+                RECORD_DEF 7  
+                RECORD_DEF 8  
+                <
+                                FIELD name                                                                        "e_source_file_visibility_enum"
+                >
+> 
+ 
+SCHEMA "st_enum_storage<e_source_file_visibility_enum>" 0 // SCHEMA[11]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_template_definition#0" // s_template_definition
+                RECORD_DECL 2    "s_template_parameters_t#0" // s_template_parameters_t
+                RECORD_DECL 3    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 4    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_template_instance
+                                FIELD reflection_enabled_parallel_data ^RECORD[4]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD template_definition           "st_enum_storage#0" // st_enum_storage
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD t0                                                                                SCHEMA[10] // e_source_file_visibility_enum
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "st_enum_storage<e_source_file_visibility_enum>"
+                >
+> 
+ 
+SCHEMA "s_source_file_info" 0 // SCHEMA[12]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_checksum_ignore#0" // s_schema_checksum_ignore
+                RECORD_DECL 4    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 5    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 6    "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 7    "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 8    "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 9    "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 10   "s_schema_embedded_boolean_intrinsic#0" // s_schema_embedded_boolean_intrinsic
+                RECORD_DECL 11   "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 12   "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[12]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/private/bonobo_metadata_definitions.h"
+                                FIELD line_number                                          389
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "m_display_name"
+                >
+                RECORD_DEF 7  
+                <
+                                FIELD name                                                                        "m_description"
+                >
+                RECORD_DEF 8  
+                <
+                                FIELD name                                                                        "m_extension"
+                >
+                RECORD_DEF 9  
+                <
+                                FIELD name                                                                        "m_visibility"
+                                FIELD type                                                                           SCHEMA[11] // st_enum_storage<e_source_file_visibility_enum>
+                >
+                RECORD_DEF 10 
+                <
+                                FIELD name                                                                        "m_alternate_info"
+                >
+                RECORD_DEF 11 
+                RECORD_DEF 12 
+                <
+                                FIELD name                                                                        "s_source_file_info"
+                >
+> 
+ 
+SCHEMA "s_fake_tag_reference_file_filters" 0 // SCHEMA[13]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 4    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 5    "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 6    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 7    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[7]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/systems/schema/helpers/interfaces/fake_tag_loader.h"
+                                FIELD line_number                                          150
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                                FIELD name                                                                        "m_file_filters"
+                >
+                RECORD_DEF 6  
+                RECORD_DEF 7  
+                <
+                                FIELD name                                                                        "s_fake_tag_reference_file_filters"
+                >
+> 
+ 
+SCHEMA "s_tagview_desc" 0 // SCHEMA[14]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_checksum_ignore#0" // s_schema_checksum_ignore
+                RECORD_DECL 4    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 5    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 6    "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 7    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 8    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[8]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/private/bonobo_metadata_definitions.h"
+                                FIELD line_number                                          72
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "m_text"
+                >
+                RECORD_DEF 7  
+                RECORD_DEF 8  
+                <
+                                FIELD name                                                                        "s_tagview_desc"
+                >
+> 
+ 
+SCHEMA "s_budget_set" 1 // SCHEMA[15]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 4    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 5    SCHEMA[12] // s_source_file_info
+                RECORD_DECL 6    "s_schema_embedded_integer_intrinsic<intsize>#0" // s_schema_embedded_integer_intrinsic<intsize>
+                RECORD_DECL 7    "s_schema_data_is_generated#0" // s_schema_data_is_generated
+                RECORD_DECL 8    "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 9    "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 10   SCHEMA[13] // s_fake_tag_reference_file_filters
+                RECORD_DECL 11   "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 12   "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 13   "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 14   SCHEMA[14] // s_tagview_desc
+                RECORD_DECL 15   "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 16   "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 17   "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_flags                                        _schema_flags_container
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD schema_major_version    0x01
+                                FIELD reflection_enabled_parallel_data ^RECORD[17]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/systems/resourcerer/interfaces/resourcerer_budget_ids.h"
+                                FIELD line_number                                          159
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                                FIELD m_display_name                 "Budget set"
+                                FIELD m_description                                       "A list of asset tags used to calculate group budgets"
+                                FIELD m_extension                                         "budget_set"
+                                FIELD m_visibility                                             _source_file_visibility_visible
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "this_size"
+                >
+                RECORD_DEF 7  
+                RECORD_DEF 8  
+                <
+                                FIELD name                                                                        "override_budget_id"
+                                FIELD type                                                                           SCHEMA[2] // st_enum_storage<e_package_budget_id>
+                >
+                RECORD_DEF 9  
+                <
+                                FIELD name                                                                        "budget_source_definition"
+                                FIELD type                                                                           SCHEMA[4] // c_fake_tag_reference
+                >
+                RECORD_DEF 10 
+                <
+                                FIELD m_file_filters                         "Budget Source Definition|*.budget_source_definition.tft"
+                >
+                RECORD_DEF 11 
+                <
+                                FIELD name                                                                        "asset_list"
+                                FIELD type                                                                           SCHEMA[7] // st_dynamic_array<s_budget_set_asset>
+                >
+                RECORD_DEF 12 
+                <
+                                FIELD name                                                                        "asset_list_with_variants"
+                                FIELD type                                                                           SCHEMA[8] // st_dynamic_array<s_asset_with_variant>
+                >
+                RECORD_DEF 13 
+                <
+                                FIELD name                                                                        "budget_set_global_variant"
+                >
+                RECORD_DEF 14 
+                <
+                                FIELD m_text                                                     "\nGlobal variant applied to all assets in in 'asset list with variants'"
+                >
+                RECORD_DEF 15 
+                <
+                                FIELD name                                                                        "do_not_override_budget_ids"
+                                FIELD type                                                                           SCHEMA[9] // st_flags_storage<e_package_budget_id>
+                >
+                RECORD_DEF 16 
+                RECORD_DEF 17 
+                <
+                                FIELD name                                                                        "s_budget_set"
+                >
+> 
+ 
+SCHEMA "s_dynamic_array_dynamic_element_container" 0 // SCHEMA[16]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 4    "s_schema_version_old_structure_name#0" // s_schema_version_old_structure_name
+                RECORD_DECL 5    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 6    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD root_type                                                               "s_schema_dynamic_element_container#0" // s_schema_dynamic_element_container
+                                FIELD schema_flags                                        _schema_flags_inherits|_schema_flags_dynamic_container
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[6]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/interfaces/dynamic_array.h"
+                                FIELD line_number                                          145
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                                FIELD m_old_name                                         "st_dynamic_array_elements"
+                >
+                RECORD_DEF 5  
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "s_dynamic_array_dynamic_element_container"
+                >
+> 
+ 
+SCHEMA "s_fake_tag_is_blob_reference" 0 // SCHEMA[17]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 4    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 5    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[5]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/systems/schema/helpers/interfaces/fake_tag_loader.h"
+                                FIELD line_number                                          128
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                RECORD_DEF 5  
+                <
+                                FIELD name                                                                        "s_fake_tag_is_blob_reference"
+                >
+> 
+ 
+SCHEMA "s_budget_set_asset" 0 // SCHEMA[18]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 4    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 5    "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 6    SCHEMA[17] // s_fake_tag_is_blob_reference
+                RECORD_DECL 7    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 8    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[8]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/systems/resourcerer/interfaces/resourcerer_budget_ids.h"
+                                FIELD line_number                                          147
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                                FIELD name                                                                        "asset"
+                                FIELD type                                                                           SCHEMA[4] // c_fake_tag_reference
+                >
+                RECORD_DEF 6  
+                <
+                >
+                RECORD_DEF 7  
+                RECORD_DEF 8  
+                <
+                                FIELD name                                                                        "s_budget_set_asset"
+                >
+> 
+ 
+STRUCTURE
+< 
+                RECORD_DECL 0    SCHEMA[15] // s_budget_set
+                RECORD_DECL 1    SCHEMA[16] 9 SCHEMA[18] // s_dynamic_array_dynamic_element_container[s_budget_set_asset]
+                RECORD_DEF 0  
+                <
+                                FIELD budget_source_definition // c_fake_tag_reference
+                                <
+                                                FIELD m_referenced_tag_name               "content\\common\\native\\budget\\combatants\\cabal\\cabal.budget_source_definition.tft"
+                                                                                >
+                                FIELD asset_list                                 // st_dynamic_array<s_budget_set_asset>
+                                <
+                                                FIELD m_element_count                              9
+                                                FIELD m_elements                                          ^RECORD[1]
+                                >
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_budget_set_asset
+                                                <
+                                                                FIELD asset                                                                         // c_fake_tag_reference
+                                                                <
+                                                                                FIELD m_referenced_tag_name               "content\\foobar"
+                                                                                                                                                >
+                                                >
+                                                FIELD [1]                                                                              // s_budget_set_asset
+                                                <
+                                                                FIELD asset                                                                         // c_fake_tag_reference
+                                                                <
+                                                                                FIELD m_referenced_tag_name               "content\\foobar.tft"
+                                                                                                                                                >
+                                                >
+                                                FIELD [2]                                                                              // s_budget_set_asset
+                                                <
+                                                                FIELD asset                                                                         // c_fake_tag_reference
+                                                                <
+                                                                                FIELD m_referenced_tag_name               "content\\sandbox\\foobarft"
+                                                                                                                                                >
+                                                >
+                                                FIELD [3]                                                                              // s_budget_set_asset
+                                                <
+                                                                FIELD asset                                                                         // c_fake_tag_reference
+                                                                <
+                                                                                FIELD m_referenced_tag_name               "content\\sandbox\\chafoobarrn.tft"
+                                                                                                                                                >
+                                                >
+                                                FIELD [4]                                                                              // s_budget_set_asset
+                                                <
+                                                                FIELD asset                                                                         // c_fake_tag_reference
+                                                                <
+                                                                                FIELD m_referenced_tag_name               "content\\sandbox\foobarn.tft"
+                                                                                                                                                >
+                                                >
+                                                FIELD [5]                                                                              // s_budget_set_asset
+                                                <
+                                                                FIELD asset                                                                         // c_fake_tag_reference
+                                                                <
+                                                                                FIELD m_referenced_tag_name               "content\\sandbox\\charafoobar"
+                                                                                                                                                >
+                                                >
+                                                FIELD [6]                                                                              // s_budget_set_asset
+                                                <
+                                                                FIELD asset                                                                         // c_fake_tag_reference
+                                                                <
+                                                                                FIELD m_referenced_tag_name               "content\\sandbox\\charafoobarern.tft"
+                                                                                                                                                >
+                                                >
+                                                FIELD [7]                                                                              // s_budget_set_asset
+                                                <
+                                                                FIELD asset                                                                         // c_fake_tag_reference
+                                                                <
+                                                                                FIELD m_referenced_tag_name               "contentfoobarern.tft"
+                                                                                                                                                >
+                                                >
+                                                FIELD [8]                                                                              // s_budget_set_asset
+                                                <
+                                                                FIELD asset                                                                         // c_fake_tag_reference
+                                                                <
+                                                                                FIELD m_referenced_tag_name               "content\\safoobarern.tft"
+                                                                                                                                                >
+                                                >
+                                >
+                >
+>

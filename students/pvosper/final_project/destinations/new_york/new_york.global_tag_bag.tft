@@ -1,0 +1,868 @@
+VERSION 8
+FILE_TYPE TXT
+NAME s_grognok_destination_global_tag_bag
+CHECKSUM 0x90a42798
+VERSION 8
+SCHEMATA
+< 
+                RECORD_DECL 0    "s_magic_persistent_magic_handle_container#0" // s_magic_persistent_magic_handle_container
+                RECORD_DECL 1    "s_magic_persistent_magic_handle_array#0" 13 // s_magic_persistent_magic_handle_array
+                RECORD_DECL 2    "s_well_known_magic_persistent_handle#0" // s_well_known_magic_persistent_handle
+                RECORD_DECL 3    "s_conjured_template_magic_persistent_handle#0" 1 // s_conjured_template_magic_persistent_handle
+                RECORD_DECL 4    "s_native_magic_persistent_handle#0" // s_native_magic_persistent_handle
+                RECORD_DECL 5    "s_native_magic_persistent_handle#0" // s_native_magic_persistent_handle
+                RECORD_DECL 6    "s_native_magic_persistent_handle#0" // s_native_magic_persistent_handle
+                RECORD_DECL 7    "s_conjured_template_magic_persistent_handle#0" 1 // s_conjured_template_magic_persistent_handle
+                RECORD_DECL 8    "s_native_magic_persistent_handle#0" // s_native_magic_persistent_handle
+                RECORD_DECL 9    "s_native_magic_persistent_handle#0" // s_native_magic_persistent_handle
+                RECORD_DECL 10   "s_native_magic_persistent_handle#0" // s_native_magic_persistent_handle
+                RECORD_DECL 11   "s_well_known_magic_persistent_handle#0" // s_well_known_magic_persistent_handle
+                RECORD_DECL 12   "s_conjured_template_magic_persistent_handle#0" 1 // s_conjured_template_magic_persistent_handle
+                RECORD_DECL 13   "s_native_magic_persistent_handle#0" // s_native_magic_persistent_handle
+                RECORD_DECL 14   "s_native_magic_persistent_handle#0" // s_native_magic_persistent_handle
+                RECORD_DECL 15   "s_native_magic_persistent_handle#0" // s_native_magic_persistent_handle
+                RECORD_DECL 16   "s_native_magic_persistent_handle#0" // s_native_magic_persistent_handle
+                RECORD_DECL 17   "s_native_magic_persistent_handle#0" // s_native_magic_persistent_handle
+                RECORD_DECL 18   "s_native_magic_persistent_handle#0" // s_native_magic_persistent_handle
+                RECORD_DECL 19   "s_native_magic_persistent_handle#0" // s_native_magic_persistent_handle
+                RECORD_DECL 20   "s_native_magic_persistent_handle#0" // s_native_magic_persistent_handle
+                RECORD_DEF 0  
+                <
+                                FIELD handles                                                    ^RECORD[1]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_magic_persistent_magic_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[3]
+                                                                FIELD checksum                                                                0x8DE2DFAC
+                                                >
+                                                FIELD [1]                                                                              // s_magic_persistent_magic_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[5]
+                                                                FIELD checksum                                                                0xCBF324AF
+                                                >
+                                                FIELD [2]                                                                              // s_magic_persistent_magic_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[7]
+                                                                FIELD checksum                                                                0x66EF1BB2
+                                                >
+                                                FIELD [3]                                                                              // s_magic_persistent_magic_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[9]
+                                                                FIELD checksum                                                                0xA69EB5E1
+                                                >
+                                                FIELD [4]                                                                              // s_magic_persistent_magic_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[10]
+                                                                FIELD checksum                                                                0x5B4AE144
+                                                >
+                                                FIELD [5]                                                                              // s_magic_persistent_magic_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[12]
+                                                                FIELD checksum                                                                0xF4D83818
+                                                >
+                                                FIELD [6]                                                                              // s_magic_persistent_magic_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[14]
+                                                                FIELD checksum                                                                0x74D30F67
+                                                >
+                                                FIELD [7]                                                                              // s_magic_persistent_magic_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[15]
+                                                                FIELD checksum                                                                0x78B8B92C
+                                                >
+                                                FIELD [8]                                                                              // s_magic_persistent_magic_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[16]
+                                                                FIELD checksum                                                                0x949D5007
+                                                >
+                                                FIELD [9]                                                                              // s_magic_persistent_magic_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[17]
+                                                                FIELD checksum                                                                0xF24260D1
+                                                >
+                                                FIELD [10]                                                                            // s_magic_persistent_magic_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[18]
+                                                                FIELD checksum                                                                0x033B5B74
+                                                >
+                                                FIELD [11]                                                                            // s_magic_persistent_magic_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[19]
+                                                                FIELD checksum                                                                0x769CA121
+                                                >
+                                                FIELD [12]                                                                            // s_magic_persistent_magic_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[20]
+                                                                FIELD checksum                                                                0xE8C782D4
+                                                >
+                                >
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD well_known_magic_name "c_magic_owner_pointer"
+                >
+                RECORD_DEF 3  
+                <
+                                FIELD template_definition           ^RECORD[2]
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_conjured_template_magic_persistent_handle_entry
+                                                <
+                                                                FIELD type_argument                                    ^RECORD[4]
+                                                >
+                                >
+                >
+                RECORD_DEF 4  
+                <
+                                FIELD magic_name                                          "s_dynamic_array_dynamic_element_container"
+                >
+                RECORD_DEF 5  
+                <
+                                FIELD magic_name                                          "st_dynamic_array"
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD magic_name                                          "st_dynamic_array"
+                >
+                RECORD_DEF 7  
+                <
+                                FIELD template_definition           ^RECORD[6]
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_conjured_template_magic_persistent_handle_entry
+                                                <
+                                                                FIELD type_argument                                    ^RECORD[8]
+                                                >
+                                >
+                >
+                RECORD_DEF 8  
+                <
+                                FIELD magic_name                                          "s_grognok_destination_global_tag_bag_element"
+                >
+                RECORD_DEF 9  
+                <
+                                FIELD magic_name                                          "s_csharp_wrapper_generate"
+                >
+                RECORD_DEF 10 
+                <
+                                FIELD magic_name                                          "e_source_file_visibility_enum"
+                >
+                RECORD_DEF 11 
+                <
+                                FIELD well_known_magic_name "st_enum_storage"
+                >
+                RECORD_DEF 12 
+                <
+                                FIELD template_definition           ^RECORD[11]
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_conjured_template_magic_persistent_handle_entry
+                                                <
+                                                                FIELD type_argument                                    ^RECORD[13]
+                                                >
+                                >
+                >
+                RECORD_DEF 13 
+                <
+                                FIELD magic_name                                          "e_source_file_visibility_enum"
+                >
+                RECORD_DEF 14 
+                <
+                                FIELD magic_name                                          "s_source_file_info"
+                >
+                RECORD_DEF 15 
+                <
+                                FIELD magic_name                                          "s_grognok_destination_global_tag_bag"
+                                FIELD major_version_number   0x01
+                >
+                RECORD_DEF 16 
+                <
+                                FIELD magic_name                                          "s_dynamic_array_dynamic_element_container"
+                >
+                RECORD_DEF 17 
+                <
+                                FIELD magic_name                                          "s_network_no_rsat_metadata"
+                >
+                RECORD_DEF 18 
+                <
+                                FIELD magic_name                                          "c_fake_tag_reference"
+                >
+                RECORD_DEF 19 
+                <
+                                FIELD magic_name                                          "s_fake_tag_is_blob_reference"
+                >
+                RECORD_DEF 20 
+                <
+                                FIELD magic_name                                          "s_grognok_destination_global_tag_bag_element"
+                >
+> 
+ 
+HANDLES
+< 
+                RECORD_DECL 0    "s_magic_persistent_handle_container#0" // s_magic_persistent_handle_container
+                RECORD_DEF 0  
+                <
+                >
+> 
+ 
+SCHEMA "c_magic_owner_pointer<s_dynamic_array_dynamic_element_container>" 0 // SCHEMA[0]
+< 
+                RECORD_DECL 0    "s_magic#0" // s_magic
+                RECORD_DECL 1    "s_template_definition#0" // s_template_definition
+                RECORD_DECL 2    "s_template_parameters_w#0" // s_template_parameters_w
+                RECORD_DECL 3    "s_magic_resource_marker#0" // s_magic_resource_marker
+                RECORD_DECL 4    "s_magic_reflection_parallel_data#0" // s_magic_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD root_type                                                               "c_magic_offset_pointer#0" // c_magic_offset_pointer
+                                FIELD magic_flags                                            _magic_flags_inherits
+                                FIELD magic_type                                            _magic_type_template_instance
+                                FIELD reflection_enabled_parallel_data ^RECORD[4]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD template_definition           "c_magic_owner_pointer#0" // c_magic_owner_pointer
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD w0                                                                              SCHEMA[8] // s_dynamic_array_dynamic_element_container
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "c_magic_owner_pointer<s_dynamic_array_dynamic_element_container>"
+                >
+> 
+ 
+SCHEMA "st_dynamic_array" 0 // SCHEMA[1]
+< 
+                RECORD_DECL 0    "s_magic#0" // s_magic
+                RECORD_DECL 1    "s_template_definition_parameters#0" // s_template_definition_parameters
+                RECORD_DECL 2    "s_magic_origin_metadata#0" // s_magic_origin_metadata
+                RECORD_DECL 3    "s_magic_tag_range_metadata#0" // s_magic_tag_range_metadata
+                RECORD_DECL 4    "s_magic_release_reflection_owner_pointer_wrapper#0" // s_magic_release_reflection_owner_pointer_wrapper
+                RECORD_DECL 5    "s_magic_trim_process#0" // s_magic_trim_process
+                RECORD_DECL 6    "s_magic_release_required_recursive#0" // s_magic_release_required_recursive
+                RECORD_DECL 7    "s_magic_release_dependency#0" // s_magic_release_dependency
+                RECORD_DECL 8    "s_magic_release_required#0" // s_magic_release_required
+                RECORD_DECL 9    "s_magic_allow_in_packages#0" // s_magic_allow_in_packages
+                RECORD_DECL 10   "s_magic_embedded_integer_intrinsic<intsize>#0" // s_magic_embedded_integer_intrinsic<intsize>
+                RECORD_DECL 11   "s_magic_embedded_member#0" // s_magic_embedded_member
+                RECORD_DECL 12   "s_magic_version_snap_owner_pointer_to_record#0" // s_magic_version_snap_owner_pointer_to_record
+                RECORD_DECL 13   "s_magic_resource_marker#0" // s_magic_resource_marker
+                RECORD_DECL 14   "s_magic_reflection_parallel_data#0" // s_magic_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD magic_type                                            _magic_type_template_definition
+                                FIELD reflection_enabled_parallel_data ^RECORD[14]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD parameters                                            "s_template_parameters_w#0" // s_template_parameters_w
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD origin                                                         _magic_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/interfaces/dynamic_array.h"
+                                FIELD line_number                                          215
+                >
+                RECORD_DEF 3  
+                <
+                                FIELD tag_range                                                               _magic_tag_range_foundation
+                >
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                >
+                RECORD_DEF 6  
+                <
+                >
+                RECORD_DEF 7  
+                <
+                >
+                RECORD_DEF 8  
+                <
+                >
+                RECORD_DEF 9  
+                <
+                >
+                RECORD_DEF 10 
+                <
+                                FIELD name                                                                        "m_element_count"
+                >
+                RECORD_DEF 11 
+                <
+                                FIELD name                                                                        "m_elements"
+                                FIELD type                                                                           SCHEMA[0] // c_magic_owner_pointer<s_dynamic_array_dynamic_element_container>
+                >
+                RECORD_DEF 12 
+                RECORD_DEF 13 
+                RECORD_DEF 14 
+                <
+                                FIELD name                                                                        "st_dynamic_array"
+                >
+> 
+ 
+SCHEMA "st_dynamic_array<s_grognok_destination_global_tag_bag_element>" 0 // SCHEMA[2]
+< 
+                RECORD_DECL 0    "s_magic#0" // s_magic
+                RECORD_DECL 1    "s_template_definition#0" // s_template_definition
+                RECORD_DECL 2    "s_template_parameters_w#0" // s_template_parameters_w
+                RECORD_DECL 3    "s_magic_resource_marker#0" // s_magic_resource_marker
+                RECORD_DECL 4    "s_magic_reflection_parallel_data#0" // s_magic_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD magic_type                                            _magic_type_template_instance
+                                FIELD reflection_enabled_parallel_data ^RECORD[4]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD template_definition           SCHEMA[1] // st_dynamic_array
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD w0                                                                              SCHEMA[12] // s_grognok_destination_global_tag_bag_element
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "st_dynamic_array<s_grognok_destination_global_tag_bag_element>"
+                >
+> 
+ 
+SCHEMA "s_csharp_wrapper_generate" 0 // SCHEMA[3]
+< 
+                RECORD_DECL 0    "s_magic#0" // s_magic
+                RECORD_DECL 1    "s_magic_origin_metadata#0" // s_magic_origin_metadata
+                RECORD_DECL 2    "s_magic_tag_range_metadata#0" // s_magic_tag_range_metadata
+                RECORD_DECL 3    "s_magic_allow_in_packages#0" // s_magic_allow_in_packages
+                RECORD_DECL 4    "s_magic_checksum_ignore#0" // s_magic_checksum_ignore
+                RECORD_DECL 5    "s_magic_resource_marker#0" // s_magic_resource_marker
+                RECORD_DECL 6    "s_magic_reflection_parallel_data#0" // s_magic_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD magic_type                                            _magic_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[6]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _magic_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/interfaces/csharp_metadata.h"
+                                FIELD line_number                                          22
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _magic_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                RECORD_DEF 5  
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "s_csharp_wrapper_generate"
+                >
+> 
+ 
+SCHEMA "e_source_file_visibility_enum" 0 // SCHEMA[4]
+< 
+                RECORD_DECL 0    "s_magic#0" // s_magic
+                RECORD_DECL 1    "s_magic_origin_metadata#0" // s_magic_origin_metadata
+                RECORD_DECL 2    "s_magic_tag_range_metadata#0" // s_magic_tag_range_metadata
+                RECORD_DECL 3    "s_magic_checksum_ignore#0" // s_magic_checksum_ignore
+                RECORD_DECL 4    "s_magic_allow_in_packages#0" // s_magic_allow_in_packages
+                RECORD_DECL 5    SCHEMA[3] // s_csharp_wrapper_generate
+                RECORD_DECL 6    "s_magic_enum_members_incremental#0" 2 // s_magic_enum_members_incremental
+                RECORD_DECL 7    "s_magic_resource_marker#0" // s_magic_resource_marker
+                RECORD_DECL 8    "s_magic_reflection_parallel_data#0" // s_magic_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD reflection_enabled_parallel_data ^RECORD[8]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _magic_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/private/bonobo_metadata_definitions.h"
+                                FIELD line_number                                          379
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _magic_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              "_source_file_visibility_hidden"
+                                                FIELD [1]                                                                              "_source_file_visibility_visible"
+                                >
+                >
+                RECORD_DEF 7  
+                RECORD_DEF 8  
+                <
+                                FIELD name                                                                        "e_source_file_visibility_enum"
+                >
+> 
+ 
+SCHEMA "st_enum_storage<e_source_file_visibility_enum>" 0 // SCHEMA[5]
+< 
+                RECORD_DECL 0    "s_magic#0" // s_magic
+                RECORD_DECL 1    "s_template_definition#0" // s_template_definition
+                RECORD_DECL 2    "s_template_parameters_t#0" // s_template_parameters_t
+                RECORD_DECL 3    "s_magic_resource_marker#0" // s_magic_resource_marker
+                RECORD_DECL 4    "s_magic_reflection_parallel_data#0" // s_magic_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD magic_type                                            _magic_type_template_instance
+                                FIELD reflection_enabled_parallel_data ^RECORD[4]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD template_definition           "st_enum_storage#0" // st_enum_storage
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD t0                                                                                SCHEMA[4] // e_source_file_visibility_enum
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "st_enum_storage<e_source_file_visibility_enum>"
+                >
+> 
+ 
+SCHEMA "s_source_file_info" 0 // SCHEMA[6]
+< 
+                RECORD_DECL 0    "s_magic#0" // s_magic
+                RECORD_DECL 1    "s_magic_origin_metadata#0" // s_magic_origin_metadata
+                RECORD_DECL 2    "s_magic_tag_range_metadata#0" // s_magic_tag_range_metadata
+                RECORD_DECL 3    "s_magic_checksum_ignore#0" // s_magic_checksum_ignore
+                RECORD_DECL 4    "s_magic_allow_in_packages#0" // s_magic_allow_in_packages
+                RECORD_DECL 5    SCHEMA[3] // s_csharp_wrapper_generate
+                RECORD_DECL 6    "s_magic_embedded_string#0" // s_magic_embedded_string
+                RECORD_DECL 7    "s_magic_embedded_string#0" // s_magic_embedded_string
+                RECORD_DECL 8    "s_magic_embedded_string#0" // s_magic_embedded_string
+                RECORD_DECL 9    "s_magic_embedded_member#0" // s_magic_embedded_member
+                RECORD_DECL 10   "s_magic_embedded_boolean_intrinsic#0" // s_magic_embedded_boolean_intrinsic
+                RECORD_DECL 11   "s_magic_resource_marker#0" // s_magic_resource_marker
+                RECORD_DECL 12   "s_magic_reflection_parallel_data#0" // s_magic_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD magic_type                                            _magic_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[12]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _magic_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/private/bonobo_metadata_definitions.h"
+                                FIELD line_number                                          389
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _magic_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "m_display_name"
+                >
+                RECORD_DEF 7  
+                <
+                                FIELD name                                                                        "m_description"
+                >
+                RECORD_DEF 8  
+                <
+                                FIELD name                                                                        "m_extension"
+                >
+                RECORD_DEF 9  
+                <
+                                FIELD name                                                                        "m_visibility"
+                                FIELD type                                                                           SCHEMA[5] // st_enum_storage<e_source_file_visibility_enum>
+                >
+                RECORD_DEF 10 
+                <
+                                FIELD name                                                                        "m_alternate_info"
+                >
+                RECORD_DEF 11 
+                RECORD_DEF 12 
+                <
+                                FIELD name                                                                        "s_source_file_info"
+                >
+> 
+ 
+SCHEMA "s_grognok_destination_global_tag_bag" 1 // SCHEMA[7]
+< 
+                RECORD_DECL 0    "s_magic#0" // s_magic
+                RECORD_DECL 1    "s_magic_origin_metadata#0" // s_magic_origin_metadata
+                RECORD_DECL 2    "s_magic_tag_range_metadata#0" // s_magic_tag_range_metadata
+                RECORD_DECL 3    SCHEMA[3] // s_csharp_wrapper_generate
+                RECORD_DECL 4    "s_magic_allow_in_packages#0" // s_magic_allow_in_packages
+                RECORD_DECL 5    SCHEMA[6] // s_source_file_info
+                RECORD_DECL 6    "s_magic_embedded_integer_intrinsic<intsize>#0" // s_magic_embedded_integer_intrinsic<intsize>
+                RECORD_DECL 7    "s_magic_data_is_generated#0" // s_magic_data_is_generated
+                RECORD_DECL 8    "s_magic_embedded_member#0" // s_magic_embedded_member
+                RECORD_DECL 9    "s_magic_resource_marker#0" // s_magic_resource_marker
+                RECORD_DECL 10   "s_magic_reflection_parallel_data#0" // s_magic_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD magic_flags                                            _magic_flags_container
+                                FIELD magic_type                                            _magic_type_structure
+                                FIELD magic_major_version        0x01
+                                FIELD reflection_enabled_parallel_data ^RECORD[10]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _magic_origin_scraper
+                                FIELD file_path                                                  "source/engine/environment/scene/private/import/grognok_destination_common.h"
+                                FIELD line_number                                          104
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _magic_tag_range_engine
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                                FIELD m_display_name                 "Destination Global Tag Bag"
+                                FIELD m_description                                       "These tags will always be loaded while the player is in the destination."
+                                FIELD m_extension                                         "destination_global_tag_bag"
+                                FIELD m_visibility                                             _source_file_visibility_visible
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "this_size"
+                >
+                RECORD_DEF 7  
+                RECORD_DEF 8  
+                <
+                                FIELD name                                                                        "global_tags"
+                                FIELD type                                                                           SCHEMA[2] // st_dynamic_array<s_grognok_destination_global_tag_bag_element>
+                >
+                RECORD_DEF 9  
+                RECORD_DEF 10 
+                <
+                                FIELD name                                                                        "s_grognok_destination_global_tag_bag"
+                >
+> 
+ 
+SCHEMA "s_dynamic_array_dynamic_element_container" 0 // SCHEMA[8]
+< 
+                RECORD_DECL 0    "s_magic#0" // s_magic
+                RECORD_DECL 1    "s_magic_origin_metadata#0" // s_magic_origin_metadata
+                RECORD_DECL 2    "s_magic_tag_range_metadata#0" // s_magic_tag_range_metadata
+                RECORD_DECL 3    "s_magic_allow_in_packages#0" // s_magic_allow_in_packages
+                RECORD_DECL 4    "s_magic_version_old_structure_name#0" // s_magic_version_old_structure_name
+                RECORD_DECL 5    "s_magic_resource_marker#0" // s_magic_resource_marker
+                RECORD_DECL 6    "s_magic_reflection_parallel_data#0" // s_magic_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD root_type                                                               "s_magic_dynamic_element_container#0" // s_magic_dynamic_element_container
+                                FIELD magic_flags                                            _magic_flags_inherits|_magic_flags_dynamic_container
+                                FIELD magic_type                                            _magic_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[6]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _magic_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/interfaces/dynamic_array.h"
+                                FIELD line_number                                          145
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _magic_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                                FIELD m_old_name                                         "st_dynamic_array_elements"
+                >
+                RECORD_DEF 5  
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "s_dynamic_array_dynamic_element_container"
+                >
+> 
+ 
+SCHEMA "s_network_no_rsat_metadata" 0 // SCHEMA[9]
+< 
+                RECORD_DECL 0    "s_magic#0" // s_magic
+                RECORD_DECL 1    "s_magic_origin_metadata#0" // s_magic_origin_metadata
+                RECORD_DECL 2    "s_magic_tag_range_metadata#0" // s_magic_tag_range_metadata
+                RECORD_DECL 3    "s_magic_allow_in_packages#0" // s_magic_allow_in_packages
+                RECORD_DECL 4    "s_magic_resource_marker#0" // s_magic_resource_marker
+                RECORD_DECL 5    "s_magic_reflection_parallel_data#0" // s_magic_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD magic_type                                            _magic_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[5]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _magic_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/networking/interfaces/networking_metadata_definitions.h"
+                                FIELD line_number                                          24
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _magic_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                RECORD_DEF 5  
+                <
+                                FIELD name                                                                        "s_network_no_rsat_metadata"
+                >
+> 
+ 
+SCHEMA "c_fake_tag_reference" 0 // SCHEMA[10]
+< 
+                RECORD_DECL 0    "s_magic#0" // s_magic
+                RECORD_DECL 1    "s_magic_origin_metadata#0" // s_magic_origin_metadata
+                RECORD_DECL 2    "s_magic_tag_range_metadata#0" // s_magic_tag_range_metadata
+                RECORD_DECL 3    "s_magic_allow_in_packages#0" // s_magic_allow_in_packages
+                RECORD_DECL 4    SCHEMA[3] // s_csharp_wrapper_generate
+                RECORD_DECL 5    SCHEMA[9] // s_network_no_rsat_metadata
+                RECORD_DECL 6    "s_magic_embedded_string#0" // s_magic_embedded_string
+                RECORD_DECL 7    "s_magic_embedded_member#0" // s_magic_embedded_member
+                RECORD_DECL 8    "s_magic_data_is_generated#0" // s_magic_data_is_generated
+                RECORD_DECL 9    "s_magic_resource_marker#0" // s_magic_resource_marker
+                RECORD_DECL 10   "s_magic_reflection_parallel_data#0" // s_magic_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD magic_type                                            _magic_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[10]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _magic_origin_scraper
+                                FIELD file_path                                                  "source/foundation/systems/magic/helpers/interfaces/fake_tag_loader.h"
+                                FIELD line_number                                          68
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _magic_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5   
+                <
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "m_referenced_tag_name"
+                >
+                RECORD_DEF 7  
+                <
+                                FIELD name                                                                        "m_referenced_tag_handle"
+                                FIELD type                                                                           "c_common_handle#0" // c_common_handle
+                >
+                RECORD_DEF 8  
+                RECORD_DEF 9  
+                RECORD_DEF 10 
+                <
+                                FIELD name                                                                        "c_fake_tag_reference"
+                >
+> 
+ 
+SCHEMA "s_fake_tag_is_blob_reference" 0 // SCHEMA[11]
+< 
+                RECORD_DECL 0    "s_magic#0" // s_magic
+                RECORD_DECL 1    "s_magic_origin_metadata#0" // s_magic_origin_metadata
+                RECORD_DECL 2    "s_magic_tag_range_metadata#0" // s_magic_tag_range_metadata
+                RECORD_DECL 3    "s_magic_allow_in_packages#0" // s_magic_allow_in_packages
+                RECORD_DECL 4    "s_magic_resource_marker#0" // s_magic_resource_marker
+                RECORD_DECL 5    "s_magic_reflection_parallel_data#0" // s_magic_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD magic_type                                            _magic_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[5]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _magic_origin_scraper
+                                FIELD file_path                                                  "source/foundation/systems/magic/helpers/interfaces/fake_tag_loader.h"
+                                FIELD line_number                                          128
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _magic_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                RECORD_DEF 5  
+                <
+                                FIELD name                                                                        "s_fake_tag_is_blob_reference"
+                >
+> 
+ 
+SCHEMA "s_grognok_destination_global_tag_bag_element" 0 // SCHEMA[12]
+< 
+                RECORD_DECL 0    "s_magic#0" // s_magic
+                RECORD_DECL 1    "s_magic_origin_metadata#0" // s_magic_origin_metadata
+                RECORD_DECL 2    "s_magic_tag_range_metadata#0" // s_magic_tag_range_metadata
+                RECORD_DECL 3    SCHEMA[3] // s_csharp_wrapper_generate
+                RECORD_DECL 4    "s_magic_allow_in_packages#0" // s_magic_allow_in_packages
+                RECORD_DECL 5    "s_magic_embedded_member#0" // s_magic_embedded_member
+                RECORD_DECL 6    SCHEMA[11] // s_fake_tag_is_blob_reference
+                RECORD_DECL 7    "s_magic_resource_marker#0" // s_magic_resource_marker
+                RECORD_DECL 8    "s_magic_reflection_parallel_data#0" // s_magic_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD magic_type                                            _magic_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[8]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _magic_origin_scraper
+                                FIELD file_path                                                  "source/engine/environment/scene/private/import/grognok_destination_common.h"
+                                FIELD line_number                                          94
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _magic_tag_range_engine
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                                FIELD name                                                                        "global_tag"
+                                FIELD type                                                                           SCHEMA[10] // c_fake_tag_reference
+                >
+                RECORD_DEF 6  
+                <
+                >
+                RECORD_DEF 7  
+                RECORD_DEF 8  
+                <
+                                FIELD name                                                                        "s_grognok_destination_global_tag_bag_element"
+                >
+> 
+ 
+STRUCTURE
+< 
+                RECORD_DECL 0    SCHEMA[7] // s_grognok_destination_global_tag_bag
+                RECORD_DECL 1    SCHEMA[8] 10 SCHEMA[12] // s_dynamic_array_dynamic_element_container[s_grognok_destination_global_tag_bag_element]
+                RECORD_DEF 0  
+                <
+                                FIELD global_tags                                             // st_dynamic_array<s_grognok_destination_global_tag_bag_element>
+                                <
+                                                FIELD m_element_count                              10
+                                                FIELD m_elements                                          ^RECORD[1]
+                                >
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_grognok_destination_global_tag_bag_element
+                                                <
+                                                                FIELD global_tag                                               // c_fake_tag_reference
+                                                                <
+                                                                                FIELD m_referenced_tag_name               "domain\\kingdom\\phylum\\class\\asset_a\\asset_a.pattern.tft"
+                                                                                                                                                >
+                                                >
+                                                FIELD [1]                                                                              // s_grognok_destination_global_tag_bag_element
+                                                <
+                                                                FIELD global_tag                                               // c_fake_tag_reference
+                                                                <
+                                                                                FIELD m_referenced_tag_name               "domain\\kingdom\\phylum\\class\\asset_b\\asset_b.pattern.tft"
+                                                                                                                                                >
+                                                >
+                                                FIELD [2]                                                                              // s_grognok_destination_global_tag_bag_element
+                                                <
+                                                                FIELD global_tag                                               // c_fake_tag_reference
+                                                                <
+                                                                                FIELD m_referenced_tag_name               "domain\\kingdom\\phylum\\class\\asset_c\\asset_c.pattern.tft"
+                                                                                                                                                >
+                                                >
+                                                FIELD [3]                                                                              // s_grognok_destination_global_tag_bag_element
+                                                <
+                                                                FIELD global_tag                                               // c_fake_tag_reference
+                                                                <
+                                                                                FIELD m_referenced_tag_name               "domain\\kingdom\\phylum\\class\\asset_d\\asset_d.pattern.tft"
+                                                                                                                                                >
+                                                >
+                                                FIELD [4]                                                                              // s_grognok_destination_global_tag_bag_element
+                                                <
+                                                                FIELD global_tag                                               // c_fake_tag_reference
+                                                                <
+                                                                                FIELD m_referenced_tag_name               "domain\\kingdom\\phylum\\class\\asset_e\\asset_e.pattern.tft"
+                                                                                                                                                >
+                                                >
+                                                FIELD [5]                                                                              // s_grognok_destination_global_tag_bag_element
+                                                <
+                                                                FIELD global_tag                                               // c_fake_tag_reference
+                                                                <
+                                                                                FIELD m_referenced_tag_name               "domain\\kingdom\\phylum\\class\\asset_f\\asset_f.pattern.tft"
+                                                                                                                                                >
+                                                >
+                                                FIELD [6]                                                                              // s_grognok_destination_global_tag_bag_element
+                                                <
+                                                                FIELD global_tag                                               // c_fake_tag_reference
+                                                                <
+                                                                                FIELD m_referenced_tag_name               "domain\\kingdom\\phylum\\class\\asset_g\\asset_g.pattern.tft"
+                                                                                                                                                >
+                                                >
+                                                FIELD [7]                                                                              // s_grognok_destination_global_tag_bag_element
+                                                <
+                                                                FIELD global_tag                                               // c_fake_tag_reference
+                                                                <
+                                                                                FIELD m_referenced_tag_name               "domain\\kingdom\\phylum\\class\\asset_h\\asset_h.pattern.tft"
+                                                                                                                                                >
+                                                >
+                                                FIELD [8]                                                                              // s_grognok_destination_global_tag_bag_element
+                                                <
+                                                                FIELD global_tag                                               // c_fake_tag_reference
+                                                                <
+                                                                                FIELD m_referenced_tag_name               "domain\\kingdom\\phylum\\class\\asset_i\\asset_i.pattern.tft"
+                                                                                                                                                >
+                                                >
+                                                FIELD [9]                                                                              // s_grognok_destination_global_tag_bag_element
+                                                <
+                                                                FIELD global_tag                                               // c_fake_tag_reference
+                                                                <
+                                                                                FIELD m_referenced_tag_name               "domain\\kingdom\\phylum\\class\\asset_j\\asset_j.pattern.tft"
+                                                                                                                                                >
+                                                >
+                                >
+                >
+> 

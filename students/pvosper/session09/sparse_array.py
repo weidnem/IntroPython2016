@@ -70,6 +70,6 @@ class SparseArray:
             self.sparse_dict[self.length] = item
             self.length += 1
         else:
-            self.length += 1         
+            self.length += 1              
 
 # sa = SparseArray([7,29,0,0,0,0,13,0,0,72])

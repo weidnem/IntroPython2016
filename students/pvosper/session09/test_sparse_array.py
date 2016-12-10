@@ -46,7 +46,7 @@ def test_getvalue():
     assert test_a == 13
     assert test_b == 29
     assert test_c == 0
-    
+
 def test_del():
     sa = SparseArray([7,29,0,0,0,0,13,0,0,72])
     del sa[4]
@@ -60,6 +60,12 @@ def test_append():
     sa.append(4)
     assert sa[10] == 4
     assert sa.length == old_length + 1
+
+def test_slice():
+    sa = SparseArray([7,29,0,0,0,0,13,0,0,72])
+    assert sa[2:10] == [0, 0, 0, 0, 13, 0, 0, 72]
+    assert sa[:4] == [7, 29, 0, 0]
+    assert sa[4:-1] == [0, 0, 13, 0, 0]
 
 '''
 sa[5] = 12
@@ -119,5 +125,5 @@ How else can you make it like a list?
  'remove',
  'reverse',
  'sort']
- 
+
 '''

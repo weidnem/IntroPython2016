@@ -1,0 +1,2447 @@
+VERSION 8
+FILE_TYPE TXT
+NAME s_grognok_destination
+CHECKSUM 0xb18b95a4
+VERSION 8
+SCHEMATA
+< 
+                RECORD_DECL 0    "s_schema_persistent_schema_handle_container#0" // s_schema_persistent_schema_handle_container
+                RECORD_DECL 1    "s_schema_persistent_schema_handle_array#0" 38 // s_schema_persistent_schema_handle_array
+                RECORD_DECL 2    "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 3    "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 4    "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 5    "s_well_known_schema_persistent_handle#0" // s_well_known_schema_persistent_handle
+                RECORD_DECL 6    "s_conjured_template_schema_persistent_handle#0" 1 // s_conjured_template_schema_persistent_handle
+                RECORD_DECL 7    "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 8    "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 9    "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 10   "s_conjured_template_schema_persistent_handle#0" 1 // s_conjured_template_schema_persistent_handle
+                RECORD_DECL 11   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 12   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 13   "s_well_known_schema_persistent_handle#0" // s_well_known_schema_persistent_handle
+                RECORD_DECL 14   "s_conjured_template_schema_persistent_handle#0" 1 // s_conjured_template_schema_persistent_handle
+                RECORD_DECL 15   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 16   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 17   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 18   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 19   "s_conjured_template_schema_persistent_handle#0" 1 // s_conjured_template_schema_persistent_handle
+                RECORD_DECL 20   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 21   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 22   "s_conjured_template_schema_persistent_handle#0" 1 // s_conjured_template_schema_persistent_handle
+                RECORD_DECL 23   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 24   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 25   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 26   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 27   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 28   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 29   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 30   "s_well_known_schema_persistent_handle#0" // s_well_known_schema_persistent_handle
+                RECORD_DECL 31   "s_conjured_template_schema_persistent_handle#0" 1 // s_conjured_template_schema_persistent_handle
+                RECORD_DECL 32   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 33   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 34   "s_well_known_schema_persistent_handle#0" // s_well_known_schema_persistent_handle
+                RECORD_DECL 35   "s_conjured_template_schema_persistent_handle#0" 1 // s_conjured_template_schema_persistent_handle
+                RECORD_DECL 36   "s_well_known_schema_persistent_handle#0" // s_well_known_schema_persistent_handle
+                RECORD_DECL 37   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 38   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 39   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 40   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 41   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 42   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 43   "s_well_known_schema_persistent_handle#0" // s_well_known_schema_persistent_handle
+                RECORD_DECL 44   "s_conjured_template_schema_persistent_handle#0" 1 // s_conjured_template_schema_persistent_handle
+                RECORD_DECL 45   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 46   "s_well_known_schema_persistent_handle#0" // s_well_known_schema_persistent_handle
+                RECORD_DECL 47   "s_conjured_template_schema_persistent_handle#0" 1 // s_conjured_template_schema_persistent_handle
+                RECORD_DECL 48   "s_well_known_schema_persistent_handle#0" // s_well_known_schema_persistent_handle
+                RECORD_DECL 49   "s_conjured_template_schema_persistent_handle#0" 1 // s_conjured_template_schema_persistent_handle
+                RECORD_DECL 50   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 51   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 52   "s_well_known_schema_persistent_handle#0" // s_well_known_schema_persistent_handle
+                RECORD_DECL 53   "s_conjured_template_schema_persistent_handle#0" 1 // s_conjured_template_schema_persistent_handle
+                RECORD_DECL 54   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 55   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 56   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 57   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 58   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 59   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 60   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DECL 61   "s_native_schema_persistent_handle#0" // s_native_schema_persistent_handle
+                RECORD_DEF 0  
+                <
+                                FIELD handles                                                    ^RECORD[1]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[2]
+                                                                FIELD checksum                                                                0x056E8023
+                                                >
+                                                FIELD [1]                                                                              // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[3]
+                                                                FIELD checksum                                                                0x764B1FF9
+                                                >
+                                                FIELD [2]                                                                              // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[4]
+                                                                FIELD checksum                                                                0xD13747B8
+                                                >
+                                                FIELD [3]                                                                              // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[6]
+                                                                FIELD checksum                                                                0x8DE2DFAC
+                                                >
+                                                FIELD [4]                                                                              // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[8]
+                                                                FIELD checksum                                                                0x3C4CD6E3
+                                                >
+                                                FIELD [5]                                                                              // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[10]
+                                                                FIELD checksum                                                                0x51E0B0DC
+                                                >
+                                                FIELD [6]                                                                              // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[12]
+                                                                FIELD checksum                                                                0x00C08421
+                                                >
+                                                FIELD [7]                                                                              // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[14]
+                                                                FIELD checksum                                                                0xEA674767
+                                                >
+                                                FIELD [8]                                                                              // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[16]
+                                                                FIELD checksum                                                                0x23184B76
+                                                >
+                                                FIELD [9]                                                                              // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[17]
+                                                                FIELD checksum                                                                0x7974C599
+                                                >
+                                                FIELD [10]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[19]
+                                                                FIELD checksum                                                                0x60C15F4E
+                                                >
+                                                FIELD [11]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[22]
+                                                                FIELD checksum                                                                0x3B42E3C6
+                                                >
+                                                FIELD [12]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[24]
+                                                                FIELD checksum                                                                0x95FEB08D
+                                                >
+                                                FIELD [13]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[25]
+                                                                FIELD checksum                                                                0x3FE374D8
+                                                >
+                                                FIELD [14]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[26]
+                                                                FIELD checksum                                                                0xD29D7936
+                                                >
+                                                FIELD [15]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[27]
+                                                                FIELD checksum                                                                0xA89E0619
+                                                >
+                                                FIELD [16]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[28]
+                                                                FIELD checksum                                                                0x3A15F3EA
+                                                >
+                                                FIELD [17]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[29]
+                                                                FIELD checksum                                                                0xD70A8715
+                                                >
+                                                FIELD [18]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[31]
+                                                                FIELD checksum                                                                0x55783F00
+                                                >
+                                                FIELD [19]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[33]
+                                                                FIELD checksum                                                                0xA58732CE
+                                                >
+                                                FIELD [20]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[35]
+                                                                FIELD checksum                                                                0x38E09013
+                                                >
+                                                FIELD [21]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[37]
+                                                                FIELD checksum                                                                0x57D6E268
+                                                >
+                                                FIELD [22]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[38]
+                                                                FIELD checksum                                                                0x057F48F7
+                                                >
+                                                FIELD [23]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[39]
+                                                                FIELD checksum                                                                0xB0274A54
+                                                >
+                                                FIELD [24]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[40]
+                                                                FIELD checksum                                                                0x5F7665B6
+                                                >
+                                                FIELD [25]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[41]
+                                                                FIELD checksum                                                                0x7273CDBD
+                                                >
+                                                FIELD [26]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[42]
+                                                                FIELD checksum                                                                0x62A29E8C
+                                                >
+                                                FIELD [27]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[44]
+                                                                FIELD checksum                                                                0x9F87D6E0
+                                                >
+                                                FIELD [28]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[47]
+                                                                FIELD checksum                                                                0xB8395F2D
+                                                >
+                                                FIELD [29]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[51]
+                                                                FIELD checksum                                                                0x5D2FB260
+                                                >
+                                                FIELD [30]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[53]
+                                                                FIELD checksum                                                                0x0604D4C8
+                                                >
+                                                FIELD [31]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[55]
+                                                                FIELD checksum                                                                0x88656869
+                                                >
+                                                FIELD [32]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[56]
+                                                                FIELD checksum                                                                0x9AEF95C7
+                                                >
+                                                FIELD [33]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[57]
+                                                                FIELD checksum                                                                0x21D82136
+                                                >
+                                                FIELD [34]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[58]
+                                                                FIELD checksum                                                                0x282DB7B2
+                                                >
+                                                FIELD [35]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[59]
+                                                                FIELD checksum                                                                0x41FCD11F
+                                                >
+                                                FIELD [36]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[60]
+                                                                FIELD checksum                                                                0xA9A34EAB
+                                                >
+                                                FIELD [37]                                                                            // s_schema_persistent_schema_handle
+                                                <
+                                                                FIELD data_ptr                                                  ^RECORD[61]
+                                                >
+                                >
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD schema_name                                      "s_csharp_wrapper_generate"
+                >
+                RECORD_DEF 3  
+                <
+                                FIELD schema_name                                      "s_network_no_rsat_metadata"
+                >
+                RECORD_DEF 4  
+                <
+                                FIELD schema_name                                      "c_fake_tag_reference"
+                >
+                RECORD_DEF 5  
+                <
+                                FIELD well_known_schema_name "c_schema_owner_pointer"
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD template_definition           ^RECORD[5]
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_conjured_template_schema_persistent_handle_entry
+                                                <
+                                                                FIELD type_argument                                    ^RECORD[7]
+                                                >
+                                >
+                >
+                RECORD_DEF 7  
+                <
+                                FIELD schema_name                                      "s_dynamic_array_dynamic_element_container"
+                >
+                RECORD_DEF 8  
+                <
+                                FIELD schema_name                                      "st_dynamic_array"
+                >
+                RECORD_DEF 9  
+                <
+                                FIELD schema_name                                      "st_dynamic_array"
+                >
+                RECORD_DEF 10 
+                <
+                                FIELD template_definition           ^RECORD[9]
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_conjured_template_schema_persistent_handle_entry
+                                                <
+                                                                FIELD type_argument                                    ^RECORD[11]
+                                                >
+                                >
+                >
+                RECORD_DEF 11 
+                <
+                                FIELD schema_name                                      "s_activity_placement_reference"
+                >
+                RECORD_DEF 12 
+                <
+                                FIELD schema_name                                      "e_tagview_visibility_enum"
+                >
+                RECORD_DEF 13 
+                <
+                                FIELD well_known_schema_name "st_enum_storage"
+                >
+                RECORD_DEF 14 
+                <
+                                FIELD template_definition           ^RECORD[13]
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_conjured_template_schema_persistent_handle_entry
+                                                <
+                                                                FIELD type_argument                                    ^RECORD[15]
+                                                >
+                                >
+                >
+                RECORD_DEF 15 
+                <
+                                FIELD schema_name                                      "e_tagview_visibility_enum"
+                >
+                RECORD_DEF 16 
+                <
+                                FIELD schema_name                                      "s_tagview_visibility"
+                >
+                RECORD_DEF 17 
+                <
+                                FIELD schema_name                                      "s_grognok_destination_global_state"
+                >
+                RECORD_DEF 18 
+                <
+                                FIELD schema_name                                      "st_dynamic_array"
+                >
+                RECORD_DEF 19 
+                <
+                                FIELD template_definition           ^RECORD[18]
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_conjured_template_schema_persistent_handle_entry
+                                                <
+                                                                FIELD type_argument                                    ^RECORD[20]
+                                                >
+                                >
+                >
+                RECORD_DEF 20 
+                <
+                                FIELD schema_name                                      "s_grognok_ambient_bubble_state"
+                >
+                RECORD_DEF 21 
+                <
+                                FIELD schema_name                                      "st_dynamic_array"
+                >
+                RECORD_DEF 22 
+                <
+                                FIELD template_definition           ^RECORD[21]
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_conjured_template_schema_persistent_handle_entry
+                                                <
+                                                                FIELD type_argument                                    ^RECORD[23]
+                                                >
+                                >
+                >
+                RECORD_DEF 23 
+                <
+                                FIELD schema_name                                      "s_grognok_activity_reference"
+                >
+                RECORD_DEF 24 
+                <
+                                FIELD schema_name                                      "s_fake_tag_is_source_reference"
+                >
+                RECORD_DEF 25 
+                <
+                                FIELD schema_name                                      "s_fake_tag_reference_file_filters"
+                >
+                RECORD_DEF 26 
+                <
+                                FIELD schema_name                                      "s_tagview_desc"
+                >
+                RECORD_DEF 27 
+                <
+                                FIELD schema_name                                      "s_tagview_tooltip"
+                >
+                RECORD_DEF 28 
+                <
+                                FIELD schema_name                                      "s_grognok_destination_common_properties"
+                >
+                RECORD_DEF 29 
+                <
+                                FIELD schema_name                                      "e_source_file_visibility_enum"
+                >
+                RECORD_DEF 30 
+                <
+                                FIELD well_known_schema_name "st_enum_storage"
+                >
+                RECORD_DEF 31 
+                <
+                                FIELD template_definition           ^RECORD[30]
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_conjured_template_schema_persistent_handle_entry
+                                                <
+                                                                FIELD type_argument                                    ^RECORD[32]
+                                                >
+                                >
+                >
+                RECORD_DEF 32 
+                <
+                                FIELD schema_name                                      "e_source_file_visibility_enum"
+                >
+                RECORD_DEF 33 
+                <
+                                FIELD schema_name                                      "s_source_file_info"
+                >
+                RECORD_DEF 34 
+                <
+                                FIELD well_known_schema_name "s_schema_default_value"
+                >
+                RECORD_DEF 35 
+                <
+                                FIELD template_definition           ^RECORD[34]
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_conjured_template_schema_persistent_handle_entry
+                                                <
+                                                                FIELD type_argument                                    ^RECORD[36]
+                                                >
+                                >
+                >
+                RECORD_DEF 36 
+                <
+                                FIELD well_known_schema_name "int32"
+                >
+                RECORD_DEF 37 
+                <
+                                FIELD schema_name                                      "s_tagview_display_as_hex"
+                >
+                RECORD_DEF 38 
+                <
+                                FIELD schema_name                                      "s_tagview_dynamic_string_menu"
+                >
+                RECORD_DEF 39 
+                <
+                                FIELD schema_name                                      "s_fake_tag_is_blob_reference"
+                >
+                RECORD_DEF 40 
+                <
+                                FIELD schema_name                                      "s_grognok_destination"
+                >
+                RECORD_DEF 41 
+                <
+                                FIELD schema_name                                      "s_dynamic_array_dynamic_element_container"
+                >
+                RECORD_DEF 42 
+                <
+                                FIELD schema_name                                      "e_destination_bubble_type"
+                >
+                RECORD_DEF 43 
+                <
+                                FIELD well_known_schema_name "st_enum_storage"
+                >
+                RECORD_DEF 44 
+                <
+                                FIELD template_definition           ^RECORD[43]
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_conjured_template_schema_persistent_handle_entry
+                                                <
+                                                                FIELD type_argument                                    ^RECORD[45]
+                                                >
+                                >
+                >
+                RECORD_DEF 45 
+                <
+                                FIELD schema_name                                      "e_destination_bubble_type"
+                >
+                RECORD_DEF 46 
+                <
+                                FIELD well_known_schema_name "s_schema_default_value"
+                >
+                RECORD_DEF 47 
+                <
+                                FIELD template_definition           ^RECORD[46]
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_conjured_template_schema_persistent_handle_entry
+                                                <
+                                                                FIELD type_argument                                    ^RECORD[49]
+                                                >
+                                >
+                >
+                RECORD_DEF 48 
+                <
+                                FIELD well_known_schema_name "st_enum_storage"
+                >
+                RECORD_DEF 49 
+                <
+                                FIELD template_definition           ^RECORD[48]
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_conjured_template_schema_persistent_handle_entry
+                                                <
+                                                                FIELD type_argument                                    ^RECORD[50]
+                                                >
+                                >
+                >
+                RECORD_DEF 50 
+                <
+                                FIELD schema_name                                      "e_destination_bubble_type"
+                >
+                RECORD_DEF 51 
+                <
+                                FIELD schema_name                                      "e_bubble_matchmaking_policy"
+                >
+                RECORD_DEF 52 
+                <
+                                FIELD well_known_schema_name "st_enum_storage"
+                >
+                RECORD_DEF 53 
+                <
+                                FIELD template_definition           ^RECORD[52]
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_conjured_template_schema_persistent_handle_entry
+                                                <
+                                                                FIELD type_argument                                    ^RECORD[54]
+                                                >
+                                >
+                >
+                RECORD_DEF 54 
+                <
+                                FIELD schema_name                                      "e_bubble_matchmaking_policy"
+                >
+                RECORD_DEF 55 
+                <
+                                FIELD schema_name                                      "s_bubble_matchmaking_settings"
+                >
+                RECORD_DEF 56 
+                <
+                                FIELD schema_name                                      "s_tagview_name"
+                >
+                RECORD_DEF 57 
+                <
+                                FIELD schema_name                                      "s_bubble_source_matchmaking_settings"
+                >
+                RECORD_DEF 58 
+                <
+                                FIELD schema_name                                      "s_grognok_ambient_bubble_state_common_properties"
+                >
+                RECORD_DEF 59 
+                <
+                                FIELD schema_name                                      "s_grognok_ambient_bubble_state"
+                >
+                RECORD_DEF 60 
+                <
+                                FIELD schema_name                                      "s_activity_placement_reference"
+                >
+                RECORD_DEF 61 
+                <
+                                FIELD schema_name                                      "s_grognok_activity_reference"
+                >
+> 
+ 
+HANDLES
+< 
+                RECORD_DECL 0    "s_schema_persistent_handle_container#0" // s_schema_persistent_handle_container
+                RECORD_DEF 0  
+                <
+                >
+> 
+ 
+SCHEMA "s_csharp_wrapper_generate" 0 // SCHEMA[0]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 4    "s_schema_checksum_ignore#0" // s_schema_checksum_ignore
+                RECORD_DECL 5    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 6    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[6]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/interfaces/csharp_metadata.h"
+                                FIELD line_number                                          22
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                RECORD_DEF 5  
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "s_csharp_wrapper_generate"
+                >
+> 
+ 
+SCHEMA "s_network_no_rsat_metadata" 0 // SCHEMA[1]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 4    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 5    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[5]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/networking/interfaces/networking_metadata_definitions.h"
+                                FIELD line_number                                          24
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                RECORD_DEF 5  
+                <
+                                FIELD name                                                                        "s_network_no_rsat_metadata"
+                >
+> 
+ 
+SCHEMA "c_fake_tag_reference" 0 // SCHEMA[2]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 4    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 5    SCHEMA[1] // s_network_no_rsat_metadata
+                RECORD_DECL 6    "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 7    "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 8    "s_schema_data_is_generated#0" // s_schema_data_is_generated
+                RECORD_DECL 9    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 10   "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[10]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/systems/schema/helpers/interfaces/fake_tag_loader.h"
+                                FIELD line_number                                          68
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "m_referenced_tag_name"
+                >
+                RECORD_DEF 7  
+                <
+                                FIELD name                                                                        "m_referenced_tag_handle"
+                                FIELD type                                                                           "c_common_handle#0" // c_common_handle
+                >
+                RECORD_DEF 8  
+                RECORD_DEF 9  
+                RECORD_DEF 10 
+                <
+                                FIELD name                                                                        "c_fake_tag_reference"
+                >
+> 
+ 
+SCHEMA "c_schema_owner_pointer<s_dynamic_array_dynamic_element_container>" 0 // SCHEMA[3]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_template_definition#0" // s_template_definition
+                RECORD_DECL 2    "s_template_parameters_w#0" // s_template_parameters_w
+                RECORD_DECL 3    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 4    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD root_type                                                               "c_schema_offset_pointer#0" // c_schema_offset_pointer
+                                FIELD schema_flags                                        _schema_flags_inherits
+                                FIELD schema_type                                        _schema_type_template_instance
+                                FIELD reflection_enabled_parallel_data ^RECORD[4]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD template_definition           "c_schema_owner_pointer#0" // c_schema_owner_pointer
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD w0                                                                              SCHEMA[25] // s_dynamic_array_dynamic_element_container
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "c_schema_owner_pointer<s_dynamic_array_dynamic_element_container>"
+                >
+> 
+ 
+SCHEMA "st_dynamic_array" 0 // SCHEMA[4]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_template_definition_parameters#0" // s_template_definition_parameters
+                RECORD_DECL 2    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 3    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 4    "s_schema_trim_process#0" // s_schema_trim_process
+                RECORD_DECL 5    "s_schema_release_required_recursive#0" // s_schema_release_required_recursive
+                RECORD_DECL 6    "s_schema_release_dependency#0" // s_schema_release_dependency
+                RECORD_DECL 7    "s_schema_release_required#0" // s_schema_release_required
+                RECORD_DECL 8    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 9    "s_schema_embedded_integer_intrinsic<intsize>#0" // s_schema_embedded_integer_intrinsic<intsize>
+                RECORD_DECL 10   "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 11   "s_schema_version_snap_owner_pointer_to_record#0" // s_schema_version_snap_owner_pointer_to_record
+                RECORD_DECL 12   "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 13   "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_template_definition
+                                FIELD reflection_enabled_parallel_data ^RECORD[13]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD parameters                                            "s_template_parameters_w#0" // s_template_parameters_w
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/interfaces/dynamic_array.h"
+                                FIELD line_number                                          215
+                >
+                RECORD_DEF 3  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                >
+                RECORD_DEF 6  
+                <
+                >
+                RECORD_DEF 7  
+                <
+                >
+                RECORD_DEF 8  
+                <
+                >
+                RECORD_DEF 9  
+                <
+                                FIELD name                                                                        "m_element_count"
+                >
+                RECORD_DEF 10 
+                <
+                                FIELD name                                                                        "m_elements"
+                                FIELD type                                                                           SCHEMA[3] // c_schema_owner_pointer<s_dynamic_array_dynamic_element_container>
+                >
+                RECORD_DEF 11 
+                RECORD_DEF 12 
+                RECORD_DEF 13 
+                <
+                                FIELD name                                                                        "st_dynamic_array"
+                >
+> 
+ 
+SCHEMA "st_dynamic_array<s_activity_placement_reference>" 0 // SCHEMA[5]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_template_definition#0" // s_template_definition
+                RECORD_DECL 2    "s_template_parameters_w#0" // s_template_parameters_w
+                RECORD_DECL 3    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 4    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_template_instance
+                                FIELD reflection_enabled_parallel_data ^RECORD[4]
+                >
+                RECORD_DEF 1   
+                <
+                                FIELD template_definition           SCHEMA[4] // st_dynamic_array
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD w0                                                                              SCHEMA[36] // s_activity_placement_reference
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "st_dynamic_array<s_activity_placement_reference>"
+                >
+> 
+ 
+SCHEMA "e_tagview_visibility_enum" 0 // SCHEMA[6]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_checksum_ignore#0" // s_schema_checksum_ignore
+                RECORD_DECL 4    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 5    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 6    "s_schema_enum_members_incremental#0" 5 // s_schema_enum_members_incremental
+                RECORD_DECL 7    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 8    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD reflection_enabled_parallel_data ^RECORD[8]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/private/bonobo_metadata_definitions.h"
+                                FIELD line_number                                          22
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              "_tagview_visibility_visible"
+                                                FIELD [1]                                                                              "_tagview_visibility_readonly"
+                                                FIELD [2]                                                                              "_tagview_visibility_diffonly"
+                                                FIELD [3]                                                                              "_tagview_visibility_hidden"
+                                                FIELD [4]                                                                              "_tagview_visibility_locked"
+                                >
+                >
+                RECORD_DEF 7  
+                RECORD_DEF 8  
+                <
+                                FIELD name                                                                        "e_tagview_visibility_enum"
+                >
+> 
+ 
+SCHEMA "st_enum_storage<e_tagview_visibility_enum>" 0 // SCHEMA[7]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_template_definition#0" // s_template_definition
+                RECORD_DECL 2    "s_template_parameters_t#0" // s_template_parameters_t
+                RECORD_DECL 3    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 4    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_template_instance
+                                FIELD reflection_enabled_parallel_data ^RECORD[4]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD template_definition           "st_enum_storage#0" // st_enum_storage
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD t0                                                                                SCHEMA[6] // e_tagview_visibility_enum
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "st_enum_storage<e_tagview_visibility_enum>"
+                >
+> 
+ 
+SCHEMA "s_tagview_visibility" 0 // SCHEMA[8]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_checksum_ignore#0" // s_schema_checksum_ignore
+                RECORD_DECL 4    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 5    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 6    "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 7    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 8    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[8]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/private/bonobo_metadata_definitions.h"
+                                FIELD line_number                                          34
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "m_visibility"
+                                FIELD type                                                                           SCHEMA[7] // st_enum_storage<e_tagview_visibility_enum>
+                >
+                RECORD_DEF 7  
+                RECORD_DEF 8  
+                <
+                                FIELD name                                                                        "s_tagview_visibility"
+                >
+> 
+ 
+SCHEMA "s_grognok_destination_global_state" 0 // SCHEMA[9]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 4    "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 5    SCHEMA[8] // s_tagview_visibility
+                RECORD_DECL 6    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 7    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[7]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/engine/environment/scene/private/import/grognok_destination_source.h"
+                                FIELD line_number                                          40
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_engine
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "activity_placement_references"
+                                FIELD type                                                                           SCHEMA[5] // st_dynamic_array<s_activity_placement_reference>
+                >
+                RECORD_DEF 5  
+                <
+                                FIELD m_visibility                                             _tagview_visibility_hidden
+                >
+                RECORD_DEF 6  
+                RECORD_DEF 7  
+                <
+                                FIELD name                                                                        "s_grognok_destination_global_state"
+                >
+> 
+ 
+SCHEMA "st_dynamic_array<s_grognok_ambient_bubble_state>" 0 // SCHEMA[10]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_template_definition#0" // s_template_definition
+                RECORD_DECL 2    "s_template_parameters_w#0" // s_template_parameters_w
+                RECORD_DECL 3    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 4    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_template_instance
+                                FIELD reflection_enabled_parallel_data ^RECORD[4]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD template_definition           SCHEMA[4] // st_dynamic_array
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD w0                                                                              SCHEMA[35] // s_grognok_ambient_bubble_state
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "st_dynamic_array<s_grognok_ambient_bubble_state>"
+                >
+> 
+ 
+SCHEMA "st_dynamic_array<s_grognok_activity_reference>" 0 // SCHEMA[11]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_template_definition#0" // s_template_definition
+                RECORD_DECL 2    "s_template_parameters_w#0" // s_template_parameters_w
+                RECORD_DECL 3    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 4    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_template_instance
+                                FIELD reflection_enabled_parallel_data ^RECORD[4]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD template_definition           SCHEMA[4] // st_dynamic_array
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD w0                                                                              SCHEMA[37] // s_grognok_activity_reference
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "st_dynamic_array<s_grognok_activity_reference>"
+                >
+> 
+ 
+SCHEMA "s_fake_tag_is_source_reference" 0 // SCHEMA[12]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 4    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 5    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[5]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/systems/schema/helpers/interfaces/fake_tag_loader.h"
+                                FIELD line_number                                          110
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                RECORD_DEF 5  
+                <
+                                FIELD name                                                                        "s_fake_tag_is_source_reference"
+                >
+> 
+ 
+SCHEMA "s_fake_tag_reference_file_filters" 0 // SCHEMA[13]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 4    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 5    "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 6    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 7    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[7]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/systems/schema/helpers/interfaces/fake_tag_loader.h"
+                                FIELD line_number                                          150
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                                FIELD name                                                                        "m_file_filters"
+                >
+                RECORD_DEF 6  
+                RECORD_DEF 7  
+                <
+                                FIELD name                                                                        "s_fake_tag_reference_file_filters"
+                >
+> 
+ 
+SCHEMA "s_tagview_desc" 0 // SCHEMA[14]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_checksum_ignore#0" // s_schema_checksum_ignore
+                RECORD_DECL 4    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 5    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 6    "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 7    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 8    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[8]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/private/bonobo_metadata_definitions.h"
+                                FIELD line_number                                          72
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5   
+                <
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "m_text"
+                >
+                RECORD_DEF 7  
+                RECORD_DEF 8  
+                <
+                                FIELD name                                                                        "s_tagview_desc"
+                >
+> 
+ 
+SCHEMA "s_tagview_tooltip" 0 // SCHEMA[15]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_checksum_ignore#0" // s_schema_checksum_ignore
+                RECORD_DECL 4    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 5    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 6    "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 7    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 8    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[8]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/private/bonobo_metadata_definitions.h"
+                                FIELD line_number                                          56
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "m_text"
+                >
+                RECORD_DEF 7  
+                RECORD_DEF 8  
+                <
+                                FIELD name                                                                        "s_tagview_tooltip"
+                >
+> 
+ 
+SCHEMA "s_grognok_destination_common_properties" 0 // SCHEMA[16]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 4    "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 5    SCHEMA[12] // s_fake_tag_is_source_reference
+                RECORD_DECL 6    SCHEMA[13] // s_fake_tag_reference_file_filters
+                RECORD_DECL 7    SCHEMA[14] // s_tagview_desc
+                RECORD_DECL 8    SCHEMA[8] // s_tagview_visibility
+                RECORD_DECL 9    "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 10   SCHEMA[12] // s_fake_tag_is_source_reference
+                RECORD_DECL 11   SCHEMA[13] // s_fake_tag_reference_file_filters
+                RECORD_DECL 12   SCHEMA[15] // s_tagview_tooltip
+                RECORD_DECL 13   SCHEMA[14] // s_tagview_desc
+                RECORD_DECL 14   "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 15   SCHEMA[13] // s_fake_tag_reference_file_filters
+                RECORD_DECL 16   "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 17   "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[17]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/engine/environment/scene/private/import/grognok_destination_common.h"
+                                FIELD line_number                                          89
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_engine
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "destination_workbench"
+                                FIELD type                                                                           SCHEMA[2] // c_fake_tag_reference
+                >
+                RECORD_DEF 5  
+                <
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD m_file_filters                         "Workbench|*.workbench.tft"
+                >
+                RECORD_DEF 7  
+                <
+                                FIELD m_text                                                     "\nWorkbench to load when in this destination.\nIts contents will be merged with any map-level global tags, overriding any of the same name."
+                >
+                RECORD_DEF 8  
+                <
+                                FIELD m_visibility                                             _tagview_visibility_hidden
+                >
+                RECORD_DEF 9  
+                <
+                                FIELD name                                                                        "global_tag_bag"
+                                FIELD type                                                                           SCHEMA[2] // c_fake_tag_reference
+                >
+                RECORD_DEF 10 
+                <
+                >
+                RECORD_DEF 11 
+                <
+                                FIELD m_file_filters                         "Destination Global Tag Bag|*.destination_global_tag_bag.tft"
+                >
+                RECORD_DEF 12 
+                <
+                                FIELD m_text                                                     "This is useful for allowing the player to take AI vehicles between bubbles, e.g."
+                >
+                RECORD_DEF 13 
+                <
+                                FIELD m_text                                                     "\nThese tags will always be loaded while the player is in the destination."
+                >
+                RECORD_DEF 14 
+                <
+                                FIELD name                                                                        "gravity_scales_tag_reference"
+                                FIELD type                                                                           SCHEMA[2] // c_fake_tag_reference
+                >
+                RECORD_DEF 15 
+                <
+                                FIELD m_file_filters                         "Gravity Scales|*.gravity_scales.tft"
+                >
+                RECORD_DEF 16 
+                RECORD_DEF 17 
+                <
+                                FIELD name                                                                        "s_grognok_destination_common_properties"
+                >
+> 
+ 
+SCHEMA "e_source_file_visibility_enum" 0 // SCHEMA[17]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_checksum_ignore#0" // s_schema_checksum_ignore
+                RECORD_DECL 4    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 5    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 6    "s_schema_enum_members_incremental#0" 2 // s_schema_enum_members_incremental
+                RECORD_DECL 7    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 8    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD reflection_enabled_parallel_data ^RECORD[8]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/private/bonobo_metadata_definitions.h"
+                                FIELD line_number                                          376
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              "_source_file_visibility_hidden"
+                                                FIELD [1]                                                                              "_source_file_visibility_visible"
+                                >
+                >
+                RECORD_DEF 7  
+                RECORD_DEF 8  
+                <
+                                FIELD name                                                                        "e_source_file_visibility_enum"
+                >
+> 
+ 
+SCHEMA "st_enum_storage<e_source_file_visibility_enum>" 0 // SCHEMA[18]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_template_definition#0" // s_template_definition
+                RECORD_DECL 2    "s_template_parameters_t#0" // s_template_parameters_t
+                RECORD_DECL 3    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 4    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_template_instance
+                                FIELD reflection_enabled_parallel_data ^RECORD[4]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD template_definition           "st_enum_storage#0" // st_enum_storage
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD t0                                                                                SCHEMA[17] // e_source_file_visibility_enum
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "st_enum_storage<e_source_file_visibility_enum>"
+                >
+> 
+ 
+SCHEMA "s_source_file_info" 0 // SCHEMA[19]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_checksum_ignore#0" // s_schema_checksum_ignore
+                RECORD_DECL 4    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 5    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 6    "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 7    "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 8    "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 9    "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 10   "s_schema_embedded_boolean_intrinsic#0" // s_schema_embedded_boolean_intrinsic
+                RECORD_DECL 11   "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 12   "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[12]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/private/bonobo_metadata_definitions.h"
+                                FIELD line_number                                          386
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "m_display_name"
+                >
+                RECORD_DEF 7  
+                <
+                                FIELD name                                                                        "m_description"
+                >
+                RECORD_DEF 8  
+                <
+                                FIELD name                                                                        "m_extension"
+                >
+                RECORD_DEF 9  
+                <
+                                FIELD name                                                                        "m_visibility"
+                                FIELD type                                                                           SCHEMA[18] // st_enum_storage<e_source_file_visibility_enum>
+                >
+                RECORD_DEF 10 
+                <
+                                FIELD name                                                                        "m_alternate_info"
+                >
+                RECORD_DEF 11 
+                RECORD_DEF 12 
+                <
+                                FIELD name                                                                        "s_source_file_info"
+                >
+> 
+ 
+SCHEMA "s_schema_default_value<int32>" 0 // SCHEMA[20]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_template_definition#0" // s_template_definition
+                RECORD_DECL 2    "s_template_parameters_t#0" // s_template_parameters_t
+                RECORD_DECL 3    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 4    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD root_type                                                               "s_schema_has_default_value#0" // s_schema_has_default_value
+                                FIELD schema_flags                                        _schema_flags_inherits
+                                FIELD schema_type                                        _schema_type_template_instance
+                                FIELD reflection_enabled_parallel_data ^RECORD[4]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD template_definition           "s_schema_default_value#0" // s_schema_default_value
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD t0                                                                                "int32#0" // int32
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "s_schema_default_value<int32>"
+                >
+> 
+ 
+SCHEMA "s_tagview_display_as_hex" 0 // SCHEMA[21]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_checksum_ignore#0" // s_schema_checksum_ignore
+                RECORD_DECL 4    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 5    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 6    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 7    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[7]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/private/bonobo_metadata_definitions.h"
+                                FIELD line_number                                          317
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                >
+                RECORD_DEF 6  
+                RECORD_DEF 7  
+                <
+                                FIELD name                                                                        "s_tagview_display_as_hex"
+                >
+> 
+ 
+SCHEMA "s_tagview_dynamic_string_menu" 0 // SCHEMA[22]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_checksum_ignore#0" // s_schema_checksum_ignore
+                RECORD_DECL 4    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 5    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 6    "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 7    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 8    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[8]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/private/bonobo_metadata_definitions.h"
+                                FIELD line_number                                          267
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "m_path"
+                >
+                RECORD_DEF 7  
+                RECORD_DEF 8  
+                <
+                                FIELD name                                                                        "s_tagview_dynamic_string_menu"
+                >
+> 
+ 
+SCHEMA "s_fake_tag_is_blob_reference" 0 // SCHEMA[23]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 4    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 5    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[5]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/systems/schema/helpers/interfaces/fake_tag_loader.h"
+                                FIELD line_number                                          128
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                RECORD_DEF 5  
+                <
+                                FIELD name                                                                        "s_fake_tag_is_blob_reference"
+                >
+> 
+ 
+SCHEMA "s_grognok_destination" 0 // SCHEMA[24]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 4    SCHEMA[19] // s_source_file_info
+                RECORD_DECL 5    "s_schema_embedded_integer_intrinsic<intsize>#0" // s_schema_embedded_integer_intrinsic<intsize>
+                RECORD_DECL 6    "s_schema_data_is_generated#0" // s_schema_data_is_generated
+                RECORD_DECL 7    "s_schema_embedded_integer_intrinsic<int32>#0" // s_schema_embedded_integer_intrinsic<int32>
+                RECORD_DECL 8    SCHEMA[20] // s_schema_default_value<int32>
+                RECORD_DECL 9    SCHEMA[8] // s_tagview_visibility
+                RECORD_DECL 10   "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 11   "s_schema_embedded_integer_intrinsic<uint64>#0" // s_schema_embedded_integer_intrinsic<uint64>
+                RECORD_DECL 12   SCHEMA[8] // s_tagview_visibility
+                RECORD_DECL 13   SCHEMA[21] // s_tagview_display_as_hex
+                RECORD_DECL 14   "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 15   SCHEMA[22] // s_tagview_dynamic_string_menu
+                RECORD_DECL 16   "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 17   "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 18   SCHEMA[8] // s_tagview_visibility
+                RECORD_DECL 19   "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 20   SCHEMA[8] // s_tagview_visibility
+                RECORD_DECL 21   "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 22   "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 23   "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 24   "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 25   SCHEMA[12] // s_fake_tag_is_source_reference
+                RECORD_DECL 26   SCHEMA[13] // s_fake_tag_reference_file_filters
+                RECORD_DECL 27   "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 28   SCHEMA[23] // s_fake_tag_is_blob_reference
+                RECORD_DECL 29   SCHEMA[13] // s_fake_tag_reference_file_filters
+                RECORD_DECL 30   SCHEMA[15] // s_tagview_tooltip
+                RECORD_DECL 31   "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 32   "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_flags                                        _schema_flags_container
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[32]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/engine/environment/scene/private/import/grognok_destination_source.h"
+                                FIELD line_number                                          56
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_engine
+                >
+                RECORD_DEF 3   
+                <
+                >
+                RECORD_DEF 4  
+                <
+                                FIELD m_display_name                 "Grognok Destination"
+                                FIELD m_description                                       "A destination set up within Grognok/Bonobo Destination Viewer and exported for import into the game."
+                                FIELD m_extension                                         "grognok_destination"
+                                FIELD m_visibility                                             _source_file_visibility_visible
+                >
+                RECORD_DEF 5  
+                <
+                                FIELD name                                                                        "this_size"
+                >
+                RECORD_DEF 6  
+                RECORD_DEF 7  
+                <
+                                FIELD name                                                                        "destination_version"
+                >
+                RECORD_DEF 8  
+                <
+                                FIELD m_default_value                 2
+                >
+                RECORD_DEF 9  
+                <
+                                FIELD m_visibility                                             _tagview_visibility_hidden
+                >
+                RECORD_DEF 10 
+                <
+                                FIELD name                                                                        "destination_name"
+                >
+                RECORD_DEF 11 
+                <
+                                FIELD name                                                                        "destination_id"
+                >
+                RECORD_DEF 12 
+                <
+                                FIELD m_visibility                                             _tagview_visibility_hidden
+                >
+                RECORD_DEF 13 
+                <
+                >
+                RECORD_DEF 14 
+                <
+                                FIELD name                                                                        "geographical_palette"
+                >
+                RECORD_DEF 15 
+                <
+                                FIELD m_path                                                    "content/common/grognok/geographical_palettes.string_menu.tft"
+                >
+                RECORD_DEF 16 
+                <
+                                FIELD name                                                                        "map_reference"
+                                FIELD type                                                                           SCHEMA[2] // c_fake_tag_reference
+                >
+                RECORD_DEF 17 
+                <
+                                FIELD name                                                                        "global_state"
+                                FIELD type                                                                           SCHEMA[9] // s_grognok_destination_global_state
+                >
+                RECORD_DEF 18 
+                <
+                                FIELD m_visibility                                             _tagview_visibility_hidden
+                >
+                RECORD_DEF 19 
+                <
+                                FIELD name                                                                        "ambient_bubble_states"
+                                FIELD type                                                                           SCHEMA[10] // st_dynamic_array<s_grognok_ambient_bubble_state>
+                >
+                RECORD_DEF 20 
+                <
+                                FIELD m_visibility                                             _tagview_visibility_hidden
+                >
+                RECORD_DEF 21 
+                <
+                                FIELD name                                                                        "power_group_table"
+                                FIELD type                                                                           SCHEMA[2] // c_fake_tag_reference
+                >
+                RECORD_DEF 22 
+                <
+                                FIELD name                                                                        "activity_references"
+                                FIELD type                                                                           SCHEMA[11] // st_dynamic_array<s_grognok_activity_reference>
+                >
+                RECORD_DEF 23 
+                <
+                                FIELD name                                                                        "common_properties"
+                                FIELD type                                                                           SCHEMA[16] // s_grognok_destination_common_properties
+                >
+                RECORD_DEF 24 
+                <
+                                FIELD name                                                                        "event_schedule"
+                                FIELD type                                                                           SCHEMA[2] // c_fake_tag_reference
+                >
+                RECORD_DEF 25 
+                <
+                >
+                RECORD_DEF 26 
+                <
+                                FIELD m_file_filters                         "Event Schedule|*.event_schedule.tft;All Files|*.*"
+                >
+                RECORD_DEF 27 
+                <
+                                FIELD name                                                                        "string_table"
+                                FIELD type                                                                           SCHEMA[2] // c_fake_tag_reference
+                >
+                RECORD_DEF 28 
+                <
+                >
+                RECORD_DEF 29 
+                <
+                                FIELD m_file_filters                         "Localized Strings file|*.localized_strings.tft|*.master_strings.tft"
+                >
+                RECORD_DEF 30 
+                <
+                                FIELD m_text                                                     "String table containing destination-specific strings such as bubble names"
+                >
+                RECORD_DEF 31 
+                RECORD_DEF 32 
+                <
+                                FIELD name                                                                        "s_grognok_destination"
+                >
+> 
+ 
+SCHEMA "s_dynamic_array_dynamic_element_container" 0 // SCHEMA[25]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 4    "s_schema_version_old_structure_name#0" // s_schema_version_old_structure_name
+                RECORD_DECL 5    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 6    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD root_type                                                               "s_schema_dynamic_element_container#0" // s_schema_dynamic_element_container
+                                FIELD schema_flags                                        _schema_flags_inherits|_schema_flags_dynamic_container
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[6]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/interfaces/dynamic_array.h"
+                                FIELD line_number                                          146
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                                FIELD m_old_name                                         "st_dynamic_array_elements"
+                >
+                RECORD_DEF 5  
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "s_dynamic_array_dynamic_element_container"
+                >
+> 
+ 
+SCHEMA "e_destination_bubble_type" 0 // SCHEMA[26]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 4    "s_schema_enum_members_incremental#0" 4 // s_schema_enum_members_incremental
+                RECORD_DECL 5    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 6    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD reflection_enabled_parallel_data ^RECORD[6]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/engine/activities/scenario/activity_bubble_types.h"
+                                FIELD line_number                                          18
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_engine
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              "_destination_bubble_private"
+                                                FIELD [1]                                                                              "_destination_bubble_public"
+                                                FIELD [2]                                                                              "_destination_bubble_social_city"
+                                                FIELD [3]                                                                              "_destination_bubble_social_vendor"
+                                >
+                >
+                RECORD_DEF 5  
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "e_destination_bubble_type"
+                >
+> 
+ 
+SCHEMA "st_enum_storage<e_destination_bubble_type>" 0 // SCHEMA[27]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_template_definition#0" // s_template_definition
+                RECORD_DECL 2    "s_template_parameters_t#0" // s_template_parameters_t
+                RECORD_DECL 3    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 4    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_template_instance
+                                FIELD reflection_enabled_parallel_data ^RECORD[4]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD template_definition           "st_enum_storage#0" // st_enum_storage
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD t0                                                                                SCHEMA[26] // e_destination_bubble_type
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "st_enum_storage<e_destination_bubble_type>"
+                >
+> 
+ 
+SCHEMA "s_schema_default_value<st_enum_storage<e_destination_bubble_type> >" 0 // SCHEMA[28]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_template_definition#0" // s_template_definition
+                RECORD_DECL 2    "s_template_parameters_t#0" // s_template_parameters_t
+                RECORD_DECL 3    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 4    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD root_type                                                               "s_schema_has_default_value#0" // s_schema_has_default_value
+                                FIELD schema_flags                                        _schema_flags_inherits
+                                FIELD schema_type                                        _schema_type_template_instance
+                                FIELD reflection_enabled_parallel_data ^RECORD[4]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD template_definition           "s_schema_default_value#0" // s_schema_default_value
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD t0                                                                                SCHEMA[27] // st_enum_storage<e_destination_bubble_type>
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "s_schema_default_value<st_enum_storage<e_destination_bubble_type> >"
+                >
+> 
+ 
+SCHEMA "e_bubble_matchmaking_policy" 0 // SCHEMA[29]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 4    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 5    "s_schema_enum_members_incremental#0" 2 // s_schema_enum_members_incremental
+                RECORD_DECL 6    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 7    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD reflection_enabled_parallel_data ^RECORD[7]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/engine/activities/scenario/bubble_matchmaking_settings.h"
+                                FIELD line_number                                          22
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_engine
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              "_bubble_matchmaking_policy_private"
+                                                FIELD [1]                                                                              "_bubble_matchmaking_policy_public"
+                                >
+                >
+                RECORD_DEF 6  
+                RECORD_DEF 7  
+                <
+                                FIELD name                                                                        "e_bubble_matchmaking_policy"
+                >
+> 
+ 
+SCHEMA "st_enum_storage<e_bubble_matchmaking_policy>" 0 // SCHEMA[30]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_template_definition#0" // s_template_definition
+                RECORD_DECL 2    "s_template_parameters_t#0" // s_template_parameters_t
+                RECORD_DECL 3    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 4    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_template_instance
+                                FIELD reflection_enabled_parallel_data ^RECORD[4]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD template_definition           "st_enum_storage#0" // st_enum_storage
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD t0                                                                                SCHEMA[29] // e_bubble_matchmaking_policy
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "st_enum_storage<e_bubble_matchmaking_policy>"
+                >
+> 
+ 
+SCHEMA "s_bubble_matchmaking_settings" 0 // SCHEMA[31]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 4    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 5    "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 6    "s_schema_embedded_integer_intrinsic<int32>#0" // s_schema_embedded_integer_intrinsic<int32>
+                RECORD_DECL 7    "s_schema_embedded_integer_intrinsic<int32>#0" // s_schema_embedded_integer_intrinsic<int32>
+                RECORD_DECL 8    "s_schema_embedded_integer_intrinsic<int32>#0" // s_schema_embedded_integer_intrinsic<int32>
+                RECORD_DECL 9    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 10   "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[10]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/engine/activities/scenario/bubble_matchmaking_settings.h"
+                                FIELD line_number                                          65
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_engine
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                                FIELD name                                                                        "policy"
+                                FIELD type                                                                           SCHEMA[30] // st_enum_storage<e_bubble_matchmaking_policy>
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "max_player_count"
+                >
+                RECORD_DEF 7  
+                <
+                                FIELD name                                                                        "max_posse_count"
+                >
+                RECORD_DEF 8  
+                <
+                                FIELD name                                                                        "max_matchmade_player_count"
+                >
+                RECORD_DEF 9  
+                RECORD_DEF 10 
+                <
+                                FIELD name                                                                        "s_bubble_matchmaking_settings"
+                >
+> 
+ 
+SCHEMA "s_tagview_name" 0 // SCHEMA[32]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    "s_schema_checksum_ignore#0" // s_schema_checksum_ignore
+                RECORD_DECL 4    "s_schema_allow_in_packages#0" // s_schema_allow_in_packages
+                RECORD_DECL 5    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 6    "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 7    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 8    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[8]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/foundation/toolbox/datatypes/private/bonobo_metadata_definitions.h"
+                                FIELD line_number                                          16
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_foundation
+                >
+                RECORD_DEF 3  
+                RECORD_DEF 4  
+                <
+                >
+                RECORD_DEF 5  
+                <
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "m_name"
+                >
+                RECORD_DEF 7  
+                RECORD_DEF 8  
+                <
+                                FIELD name                                                                        "s_tagview_name"
+                >
+> 
+ 
+SCHEMA "s_bubble_source_matchmaking_settings" 0 // SCHEMA[33]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 4    "s_schema_embedded_integer_intrinsic<int32>#0" // s_schema_embedded_integer_intrinsic<int32>
+                RECORD_DECL 5    SCHEMA[32] // s_tagview_name
+                RECORD_DECL 6    SCHEMA[14] // s_tagview_desc
+                RECORD_DECL 7    "s_schema_embedded_integer_intrinsic<int32>#0" // s_schema_embedded_integer_intrinsic<int32>
+                RECORD_DECL 8    SCHEMA[32] // s_tagview_name
+                RECORD_DECL 9    "s_schema_embedded_integer_intrinsic<int32>#0" // s_schema_embedded_integer_intrinsic<int32>
+                RECORD_DECL 10   SCHEMA[32] // s_tagview_name
+                RECORD_DECL 11   "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 12   "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0   
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[12]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/engine/activities/scenario/bubble_matchmaking_settings.h"
+                                FIELD line_number                                          48
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_engine
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "max_player_count"
+                >
+                RECORD_DEF 5  
+                <
+                                FIELD m_name                                                  "Public Max Player Count"
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD m_text                                                     "\nOptional configuration for public matchmaking. Zero means use the default for the bubble type."
+                >
+                RECORD_DEF 7  
+                <
+                                FIELD name                                                                        "max_posse_count"
+                >
+                RECORD_DEF 8  
+                <
+                                FIELD m_name                                                  "Public Max Posse Count"
+                >
+                RECORD_DEF 9  
+                <
+                                FIELD name                                                                        "max_matchmade_player_count"
+                >
+                RECORD_DEF 10 
+                <
+                                FIELD m_name                                                  "Matchmaking Desired Budget Player Count"
+                >
+                RECORD_DEF 11 
+                RECORD_DEF 12 
+                <
+                                FIELD name                                                                        "s_bubble_source_matchmaking_settings"
+                >
+> 
+ 
+SCHEMA "s_grognok_ambient_bubble_state_common_properties" 0 // SCHEMA[34]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 4    "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 5    SCHEMA[8] // s_tagview_visibility
+                RECORD_DECL 6    "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 7    SCHEMA[14] // s_tagview_desc
+                RECORD_DECL 8    "s_schema_embedded_integer_intrinsic<int32>#0" // s_schema_embedded_integer_intrinsic<int32>
+                RECORD_DECL 9    SCHEMA[14] // s_tagview_desc
+                RECORD_DECL 10   "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 11   SCHEMA[14] // s_tagview_desc
+                RECORD_DECL 12   "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 13   SCHEMA[28] // s_schema_default_value<st_enum_storage<e_destination_bubble_type> >
+                RECORD_DECL 14   SCHEMA[14] // s_tagview_desc
+                RECORD_DECL 15   "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 16   SCHEMA[8] // s_tagview_visibility
+                RECORD_DECL 17   "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 18   "s_schema_embedded_boolean_intrinsic#0" // s_schema_embedded_boolean_intrinsic
+                RECORD_DECL 19   "s_schema_embedded_boolean_intrinsic#0" // s_schema_embedded_boolean_intrinsic
+                RECORD_DECL 20   SCHEMA[8] // s_tagview_visibility
+                RECORD_DECL 21   "s_schema_embedded_integer_intrinsic<int32>#0" // s_schema_embedded_integer_intrinsic<int32>
+                RECORD_DECL 22   SCHEMA[20] // s_schema_default_value<int32>
+                RECORD_DECL 23   "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 24   "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[24]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/engine/environment/scene/private/import/grognok_destination_common.h"
+                                FIELD line_number                                          17
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_engine
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "bubble_name"
+                >
+                RECORD_DEF 5  
+                <
+                                FIELD m_visibility                                             _tagview_visibility_readonly
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD name                                                                        "state_name"
+                >
+                RECORD_DEF 7  
+                <
+                                FIELD m_text                                                     "\nLeave this blank unless you have multiple ambient states for this bubble.\nFor example, you might create a 'barrier' and an 'open' ambient state for this bubble, so you\ncould make it open up only after Story Chapter 2 was completed."
+                >
+                RECORD_DEF 8  
+                <
+                                FIELD name                                                                        "state_priority"
+                >
+                RECORD_DEF 9  
+                <
+                                FIELD m_text                                                     "\nLeave this blank unless you have multiple ambient states for this bubble.\nPriority of this state - the highest priority state that is available is chosen."
+                >
+                RECORD_DEF 10 
+                <
+                                FIELD name                                                                        "investment_unlock_flag_name"
+                >
+                RECORD_DEF 11 
+                <
+                                FIELD m_text                                                     "\nLeave this blank unless you have multiple ambient states for this bubble.\nAllows you to unlock a bubble state based on an investment unlock flag.\nFor example, the 'open' ambient state might require an investment unlock flag of 'season1_ch2_completed'."
+                >
+                RECORD_DEF 12 
+                <
+                                FIELD name                                                                        "bubble_type"
+                                FIELD type                                                                           SCHEMA[27] // st_enum_storage<e_destination_bubble_type>
+                >
+                RECORD_DEF 13 
+                <
+                >
+                RECORD_DEF 14 
+                <
+                                FIELD m_text                                                     "How this bubble is used in the ambient state\nFor more details on these settings please see Bungiepedia...\nPRIVATE: private, no matchmaking, fireteam only.\nPUBLIC: a public space with a group host.\nSOCIAL CITY: a public social bubble in the city.\nSOCIAL VENDOR: a public social bubble in an agent space with vendors.\n"
+                >
+                RECORD_DEF 15 
+                <
+                                FIELD name                                                                        "matchmaking_settings"
+                                FIELD type                                                                           SCHEMA[31] // s_bubble_matchmaking_settings
+                >
+                RECORD_DEF 16 
+                <
+                                FIELD m_visibility                                             _tagview_visibility_hidden
+                >
+                RECORD_DEF 17 
+                <
+                                FIELD name                                                                        "new_matchmaking_settings"
+                                FIELD type                                                                           SCHEMA[33] // s_bubble_source_matchmaking_settings
+                >
+                RECORD_DEF 18 
+                <
+                                FIELD name                                                                        "is_time_of_day_locked"
+                >
+                RECORD_DEF 19 
+                <
+                                FIELD name                                                                        "is_vehicle_summoning_disabled"
+                >
+                RECORD_DEF 20 
+                <
+                                FIELD m_visibility                                             _tagview_visibility_hidden
+                >
+                RECORD_DEF 21 
+                <
+                                FIELD name                                                                        "actor_budget"
+                >
+                RECORD_DEF 22 
+                <
+                                FIELD m_default_value                 50
+                >
+                RECORD_DEF 23 
+                RECORD_DEF 24 
+                <
+                                FIELD name                                                                        "s_grognok_ambient_bubble_state_common_properties"
+                >
+> 
+ 
+SCHEMA "s_grognok_ambient_bubble_state" 0 // SCHEMA[35]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 4    "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 5    "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 6    SCHEMA[8] // s_tagview_visibility
+                RECORD_DECL 7    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 8    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[8]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/engine/environment/scene/private/import/grognok_destination_source.h"
+                                FIELD line_number                                          29
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_engine
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "common_properties"
+                                FIELD type                                                                           SCHEMA[34] // s_grognok_ambient_bubble_state_common_properties
+                >
+                RECORD_DEF 5  
+                <
+                                FIELD name                                                                        "activity_placement_references"
+                                FIELD type                                                                           SCHEMA[5] // st_dynamic_array<s_activity_placement_reference>
+                >
+                RECORD_DEF 6  
+                <
+                                FIELD m_visibility                                             _tagview_visibility_hidden
+                >
+                RECORD_DEF 7  
+                RECORD_DEF 8  
+                <
+                                FIELD name                                                                        "s_grognok_ambient_bubble_state"
+                >
+> 
+ 
+SCHEMA "s_activity_placement_reference" 0 // SCHEMA[36]
+< 
+                RECORD_DECL 0    "s_schema#0" // s_schema
+                RECORD_DECL 1    "s_schema_origin_metadata#0" // s_schema_origin_metadata
+                RECORD_DECL 2    "s_schema_tag_range_metadata#0" // s_schema_tag_range_metadata
+                RECORD_DECL 3    SCHEMA[0] // s_csharp_wrapper_generate
+                RECORD_DECL 4    "s_schema_embedded_member#0" // s_schema_embedded_member
+                RECORD_DECL 5    "s_schema_embedded_string#0" // s_schema_embedded_string
+                RECORD_DECL 6    "s_schema_resource_marker#0" // s_schema_resource_marker
+                RECORD_DECL 7    "s_schema_reflection_parallel_data#0" // s_schema_reflection_parallel_data
+                RECORD_DEF 0  
+                <
+                                FIELD schema_type                                        _schema_type_structure
+                                FIELD reflection_enabled_parallel_data ^RECORD[7]
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD origin                                                         _schema_origin_scraper
+                                FIELD file_path                                                  "source/engine/environment/scene/private/import/grognok_map_source.h"
+                                FIELD line_number                                          33
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD tag_range                                                               _schema_tag_range_engine
+                >
+                RECORD_DEF 3  
+                <
+                >
+                RECORD_DEF 4  
+                <
+                                FIELD name                                                                        "activity_set_reference"
+                                FIELD type                                                                           SCHEMA[2] // c_fake_tag_reference
+                >
+                RECORD_DEF 5  
+                <
+                                FIELD name                                                                        "activity_placement_name"
+                >
+                RECORD_DEF 6  
+                RECORD_DEF 7  
+                <
+                                FIELD name                                                                        "s_activity_placement_reference"
+                >
+> 
+ 
+STRUCTURE
+< 
+                RECORD_DECL 0    SCHEMA[24] // s_grognok_destination
+                RECORD_DECL 1    SCHEMA[25] 1 SCHEMA[35] // s_dynamic_array_dynamic_element_container[s_grognok_ambient_bubble_state]
+                RECORD_DECL 2    SCHEMA[25] 2 SCHEMA[36] // s_dynamic_array_dynamic_element_container[s_activity_placement_reference]
+                RECORD_DEF 0  
+                <
+                                FIELD destination_name                               "new_york"
+                                FIELD destination_id                       0x97ad62ab39bcb5a1
+                                FIELD map_reference                                    // c_fake_tag_reference
+                                <
+                                                FIELD m_referenced_tag_name               "content\\world\\new_york\\new_york.map.tft"
+                                                                                >
+                                FIELD ambient_bubble_states   // st_dynamic_array<s_grognok_ambient_bubble_state>
+                                <
+                                                FIELD m_element_count                              1
+                                                FIELD m_elements                                          ^RECORD[1]
+                                >
+                                FIELD common_properties                          // s_grognok_destination_common_properties
+                                <
+                                                FIELD global_tag_bag                     // c_fake_tag_reference
+                                                <
+                                                                FIELD m_referenced_tag_name               "destinations/new_york/new_york.destination_global_tag_bag.tft"
+                                                                                                                >
+                                >
+                >
+                RECORD_DEF 1  
+                <
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_grognok_ambient_bubble_state
+                                                <
+                                                                FIELD common_properties                          // s_grognok_ambient_bubble_state_common_properties
+                                                                <
+                                                                                FIELD bubble_name                                       "new_york"
+                                                                >
+                                                                FIELD activity_placement_references // st_dynamic_array<s_activity_placement_reference>
+                                                                <
+                                                                                FIELD m_element_count                              2
+                                                                                FIELD m_elements                                          ^RECORD[2]
+                                                                >
+                                                >
+                                >
+                >
+                RECORD_DEF 2  
+                <
+                                FIELD _tail
+                                <
+                                                FIELD [0]                                                                              // s_activity_placement_reference
+                                                <
+                                                                FIELD activity_set_reference // c_fake_tag_reference
+                                                                <
+                                                                                FIELD m_referenced_tag_name               "content\\world\\new_york\\deck_00\\global_player_nav_graph_d16.encounters.tft"
+                                                                                                                                                >
+                                                                FIELD activity_placement_name "global_player_nav_graph_d16"
+                                                >
+                                                FIELD [1]                                                                              // s_activity_placement_reference
+                                                <
+                                                                FIELD activity_set_reference // c_fake_tag_reference
+                                                                <
+                                                                                FIELD m_referenced_tag_name               "content\\world\\new_york\\deck_00\\ambient_new_york_d16.encounters.tft"
+                                                                                                                                                >
+                                                                FIELD activity_placement_name "ambient_pve_template_d16"
+                                                >
+                                >
+                >
+> 
