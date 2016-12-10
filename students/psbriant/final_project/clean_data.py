@@ -14,11 +14,11 @@ from datetime import datetime
 # Change source to smaller file.
 data = pandas.read_csv("data/Residential_Water_Usage_Zip_Code_on_Top.csv")
 
-print(data["Date Text"].head())
+# print(data["Date Text"].head())
 
 
 first_date = data["Date Text"].values[0]
-# print(first_date)
+print(first_date)
 
 # datetime.strptime(first_date, "%Y-%m-%d")
 # datetime(2012, 3, 10, 0, 0)
