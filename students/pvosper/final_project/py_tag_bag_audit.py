@@ -5,6 +5,9 @@ Creates tag_bag_audit.csv, listing .patterns and .budget_sets from .global_tag_b
 Also creates common_budget_set_audit.csv, listing all .patterns from common budget sets
 <source file name>, <source file w/relative path>, <referenced tag file name>, <referenced tag file file w/relative path>
 
+NOTE: While this will be run exclusively on Windows, I'm writing/testing this
+on a Mac, so paths are set for MacOS/Linux.
+
 $ToDo:
     @CHB: This is pretty deeply nested -- break into separate functions, maybe?
     replace 'find' with 'in'
@@ -41,12 +44,15 @@ def tag_bag_list(dest_list):
         with open(dest_file) as destination:
             lines_list = destination.readlines()
             for i in range(len(lines_list)):
-                if lines_list[i].find('FIELD global_tag_bag') >= 0:
+                # if lines_list[i].find('FIELD global_tag_bag') >= 0:
+                if 'FIELD global_tag_bag' in lines_list[i] != False:
                     # Actual reference on following line within field
                     for j in range(4):
-                        if lines_list[i + j].find('FIELD m_referenced_tag_name') >= 0:
+                        if 'FIELD m_referenced_tag_name' in lines_list[i + j] != False:
+                        # if lines_list[i + j].find('FIELD m_referenced_tag_name') >= 0:
                             l.append(extract_tag_name(lines_list[i + j]))
                             # There's only one global_tag_bag entry per destination so we should stop here
+                            # break
     return l
 
 def tag_bag_content(tb_list):
@@ -55,7 +61,8 @@ def tag_bag_content(tb_list):
     
 def extract_tag_name(line_string):
     '''Returns referenced tag name with path given valid string (line from file), otherwise returns None'''
-    if line_string.find('"') >= 0:
+    # if line_string.find('"') >= 0:
+    if '"' in line_string != False:
         tag_path = line_string[line_string.find('"'):-1]
         return tag_path.replace('\\\\', '\\').replace('"', '')
     else:
@@ -88,4 +95,6 @@ def source_files():
 end = time.clock()
                 
 if __name__ == "__main__":
+
+    print(destinations_list('destinations'))
     print('\tFinished!\n\tElapsed time: {:.2f} seconds'.format(end - start))
