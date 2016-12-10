@@ -1,4 +1,4 @@
-#!/usr/bin/env/python3
+#!/usr/bin/env/ python
 
 import os
 import subprocess
@@ -8,6 +8,8 @@ dict_node_iops = {}
 dict_total_iops = {}
 
 file_list = []
+
+myDate = None
 
 def check_queues():
 
