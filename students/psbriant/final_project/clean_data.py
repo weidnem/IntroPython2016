@@ -23,16 +23,16 @@ first_date = data["Date Text"].values[0]
 # datetime.strptime(first_date, "%Y-%m-%d")
 # datetime(2012, 3, 10, 0, 0)
 
-data.date = data.date.apply(lambda d: datetime.strptime(d, "%Y-%m-%d"))
+# data.date = data.date.apply(lambda d: datetime.strptime(d, "%Y-%m-%d"))
 # print(data.date.head())
-data.index = data.date
+# data.index = data.date
 # print(data)
 
 # print(data.ix[datetime(2012, 8, 19)])
 
 # Remove date column
-data = data.drop(["date"], axis=1)
+# data = data.drop(["date"], axis=1)
 # print(data.columns)
 
 # Determine what values are missing
-empty = data.apply(lambda col: pandas.isnull(col))
+# empty = data.apply(lambda col: pandas.isnull(col))
