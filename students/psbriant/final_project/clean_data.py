@@ -11,34 +11,14 @@ Code for Final Project
 import pandas
 from datetime import datetime
 
-# Change source to smaller file.
-data = pandas.read_csv("data/Residential_Water_Usage_Zip_Code_on_Top.csv",
-                       parse_dates=[0], infer_datetime_format=True)
-temp = pandas.DatetimeIndex(data["Date_Text"])
-data["Month"] = temp.month
-data["Year"] = temp.year
-print(data)
-
-# print(data["Date Text"].head())
-
-
-# first_date = data["Date Text"].values[0]
-# print(first_date)
-
-# datetime.strptime(first_date, "%b-%Y")
-
-# datetime(2012, 3, 10, 0, 0)
-
-# data.date = data["Date Text"].apply(lambda d: datetime.strptime(d, "%b-%Y"))
-# print(data.date.head())
-# data.index = data.date
-# print(data)
+# Connect to file.
+data = pandas.read_csv("data/Residential_Water_Usage_Zip_Code_on_Top.csv")
 
 # print(data.ix[datetime(2012, 8, 19)])
 
-# Remove date column
-# data = data.drop(["date"], axis=1)
-# print(data.columns)
+# Remove Date Values column
+data = data.drop(["Date Value"], axis=1)
+print(data)
 
 # Determine what values are missing
 # empty = data.apply(lambda col: pandas.isnull(col))
