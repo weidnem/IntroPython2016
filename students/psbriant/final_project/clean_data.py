@@ -21,5 +21,26 @@ data_columns = ["Date_Text", "Date_Value", "90001", "90002", "90003", "90004",
                 "90035", "90036", "90037", "90038", "90039", "90041", "90042",
                 "90043", "90044", "90045", "90046", "90047", "90048", "90049",
                 "90056", "90057"]
-# first_date = data..values[0]
+
+print(data["Date Text"].head())
+
+
+first_date = data["Date Text"].values[0]
 # print(first_date)
+
+# datetime.strptime(first_date, "%Y-%m-%d")
+# datetime(2012, 3, 10, 0, 0)
+
+data.date = data.date.apply(lambda d: datetime.strptime(d, "%Y-%m-%d"))
+# print(data.date.head())
+data.index = data.date
+# print(data)
+
+# print(data.ix[datetime(2012, 8, 19)])
+
+# Remove date column
+data = data.drop(["date"], axis=1)
+# print(data.columns)
+
+# Determine what values are missing
+empty = data.apply(lambda col: pandas.isnull(col))
