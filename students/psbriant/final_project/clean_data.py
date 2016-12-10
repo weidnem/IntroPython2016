@@ -11,14 +11,27 @@ Code for Final Project
 import pandas
 from datetime import datetime
 
-# Connect to file.
-data = pandas.read_csv("data/Residential_Water_Usage_Zip_Code_on_Top.csv")
 
-# print(data.ix[datetime(2012, 8, 19)])
+def clean(data):
+    """
+    Take in data and return cleaned version.
+    """
+    # Remove Date Values column
+    data = data.drop(["Date Value"], axis=1)
 
-# Remove Date Values column
-data = data.drop(["Date Value"], axis=1)
-print(data)
+    # Determine what values are missing
+    # empty = data.apply(lambda col: pandas.isnull(col))
 
-# Determine what values are missing
-# empty = data.apply(lambda col: pandas.isnull(col))
+
+def main():
+    """
+
+    """
+    # Connect to file.
+    data = pandas.read_csv("data/Residential_Water_Usage_Zip_Code_on_Top.csv")
+
+    clean(data)
+
+
+if __name__ == '__main__':
+    main()
