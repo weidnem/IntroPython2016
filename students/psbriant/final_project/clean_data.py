@@ -22,7 +22,11 @@ def clean(data):
 
     column_names = list(data.columns.values)
     data.columns = rename_columns(column_names)
-    print(data.columns)
+
+    # Modify date format
+    first_date = data.Date.values[0]
+    print(datetime.strptime(first_date, "%b_%Y"))
+
     # Assign dates as the index
     data.index = data.Date
     return data
