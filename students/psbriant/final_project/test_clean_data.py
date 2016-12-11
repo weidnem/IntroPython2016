@@ -9,7 +9,9 @@ Tests for Final Project
 """
 
 import clean_data as cd
+import matplotlib.pyplot as plt
 import pandas
+import pytest
 
 
 def get_data():
@@ -43,7 +45,12 @@ def test_find_low_water_use():
     """
 
 
+@pytest.mark.mpl_image_compare
 def test_plot_zipcode():
     """
-
+    Test zipcode based wateruse graphs.
     """
+    data = get_data()
+    cleaned = cd.clean(data)
+    wateruse = cd.plot_zipcode(cleaned, "90012")
+    return wateruse
