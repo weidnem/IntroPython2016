@@ -20,11 +20,11 @@ def clean(data):
     # Remove Date Values column
     data = data.drop(["Date Value"], axis=1)
 
-    # Determine what values are missing
-    # empty = data.apply(lambda col: pandas.isnull(col))
     column_names = list(data.columns.values)
-    print(column_names)
-    data.columns = rename_columns
+    data.columns = rename_columns(column_names)
+    print(data.columns)
+    # Assign dates as the index
+    data.index = data.Date
     return data
 
 
@@ -39,6 +39,7 @@ def rename_columns(names):
             columns_list.append("Date")
         else:
             columns_list.append(name)
+    return columns_list
 
 
 def find_low_water_use(data):
@@ -69,7 +70,7 @@ def main():
 
     cleaned_data = clean(data)
     # find_low_water_use(cleaned_data)
-    # plot_zipcode(cleaned_data, "90012")
+    plot_zipcode(cleaned_data, "90012")
     # cleaned_data["90012"].plot(kind="bar", rot=10)
     # cleaned_data["90012"].hist()
     # plt.plot(cleaned_data["90012"])
