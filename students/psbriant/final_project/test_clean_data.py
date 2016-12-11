@@ -49,6 +49,8 @@ def test_find_low_water_use():
 def test_plot_zipcode():
     """
     Test zipcode based wateruse graphs.
+
+    To Do: fix test that fails
     """
     data = get_data()
     cleaned = cd.clean(data)
