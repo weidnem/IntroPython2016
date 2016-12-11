@@ -19,6 +19,8 @@ $ToDo:
     PEP8
 '''
 
+import io
+
 import os
 
 import time
@@ -56,9 +58,19 @@ def tag_bag_list(dest_list):
     return l
 
 def tag_bag_content(tb_list):
-    '''Returns list of relative file paths for tag bags from list of destinations'''
-    pass
-    
+    '''Returns list of content references within each tag bag from a list'''
+    outfile = open('tag_bag_audit.csv','w')
+    # Find referenced tags from bags in list
+    for tag_bag in tb_list:
+        with open(tag_bag) as f:
+            for line in f:
+                if line.find('.tft') >= 0:
+                    tag_name = extract_tag_name(line)
+                    write_list = [tag_bag, tag_name]
+                    write_string = (','.join(write_list) + '\n').replace('\\\\', '\\').replace('"', '')
+                    # What happens when files with the same name are in differently named directories?
+                    outfile.write(write_string)
+  
 def extract_tag_name(line_string):
     '''Returns referenced tag name with path given valid string (line from file), otherwise returns None'''
     # if line_string.find('"') >= 0:
@@ -72,29 +84,18 @@ def source_files():
     '''Returns the source file name given valid path'''
     pass
 
-# This assumes file name == destination name (True in this case)    
-
-# Create list of destination tag bags
-# tag_bag_list = []
-# for nt.DirEntry in nt.ScandirIterator
-# for destination_dir in os.scandir(r'content\world'):
-#     for file in os.scandir(destination_dir.path):
-#         if file.name.endswith('.grognok_destination.tft'):
-#             with open(file.path) as destination:
-#                 lines_list = destination.readlines()
-#                 for i in range(len(lines_list)):
-#                     if lines_list[i].find('FIELD global_tag_bag') >= 0:
-#                         # Now read the next 4 lines
-#                         for j in range(4):
-#                             if lines_list[i + j].find('FIELD m_referenced_tag_name') >= 0:
-#                                 tag_bag_list.append(extract_tag_name(lines_list[i + j]))
-#                                 # There's only one global_tag_bag entry per destination so we should stop here
-
-# print(tag_bag_list)
-
 end = time.clock()
                 
 if __name__ == "__main__":
 
-    print(destinations_list('destinations'))
+    dest_list = destinations_list('destinations')
+
+    print(dest_list)
+    
+    tb_list = tag_bag_list(dest_list)
+        
+    print(tb_list)
+    
+    tag_bag_content(tb_list)
+    
     print('\tFinished!\n\tElapsed time: {:.2f} seconds'.format(end - start))
