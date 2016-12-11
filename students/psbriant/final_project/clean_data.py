@@ -24,9 +24,6 @@ def clean(data):
     data.columns = rename_columns(column_names)
 
     # Modify date format
-    first_date = data.Date.values[0]
-    dt = datetime.strptime(first_date, "%b_%Y").date()
-    dt = dt.replace(day=15)
     data.Date = data.Date.apply(lambda d: datetime.strptime(d, "%b_"
                                 "%Y").date().replace(day=15))
 
