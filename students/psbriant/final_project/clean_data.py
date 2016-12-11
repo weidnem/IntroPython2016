@@ -27,7 +27,9 @@ def clean(data):
     first_date = data.Date.values[0]
     dt = datetime.strptime(first_date, "%b_%Y").date()
     dt = dt.replace(day=15)
-    print(dt)
+    data.Date = data.Date.apply(lambda d: datetime.strptime(d, "%b_"
+                                "%Y").date().replace(day=15))
+
     # Assign dates as the index
     # data.index = data.Date
     return data
@@ -75,7 +77,7 @@ def main():
 
     cleaned_data = clean(data)
     # find_low_water_use(cleaned_data)
-    plot_zipcode(cleaned_data, "90012")
+    # plot_zipcode(cleaned_data, "90012")
     # cleaned_data["90012"].plot(kind="bar", rot=10)
     # cleaned_data["90012"].hist()
     # plt.plot(cleaned_data["90012"])
