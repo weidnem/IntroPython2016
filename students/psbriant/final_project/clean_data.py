@@ -6,6 +6,13 @@ Assignment: Final Project
 
 Description:
 Code for Final Project
+
+To Do:
+Add user interface
+Add code to check for null cells
+Remove or improve functionality of find_low_water_use
+Add additional plotting functionality
+Finish tests
 """
 
 import pandas
