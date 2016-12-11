@@ -10,14 +10,15 @@ Tests for Final Project
 
 import clean_data as cd
 import pandas
-import io
+
 
 def get_data():
     """
-
+    Retrieve data from csv file to test.
     """
     data = pandas.read_csv("data/Residential_Water_Usage_Zip_Code_on_Top.csv")
     return data
+
 
 def test_clean():
     """
@@ -27,7 +28,7 @@ def test_clean():
 
 def test_rename_columns():
     """
-
+    Test whether rename_columns successfully renames each column.
     """
     data = get_data()
     data = data.drop(["Date Value"], axis=1)
