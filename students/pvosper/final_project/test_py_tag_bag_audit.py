@@ -9,7 +9,7 @@ $ToDo
 
 import io
 
-from py_tag_bag_audit import destinations_list, tag_bag_list, tag_bag_content, extract_tag_name, base_file
+from py_tag_bag_audit import destinations_list, tag_bag_list, extract_tag_name, base_name
 
 # Uses test files in destinations directory
 
@@ -22,16 +22,11 @@ def test_tag_bag_list():
     l = tag_bag_list(['destinations/new_york/new_york.grognok_destination.tft'])
     assert l[0] == 'destinations/new_york/new_york.destination_global_tag_bag.tft'
 
-# def test_tag_bag_content():
-#     tag_bag_content(['destinations/new_york/new_york.destination_global_tag_bag.tft'])
-# #     print(outfile.readline)
-#     assert False
-
 def test_extract_tag_name():
     s = '                                                                FIELD m_referenced_tag_name               "destinations/new_york/new_york.destination_global_tag_bag.tft"'
     t = extract_tag_name(s)
     assert t == 'destinations/new_york/new_york.destination_global_tag_bag.tft'
 
-def test_base_file():
-    s = base_file('destinations/new_york/new_york.destination_global_tag_bag.tft')
+def test_base_name():
+    s = base_name('destinations/new_york/new_york.destination_global_tag_bag.tft')
     assert s == 'new_york'

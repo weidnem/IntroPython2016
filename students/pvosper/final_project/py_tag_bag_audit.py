@@ -61,9 +61,9 @@ def tag_bag_content(tb_list):
                 if line.find('.tft') >= 0:
                     tag_name = extract_tag_name(line)
                     write_list = [
-                        base_file(tag_bag),
+                        base_name(tag_bag),
                         tag_bag,
-                        base_file(tag_name),
+                        base_name(tag_name),
                         tag_name]
                     write_string = (
                         ','.join(write_list) +
@@ -81,7 +81,7 @@ def extract_tag_name(line_string):
         return None
 
 
-def base_file(file_name):
+def base_name(file_name):
     '''Returns the base file name given valid path'''
     s = os.path.basename(file_name)
     return s[:s.find('.')]

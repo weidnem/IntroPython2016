@@ -25,4 +25,4 @@ Goal: Create report that lists all referenced assets, sorted by Destination
     1.1) Crawl a folder that contains Destination folders
     1.2) In each folder, find the .grognok_map file
     1.3) In each map file, find the reference for .global_tag_bag
-    1.4) For each tag bag, write out all tag references to csv file
+    1.4) For each tag bag, write out all tag references to a csv file
