@@ -23,8 +23,8 @@ def clean(data):
     # Determine what values are missing
     # empty = data.apply(lambda col: pandas.isnull(col))
     column_names = list(data.columns.values)
-
     print(column_names)
+    data.columns = rename_columns
     return data
 
 
@@ -32,6 +32,12 @@ def rename_columns(names):
     """
 
     """
+    columns_list = []
+    for name in names:
+        if name == "Date Text":
+            columns_list.append("Date")
+        else:
+            columns_list.append(name)
 
 
 def find_low_water_use(data):
@@ -67,7 +73,6 @@ def main():
     # cleaned_data["90012"].hist()
     # plt.plot(cleaned_data["90012"])
     # plt.plot([1, 2, 3, 4])
-
 
 
 if __name__ == '__main__':
