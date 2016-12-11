@@ -32,7 +32,7 @@ def rename_columns(names):
     """
 
     """
-    
+
 
 def find_low_water_use(data):
     """
