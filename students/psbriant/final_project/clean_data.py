@@ -9,6 +9,7 @@ Code for Final Project
 """
 
 import pandas
+import matplotlib.pyplot as plt
 from datetime import datetime
 
 
@@ -35,6 +36,15 @@ def find_low_water_use(data):
     print(under25)
 
 
+def plot_zipcode(data, zipcode):
+    """
+
+    """
+    # data["90012"].plot(kind="bar", rot=10)
+    plt.plot(data[zipcode])
+    plt.show()
+
+
 def main():
     """
 
@@ -43,7 +53,13 @@ def main():
     data = pandas.read_csv("data/Residential_Water_Usage_Zip_Code_on_Top.csv")
 
     cleaned_data = clean(data)
-    find_low_water_use(cleaned_data)
+    # find_low_water_use(cleaned_data)
+    plot_zipcode(cleaned_data, "90012")
+    # cleaned_data["90012"].plot(kind="bar", rot=10)
+    # cleaned_data["90012"].hist()
+    # plt.plot(cleaned_data["90012"])
+    # plt.plot([1, 2, 3, 4])
+
 
 
 if __name__ == '__main__':
