@@ -797,70 +797,70 @@ STRUCTURE
                                                 <
                                                                 FIELD global_tag                                               // c_fake_tag_reference
                                                                 <
-                                                                                FIELD m_referenced_tag_name               "domain\\kingdom\\phylum\\class\\asset_a\\asset_a.pattern.tft"
+                                                                                FIELD m_referenced_tag_name               "domain/kingdom/phylum/class/asset_a/asset_a.pattern.tft"
                                                                                                                                                 >
                                                 >
                                                 FIELD [1]                                                                              // s_grognok_destination_global_tag_bag_element
                                                 <
                                                                 FIELD global_tag                                               // c_fake_tag_reference
                                                                 <
-                                                                                FIELD m_referenced_tag_name               "domain\\kingdom\\phylum\\class\\asset_b\\asset_b.pattern.tft"
+                                                                                FIELD m_referenced_tag_name               "domain/kingdom/phylum/class/asset_b/asset_b.pattern.tft"
                                                                                                                                                 >
                                                 >
                                                 FIELD [2]                                                                              // s_grognok_destination_global_tag_bag_element
                                                 <
                                                                 FIELD global_tag                                               // c_fake_tag_reference
                                                                 <
-                                                                                FIELD m_referenced_tag_name               "domain\\kingdom\\phylum\\class\\asset_c\\asset_c.pattern.tft"
+                                                                                FIELD m_referenced_tag_name               "domain/kingdom/phylum/class/asset_c/asset_c.pattern.tft"
                                                                                                                                                 >
                                                 >
                                                 FIELD [3]                                                                              // s_grognok_destination_global_tag_bag_element
                                                 <
                                                                 FIELD global_tag                                               // c_fake_tag_reference
                                                                 <
-                                                                                FIELD m_referenced_tag_name               "domain\\kingdom\\phylum\\class\\asset_d\\asset_d.pattern.tft"
+                                                                                FIELD m_referenced_tag_name               "domain/kingdom/phylum/class/asset_d/asset_d.pattern.tft"
                                                                                                                                                 >
                                                 >
                                                 FIELD [4]                                                                              // s_grognok_destination_global_tag_bag_element
                                                 <
                                                                 FIELD global_tag                                               // c_fake_tag_reference
                                                                 <
-                                                                                FIELD m_referenced_tag_name               "domain\\kingdom\\phylum\\class\\asset_e\\asset_e.pattern.tft"
+                                                                                FIELD m_referenced_tag_name               "domain/kingdom/phylum/class/asset_e/asset_e.pattern.tft"
                                                                                                                                                 >
                                                 >
                                                 FIELD [5]                                                                              // s_grognok_destination_global_tag_bag_element
                                                 <
                                                                 FIELD global_tag                                               // c_fake_tag_reference
                                                                 <
-                                                                                FIELD m_referenced_tag_name               "domain\\kingdom\\phylum\\class\\asset_f\\asset_f.pattern.tft"
+                                                                                FIELD m_referenced_tag_name               "domain/kingdom/phylum/class/asset_f/asset_f.pattern.tft"
                                                                                                                                                 >
                                                 >
                                                 FIELD [6]                                                                              // s_grognok_destination_global_tag_bag_element
                                                 <
                                                                 FIELD global_tag                                               // c_fake_tag_reference
                                                                 <
-                                                                                FIELD m_referenced_tag_name               "domain\\kingdom\\phylum\\class\\asset_g\\asset_g.pattern.tft"
+                                                                                FIELD m_referenced_tag_name               "domain/kingdom/phylum/class/asset_g/asset_g.pattern.tft"
                                                                                                                                                 >
                                                 >
                                                 FIELD [7]                                                                              // s_grognok_destination_global_tag_bag_element
                                                 <
                                                                 FIELD global_tag                                               // c_fake_tag_reference
                                                                 <
-                                                                                FIELD m_referenced_tag_name               "domain\\kingdom\\phylum\\class\\asset_h\\asset_h.pattern.tft"
+                                                                                FIELD m_referenced_tag_name               "domain/kingdom/phylum/class/asset_h/asset_h.pattern.tft"
                                                                                                                                                 >
                                                 >
                                                 FIELD [8]                                                                              // s_grognok_destination_global_tag_bag_element
                                                 <
                                                                 FIELD global_tag                                               // c_fake_tag_reference
                                                                 <
-                                                                                FIELD m_referenced_tag_name               "domain\\kingdom\\phylum\\class\\asset_i\\asset_i.pattern.tft"
+                                                                                FIELD m_referenced_tag_name               "domain/kingdom/phylum/class/asset_i/asset_i.pattern.tft"
                                                                                                                                                 >
                                                 >
                                                 FIELD [9]                                                                              // s_grognok_destination_global_tag_bag_element
                                                 <
                                                                 FIELD global_tag                                               // c_fake_tag_reference
                                                                 <
-                                                                                FIELD m_referenced_tag_name               "domain\\kingdom\\phylum\\class\\asset_j\\asset_j.pattern.tft"
+                                                                                FIELD m_referenced_tag_name               "domain/kingdom/phylum/class/asset_j/asset_j.pattern.tft"
                                                                                                                                                 >
                                                 >
                                 >
