@@ -10,7 +10,7 @@ Code for Final Project
 
 import pandas
 import matplotlib.pyplot as plt
-from datetime import datetime
+from datetime import datetime, date
 
 
 def clean(data):
@@ -25,10 +25,11 @@ def clean(data):
 
     # Modify date format
     first_date = data.Date.values[0]
-    print(datetime.strptime(first_date, "%b_%Y"))
-
+    dt = datetime.strptime(first_date, "%b_%Y").date()
+    dt = dt.replace(day=15)
+    print(dt)
     # Assign dates as the index
-    data.index = data.Date
+    # data.index = data.Date
     return data
 
 
