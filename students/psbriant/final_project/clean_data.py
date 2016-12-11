@@ -22,9 +22,17 @@ def clean(data):
 
     # Determine what values are missing
     # empty = data.apply(lambda col: pandas.isnull(col))
+    column_names = list(data.columns.values)
 
+    print(column_names)
     return data
 
+
+def rename_columns(names):
+    """
+
+    """
+    
 
 def find_low_water_use(data):
     """
@@ -54,7 +62,7 @@ def main():
 
     cleaned_data = clean(data)
     # find_low_water_use(cleaned_data)
-    plot_zipcode(cleaned_data, "90012")
+    # plot_zipcode(cleaned_data, "90012")
     # cleaned_data["90012"].plot(kind="bar", rot=10)
     # cleaned_data["90012"].hist()
     # plt.plot(cleaned_data["90012"])
