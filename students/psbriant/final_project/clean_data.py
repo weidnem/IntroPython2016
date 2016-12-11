@@ -30,7 +30,8 @@ def clean(data):
 
 def rename_columns(names):
     """
-
+    Renames the date column and adds all columns into a list so they can be
+    accessed by dot notation.
     """
     columns_list = []
     for name in names:
