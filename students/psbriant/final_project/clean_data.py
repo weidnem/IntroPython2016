@@ -5,12 +5,13 @@ Class: Introduction to Python
 Assignment: Final Project
 
 Description:
-Code for Final Project
+This program allows the user to select a zipcode to see statistics and graphs
+for monthly water use in the city of Los Angeles.
 
 To Do:
 Add code to check for null cells
+Add try/except to verify input zipcode is in Los Angeles.
 Add additional plotting functionality
-Finish tests
 """
 
 import pandas
