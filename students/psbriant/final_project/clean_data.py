@@ -67,7 +67,6 @@ def plot_zipcode(data, zipcode):
     """
     Plot water use data for a specified zipcode
     """
-    # data["90012"].plot(kind="bar", rot=10)
     plt.plot(data[zipcode])
     plt.show()
 
