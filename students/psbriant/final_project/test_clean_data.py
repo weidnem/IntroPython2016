@@ -39,12 +39,6 @@ def test_rename_columns():
     assert column_list[0:5] == ["Date", "90001", "90002", "90003", "90004"]
 
 
-def test_find_low_water_use():
-    """
-
-    """
-
-
 @pytest.mark.mpl_image_compare
 def test_plot_zipcode():
     """
