@@ -1,119 +1,192 @@
 """
-G-Coder by Adam Hollis, 2016.
-G-Coder allows simple operations to be programmed and cut on a basic CNC router without knowledge of CAM or G-Code programming.
+G-Coder(CNC Panel Saw) by Adam Hollis, 2016.
+G-Coder allows simple sheet cutting operations to be programmed and cut on a basic CNC router without knowledge of CAM or
+G-Code programming.
+
+Generating usable G-Code turned out to be more challenging than anticipated and I ran out of time, so this just outputs.
+to the console, rather than a file.
+
+This will actually run on a CNC router, but it's far from optimized, and runs a superfluous cut at the end of each
+operation that i haven't figured out how to remove yet.
+
+Looking forward to making this Way better over the next couple months.
 """
 
 from textwrap import dedent, fill
+import sys
+from io import StringIO
+
 
 def run_ui():
     """Print the main UI to the screen and get user input."""
 
-    ui_text = fill(dedent("Select an operation from the menu below.  To generate multiple operations, enter each one separated by a comma, in the order of execution.  (ex: S, O, P)"), 90, break_long_words = False)
+    ui_text = fill('''Choose an operation from the menu below. This program is only intended for .75" sheet goods. Enter an operation followed by a number to make multiple cuts (ex: R3)''', 100, break_long_words=False)
 
-    print('{:<}'.format(ui_text))
+    print('{:<90}'.format(ui_text))
 
     what_do = input(dedent('''
 
-        (S) - Surface
-        (P) - Profile
-        (O) - Pocket
+        (R) - Rip
+        (X) - Cross Cut
         (Q) - Quit\n\n
 
-            '''))
+        '''))
 
     what_do = what_do.lower()
-    what_do.strip()
+    action = what_do.strip()
 
-    action = what_do.split(',')
     return action
 
-def dims():
 
-    print('Enter dimensions in inches: ')
-    length = float(input('Length: '))
-    width = float(input('Width: '))
-    height = float(input('Height: '))
+# def cut_qty(str):
+#
+#     # add a cut qty if user entered none
+#     if len(str) < 2:
+#         str += '1'
+#
+#     return str[1:]
 
-    return [length, width, height]
+def cut_qty(qty, operation):
+    """checks number of cuts * width vs sheet size, then passes to geominatrix for g-code generation"""
+    qty = int(qty)
+    x = float(input('Enter cut width(inch-decimal): '))
+    output = [x, qty]
+    if operation == 'xcut':
+        sheet = 96.5
+    else:
+        sheet = 48.5
 
-def surface():
-    start_size = dims()
-    final_size = input("Enter finished thickness: ")
-    print('Generating G-Code to surface from {}" to {}"\n'.format(start_size[2], final_size))
+    if (qty * x) > (sheet - (qty * .25)):
+        print('You can\'t get {} {}\" {} out of a sheet\n'.format(qty, x, operation))
 
-    return geominatrix(start_size).coordinator()
+        if operation == 'xcut':
+            cut_qty(qty, 'xcut')
+            return operation
 
-def profile():
-    size = dims()
-    return geominatrix(size).coordinator()
+        elif operation == 'rip':
+            cut_qty(qty, 'rip')
+            return operation
 
-def pocket():
-    print('pocket!\n')
+    # Here we go!
+    Geominatrix(output).coordinator(operation)
 
-def quit():
-    return False
 
-def chain_input(list):
-    #sort input list, string together multiple operations.
+def cut_type(menu_obj):
 
-    for item in list:
-        if item == 's':
-            surface()
-        elif item == 'p':
-            profile()
-        elif item == 'o':
-            pocket()
-        elif item == 'q':
-            quit()
-            return False
+    # check for quit input
+    if menu_obj == 'q':
+        return False
+
+    else:
+        # Program requires a cut quantity, adds 1 if int not present.
+        try:
+            menu_obj[1]
+        except IndexError:
+            menu_obj += '1'
+
+        if menu_obj[0] == 'r':
+
+            cut_qty(menu_obj[1:], 'rip')
+            # rip(qty)
+
+        elif menu_obj[0] == 'x':
+            cut_qty(menu_obj[1:], 'xcut')
+            # (str)
+
         else:
-            print('Selection Invalid!')
-            break
+            print('\nSelection Invalid!\n')
 
-class geominatrix:
-    """convert user input size to relative machine coordinates"""
-    #tool number:radius
-    tool_library = {1: 1.5625, 2: .125, 3: .25, 4: .09375}
-    """converts user input for L x W x H into machine coordinates."""
-    def __init__(self, list, tool = tool_library[3]):
-         self.T = tool
-         self.x = list[0]
-         self.y = list[1]
-         self.z = list[2]
 
-    def coordinator(self, origin=(5, 5, 0)):
-        """rework, tool offset needs to be a total net plus to overall dimensions...for profile, or a net minus for pocketing"""
+class Geominatrix:
+    """Generates G-Code strings based on user input and cut type."""
 
-        """!!!!!!ORDER IS WRONG FOR CW (CLIME) OPERATION"""
+    def __init__(self, list):
+        self.width = float(list[0])
+        self.count = int(list[1])
 
-        tool_offset = ((origin[0] - self.T), (origin[1] - self.T), origin[2])
+    # Counter to generate cuts line-by-line
+    def coordinator(self, type, origin=(5, 5, 0)):
+        count = self.count + 2  # + 2 or you don't get enough y-axis cuts.
+        step = self.width
+        start_x = origin[0]
+        start_x -= step
+        start_y = origin[1]
+        start_y -= step
+        flipper = True
 
-        first = origin[0] + self.x
-        second = origin[1] + self.y
-        third = origin[0]
-        fourth = origin[1]
+        GWrapper.start() # Static wrapper for machine start
+        # Code for Y-axis cuts
+        if type == 'rip':
+            while count >= 1:
+                count -= 1
+                start_x += step
+                # flip Y coordinate from start to end
+                if flipper is True:
+                    y_coord = origin[1] - 1
+                    flipper = False
+                else:
+                    y_coord = origin[1] + 96.5
+                    flipper = True
 
+                print('G1 Y{0}\nG1 X{1}'.format(y_coord, start_x))
+
+        # same thing for cross-cutting
+        elif type == 'xcut':
+            while count >= 1:
+                count -= 1
+                start_y += step
+                # flip X coordinate from start to end
+                if flipper is True:
+                    x_coord = origin[0] - 1
+                    flipper = False
+                else:
+                    x_coord = origin[1] + 48.5
+                    flipper = True
+
+                print('G1 X{0}\nG1 Y{1}'.format(x_coord, start_y))
+
+
+        GWrapper.stop() # static wrapper for machine stop
+
+
+class GWrapper:
+    """Wrapper for static machine start/stop parameters"""
+
+    @staticmethod
+    def start():
+        # Positioning = Absolute, Spindle Off, Tool Check/Change, Spindle Speed, Spindle On, Jog to Start, Z down, Set Feed
         print(dedent('''
-            G0 X{0} Y{1} Z{2}
-            {3} X{4}
-            {3} Y{5}
-            {3} X{6}
-            {3} Y{7}
-            ''').format(origin[0], origin[1], self.z, 'G1', first, second, third, fourth))
+            G90
+            M5
+            T2
+            S12000
+            M3
+            G0 X5 Y4 Z1
+            Z0 F100
+            '''))
 
-class g_man:
-    pass
+    @staticmethod
+    def stop():
+        # Spindle power off, retract head, return home
+        print(dedent('''
+            M5
+            G53 Z
+            X0Y0
+            '''))
+        sys.exit(0)
 
-#(T = 3, S = 12000, F = 100)
 
 if __name__ == "__main__":
     running = True
-    print("\n\n******Welcome to G-Coder Beta******\n")
+    title = '****** Welcome to CNC Panel Saw Beta ******'
+    print('\n\n\n\n{:^90}\n'.format(title))
 
     while running:
         selection = run_ui()
-        #run chain input, w/ quit check
-        if chain_input(selection) == False:
+        start = cut_type(selection)
+
+        # run cut_type, w/ quit check
+        if start is False:
             really = input('\nAre you sure you want to Quit? Y/N:\n')
             if really.lower() == 'y':
                 running = False
