@@ -8,9 +8,7 @@ Description:
 Code for Final Project
 
 To Do:
-Add user interface
 Add code to check for null cells
-Remove or improve functionality of find_low_water_use
 Add additional plotting functionality
 Finish tests
 """
@@ -63,7 +61,8 @@ def plot_zipcode(data, zipcode):
 
 def menu():
     """
-
+    Provide a set of options for the user to select. Take in zero values and
+    output the menu as a string.
     """
     choices = """
 
@@ -116,7 +115,7 @@ def user_interface(cleaned_data):
 
 def main():
     """
-
+    Connect to csv file, clean data and initiate user expirience.
     """
     # Connect to file.
     data = pandas.read_csv("data/Residential_Water_Usage_Zip_Code_on_Top.csv")
