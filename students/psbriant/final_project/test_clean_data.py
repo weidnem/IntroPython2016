@@ -52,6 +52,26 @@ def test_plot_zipcode():
     return wateruse
 
 
+def test_menu():
+    """
+    Test the generation of a text menu for the user interface.
+    """
+    choices = """
+
+              Please select one of the following options:
+
+              ************************************************************
+
+              v - View visualizations for water use in a specific zipcode.
+              s - View statistics for water use in  a specific zipcode.
+              x - Exit program.
+
+              ************************************************************
+
+              """
+    assert cd.menu() == choices
+
+
 def test_user_interface():
     """
     Tests user interface.
