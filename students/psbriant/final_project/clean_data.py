@@ -95,19 +95,17 @@ def user_interface():
     Allows user to view visualizations and statistics for different Los Angeles
     Zip codes.
     """
+    print("""
+
+          ************************************
+
+          Welcome to the visualization program
+          for Los Angeles Zipcode water use.
+
+          ************************************
+
+          """)
     while True:
-
-        # Greeting
-        print("""
-
-              ************************************
-
-              Welcome to the visualization program
-              for Los Angeles Zipcode water use.
-
-              ************************************
-
-              """)
         response = input(menu())
         if response == "v":
             # prompt for zipcode
@@ -121,21 +119,7 @@ def user_interface():
             print("Thank you for using this program")
             return False
         else:
-
-
-    # Enter while loop
-
-    # Displays menu of options
-    # Prompts user for a choice
-    # v -View graphs for use in a specific zipcode
-    # s -View use statistics for a specific zipcode
-    # x -Exit program: exits while loop
-
-    # Redisplays menu if the user enters a value that is not recognized.
-
-
-
-
+            print("Please select an option from the following menu:")
 
 
 def main():
