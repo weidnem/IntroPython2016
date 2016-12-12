@@ -28,13 +28,19 @@ def clean(data):
     column_names = list(data.columns.values)
     data.columns = rename_columns(column_names)
 
-    # Modify date format
+    # Assign dates as the index
+    data.index = mod_dates(data)
+    return data
+
+
+def mod_dates(data):
+    """
+    Take in partially cleaned csv file and reformat dates so they year, month,
+    day in a numerical format.
+    """
     data.Date = data.Date.apply(lambda d: datetime.strptime(d, "%b_"
                                 "%Y").date().replace(day=15))
-
-    # Assign dates as the index
-    data.index = data.Date
-    return data
+    return data.Date
 
 
 def rename_columns(names):
