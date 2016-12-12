@@ -65,19 +65,21 @@ def menu():
     """
 
     """
-    print("""
+    choices = """
 
-          Please select one of the following options:
+              Please select one of the following options:
 
-          ************************************************************
+              ************************************************************
 
-          v - View visualizations for water use in a specific zipcode.
-          s - View statistics for water use in  a specific zipcode.
-          x - Exit program.
+              v - View visualizations for water use in a specific zipcode.
+              s - View statistics for water use in  a specific zipcode.
+              x - Exit program.
 
-          ************************************************************
+              ************************************************************
 
-          """)
+              """
+
+    return choices
 
 
 def user_interface(cleaned_data):
