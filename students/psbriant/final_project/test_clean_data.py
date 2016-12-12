@@ -22,10 +22,17 @@ def get_data():
     return data
 
 
-def test_clean():
+def test_mod_dates():
     """
-
+    Ensure dates are modified in the year, month day numerical format.
     """
+    data = get_data()
+    data = data.drop(["Date Value"], axis=1)
+    column_names = list(data.columns.values)
+    data.columns = cd.rename_columns(column_names)
+    date_list = cd.mod_dates(data)
+    assert date_list[0:5] == ["2005-07-15", "2005-08-15", "2005-09-15",
+                              "2005-10-15", "2005_11_15"]
 
 
 def test_rename_columns():
@@ -70,9 +77,3 @@ def test_menu():
 
               """
     assert cd.menu() == choices
-
-
-def test_user_interface():
-    """
-    Tests user interface.
-    """
