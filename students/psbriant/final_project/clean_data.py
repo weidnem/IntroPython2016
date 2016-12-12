@@ -90,7 +90,7 @@ def menu():
           """)
 
 
-def user_interface():
+def user_interface(cleaned_data):
     """
     Allows user to view visualizations and statistics for different Los Angeles
     Zip codes.
@@ -108,9 +108,9 @@ def user_interface():
     while True:
         response = input(menu())
         if response == "v":
-            # prompt for zipcode
+            zipcode = input("Please enter a zipcode to visualize ")
             # plot water use for zipcode
-            print("")
+            plot_zipcode(cleaned_data, zipcode)
         elif response == "s":
             # prompt for zipcode
             # print stats for zipcode
@@ -128,14 +128,8 @@ def main():
     """
     # Connect to file.
     data = pandas.read_csv("data/Residential_Water_Usage_Zip_Code_on_Top.csv")
-
     cleaned_data = clean(data)
-    # find_low_water_use(cleaned_data)
-    plot_zipcode(cleaned_data, "90012")
-    # cleaned_data["90012"].plot(kind="bar", rot=10)
-    # cleaned_data["90012"].hist()
-    # plt.plot(cleaned_data["90012"])
-    # plt.plot([1, 2, 3, 4])
+    user_interface(cleaned_data)
 
 
 if __name__ == '__main__':
