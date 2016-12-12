@@ -77,9 +77,10 @@ def menu():
     """
     print("""
 
+          Please select one of the following options:
+
           ************************************************************
 
-          Please select one of the following options:
           v - View visualizations for water use in a specific zipcode.
           s - View statistics for water use in  a specific zipcode.
           x - Exit program.
@@ -88,13 +89,40 @@ def menu():
 
           """)
 
+
 def user_interface():
     """
     Allows user to view visualizations and statistics for different Los Angeles
     Zip codes.
     """
+    while True:
 
-    # Greeting
+        # Greeting
+        print("""
+
+              ************************************
+
+              Welcome to the visualization program
+              for Los Angeles Zipcode water use.
+
+              ************************************
+
+              """)
+        response = input(menu())
+        if response == "v":
+            # prompt for zipcode
+            # plot water use for zipcode
+            print("")
+        elif response == "s":
+            # prompt for zipcode
+            # print stats for zipcode
+            print("")
+        elif response == "x":
+            print("Thank you for using this program")
+            return False
+        else:
+
+
     # Enter while loop
 
     # Displays menu of options
