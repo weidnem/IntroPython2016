@@ -71,6 +71,45 @@ def plot_zipcode(data, zipcode):
     plt.show()
 
 
+def menu():
+    """
+
+    """
+    print("""
+
+          ************************************************************
+
+          Please select one of the following options:
+          v - View visualizations for water use in a specific zipcode.
+          s - View statistics for water use in  a specific zipcode.
+          x - Exit program.
+
+          ************************************************************
+
+          """)
+
+def user_interface():
+    """
+    Allows user to view visualizations and statistics for different Los Angeles
+    Zip codes.
+    """
+
+    # Greeting
+    # Enter while loop
+
+    # Displays menu of options
+    # Prompts user for a choice
+    # v -View graphs for use in a specific zipcode
+    # s -View use statistics for a specific zipcode
+    # x -Exit program: exits while loop
+
+    # Redisplays menu if the user enters a value that is not recognized.
+
+
+
+
+
+
 def main():
     """
 
