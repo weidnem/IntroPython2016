@@ -53,16 +53,6 @@ def rename_columns(names):
     return columns_list
 
 
-def find_low_water_use(data):
-    """
-
-    """
-    under100 = data[(data["90012"] <= 100) & (data["90013"] <= 100)]
-    print(under100)
-    under25 = data[(data["90012"] <= 25) & (data["90013"] <= 25)]
-    print(under25)
-
-
 def plot_zipcode(data, zipcode):
     """
     Plot water use data for a specified zipcode
