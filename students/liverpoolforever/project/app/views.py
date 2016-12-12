@@ -1,6 +1,7 @@
 from flask import render_template,flash,redirect,request
 from app import app
 from .forms import InputForm,LoginForm
+from .publisher import Publisher
 
 @app.route('/')
 def simple_index():
@@ -34,7 +35,9 @@ def dashboard():
 def accept_input():
     field1 = request.form['field1']
     field2 = request.form['field2']
-    res = "The response is {} and {} ".format(field1,field2)
+    pub = Publisher(field1)
+    res = pub.count_restaurants
+    #res = "The response is {} and {} ".format(field1,field2)
     return res
 
 @app.route('/login', methods=['GET', 'POST'])
