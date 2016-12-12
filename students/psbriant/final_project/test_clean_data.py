@@ -56,3 +56,9 @@ def test_plot_zipcode():
     cleaned = cd.clean(data)
     wateruse = cd.plot_zipcode(cleaned, "90012")
     return wateruse
+
+
+def test_user_interface():
+    """
+    Tests user interface.
+    """
