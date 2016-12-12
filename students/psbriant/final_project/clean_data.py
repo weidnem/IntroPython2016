@@ -107,15 +107,15 @@ def user_interface(cleaned_data):
           """)
     while True:
         response = input(menu())
-        if response == "v":
+        if response.lower() == "v":
             zipcode = input("Please enter a zipcode to visualize ")
             # plot water use for zipcode
             plot_zipcode(cleaned_data, zipcode)
-        elif response == "s":
+        elif response.lower() == "s":
             # prompt for zipcode
             # print stats for zipcode
             print("")
-        elif response == "x":
+        elif response.lower() == "x":
             print("Thank you for using this program")
             return False
         else:
