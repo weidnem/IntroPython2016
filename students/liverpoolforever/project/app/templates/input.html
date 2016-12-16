@@ -1,0 +1,18 @@
+<!-- extend from base layout -->
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Welcome to QA Dashboard {{title}}</h1>
+  <form action="acceptInput" method="POST" name="login">
+      {{ form.hidden_tag() }}
+      <p>
+          Enter a field 1:<br>
+          {{ form.field1 }}<br>
+      </p>
+      <p>
+          Enter a field 2:<br>
+          {{ form.field2 }}<br>
+      </p>
+      <p><input type="submit" value="Hit Me"></p>
+  </form>
+{% endblock %}
