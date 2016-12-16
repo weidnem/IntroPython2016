@@ -26,6 +26,29 @@ conjugates.
 
 quadratic coefficient, the linear coefficient and the constant or free term.
 
+@ CHB:
+
+you got fancier than I expected!
+
+by evaluate, i meant:
+
+y = ax**2 + bx + c
+
+then it would return y for whichever x was passed in.
+
+but you got the OO part here.
+
+the next step is to define a call method, so you can do:
+
+q = Quadratic(3,4,5)
+
+y = q(4)
+y2 = q(5.1)
+
+etc...
+
+i.e. the instance acts like a function.
+
 '''
 
 import math
@@ -35,15 +58,21 @@ class Quadratic:
         self.q_coe = a  # quadratic coefficient
         self.q_lin = b  # linear coefficient
         self.con = c    # constant
+
+    def __call__(self, i):
+        return self.q_coe * i ** 2 + self.q_lin * i + self.con
+    
+    # Keeping the fancy bits
+    def print_root(self):
         self.dis = self.q_lin ** 2 - 4 * self.q_coe * self.con  # discriminant
         print(self.dis)
         
         if self.dis < 0:
             print('The two roots of the polynomial are complex conjugates')
         elif self.dis == 0:
-            self.x = (-b + math.sqrt(self.dis)) / (2 * a)
+            self.x = (-self.q_lin + math.sqrt(self.dis)) / (2 * self.q_coe)
             print('The polynomial has one real double root: ', self.x)
         else:
-            self.x1 = (-b + math.sqrt(self.dis)) / 2 * a
-            self.x2 = (-b - math.sqrt(self.dis)) / 2 * a
+            self.x1 = (-self.q_lin + math.sqrt(self.dis)) / 2 * self.q_coe
+            self.x2 = (-self.q_lin - math.sqrt(self.dis)) / 2 * self.q_coe
             print('The polynomial has two real roots:', self.x1, 'and', self.x2)
