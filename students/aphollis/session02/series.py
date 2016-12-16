@@ -19,6 +19,7 @@ def sum_series(n, list=[0, 1]):
         return(list[n-1])
     else:
         list.append(next_up)
+        
         sum_series(n, list)
 
 

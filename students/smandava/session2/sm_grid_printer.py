@@ -50,7 +50,7 @@ def print_grid2(n):
             print(PLUS + m * MINUS + PLUS + m * MINUS + PLUS)
 
 
-# Part 3: Printing a grid by accepting number of rows and columns.
+# Part 3: Printing a grid by accepting number of rows and item_length.
 
 
 def print_plus():
@@ -69,7 +69,7 @@ def print_bar():
 
 
 def print_grid3(x, y):
-    """Print grid based on rows and columns input."""
+    """Print grid based on rows and item_length input."""
     m = y + 1
     for i in range(0, x, 1):
         for i in range(0, y, 1):
