@@ -79,6 +79,10 @@ class Element:
 class Html(Element):
     tag = 'html'
 
+    def render(self, file_out, ind=""):
+        file_out.write(ind + "<!DOCTYPE html>" + "\n")
+        super().render(file_out, ind=ind)
+
 
 class Body(Element):
     tag = 'body'
@@ -115,7 +119,8 @@ class SelfClosingTag(Element):
         """
         Take in an output file and generate a self closing tag.
         """
-        file_out.write("{}<{} />".format((ind + self.indent), self.tag))
+        open_tag, _ = self.make_tags()
+        file_out.write(ind + open_tag.replace(">", " />"))
 
 
 class Hr(SelfClosingTag):
@@ -150,3 +155,7 @@ class H(OneLineTag):
     def __init__(self, size, content=None, **kwargs):
         self.tag = "h" + str(int(size))
         super().__init__(content, **kwargs)
+
+
+class Meta(SelfClosingTag):
+    tag = 'meta'
