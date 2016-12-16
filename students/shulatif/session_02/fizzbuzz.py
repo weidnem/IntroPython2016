@@ -17,4 +17,5 @@ def fizzbuzz(n):
         else:
             print(count)
         count += 1
+
 fizzbuzz(100)
