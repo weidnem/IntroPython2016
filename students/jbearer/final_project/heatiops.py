@@ -1,4 +1,4 @@
-#!/usr/bin/env/python3
+#!/usr/bin/env/ python
 
 import os
 import subprocess
@@ -9,6 +9,8 @@ dict_total_iops = {}
 
 file_list = []
 
+myDate = None
+
 def check_queues():
 
     quePaths = ['/Users/jbearer/scripts/misc/clus1/queued/', 
@@ -18,8 +20,6 @@ def check_queues():
         fileName = os.listdir(paths)
         for file in fileName:
             file_list.append(paths + file)
-
-    # print('file_list:', file_list)
 
 
 def proc_file():
@@ -35,8 +35,8 @@ def proc_file():
             for line in file_in:
                 heat_line = line.strip('\n').split(',')
                 if heat_line != ['']:
-                    proc_lines(heat_line, parse_file)
-        write_db_file(clusterName, parse_file)
+                    myDate = proc_lines(heat_line, parse_file)
+        write_db_file(clusterName, parse_file, myDate)
         parkPath = parse_file.replace('queued', 'parked')
         os.rename(parse_file, parkPath)
         dict_path_iops.clear()
@@ -45,8 +45,6 @@ def proc_file():
 
 
 def proc_lines(heat_line, parse_file):
-
-    global myDate #Are declaring global variables BAD? If so, why? What is another way?
 
     newPath = []
 
@@ -98,8 +96,10 @@ def proc_lines(heat_line, parse_file):
         os.rename(parse_file, errPath)
         raise
 
+    return myDate
 
-def write_db_file(clusterName, parse_file):
+
+def write_db_file(clusterName, parse_file, myDate):
 
     out_file_name = clusterName + '_' + str(myDate) + '.txt'
     procPath = os.path.split(parse_file)
@@ -121,7 +121,7 @@ def write_db_file(clusterName, parse_file):
                 myNode, myEventOps, epochDate))
 
         for total_iops, totalOps in dict_total_iops.items():
-            out.write('heatiops,clustername={} ops={} {}\n'.format(clusterName, 
+            out.write('totaliops,clustername={} ops={} {}\n'.format(clusterName, 
                 round(totalOps, 2), epochDate))
 
     url = 'http://localhost:8086/write?db=heatiops'

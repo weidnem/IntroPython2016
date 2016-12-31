@@ -36,23 +36,56 @@ for value in person:
     weird_dict[value] = person[value.lower()].count('t')
 print(weird_dict)
 
-# Create sets s2, s3 and s4 that contain numbers from zero through twenty, divisible 2, 3 and 4.
+# Creating s1 so to make the other sets
 s1 = set(range(0, 21))
+
 def create_sets(str, div):
-    results = []
+    """
+    To create new sets divisible by whatever number based off set s1.
+    For some reason this did not work.
+    :param str: name of the set to create
+    :param div: number to be divisible by
+    :return: a new set with just those numbers
+    """
+    str = set()
     for i in s1:
         if i % div == 0:
-            results.append(i)
             print('adding {}'.format(i))
-            return str.add(results)
+            print(str)
+            return str.add(i)
         else: pass
 
+# create_sets('s2', 2)
+# create_sets('s3', 3)
+# create_sets('s4', 4)
+
+# For set s2, all the numbers divisible by 2 from s1
+s2 = set()
 for i in s1:
     if i % 2 == 0:
-        s2 = set(i)
+        s2.add(i)
+print('s2 {}'.format(s2))
 
+# For set s3, all the numbers divisible by 3 from s1
+s3 = set()
+for i in s1:
+    if i % 3 == 0:
+        s3.add(i)
+print('s3 {}'.format(s3))
 
-print(s2)
-#print(s3)
-#print(s4)
+# For set s4, all the numbers divisible by 4 from s1
+s4 = set()
+for i in s1:
+    if i % 4 == 0:
+        s4.add(i)
+print('s4 {}'.format(s4))
+
+print(s3.issubset(s2))
+print(s4.issubset(s2))
+
+pyset = set('Python')
+pyset.add('i')
+marathon = frozenset('marathon')
+print(pyset.intersection(marathon))
+print(pyset.union(marathon))
 
